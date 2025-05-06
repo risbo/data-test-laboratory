@@ -1,34 +1,1896 @@
 {
-  "id": 1,
-  "topic": 1,
+  "id": 4,
+  "topic": "AWS",
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 1,
+      "topic": "EC2",
+      "question": "What is the primary function of Amazon EC2?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "Object storage",
+        "Virtual servers",
+        "Serverless computing",
+        "Database management"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Virtual servers",
+      "explanation": "Amazon EC2 (Elastic Compute Cloud) provides scalable virtual servers in the cloud for running applications.",
+      "keywords": ["EC2", "compute", "virtual servers", "AWS", "cloud"]
+    },
+    {
+      "id": 2,
+      "topic": "S3",
+      "question": "What type of storage is Amazon S3 primarily used for?",
+      "options": [
+        "Block storage",
+        "Object storage",
+        "File storage",
+        "Archival storage"
+      ],
+      "response": "Object storage",
+      "explanation": "Amazon S3 (Simple Storage Service) is designed for object storage, allowing users to store and retrieve any amount of data.",
+      "keywords": ["S3", "storage", "object storage", "AWS", "buckets"]
+    },
+    {
+      "id": 3,
+      "topic": "Lambda",
+      "question": "What is a key characteristic of AWS Lambda?",
+      "options": [
+        "Requires server management",
+        "Event-driven serverless computing",
+        "Persistent storage",
+        "Dedicated hardware"
+      ],
+      "response": "Event-driven serverless computing",
+      "explanation": "AWS Lambda enables serverless computing, executing code in response to events without managing servers.",
+      "keywords": ["Lambda", "serverless", "event-driven", "AWS", "functions"]
+    },
+    {
+      "id": 4,
+      "topic": "RDS",
+      "question": "Which type of databases does Amazon RDS support?",
+      "options": [
+        "NoSQL",
+        "SQL",
+        "Key-value",
+        "In-memory"
+      ],
+      "response": "SQL",
+      "explanation": "Amazon RDS (Relational Database Service) supports managed SQL databases like MySQL, PostgreSQL, and Oracle.",
+      "keywords": ["RDS", "SQL", "databases", "AWS", "relational"]
+    },
+    {
+      "id": 5,
+      "topic": "VPC",
+      "question": "What is the purpose of an Amazon VPC?",
+      "options": [
+        "Content delivery",
+        "Network isolation",
+        "Load balancing",
+        "DNS routing"
+      ],
+      "response": "Network isolation",
+      "explanation": "Amazon VPC (Virtual Private Cloud) provides a logically isolated network for AWS resources.",
+      "keywords": ["VPC", "networking", "isolation", "AWS", "subnets"]
+    },
+    {
+      "id": 6,
+      "topic": "IAM",
+      "question": "What does AWS IAM primarily manage?",
+      "options": [
+        "Encryption keys",
+        "User access and permissions",
+        "Billing",
+        "Monitoring"
+      ],
+      "response": "User access and permissions",
+      "explanation": "AWS IAM (Identity and Access Management) controls user access and permissions for AWS resources.",
+      "keywords": ["IAM", "security", "permissions", "AWS", "roles"]
+    },
+    {
+      "id": 7,
+      "topic": "CloudWatch",
+      "question": "What is the primary use of Amazon CloudWatch?",
+      "options": [
+        "Infrastructure provisioning",
+        "Monitoring and observability",
+        "Event orchestration",
+        "Machine learning"
+      ],
+      "response": "Monitoring and observability",
+      "explanation": "Amazon CloudWatch collects and tracks metrics, logs, and events for AWS resources and applications.",
+      "keywords": ["CloudWatch", "monitoring", "logs", "AWS", "metrics"]
+    },
+    {
+      "id": 8,
+      "topic": "SQS",
+      "question": "What is the main function of Amazon SQS?",
+      "options": [
+        "Message queuing",
+        "Pub/sub messaging",
+        "Workflow orchestration",
+        "Data analytics"
+      ],
+      "response": "Message queuing",
+      "explanation": "Amazon SQS (Simple Queue Service) is a message queuing service for decoupling and scaling microservices.",
+      "keywords": ["SQS", "messaging", "queue", "AWS", "decoupling"]
+    },
+    {
+      "id": 9,
+      "topic": "CloudFormation",
+      "question": "What does AWS CloudFormation enable?",
+      "options": [
+        "Serverless computing",
+        "Infrastructure as Code",
+        "Container orchestration",
+        "DNS management"
+      ],
+      "response": "Infrastructure as Code",
+      "explanation": "AWS CloudFormation allows users to define and provision AWS infrastructure using templates.",
+      "keywords": ["CloudFormation", "IaC", "infrastructure", "AWS", "templates"]
+    },
+    {
+      "id": 10,
+      "topic": "SageMaker",
+      "question": "What is Amazon SageMaker primarily used for?",
+      "options": [
+        "Data warehousing",
+        "Machine learning pipelines",
+        "Content delivery",
+        "Log analysis"
+      ],
+      "response": "Machine learning pipelines",
+      "explanation": "Amazon SageMaker provides tools to build, train, and deploy machine learning models.",
+      "keywords": ["SageMaker", "machine learning", "ML", "AWS", "models"]
+    },
+    {
+      "id": 11,
+      "topic": "Elastic Beanstalk",
+      "question": "What is the primary purpose of AWS Elastic Beanstalk?",
+      "options": [
+        "Container orchestration",
+        "Simplified application deployment",
+        "Object storage",
+        "Machine learning"
+      ],
+      "response": "Simplified application deployment",
+      "explanation": "AWS Elastic Beanstalk is a Platform-as-a-Service (PaaS) that simplifies deploying and managing web applications.",
+      "keywords": ["Elastic Beanstalk", "deployment", "PaaS", "AWS", "web apps"]
+    },
+    {
+      "id": 12,
+      "topic": "EBS",
+      "question": "What type of storage does Amazon EBS provide?",
+      "options": [
+        "Object storage",
+        "Block storage",
+        "File storage",
+        "Archival storage"
+      ],
+      "response": "Block storage",
+      "explanation": "Amazon EBS (Elastic Block Store) provides block storage volumes for use with EC2 instances.",
+      "keywords": ["EBS", "block storage", "EC2", "AWS", "volumes"]
+    },
+    {
+      "id": 13,
+      "topic": "Aurora",
+      "question": "What is a key feature of Amazon Aurora?",
+      "options": [
+        "NoSQL database",
+        "High-performance relational database",
+        "In-memory caching",
+        "Data warehousing"
+      ],
+      "response": "High-performance relational database",
+      "explanation": "Amazon Aurora is a high-performance, RDS-compatible relational database with enhanced scalability and availability.",
+      "keywords": ["Aurora", "relational database", "RDS", "AWS", "performance"]
+    },
+    {
+      "id": 14,
+      "topic": "CloudFront",
+      "question": "What is the main function of Amazon CloudFront?",
+      "options": [
+        "Virtual networking",
+        "Content delivery network",
+        "Message queuing",
+        "Infrastructure automation"
+      ],
+      "response": "Content delivery network",
+      "explanation": "Amazon CloudFront is a CDN that delivers content globally with low latency using edge locations.",
+      "keywords": ["CloudFront", "CDN", "content delivery", "AWS", "edge"]
+    },
+    {
+      "id": 15,
+      "topic": "STS",
+      "question": "What does AWS STS provide?",
+      "options": [
+        "Permanent user credentials",
+        "Temporary security credentials",
+        "Encryption key management",
+        "DDoS protection"
+      ],
+      "response": "Temporary security credentials",
+      "explanation": "AWS STS (Security Token Service) generates temporary credentials for secure access to AWS resources.",
+      "keywords": ["STS", "security", "temporary credentials", "AWS", "IAM"]
+    },
+    {
+      "id": 16,
+      "topic": "CodePipeline",
+      "question": "What is the primary role of AWS CodePipeline?",
+      "options": [
+        "Code compilation",
+        "Continuous integration and delivery",
+        "Log monitoring",
+        "Container management"
+      ],
+      "response": "Continuous integration and delivery",
+      "explanation": "AWS CodePipeline automates the build, test, and deployment phases of CI/CD workflows.",
+      "keywords": ["CodePipeline", "CI/CD", "DevOps", "AWS", "automation"]
+    },
+    {
+      "id": 17,
+      "topic": "CloudTrail",
+      "question": "What does AWS CloudTrail primarily track?",
+      "options": [
+        "Application performance",
+        "API activity and audit trails",
+        "Network traffic",
+        "Cost usage"
+      ],
+      "response": "API activity and audit trails",
+      "explanation": "AWS CloudTrail records API calls and account activity for auditing and compliance.",
+      "keywords": ["CloudTrail", "audit", "API activity", "AWS", "security"]
+    },
+    {
+      "id": 18,
+      "topic": "SNS",
+      "question": "What messaging pattern does Amazon SNS follow?",
+      "options": [
+        "Queue-based messaging",
+        "Publish/subscribe messaging",
+        "Workflow orchestration",
+        "Direct API calls"
+      ],
+      "response": "Publish/subscribe messaging",
+      "explanation": "Amazon SNS (Simple Notification Service) uses a pub/sub model to send messages to multiple subscribers.",
+      "keywords": ["SNS", "pub/sub", "messaging", "AWS", "notifications"]
+    },
+    {
+      "id": 19,
+      "topic": "Athena",
+      "question": "What is Amazon Athena used for?",
+      "options": [
+        "Machine learning",
+        "SQL queries on S3 data",
+        "Data warehousing",
+        "Workflow orchestration"
+      ],
+      "response": "SQL queries on S3 data",
+      "explanation": "Amazon Athena enables serverless SQL queries directly on data stored in Amazon S3.",
+      "keywords": ["Athena", "SQL", "S3", "AWS", "analytics"]
+    },
+    {
+      "id": 20,
+      "topic": "KMS",
+      "question": "What is the primary function of AWS KMS?",
+      "options": [
+        "User authentication",
+        "Encryption key management",
+        "Network routing",
+        "Cost monitoring"
+      ],
+      "response": "Encryption key management",
+      "explanation": "AWS KMS (Key Management Service) creates and manages cryptographic keys for encrypting data.",
+      "keywords": ["KMS", "encryption", "keys", "AWS", "security"]
+    },
+    {
+      "id": 21,
+      "topic": "EKS",
+      "question": "What is the primary function of Amazon EKS?",
+      "options": [
+        "Serverless computing",
+        "Managed Kubernetes service",
+        "Object storage",
+        "Content delivery"
+      ],
+      "response": "Managed Kubernetes service",
+      "explanation": "Amazon EKS (Elastic Kubernetes Service) is a managed service for running Kubernetes clusters without managing the control plane.",
+      "keywords": ["EKS", "Kubernetes", "containers", "AWS", "orchestration"]
+    },
+    {
+      "id": 22,
+      "topic": "Glacier",
+      "question": "What is Amazon Glacier primarily used for?",
+      "options": [
+        "Real-time data processing",
+        "Archival storage",
+        "Block storage",
+        "In-memory caching"
+      ],
+      "response": "Archival storage",
+      "explanation": "Amazon Glacier provides low-cost, long-term storage for data archiving and backup.",
+      "keywords": ["Glacier", "archival", "storage", "AWS", "cold storage"]
+    },
+    {
+      "id": 23,
+      "topic": "ElastiCache",
+      "question": "What type of data store does Amazon ElastiCache support?",
+      "options": [
+        "Relational database",
+        "In-memory cache",
+        "Object storage",
+        "Data warehouse"
+      ],
+      "response": "In-memory cache",
+      "explanation": "Amazon ElastiCache provides managed in-memory caching using Redis or Memcached for high-performance applications.",
+      "keywords": ["ElastiCache", "in-memory", "cache", "AWS", "Redis"]
+    },
+    {
+      "id": 24,
+      "topic": "Route 53",
+      "question": "What is the primary function of Amazon Route 53?",
+      "options": [
+        "Load balancing",
+        "DNS and domain routing",
+        "Message queuing",
+        "Infrastructure monitoring"
+      ],
+      "response": "DNS and domain routing",
+      "explanation": "Amazon Route 53 is a scalable DNS service for routing domain traffic and managing domain names.",
+      "keywords": ["Route 53", "DNS", "routing", "AWS", "domains"]
+    },
+    {
+      "id": 25,
+      "topic": "Step Functions",
+      "question": "What does AWS Step Functions enable?",
+      "options": [
+        "Container orchestration",
+        "Serverless workflow orchestration",
+        "Data analytics",
+        "Network isolation"
+      ],
+      "response": "Serverless workflow orchestration",
+      "explanation": "AWS Step Functions coordinates serverless workflows by orchestrating AWS services and tasks.",
+      "keywords": ["Step Functions", "workflow", "serverless", "AWS", "orchestration"]
+    },
+    {
+      "id": 26,
+      "-topic": "WAF",
+      "question": "What is the primary purpose of AWS WAF?",
+      "options": [
+        "Encryption key management",
+        "Web application firewall",
+        "Cost optimization",
+        "Event-driven computing"
+      ],
+      "response": "Web application firewall",
+      "explanation": "AWS WAF (Web Application Firewall) protects web applications from common exploits and attacks.",
+      "keywords": ["WAF", "firewall", "security", "AWS", "web"]
+    },
+    {
+      "id": 27,
+      "topic": "Redshift",
+      "question": "What is Amazon Redshift primarily used for?",
+      "options": [
+        "Real-time messaging",
+        "Data warehousing",
+        "In-memory caching",
+        "Container management"
+      ],
+      "response": "Data warehousing",
+      "explanation": "Amazon Redshift is a managed data warehouse service for large-scale data analytics.",
+      "keywords": ["Redshift", "data warehouse", "analytics", "AWS", "SQL"]
+    },
+    {
+      "id": 28,
+      "topic": "CodeCommit",
+      "question": "What is AWS CodeCommit used for?",
+      "options": [
+        "Continuous deployment",
+        "Source code repository",
+        "Log analysis",
+        "Machine learning"
+      ],
+      "response": "Source code repository",
+      "explanation": "AWS CodeCommit is a managed Git repository service for storing and versioning source code.",
+      "keywords": ["CodeCommit", "Git", "repository", "AWS", "version control"]
+    },
+    {
+      "id": 29,
+      "topic": "EventBridge",
+      "question": "What is the primary role of Amazon EventBridge?",
+      "options": [
+        "Message queuing",
+        "Event bus for service integration",
+        "Infrastructure as Code",
+        "DNS management"
+      ],
+      "response": "Event bus for service integration",
+      "explanation": "Amazon EventBridge is an event bus that routes events between AWS services, applications, and third-party sources.",
+      "keywords": ["EventBridge", "events", "integration", "AWS", "bus"]
+    },
+    {
+      "id": 30,
+      "topic": "Cost Explorer",
+      "question": "What is the primary function of AWS Cost Explorer?",
+      "options": [
+        "Network monitoring",
+        "Cost and usage analysis",
+        "Security auditing",
+        "Workflow orchestration"
+      ],
+      "response": "Cost and usage analysis",
+      "explanation": "AWS Cost Explorer helps analyze and visualize AWS spending and usage patterns.",
+      "keywords": ["Cost Explorer", "billing", "cost management", "AWS", "usage"]
+    },
+    {
+      "id": 31,
+      "topic": "ECS",
+      "question": "What is the primary function of Amazon ECS?",
+      "options": [
+        "Serverless computing",
+        "Container orchestration",
+        "Object storage",
+        "DNS routing"
+      ],
+      "response": "Container orchestration",
+      "explanation": "Amazon ECS (Elastic Container Service) is a managed service for orchestrating Docker containers.",
+      "keywords": ["ECS", "containers", "orchestration", "AWS", "Docker"]
+    },
+    {
+      "id": 32,
+      "topic": "Fargate",
+      "question": "What is a key feature of AWS Fargate?",
+      "options": [
+        "Serverless container management",
+        "Managed SQL databases",
+        "Archival storage",
+        "DNS management"
+      ],
+      "response": "Serverless container management",
+      "explanation": "AWS Fargate allows running containers without managing the underlying EC2 instances.",
+      "keywords": ["Fargate", "serverless", "containers", "AWS", "ECS"]
+    },
+    {
+      "id": 33,
+      "topic": "EFS",
+      "question": "What type of storage does Amazon EFS provide?",
+      "options": [
+        "Block storage",
+        "Object storage",
+        "File storage",
+        "In-memory storage"
+      ],
+      "response": "File storage",
+      "explanation": "Amazon EFS (Elastic File System) provides shared file storage accessible via NFS for multiple EC2 instances.",
+      "keywords": ["EFS", "file storage", "NFS", "AWS", "shared"]
+    },
+    {
+      "id": 34,
+      "topic": "API Gateway",
+      "question": "What is the primary role of Amazon API Gateway?",
+      "options": [
+        "Workflow orchestration",
+        "Managing HTTP APIs and WebSockets",
+        "Data warehousing",
+        "Encryption key management"
+      ],
+      "response": "Managing HTTP APIs and WebSockets",
+      "explanation": "Amazon API Gateway enables creating, managing, and scaling HTTP APIs and WebSocket APIs.",
+      "keywords": ["API Gateway", "HTTP", "WebSockets", "AWS", "APIs"]
+    },
+    {
+      "id": 35,
+      "topic": "Cognito",
+      "question": "What does Amazon Cognito primarily provide?",
+      "options": [
+        "Temporary credentials",
+        "User authentication for apps",
+        "Network isolation",
+        "Log analysis"
+      ],
+      "response": "User authentication for apps",
+      "explanation": "Amazon Cognito provides authentication, authorization, and user management for web and mobile apps.",
+      "keywords": ["Cognito", "authentication", "users", "AWS", "identity"]
+    },
+    {
+      "id": 36,
+      "topic": "Secrets Manager",
+      "question": "What is the primary function of AWS Secrets Manager?",
+      "options": [
+        "Monitoring metrics",
+        "Managing sensitive data like API keys",
+        "Container orchestration",
+        "DNS routing"
+      ],
+      "response": "Managing sensitive data like API keys",
+      "explanation": "AWS Secrets Manager securely stores and manages sensitive data such as API keys and database credentials.",
+      "keywords": ["Secrets Manager", "security", "credentials", "AWS", "sensitive data"]
+    },
+    {
+      "id": 37,
+      "topic": "CodeBuild",
+      "question": "What is AWS CodeBuild used for?",
+      "options": [
+        "Deploying applications",
+        "Compiling and testing code",
+        "Managing Git repositories",
+        "Monitoring logs"
+      ],
+      "response": "Compiling and testing code",
+      "explanation": "AWS CodeBuild is a fully managed build service for compiling source code, running tests, and producing artifacts.",
+      "keywords": ["CodeBuild", "CI/CD", "build", "AWS", "testing"]
+    },
+    {
+      "id": 38,
+      "topic": "CodeDeploy",
+      "question": "What is the primary purpose of AWS CodeDeploy?",
+      "options": [
+        "Automating code deployments",
+        "Creating Git repositories",
+        "Running SQL queries",
+        "Managing encryption keys"
+      ],
+      "response": "Automating code deployments",
+      "explanation": "AWS CodeDeploy automates application deployments to EC2, Lambda, or on-premises servers.",
+      "keywords": ["CodeDeploy", "deployment", "CI/CD", "AWS", "automation"]
+    },
+    {
+      "id": 39,
+      "topic": "X-Ray",
+      "question": "What does AWS X-Ray primarily help with?",
+      "options": [
+        "Cost analysis",
+        "Distributed tracing",
+        "Event orchestration",
+        "Database management"
+      ],
+      "response": "Distributed tracing",
+      "explanation": "AWS X-Ray helps analyze and debug distributed applications by providing request tracing and performance insights.",
+      "keywords": ["X-Ray", "tracing", "debugging", "AWS", "distributed"]
+    },
+    {
+      "id": 40,
+      "topic": "Shield",
+      "question": "What is the primary function of AWS Shield?",
+      "options": [
+        "Web application firewall",
+        "DDoS protection",
+        "User authentication",
+        "Data encryption"
+      ],
+      "response": "DDoS protection",
+      "explanation": "AWS Shield provides protection against Distributed Denial of Service (DDoS) attacks for AWS resources.",
+      "keywords": ["Shield", "DDoS", "security", "AWS", "protection"]
+    },
+    {
+      "id": 41,
+      "topic": "Glue",
+      "question": "What is Amazon Glue primarily used for?",
+      "options": [
+        "ETL and data cataloging",
+        "Machine learning",
+        "DNS routing",
+        "Workflow orchestration"
+      ],
+      "response": "ETL and data cataloging",
+      "explanation": "Amazon Glue is a serverless ETL service that extracts, transforms, and loads data, also providing a data catalog.",
+      "keywords": ["Glue", "ETL", "data catalog", "AWS", "analytics"]
+    },
+    {
+      "id": 42,
+      "topic": "Lex",
+      "question": "What is Amazon Lex used for?",
+      "options": [
+        "Building conversational chatbots",
+        "Running SQL queries",
+        "Managing containers",
+        "Monitoring costs"
+      ],
+      "response": "Building conversational chatbots",
+      "explanation": "Amazon Lex enables building conversational interfaces and chatbots using natural language processing.",
+      "keywords": ["Lex", "chatbots", "NLP", "AWS", "conversational"]
+    },
+    {
+      "id": 43,
+      "topic": "Rekognition",
+      "question": "What is the primary function of Amazon Rekognition?",
+      "options": [
+        "Text translation",
+        "Image and video analysis",
+        "Workflow orchestration",
+        "Cost management"
+      ],
+      "response": "Image and video analysis",
+      "explanation": "Amazon Rekognition provides AI-powered image and video analysis for tasks like object detection and facial recognition.",
+      "keywords": ["Rekognition", "image analysis", "AI", "AWS", "video"]
+    },
+    {
+      "id": 44,
+      "topic": "Comprehend",
+      "question": "What does Amazon Comprehend primarily do?",
+      "options": [
+        "Text analysis and NLP",
+        "Data warehousing",
+        "Container orchestration",
+        "DNS routing"
+      ],
+      "response": "Text analysis and NLP",
+      "explanation": "Amazon Comprehend uses natural language processing to analyze text for sentiment, entities, and key phrases.",
+      "keywords": ["Comprehend", "NLP", "text analysis", "AWS", "AI"]
+    },
+    {
+      "id": 45,
+      "topic": "Translate",
+      "question": "What is the primary function of Amazon Translate?",
+      "options": [
+        "Real-time language translation",
+        "Image recognition",
+        "Event orchestration",
+        "Log monitoring"
+      ],
+      "response": "Real-time language translation",
+      "explanation": "Amazon Translate provides real-time and batch language translation for text using machine learning.",
+      "keywords": ["Translate", "translation", "language", "AWS", "AI"]
+    },
+    {
+      "id": 46,
+      "topic": "Budgets",
+      "question": "What is the purpose of AWS Budgets?",
+      "options": [
+        "Monitoring API activity",
+        "Setting cost and usage limits",
+        "Managing containers",
+        "Running SQL queries"
+      ],
+      "response": "Setting cost and usage limits",
+      "explanation": "AWS Budgets allows users to set custom cost and usage limits and receive alerts when thresholds are exceeded.",
+      "keywords": ["Budgets", "cost management", "billing", "AWS", "alerts"]
+    },
+    {
+      "id": 47,
+      "topic": "Auto Scaling",
+      "question": "What does AWS Auto Scaling primarily enable?",
+      "options": [
+        "Automatic scaling of resources",
+        "Data encryption",
+        "Event routing",
+        "Code compilation"
+      ],
+      "response": "Automatic scaling of resources",
+      "explanation": "AWS Auto Scaling automatically adjusts the number of EC2 instances or other resources based on demand.",
+      "keywords": ["Auto Scaling", "scaling", "EC2", "AWS", "resources"]
+    },
+    {
+      "id": 48,
+      "topic": "Config",
+      "question": "What is the primary function of AWS Config?",
+      "options": [
+        "Monitoring resource configurations",
+        "Running machine learning models",
+        "Managing DNS",
+        "Orchestrating workflows"
+      ],
+      "response": "Monitoring resource configurations",
+      "explanation": "AWS Config tracks and monitors the configuration of AWS resources for compliance and auditing.",
+      "keywords": ["Config", "compliance", "resources", "AWS", "monitoring"]
+    },
+    {
+      "id": 49,
+      "topic": "ECR",
+      "question": "What is AWS ECR used for?",
+      "options": [
+        "Container image storage",
+        "Code deployment",
+        "Log analysis",
+        "Cost monitoring"
+      ],
+      "response": "Container image storage",
+      "explanation": "AWS ECR (Elastic Container Registry) is a managed Docker container image registry for storing and managing images.",
+      "keywords": ["ECR", "containers", "registry", "AWS", "Docker"]
+    },
+    {
+      "id": 50,
+      "topic": "CDK",
+      "question": "What does the AWS CDK enable?",
+      "options": [
+        "Code-first infrastructure definition",
+        "Real-time data streaming",
+        "User authentication",
+        "Image analysis"
+      ],
+      "response": "Code-first infrastructure definition",
+      "explanation": "The AWS CDK (Cloud Development Kit) allows defining cloud infrastructure using programming languages like TypeScript or Python.",
+      "keywords": ["CDK", "infrastructure", "code", "AWS", "IaC"]
+    },
+    {
+      "id": 51,
+      "topic": "GuardDuty",
+      "question": "What is the primary function of AWS GuardDuty?",
+      "options": [
+        "Infrastructure provisioning",
+        "Threat detection and monitoring",
+        "Workflow orchestration",
+        "DNS management"
+      ],
+      "response": "Threat detection and monitoring",
+      "explanation": "AWS GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior.",
+      "keywords": ["GuardDuty", "security", "threat detection", "AWS", "monitoring"]
+    },
+    {
+      "id": 52,
+      "topic": "Inspector",
+      "question": "What does AWS Inspector primarily assess?",
+      "options": [
+        "Network performance",
+        "Application security and compliance",
+        "Cost usage",
+        "Event routing"
+      ],
+      "response": "Application security and compliance",
+      "explanation": "AWS Inspector evaluates applications for security vulnerabilities and compliance issues.",
+      "keywords": ["Inspector", "security", "compliance", "AWS", "vulnerabilities"]
+    },
+    {
+      "id": 53,
+      "topic": "Parameter Store",
+      "question": "What is the primary purpose of AWS Systems Manager Parameter Store?",
+      "options": [
+        "Storing configuration data and secrets",
+        "Running SQL queries",
+        "Managing containers",
+        "Monitoring logs"
+      ],
+      "response": "Storing configuration data and secrets",
+      "explanation": "AWS Systems Manager Parameter Store securely stores configuration data and secrets, such as passwords or API keys.",
+      "keywords": ["Parameter Store", "secrets", "configuration", "AWS", "Systems Manager"]
+    },
+    {
+      "id": 54,
+      "topic": "ALB",
+      "question": "What is the primary role of an Application Load Balancer (ALB) in AWS?",
+      "options": [
+        "Distributing HTTP/HTTPS traffic",
+        "Managing DNS records",
+        "Encrypting data",
+        "Running serverless functions"
+      ],
+      "response": "Distributing HTTP/HTTPS traffic",
+      "explanation": "An Application Load Balancer (ALB) distributes incoming HTTP/HTTPS traffic across multiple targets, such as EC2 instances.",
+      "keywords": ["ALB", "load balancer", "HTTP", "AWS", "traffic"]
+    },
+    {
+      "id": 55,
+      "topic": "NLB",
+      "question": "What type of traffic is an AWS Network Load Balancer (NLB) optimized for?",
+      "options": [
+        "HTTP/HTTPS traffic",
+        "TCP/UDP traffic",
+        "DNS queries",
+        "File storage access"
+      ],
+      "response": "TCP/UDP traffic",
+      "explanation": "AWS Network Load Balancer (NLB) is optimized for low-latency TCP/UDP traffic, ideal for high-performance applications.",
+      "keywords": ["NLB", "load balancer", "TCP", "UDP", "AWS"]
+    },
+    {
+      "id": 56,
+      "topic": "PrivateLink",
+      "question": "What does AWS PrivateLink enable?",
+      "options": [
+        "Public internet access",
+        "Secure service access over private networks",
+        "Event-driven computing",
+        "Cost analysis"
+      ],
+      "response": "Secure service access over private networks",
+      "explanation": "AWS PrivateLink provides secure, private connectivity between VPCs and AWS services or third-party services.",
+      "keywords": ["PrivateLink", "networking", "security", "AWS", "VPC"]
+    },
+    {
+      "id": 57,
+      "topic": "Organizations",
+      "question": "What is the primary function of AWS Organizations?",
+      "options": [
+        "Managing multiple AWS accounts",
+        "Running machine learning models",
+        "Monitoring network traffic",
+        "Orchestrating workflows"
+      ],
+      "response": "Managing multiple AWS accounts",
+      "explanation": "AWS Organizations enables centralized management and governance of multiple AWS accounts.",
+      "keywords": ["Organizations", "accounts", "governance", "AWS", "management"]
+    },
+    {
+      "id": 58,
+      "topic": "Polly",
+      "question": "What is Amazon Polly used for?",
+      "options": [
+        "Text-to-speech conversion",
+        "Image analysis",
+        "Data warehousing",
+        "Container orchestration"
+      ],
+      "response": "Text-to-speech conversion",
+      "explanation": "Amazon Polly is a text-to-speech service that generates lifelike speech from text using advanced deep learning.",
+      "keywords": ["Polly", "text-to-speech", "AI", "AWS", "speech"]
+    },
+    {
+      "id": 59,
+      "topic": "Savings Plans",
+      "question": "What is the primary benefit of AWS Savings Plans?",
+      "options": [
+        "Real-time monitoring",
+        "Cost optimization for compute usage",
+        "Event routing",
+        "Database management"
+      ],
+      "response": "Cost optimization for compute usage",
+      "explanation": "AWS Savings Plans offer discounted rates for committed compute usage, optimizing costs for services like EC2 and Lambda.",
+      "keywords": ["Savings Plans", "cost optimization", "compute", "AWS", "billing"]
+    },
+    {
+      "id": 60,
+      "topic": "VPC Peering",
+      "question": "What does VPC Peering in AWS enable?",
+      "options": [
+        "Public internet routing",
+        "Private connectivity between VPCs",
+        "Log analysis",
+        "Code deployment"
+      ],
+      "response": "Private connectivity between VPCs",
+      "explanation": "VPC Peering allows private communication between Virtual Private Clouds (VPCs) without using public internet.",
+      "keywords": ["VPC Peering", "networking", "VPC", "AWS", "connectivity"]
+    },
+    {
+      "id": 61,
+      "topic": "CloudFormation",
+      "question": "What is a key feature of AWS CloudFormation templates?",
+      "options": [
+        "Real-time data processing",
+        "Declarative infrastructure provisioning",
+        "Image recognition",
+        "DNS routing"
+      ],
+      "response": "Declarative infrastructure provisioning",
+      "explanation": "AWS CloudFormation templates allow users to define AWS resources declaratively in JSON or YAML for automated provisioning.",
+      "keywords": ["CloudFormation", "IaC", "templates", "AWS", "provisioning"]
+    },
+    {
+      "id": 62,
+      "topic": "DynamoDB",
+      "question": "What type of database is Amazon DynamoDB?",
+      "options": [
+        "Relational database",
+        "NoSQL key-value store",
+        "In-memory cache",
+        "Data warehouse"
+      ],
+      "response": "NoSQL key-value store",
+      "explanation": "Amazon DynamoDB is a fully managed NoSQL key-value and document database designed for high performance and scalability.",
+      "keywords": ["DynamoDB", "NoSQL", "key-value", "AWS", "database"]
+    },
+    {
+      "id": 63,
+      "topic": "SNS",
+      "question": "What type of messaging does Amazon SNS support?",
+      "options": [
+        "Queue-based messaging",
+        "Publish/subscribe messaging",
+        "Direct API calls",
+        "File-based messaging"
+      ],
+      "response": "Publish/subscribe messaging",
+      "explanation": "Amazon SNS (Simple Notification Service) supports a pub/sub messaging model, enabling message delivery to multiple subscribers.",
+      "keywords": ["SNS", "pub/sub", "messaging", "AWS", "notifications"]
+    },
+    {
+      "id": 64,
+      "topic": "SQS",
+      "question": "What is a key feature of Amazon SQS?",
+      "options": [
+        "Content delivery",
+        "Message queuing for decoupling",
+        "DNS management",
+        "Data encryption"
+      ],
+      "response": "Message queuing for decoupling",
+      "explanation": "Amazon SQS (Simple Queue Service) provides message queuing to decouple and scale microservices and distributed systems.",
+      "keywords": ["SQS", "queue", "messaging", "AWS", "decoupling"]
+    },
+    {
+      "id": 65,
+      "topic": "Athena",
+      "question": "What type of data does Amazon Athena query?",
+      "options": [
+        "Data in RDS",
+        "Data in S3",
+        "Data in DynamoDB",
+        "Data in Redshift"
+      ],
+      "response": "Data in S3",
+      "explanation": "Amazon Athena is a serverless query service that allows running SQL queries on data stored in Amazon S3.",
+      "keywords": ["Athena", "SQL", "S3", "AWS", "query"]
+    },
+    {
+      "id": 66,
+      "topic": "SageMaker",
+      "question": "What does Amazon SageMaker support in addition to model training?",
+      "options": [
+        "DNS routing",
+        "Model deployment and management",
+        "File storage",
+        "Event orchestration"
+      ],
+      "response": "Model deployment and management",
+      "explanation": "Amazon SageMaker supports building, training, deploying, and managing machine learning models at scale.",
+      "keywords": ["SageMaker", "machine learning", "deployment", "AWS", "models"]
+    },
+    {
+      "id": 67,
+      "topic": "CloudWatch Logs",
+      "question": "What is the primary use of Amazon CloudWatch Logs?",
+      "options": [
+        "Storing application logs",
+        "Running SQL queries",
+        "Managing containers",
+        "Cost optimization"
+      ],
+      "response": "Storing application logs",
+      "explanation": "Amazon CloudWatch Logs is used to collect, store, and analyze log data from AWS resources and applications.",
+      "keywords": ["CloudWatch", "logs", "monitoring", "AWS", "observability"]
+    },
+    {
+      "id": 68,
+      "topic": "Route Tables",
+      "question": "What do Route Tables in an AWS VPC control?",
+      "options": [
+        "User authentication",
+        "Network traffic routing",
+        "Cost allocation",
+        "Log storage"
+      ],
+      "response": "Network traffic routing",
+      "explanation": "Route Tables in an AWS VPC define rules for directing network traffic between subnets and external networks.",
+      "keywords": ["Route Tables", "VPC", "networking", "AWS", "routing"]
+    },
+    {
+      "id": 69,
+      "topic": "NAT Gateway",
+      "question": "What is the purpose of an AWS NAT Gateway?",
+      "options": [
+        "Public internet access for private subnets",
+        "DNS resolution",
+        "Container orchestration",
+        "Data encryption"
+      ],
+      "response": "Public internet access for private subnets",
+      "explanation": "An AWS NAT Gateway allows instances in private subnets to access the internet while preventing inbound connections.",
+      "keywords": ["NAT Gateway", "VPC", "networking", "AWS", "internet"]
+    },
+    {
+      "id": 70,
+      "topic": "Billing Dashboard",
+      "question": "What is the primary function of the AWS Billing Dashboard?",
+      "options": [
+        "Monitoring API activity",
+        "Tracking and managing AWS costs",
+        "Running machine learning models",
+        "Managing DNS records"
+      ],
+      "response": "Tracking and managing AWS costs",
+      "explanation": "The AWS Billing Dashboard provides tools to track, manage, and analyze AWS service usage and costs.",
+      "keywords": ["Billing Dashboard", "cost management", "billing", "AWS", "usage"]
+    },
+    {
+      "id": 71,
+      "topic": "Subnets",
+      "question": "What is the primary purpose of subnets in an AWS VPC?",
+      "options": [
+        "Managing user permissions",
+        "Segmenting network traffic",
+        "Storing application logs",
+        "Running serverless functions"
+      ],
+      "response": "Segmenting network traffic",
+      "explanation": "Subnets in an AWS VPC divide the network into smaller segments to control traffic flow and isolate resources.",
+      "keywords": ["Subnets", "VPC", "networking", "AWS", "segmentation"]
+    },
+    {
+      "id": 72,
+      "topic": "Internet Gateway",
+      "question": "What does an AWS Internet Gateway enable?",
+      "options": [
+        "Private connectivity between VPCs",
+        "Public internet access for VPC resources",
+        "Encryption key management",
+        "Event-driven computing"
+      ],
+      "response": "Public internet access for VPC resources",
+      "explanation": "An AWS Internet Gateway allows VPC resources in public subnets to communicate with the internet.",
+      "keywords": ["Internet Gateway", "VPC", "networking", "AWS", "internet"]
+    },
+    {
+      "id": 73,
+      "topic": "SCPs",
+      "question": "What is the primary function of Service Control Policies (SCPs) in AWS Organizations?",
+      "options": [
+        "Managing DNS records",
+        "Setting permission boundaries for accounts",
+        "Running SQL queries",
+        "Monitoring application performance"
+      ],
+      "response": "Setting permission boundaries for accounts",
+      "explanation": "Service Control Policies (SCPs) in AWS Organizations define permission boundaries for member accounts.",
+      "keywords": ["SCPs", "Organizations", "permissions", "AWS", "governance"]
+    },
+    {
+      "id": 74,
+      "topic": "Elastic Beanstalk",
+      "question": "What type of applications is AWS Elastic Beanstalk best suited for?",
+      "options": [
+        "Machine learning models",
+        "Web applications",
+        "Data warehousing",
+        "Container orchestration"
+      ],
+      "response": "Web applications",
+      "explanation": "AWS Elastic Beanstalk is a PaaS solution designed for deploying and managing web applications with minimal configuration.",
+      "keywords": ["Elastic Beanstalk", "web applications", "PaaS", "AWS", "deployment"]
+    },
+    {
+      "id": 75,
+      "topic": "CloudTrail",
+      "question": "What type of activity does AWS CloudTrail primarily record?",
+      "options": [
+        "Network traffic",
+        "API calls and account activity",
+        "Application performance",
+        "Cost usage"
+      ],
+      "response": "API calls and account activity",
+      "explanation": "AWS CloudTrail logs API calls and account activity for auditing, compliance, and troubleshooting.",
+      "keywords": ["CloudTrail", "audit", "API", "AWS", "activity"]
+    },
+    {
+      "id": 76,
+      "topic": "EventBridge",
+      "question": "What is a key feature of Amazon EventBridge?",
+      "options": [
+        "Running SQL queries",
+        "Routing events between services",
+        "Managing encryption keys",
+        "Deploying containers"
+      ],
+      "response": "Routing events between services",
+      "explanation": "Amazon EventBridge is an event bus that routes events between AWS services, applications, and third-party sources.",
+      "keywords": ["EventBridge", "events", "routing", "AWS", "integration"]
+    },
+    {
+      "id": 77,
+      "topic": "KMS",
+      "question": "What does AWS KMS support in addition to key creation?",
+      "options": [
+        "DNS management",
+        "Key rotation and management",
+        "Container orchestration",
+        "Log analysis"
+      ],
+      "response": "Key rotation and management",
+      "explanation": "AWS KMS (Key Management Service) supports creating, rotating, and managing cryptographic keys for data encryption.",
+      "keywords": ["KMS", "encryption", "key management", "AWS", "security"]
+    },
+    {
+      "id": 78,
+      "topic": "Redshift",
+      "question": "What is a key characteristic of Amazon Redshift?",
+      "options": [
+        "Real-time messaging",
+        "Columnar storage for analytics",
+        "In-memory caching",
+        "Serverless computing"
+      ],
+      "response": "Columnar storage for analytics",
+      "explanation": "Amazon Redshift uses columnar storage to optimize large-scale data analytics and querying.",
+      "keywords": ["Redshift", "data warehouse", "columnar", "AWS", "analytics"]
+    },
+    {
+      "id": 79,
+      "topic": "CodeCommit",
+      "question": "What is a key feature of AWS CodeCommit?",
+      "options": [
+        "Automated code deployment",
+        "Version control with Git",
+        "Running SQL queries",
+        "Cost monitoring"
+      ],
+      "response": "Version control with Git",
+      "explanation": "AWS CodeCommit is a managed Git repository service for secure version control of source code.",
+      "keywords": ["CodeCommit", "Git", "version control", "AWS", "repository"]
+    },
+    {
+      "id": 80,
+      "topic": "X-Ray",
+      "question": "What is a primary use case for AWS X-Ray?",
+      "options": [
+        "Cost optimization",
+        "Debugging distributed applications",
+        "Managing DNS records",
+        "Data encryption"
+      ],
+      "response": "Debugging distributed applications",
+      "explanation": "AWS X-Ray provides tracing and performance insights for debugging and analyzing distributed applications.",
+      "keywords": ["X-Ray", "tracing", "debugging", "AWS", "distributed"]
+    },
+    {
+      "id": 81,
+      "topic": "Lambda with Java",
+      "question": "What is a common use case for AWS Lambda when developing with Java?",
+      "options": [
+        "Running SQL queries directly",
+        "Executing serverless backend logic",
+        "Managing VPC configurations",
+        "Storing large files"
+      ],
+      "response": "Executing serverless backend logic",
+      "explanation": "AWS Lambda with Java allows developers to write serverless functions for backend logic, such as handling API requests or processing events, without managing servers.",
+      "keywords": ["Lambda", "Java", "serverless", "AWS", "backend"]
+    },
+    {
+      "id": 82,
+      "topic": "S3 with Angular",
+      "question": "How can an Angular application interact with Amazon S3?",
+      "options": [
+        "Directly querying S3 buckets",
+        "Using AWS SDK via pre-signed URLs",
+        "Running S3 as a database",
+        "Deploying Angular code to S3"
+      ],
+      "response": "Using AWS SDK via pre-signed URLs",
+      "explanation": "Angular applications can interact with S3 using the AWS SDK for JavaScript to generate pre-signed URLs for secure file uploads or downloads.",
+      "keywords": ["S3", "Angular", "pre-signed URLs", "AWS", "SDK"]
+    },
+    {
+      "id": 83,
+      "topic": "Cognito with iOS",
+      "question": "What is the primary role of Amazon Cognito in an iOS application?",
+      "options": [
+        "Managing container orchestration",
+        "Providing user authentication and authorization",
+        "Running serverless functions",
+        "Analyzing log data"
+      ],
+      "response": "Providing user authentication and authorization",
+      "explanation": "Amazon Cognito integrates with iOS apps to handle user authentication, authorization, and user management using AWS SDK for Swift or Objective-C.",
+      "keywords": ["Cognito", "iOS", "authentication", "AWS", "identity"]
+    },
+    {
+      "id": 84,
+      "topic": "API Gateway with Java",
+      "question": "How does AWS API Gateway typically integrate with Java applications?",
+      "options": [
+        "As a database service",
+        "As a front-end for Lambda functions",
+        "As a file storage system",
+        "As a DNS manager"
+      ],
+      "response": "As a front-end for Lambda functions",
+      "explanation": "AWS API Gateway serves as a front-end for Java-based Lambda functions, enabling HTTP APIs to trigger serverless backend logic.",
+      "keywords": ["API Gateway", "Java", "Lambda", "AWS", "HTTP"]
+    },
+    {
+      "id": 85,
+      "topic": "DynamoDB with Angular",
+      "question": "What is a common way to access Amazon DynamoDB from an Angular application?",
+      "options": [
+        "Directly accessing DynamoDB tables",
+        "Using AWS Amplify or SDK for JavaScript",
+        "Deploying Angular to DynamoDB",
+        "Using DynamoDB as a CDN"
+      ],
+      "response": "Using AWS Amplify or SDK for JavaScript",
+      "explanation": "Angular applications can access DynamoDB using AWS Amplify or the AWS SDK for JavaScript to perform CRUD operations via APIs.",
+      "keywords": ["DynamoDB", "Angular", "Amplify", "AWS", "NoSQL"]
+    },
+    {
+      "id": 86,
+      "topic": "SNS with iOS",
+      "question": "How can Amazon SNS be used in an iOS application?",
+      "options": [
+        "For storing user data",
+        "For sending push notifications",
+        "For running SQL queries",
+        "For managing VPCs"
+      ],
+      "response": "For sending push notifications",
+      "explanation": "Amazon SNS (Simple Notification Service) integrates with iOS apps to send push notifications to users via Apple Push Notification service (APNs).",
+      "keywords": ["SNS", "iOS", "push notifications", "AWS", "messaging"]
+    },
+    {
+      "id": 87,
+      "topic": "CloudFormation with Java",
+      "question": "How can Java developers leverage AWS CloudFormation?",
+      "options": [
+        "To write serverless functions",
+        "To define infrastructure as code",
+        "To manage user authentication",
+        "To analyze application logs"
+      ],
+      "response": "To define infrastructure as code",
+      "explanation": "Java developers can use AWS CloudFormation to define and provision AWS resources like Lambda or EC2 using JSON/YAML templates, often with the AWS SDK.",
+      "keywords": ["CloudFormation", "Java", "IaC", "AWS", "templates"]
+    },
+    {
+      "id": 88,
+      "topic": "CloudWatch with Angular",
+      "question": "How can an Angular application utilize Amazon CloudWatch?",
+      "options": [
+        "To store application files",
+        "To monitor application metrics and logs",
+        "To manage DNS records",
+        "To run serverless workflows"
+      ],
+      "response": "To monitor application metrics and logs",
+      "explanation": "Angular apps can integrate with CloudWatch using AWS SDK or Amplify to send custom metrics or logs for monitoring application performance.",
+      "keywords": ["CloudWatch", "Angular", "monitoring", "AWS", "logs"]
+    },
+    {
+      "id": 89,
+      "topic": "SQS with Java",
+      "question": "What is a typical use case for Amazon SQS in a Java application?",
+      "options": [
+        "Serving web content",
+        "Decoupling microservices with message queues",
+        "Managing user authentication",
+        "Running data analytics"
+      ],
+      "response": "Decoupling microservices with message queues",
+      "explanation": "Amazon SQS is used in Java applications to decouple microservices by sending and receiving messages via queues, using the AWS SDK for Java.",
+      "keywords": ["SQS", "Java", "message queue", "AWS", "microservices"]
+    },
+    {
+      "id": 90,
+      "topic": "CodePipeline with iOS",
+      "question": "How can AWS CodePipeline benefit iOS app development?",
+      "options": [
+        "By storing app assets",
+        "By automating build and deployment",
+        "By managing user permissions",
+        "By running machine learning models"
+      ],
+      "response": "By automating build and deployment",
+      "explanation": "AWS CodePipeline automates the CI/CD pipeline for iOS apps, integrating with tools like Xcode and Fastlane for building and deploying to the App Store.",
+      "keywords": ["CodePipeline", "iOS", "CI/CD", "AWS", "automation"]
+    },
+    {
+      "id": 91,
+      "topic": "EC2 with Java",
+      "question": "How can Java developers utilize Amazon EC2 in their applications?",
+      "options": [
+        "To run serverless functions",
+        "To deploy and manage virtual servers",
+        "To store large datasets",
+        "To manage DNS records"
+      ],
+      "response": "To deploy and manage virtual servers",
+      "explanation": "Java developers can deploy Java applications on Amazon EC2 virtual servers, managing them with the AWS SDK for Java or tools like Spring Boot.",
+      "keywords": ["EC2", "Java", "virtual servers", "AWS", "deployment"]
+    },
+    {
+      "id": 92,
+      "topic": "CloudFront with Angular",
+      "question": "What is a common use case for Amazon CloudFront in an Angular application?",
+      "options": [
+        "Running backend logic",
+        "Serving static assets with low latency",
+        "Managing user authentication",
+        "Executing SQL queries"
+      ],
+      "response": "Serving static assets with low latency",
+      "explanation": "Amazon CloudFront can serve Angular app static assets (HTML, CSS, JS) from S3 or other origins, improving performance via its CDN.",
+      "keywords": ["CloudFront", "Angular", "CDN", "AWS", "static assets"]
+    },
+    {
+      "id": 93,
+      "topic": "RDS with iOS",
+      "question": "How can an iOS application interact with Amazon RDS?",
+      "options": [
+        "Directly querying RDS tables",
+        "Via APIs backed by Lambda or EC2",
+        "Using RDS as a file storage",
+        "Deploying iOS code to RDS"
+      ],
+      "response": "Via APIs backed by Lambda or EC2",
+      "explanation": "iOS apps interact with Amazon RDS through APIs (e.g., via API Gateway and Lambda or EC2), using AWS SDK for Swift to handle requests.",
+      "keywords": ["RDS", "iOS", "APIs", "AWS", "database"]
+    },
+    {
+      "id": 94,
+      "topic": "IAM with Java",
+      "question": "What is a key use of AWS IAM in a Java application?",
+      "options": [
+        "Managing database schemas",
+        "Controlling access to AWS resources",
+        "Serving web content",
+        "Analyzing logs"
+      ],
+      "response": "Controlling access to AWS resources",
+      "explanation": "AWS IAM is used in Java applications to manage permissions and roles, ensuring secure access to AWS resources via the AWS SDK for Java.",
+      "keywords": ["IAM", "Java", "permissions", "AWS", "security"]
+    },
+    {
+      "id": 95,
+      "topic": "Step Functions with Angular",
+      "question": "How can AWS Step Functions benefit an Angular application?",
+      "options": [
+        "By storing static files",
+        "By orchestrating backend workflows",
+        "By managing DNS records",
+        "By running SQL queries"
+      ],
+      "response": "By orchestrating backend workflows",
+      "explanation": "AWS Step Functions can orchestrate complex backend workflows for Angular apps, integrating with Lambda and other services via API calls.",
+      "keywords": ["Step Functions", "Angular", "workflows", "AWS", "orchestration"]
+    },
+    {
+      "id": 96,
+      "topic": "KMS with iOS",
+      "question": "What role does AWS KMS play in an iOS application?",
+      "options": [
+        "Running serverless functions",
+        "Encrypting sensitive data",
+        "Managing network traffic",
+        "Deploying app code"
+      ],
+      "response": "Encrypting sensitive data",
+      "explanation": "AWS KMS (Key Management Service) is used in iOS apps to encrypt sensitive data, such as user credentials, with keys managed via the AWS SDK.",
+      "keywords": ["KMS", "iOS", "encryption", "AWS", "security"]
+    },
+    {
+      "id": 97,
+      "topic": "CodeBuild with Java",
+      "question": "What is a primary use of AWS CodeBuild for Java developers?",
+      "options": [
+        "Storing application logs",
+        "Compiling and testing Java code",
+        "Managing user authentication",
+        "Serving static content"
+      ],
+      "response": "Compiling and testing Java code",
+      "explanation": "AWS CodeBuild compiles and tests Java code in a managed build environment, integrating with tools like Maven or Gradle.",
+      "keywords": ["CodeBuild", "Java", "CI/CD", "AWS", "build"]
+    },
+    {
+      "id": 98,
+      "topic": "S3 with iOS",
+      "question": "How can an iOS application upload files to Amazon S3?",
+      "options": [
+        "Using pre-signed URLs with AWS SDK",
+        "Directly accessing S3 buckets",
+        "Running S3 as a database",
+        "Deploying iOS code to S3"
+      ],
+      "response": "Using pre-signed URLs with AWS SDK",
+      "explanation": "iOS apps can upload files to S3 using pre-signed URLs generated by the AWS SDK for Swift, ensuring secure and controlled access.",
+      "keywords": ["S3", "iOS", "pre-signed URLs", "AWS", "upload"]
+    },
+    {
+      "id": 99,
+      "topic": "EventBridge with Java",
+      "question": "How can AWS EventBridge be used in a Java application?",
+      "options": [
+        "To store application data",
+        "To trigger Lambda functions on events",
+        "To manage DNS records",
+        "To run SQL queries"
+      ],
+      "response": "To trigger Lambda functions on events",
+      "explanation": "AWS EventBridge in Java applications triggers Lambda functions or other services based on events, using the AWS SDK for Java.",
+      "keywords": ["EventBridge", "Java", "events", "AWS", "Lambda"]
+    },
+    {
+      "id": 100,
+      "topic": "API Gateway with Angular",
+      "question": "What is a key benefit of using AWS API Gateway with Angular?",
+      "options": [
+        "Storing static assets",
+        "Providing secure APIs for backend services",
+        "Running machine learning models",
+        "Managing VPC configurations"
+      ],
+      "response": "Providing secure APIs for backend services",
+      "explanation": "AWS API Gateway provides secure, scalable APIs for Angular apps to interact with backend services like Lambda or EC2.",
+      "keywords": ["API Gateway", "Angular", "APIs", "AWS", "backend"]
+    },
+    {
+      "id": 101,
+      "topic": "CloudWatch with Java",
+      "question": "How can Java developers use Amazon CloudWatch?",
+      "options": [
+        "To encrypt sensitive data",
+        "To monitor application metrics and logs",
+        "To manage DNS records",
+        "To store files"
+      ],
+      "response": "To monitor application metrics and logs",
+      "explanation": "Java developers can use Amazon CloudWatch to monitor application metrics and logs, integrating via the AWS SDK for Java.",
+      "keywords": ["CloudWatch", "Java", "monitoring", "AWS", "logs"]
     },
     {
       "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "topic": "Cognito with Angular",
+      "question": "What is a common use of Amazon Cognito in an Angular application?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Running serverless functions",
+        "Managing user sign-in and sign-up",
+        "Orchestrating workflows",
+        "Analyzing data"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Managing user sign-in and sign-up",
+      "explanation": "Amazon Cognito integrates with Angular apps via AWS Amplify to handle user authentication, including sign-in and sign-up flows.",
+      "keywords": ["Cognito", "Angular", "authentication", "AWS", "Amplify"]
+    },
+    {
+      "id": 103,
+      "topic": "CodeDeploy with Java",
+      "question": "What does AWS CodeDeploy enable for Java applications?",
+      "options": [
+        "Running SQL queries",
+        "Automating application deployments",
+        "Managing network traffic",
+        "Storing static files"
+      ],
+      "response": "Automating application deployments",
+      "explanation": "AWS CodeDeploy automates the deployment of Java applications to EC2, Lambda, or on-premises servers, ensuring consistent updates.",
+      "keywords": ["CodeDeploy", "Java", "deployment", "AWS", "CI/CD"]
+    },
+    {
+      "id": 104,
+      "topic": "SNS with Angular",
+      "question": "How can Amazon SNS be integrated with an Angular application?",
+      "options": [
+        "To store application data",
+        "To send notifications to users",
+        "To manage VPC configurations",
+        "To run machine learning models"
+      ],
+      "response": "To send notifications to users",
+      "explanation": "Amazon SNS can send notifications (e.g., email or SMS) to Angular app users by integrating with backend services via AWS SDK or Amplify.",
+      "keywords": ["SNS", "Angular", "notifications", "AWS", "messaging"]
+    },
+    {
+      "id": 105,
+      "topic": "DynamoDB with iOS",
+      "question": "How can an iOS application access Amazon DynamoDB?",
+      "options": [
+        "Directly querying DynamoDB tables",
+        "Via APIs using AWS SDK for Swift",
+        "Deploying iOS code to DynamoDB",
+        "Using DynamoDB as a file store"
+      ],
+      "response": "Via APIs using AWS SDK for Swift",
+      "explanation": "iOS apps access Amazon DynamoDB through APIs, using the AWS SDK for Swift to perform operations like querying or updating data.",
+      "keywords": ["DynamoDB", "iOS", "APIs", "AWS", "NoSQL"]
+    },
+    {
+      "id": 106,
+      "topic": "Lambda with Spring Boot",
+      "question": "How can Spring Boot be used with AWS Lambda?",
+      "options": [
+        "As a database service",
+        "To build serverless REST APIs",
+        "To manage VPC configurations",
+        "To store static files"
+      ],
+      "response": "To build serverless REST APIs",
+      "explanation": "Spring Boot can be used with AWS Lambda to create serverless REST APIs, leveraging the Spring Cloud Function framework and AWS SDK for Java.",
+      "keywords": ["Lambda", "Spring Boot", "serverless", "AWS", "REST APIs"]
+    },
+    {
+      "id": 107,
+      "topic": "S3 with Android",
+      "question": "How can an Android application upload files to Amazon S3?",
+      "options": [
+        "Directly accessing S3 buckets",
+        "Using pre-signed URLs with AWS SDK",
+        "Running S3 as a database",
+        "Deploying Android code to S3"
+      ],
+      "response": "Using pre-signed URLs with AWS SDK",
+      "explanation": "Android apps can upload files to Amazon S3 using pre-signed URLs generated by the AWS SDK for Java or Kotlin, ensuring secure access.",
+      "keywords": ["S3", "Android", "pre-signed URLs", "AWS", "upload"]
+    },
+    {
+      "id": 108,
+      "topic": "Cognito with Angular",
+      "question": "What is a key benefit of using Amazon Cognito with an Angular application?",
+      "options": [
+        "Running serverless workflows",
+        "Managing user authentication",
+        "Orchestrating backend services",
+        "Analyzing log data"
+      ],
+      "response": "Managing user authentication",
+      "explanation": "Amazon Cognito integrates with Angular via AWS Amplify to manage user authentication, including sign-up, sign-in, and token management.",
+      "keywords": ["Cognito", "Angular", "authentication", "AWS", "Amplify"]
+    },
+    {
+      "id": 109,
+      "topic": "DynamoDB with Spring Boot",
+      "question": "How can Spring Boot applications interact with Amazon DynamoDB?",
+      "options": [
+        "Using Spring Data DynamoDB or AWS SDK",
+        "Directly querying DynamoDB tables",
+        "Deploying Spring Boot to DynamoDB",
+        "Using DynamoDB as a CDN"
+      ],
+      "response": "Using Spring Data DynamoDB or AWS SDK",
+      "explanation": "Spring Boot applications can interact with Amazon DynamoDB using Spring Data DynamoDB or the AWS SDK for Java for CRUD operations.",
+      "keywords": ["DynamoDB", "Spring Boot", "NoSQL", "AWS", "SDK"]
+    },
+    {
+      "id": 110,
+      "topic": "SNS with iOS",
+      "question": "What is a common use of Amazon SNS in an iOS application?",
+      "options": [
+        "Storing user data",
+        "Sending push notifications",
+        "Managing network traffic",
+        "Running SQL queries"
+      ],
+      "response": "Sending push notifications",
+      "explanation": "Amazon SNS integrates with iOS apps to send push notifications via Apple Push Notification service (APNs) using the AWS SDK for Swift.",
+      "keywords": ["SNS", "iOS", "push notifications", "AWS", "messaging"]
+    },
+    {
+      "id": 111,
+      "topic": "API Gateway with Android",
+      "question": "How does AWS API Gateway benefit an Android application?",
+      "options": [
+        "Providing secure APIs for backend services",
+        "Storing application files",
+        "Running machine learning models",
+        "Managing DNS records"
+      ],
+      "response": "Providing secure APIs for backend services",
+      "explanation": "AWS API Gateway provides secure, scalable APIs for Android apps to interact with backend services like Lambda or EC2, using the AWS SDK.",
+      "keywords": ["API Gateway", "Android", "APIs", "AWS", "backend"]
+    },
+    {
+      "id": 112,
+      "topic": "CloudWatch with Spring Boot",
+      "question": "How can Spring Boot applications utilize Amazon CloudWatch?",
+      "options": [
+        "To encrypt sensitive data",
+        "To monitor application metrics and logs",
+        "To manage VPC configurations",
+        "To store static assets"
+      ],
+      "response": "To monitor application metrics and logs",
+      "explanation": "Spring Boot apps can send metrics and logs to Amazon CloudWatch using the AWS SDK for Java or Spring Cloud AWS for monitoring.",
+      "keywords": ["CloudWatch", "Spring Boot", "monitoring", "AWS", "logs"]
+    },
+    {
+      "id": 113,
+      "topic": "CodePipeline with Angular",
+      "question": "What is a key use of AWS CodePipeline for Angular applications?",
+      "options": [
+        "Running serverless functions",
+        "Automating build and deployment",
+        "Managing user permissions",
+        "Analyzing data"
+      ],
+      "response": "Automating build and deployment",
+      "explanation": "AWS CodePipeline automates the CI/CD pipeline for Angular apps, building and deploying to S3 or other hosting services.",
+      "keywords": ["CodePipeline", "Angular", "CI/CD", "AWS", "deployment"]
+    },
+    {
+      "id": 114,
+      "topic": "KMS with Android",
+      "question": "What is the primary role of AWS KMS in an Android application?",
+      "options": [
+        "Running serverless functions",
+        "Encrypting sensitive data",
+        "Managing network traffic",
+        "Deploying app code"
+      ],
+      "response": "Encrypting sensitive data",
+      "explanation": "AWS KMS (Key Management Service) is used in Android apps to encrypt sensitive data, such as user credentials, via the AWS SDK for Java or Kotlin.",
+      "keywords": ["KMS", "Android", "encryption", "AWS", "security"]
+    },
+    {
+      "id": 115,
+      "topic": "SQS with Spring Boot",
+      "question": "What is a typical use case for Amazon SQS in a Spring Boot application?",
+      "options": [
+        "Serving web content",
+        "Decoupling microservices with queues",
+        "Managing user authentication",
+        "Running data analytics"
+      ],
+      "response": "Decoupling microservices with queues",
+      "explanation": "Amazon SQS is used in Spring Boot applications to decouple microservices by sending and receiving messages via queues, using Spring Cloud AWS or AWS SDK.",
+      "keywords": ["SQS", "Spring Boot", "message queue", "AWS", "microservices"]
+    },
+    {
+      "id": 116,
+      "topic": "Well-Architected Framework",
+      "question": "What are the five pillars of the AWS Well-Architected Framework?",
+      "options": [
+        "Security, Reliability, Performance Efficiency, Cost Optimization, Operational Excellence",
+        "Availability, Scalability, Cost Management, Security, Compliance",
+        "Durability, Performance, Governance, Reliability, Efficiency",
+        "Monitoring, Automation, Fault Tolerance, Cost Efficiency, Security"
+      ],
+      "response": "Security, Reliability, Performance Efficiency, Cost Optimization, Operational Excellence",
+      "explanation": "The AWS Well-Architected Framework consists of five pillars: Security (protecting systems), Reliability (ensuring system recovery), Performance Efficiency (optimizing resource use), Cost Optimization (managing costs), and Operational Excellence (improving processes). These guide cloud architecture best practices.",
+      "keywords": ["Well-Architected", "pillars", "architecture", "AWS", "best practices"]
+    },
+    {
+      "id": 117,
+      "topic": "S3 Storage Classes",
+      "question": "Which Amazon S3 storage class is best suited for infrequently accessed data with retrieval times of hours?",
+      "options": [
+        "S3 Standard",
+        "S3 Glacier Deep Archive",
+        "S3 Intelligent-Tiering",
+        "S3 One Zone-IA"
+      ],
+      "response": "S3 Glacier Deep Archive",
+      "explanation": "S3 Glacier Deep Archive is designed for long-term, infrequently accessed data with retrieval times of 12-48 hours, offering the lowest storage cost among S3 storage classes.",
+      "keywords": ["S3", "storage classes", "Glacier", "AWS", "archive"]
+    },
+    {
+      "id": 118,
+      "topic": "Auto Scaling",
+      "question": "What is the primary purpose of AWS Auto Scaling?",
+      "options": [
+        "Managing database backups",
+        "Dynamically adjusting resource capacity",
+        "Encrypting data at rest",
+        "Configuring DNS records"
+      ],
+      "response": "Dynamically adjusting resource capacity",
+      "explanation": "AWS Auto Scaling automatically adjusts the number of resources, such as EC2 instances, based on demand to maintain performance and optimize costs.",
+      "keywords": ["Auto Scaling", "capacity", "EC2", "AWS", "scaling"]
+    },
+    {
+      "id": 119,
+      "topic": "ELB",
+      "question": "What is the main function of an Elastic Load Balancer (ELB) in AWS?",
+      "options": [
+        "Storing application logs",
+        "Distributing incoming traffic across multiple targets",
+        "Managing encryption keys",
+        "Running serverless functions"
+      ],
+      "response": "Distributing incoming traffic across multiple targets",
+      "explanation": "Elastic Load Balancer (ELB) distributes incoming application traffic across multiple targets, such as EC2 instances, to improve availability and fault tolerance.",
+      "keywords": ["ELB", "load balancer", "traffic", "AWS", "availability"]
+    },
+    {
+      "id": 120,
+      "topic": "Regions and Availability Zones",
+      "question": "What is the relationship between AWS Regions and Availability Zones?",
+      "options": [
+        "Regions are subsets of Availability Zones",
+        "Availability Zones are isolated locations within a Region",
+        "Regions and Availability Zones are interchangeable",
+        "Availability Zones span multiple Regions"
+      ],
+      "response": "Availability Zones are isolated locations within a Region",
+      "explanation": "AWS Regions are geographic areas, each containing multiple isolated Availability Zones (data centers) to enhance fault tolerance and high availability.",
+      "keywords": ["Regions", "Availability Zones", "AWS", "infrastructure", "fault tolerance"]
+    },
+    {
+      "id": 121,
+      "topic": "Trusted Advisor",
+      "question": "What is the primary role of AWS Trusted Advisor?",
+      "options": [
+        "Running machine learning models",
+        "Providing real-time recommendations for best practices",
+        "Managing DNS records",
+        "Orchestrating serverless workflows"
+      ],
+      "response": "Providing real-time recommendations for best practices",
+      "explanation": "AWS Trusted Advisor analyzes AWS environments and provides recommendations to optimize cost, performance, security, and fault tolerance based on best practices.",
+      "keywords": ["Trusted Advisor", "recommendations", "best practices", "AWS", "optimization"]
+    },
+    {
+      "id": 122,
+      "topic": "Snowball",
+      "question": "What is AWS Snowball primarily used for?",
+      "options": [
+        "Running serverless applications",
+        "Transferring large amounts of data to AWS",
+        "Managing user authentication",
+        "Monitoring application performance"
+      ],
+      "response": "Transferring large amounts of data to AWS",
+      "explanation": "AWS Snowball is a physical device used to transfer petabyte-scale data to and from AWS, ideal for migrations or when internet transfer is too slow.",
+    "keywords": ["Snowball", "data transfer", "migration", "AWS", "petabyte"]
+    },
+    {
+      "id": 123,
+      "topic": "IAM Roles",
+      "question": "What is a key benefit of using IAM Roles over IAM Users for AWS services?",
+      "options": [
+        "IAM Roles provide permanent credentials",
+        "IAM Roles allow temporary credentials for services",
+        "IAM Roles are used for DNS management",
+        "IAM Roles enable data encryption"
+      ],
+      "response": "IAM Roles allow temporary credentials for services",
+      "explanation": "IAM Roles provide temporary credentials for AWS services or applications, enhancing security by avoiding the need to manage long-term credentials.",
+      "keywords": ["IAM Roles", "temporary credentials", "security", "AWS", "IAM"]
+    },
+    {
+      "id": 124,
+      "topic": "S3 Lifecycle Policies",
+      "question": "What is the purpose of Amazon S3 Lifecycle Policies?",
+      "options": [
+        "Managing user permissions",
+        "Automating data transitions between storage classes",
+        "Running serverless functions",
+        "Configuring network traffic"
+      ],
+      "response": "Automating data transitions between storage classes",
+      "explanation": "S3 Lifecycle Policies automate the transition of objects between storage classes (e.g., from S3 Standard to Glacier) or delete them to optimize costs.",
+      "keywords": ["S3", "Lifecycle Policies", "storage classes", "AWS", "cost optimization"]
+    },
+    {
+      "id": 125,
+      "topic": "VPC Endpoints",
+      "question": "What is the primary function of AWS VPC Endpoints?",
+      "options": [
+        "Managing public internet access",
+        "Enabling private connections to AWS services",
+        "Running SQL queries",
+        "Monitoring application logs"
+      ],
+      "response": "Enabling private connections to AWS services",
+      "explanation": "VPC Endpoints allow private connections from a VPC to AWS services like S3 or DynamoDB without using public internet, improving security and performance.",
+      "keywords": ["VPC Endpoints", "private connections", "VPC", "AWS", "security"]
+    },
+    {
+      "id": 126,
+      "topic": "Direct Connect",
+      "question": "What is AWS Direct Connect used for?",
+      "options": [
+        "Running serverless applications",
+        "Providing dedicated network connections to AWS",
+        "Managing user authentication",
+        "Storing application logs"
+      ],
+      "response": "Providing dedicated network connections to AWS",
+      "explanation": "AWS Direct Connect establishes dedicated, private network connections between on-premises infrastructure and AWS, offering consistent latency and bandwidth.",
+      "keywords": ["Direct Connect", "network", "private", "AWS", "on-premises"]
+    },
+    {
+      "id": 127,
+      "topic": "EBS Snapshots",
+      "question": "What is the primary use of Amazon EBS Snapshots?",
+      "options": [
+        "Running serverless functions",
+        "Backing up EC2 instance volumes",
+        "Managing DNS records",
+        "Orchestrating workflows"
+      ],
+      "response": "Backing up EC2 instance volumes",
+      "explanation": "Amazon EBS Snapshots are point-in-time backups of EBS volumes, used for disaster recovery, data migration, or creating new volumes.",
+    "keywords": ["EBS", "Snapshots", "backup", "AWS", "EC2"]
+    },
+    {
+      "id": 128,
+      "topic": "Cost Allocation Tags",
+      "question": "What is the purpose of AWS Cost Allocation Tags?",
+      "options": [
+        "Encrypting sensitive data",
+        "Tracking and categorizing AWS costs",
+        "Managing network traffic",
+        "Running machine learning models"
+      ],
+      "response": "Tracking and categorizing AWS costs",
+      "explanation": "AWS Cost Allocation Tags allow users to label resources to track and categorize costs, enabling detailed billing analysis and cost management.",
+      "keywords": ["Cost Allocation Tags", "billing", "cost management", "AWS", "tracking"]
+    },
+    {
+      "id": 129,
+      "topic": "SES",
+      "question": "What is the primary function of Amazon SES?",
+      "options": [
+        "Running serverless applications",
+        "Sending transactional emails",
+        "Managing DNS records",
+        "Monitoring application performance"
+      ],
+      "response": "Sending transactional emails",
+      "explanation": "Amazon SES (Simple Email Service) is a scalable service for sending transactional and marketing emails, such as notifications or newsletters.",
+      "keywords": ["SES", "email", "transactional", "AWS", "messaging"]
+    },
+    {
+      "id": 130,
+      "topic": "Global Accelerator",
+      "question": "What is the main benefit of AWS Global Accelerator?",
+      "options": [
+        "Encrypting data at rest",
+        "Improving application performance via optimized routing",
+        "Managing user permissions",
+        "Storing large datasets"
+      ],
+      "response": "Improving application performance via optimized routing",
+      "explanation": "AWS Global Accelerator improves application performance by routing user traffic through AWS’s global network, reducing latency and increasing availability.",
+      "keywords": ["Global Accelerator", "performance", "routing", "AWS", "network"]
+    },
+    {
+      "id": 131,
+      "topic": "Backup",
+      "question": "What is AWS Backup primarily used for?",
+      "options": [
+        "Running serverless functions",
+        "Centralized backup management across AWS services",
+        "Managing network traffic",
+        "Analyzing application logs"
+      ],
+      "response": "Centralized backup management across AWS services",
+      "explanation": "AWS Backup provides a centralized service to automate and manage backups across AWS services like EBS, RDS, and S3, ensuring data protection.",
+      "keywords": ["Backup", "data protection", "centralized", "AWS", "management"]
+    },
+    {
+      "id": 132,
+      "topic": "FSx",
+      "question": "What is Amazon FSx primarily designed for?",
+      "options": [
+        "Running machine learning models",
+        "Providing managed file systems",
+        "Managing DNS records",
+        "Orchestrating serverless workflows"
+      ],
+      "response": "Providing managed file systems",
+      "explanation": "Amazon FSx offers fully managed file systems, such as FSx for Windows File Server or FSx for Lustre, optimized for specific workloads.",
+      "keywords": ["FSx", "file systems", "managed", "AWS", "storage"]
+    },
+    {
+      "id": 133,
+      "topic": "Security Groups",
+      "question": "What is the primary function of AWS Security Groups?",
+      "options": [
+        "Encrypting sensitive data",
+        "Acting as a virtual firewall for EC2 instances",
+        "Running SQL queries",
+        "Managing user authentication"
+      ],
+      "response": "Acting as a virtual firewall for EC2 instances",
+      "explanation": "AWS Security Groups act as virtual firewalls, controlling inbound and outbound traffic to EC2 instances and other resources based on defined rules.",
+      "keywords": ["Security Groups", "firewall", "EC2", "AWS", "network"]
+    },
+    {
+      "id": 134,
+      "topic": "CloudHSM",
+      "question": "What is AWS CloudHSM used for?",
+      "options": [
+        "Running serverless applications",
+        "Managing cryptographic keys in hardware",
+        "Monitoring application performance",
+        "Storing application logs"
+      ],
+      "response": "Managing cryptographic keys in hardware",
+      "explanation": "AWS CloudHSM provides hardware security modules to securely generate, store, and manage cryptographic keys for sensitive applications.",
+      "keywords": ["CloudHSM", "cryptographic keys", "security", "AWS", "hardware"]
+    },
+    {
+      "id": 135,
+      "topic": "Systems Manager",
+      "question": "What is a key feature of AWS Systems Manager?",
+      "options": [
+        "Running machine learning models",
+        "Automating operational tasks across AWS resources",
+        "Managing DNS records",
+        "Sending transactional emails"
+      ],
+      "response": "Automating operational tasks across AWS resources",
+      "explanation": "AWS Systems Manager automates operational tasks like patching, configuration, and resource management across AWS resources, improving efficiency.",
+      "keywords": ["Systems Manager", "automation", "operations", "AWS", "management"]
     }
   ]
 }

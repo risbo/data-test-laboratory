@@ -17,27 +17,3 @@ A response:  Answer with large explanation.
 A explanation: detailed explanation (expanded with 4 examples, with inputs and outputs results and code comments to enforce learning).
 A keywords: array with 10 relevant and Review Concepts.
 Output only the following structure (fill in the values):
-
-{
-"id": 1,
-"topic": 1,
-"data": [
-{
-"id": 101,
-"topic": "Java",
-"question": "What is the size of an int in Java?",
-"options": [
-"4 bytes",
-"2 bytes",
-"8 bytes",
-"Depends on the system"
-],
-"response": "4 bytes",
-"explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-"keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
-}
-]
-}
-                                    
-Content:
-                                        

@@ -339,20 +339,6 @@
       "keywords": ["Route 53", "DNS", "routing", "AWS", "domains"]
     },
     {
-      "id": 25,
-      "topic": "Step Functions",
-      "question": "What does AWS Step Functions enable?",
-      "options": [
-        "Container orchestration",
-        "Serverless workflow orchestration",
-        "Data analytics",
-        "Network isolation"
-      ],
-      "response": "Serverless workflow orchestration",
-      "explanation": "AWS Step Functions coordinates serverless workflows by orchestrating AWS services and tasks.",
-      "keywords": ["Step Functions", "workflow", "serverless", "AWS", "orchestration"]
-    },
-    {
       "id": 26,
       "-topic": "WAF",
       "question": "What is the primary purpose of AWS WAF?",

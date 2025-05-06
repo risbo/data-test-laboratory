@@ -91,6 +91,108 @@
       "response": "start()",
       "explanation": "`start()` launches a new thread and calls `run()` internally.",
       "keywords": ["thread", "start", "run", "concurrency", "multithreading", "Java", "asynchronous", "parallel", "runnable", "execution"]
+    },
+    {
+      "id": 11,
+      "topic": "Lambda Expressions and Functional Interfaces",
+      "question": "Which statement defines a functional interface in Java?",
+      "options": [
+        "@FunctionalInterface\ninterface Converter<T, R> { R convert(T t); }",
+        "interface Marker {}",
+        "class Lambda {}",
+        "@interface FunctionalInterface",
+        "interface Predicate { boolean test(); void reset(); }"
+      ],
+      "response": "@FunctionalInterface\ninterface Converter<T, R> { R convert(T t); }",
+      "explanation": "A functional interface contains only one abstract method. The @FunctionalInterface annotation is optional but recommended.",
+      "keywords": ["lambda", "functional interface", "annotation", "Java 8", "single method", "SAM", "functional", "interface", "java.util.function", "syntax"]
+    },
+    {
+      "id": 12,
+      "topic": "Streams and Optional",
+      "question": "What does this code print?\n\nOptional<String> opt = Optional.of(\"Java\");\nSystem.out.println(opt.orElse(\"Python\"));",
+      "options": ["Java", "Python", "null", "Compilation Error", "Exception"],
+      "response": "Java",
+      "explanation": "Optional.of(\"Java\") is not empty, so orElse returns \"Java\" instead of the fallback.",
+      "keywords": ["optional", "stream", "orElse", "null safe", "java.util", "optional chaining", "default value", "get", "presence", "container"]
+    },
+    {
+      "id": 13,
+      "topic": "Annotations and Reflection",
+      "question": "Which class is used to analyze annotations at runtime?",
+      "options": ["Annotation", "ReflectionUtils", "MethodHandles", "Class", "AnnotationProcessor"],
+      "response": "Class",
+      "explanation": "Java uses reflection via the Class object to inspect annotations using methods like getAnnotation() and isAnnotationPresent().",
+      "keywords": ["reflection", "annotations", "metadata", "runtime", "Class", "getAnnotation", "java.lang.reflect", "introspection", "fields", "methods"]
+    },
+    {
+      "id": 14,
+      "topic": "Access Modifiers and Static/Final",
+      "question": "What is the effect of marking a field `static final`?",
+      "options": ["It can be changed later", "It belongs to instance", "It's shared and immutable", "It’s garbage collected", "None"],
+      "response": "It's shared and immutable",
+      "explanation": "`static` makes a field class-level, and `final` makes it immutable—together forming a constant shared across all instances.",
+      "keywords": ["static", "final", "constant", "class field", "immutability", "shared", "memory", "Java", "modifiers", "access"]
+    },
+    {
+      "id": 15,
+      "topic": "Inner Classes",
+      "question": "What is a non-static inner class called in Java?",
+      "options": ["Nested class", "Local class", "Member class", "Anonymous class", "Abstract class"],
+      "response": "Member class",
+      "explanation": "A non-static inner class defined inside another class is called a member class and needs an outer instance.",
+      "keywords": ["inner class", "member class", "nested", "Java", "non-static", "object", "enclosure", "scope", "local class", "class relationship"]
+    },
+    {
+      "id": 16,
+      "topic": "Packages, Imports, and Modules",
+      "question": "What keyword is used to import a class from another package?",
+      "options": ["include", "using", "import", "require", "load"],
+      "response": "import",
+      "explanation": "`import` allows classes from other packages to be referenced in your code.",
+      "keywords": ["import", "packages", "modules", "Java", "namespace", "static import", "organization", "classpath", "syntax", "visibility"]
+    },
+    {
+      "id": 17,
+      "topic": "JVM, Memory Model, and Garbage Collection",
+      "question": "Which part of memory is used to store class metadata in JVM?",
+      "options": ["Heap", "Stack", "PermGen/MetaSpace", "Native Method Stack", "Registers"],
+      "response": "PermGen/MetaSpace",
+      "explanation": "Class metadata is stored in PermGen (Java 7 and earlier) or MetaSpace (Java 8+), separate from the heap.",
+      "keywords": ["jvm", "memory", "metaspace", "permgen", "heap", "class metadata", "garbage collection", "Java", "runtime", "architecture"]
+    },
+    {
+      "id": 18,
+      "topic": "JDBC and Database Access",
+      "question": "Which interface is used to execute SQL queries in JDBC?",
+      "options": ["Connection", "Statement", "ResultSet", "DatabaseMetaData", "DriverManager"],
+      "response": "Statement",
+      "explanation": "The Statement interface sends SQL commands to the database, and results are retrieved via ResultSet.",
+      "keywords": ["jdbc", "sql", "statement", "query", "Java", "database", "connection", "execute", "resultset", "driver"]
+    },
+    {
+      "id": 19,
+      "topic": "JUnit and Testing",
+      "question": "Which JUnit annotation is used to run code before each test method?",
+      "options": ["@BeforeAll", "@BeforeEach", "@Test", "@Init", "@Setup"],
+      "response": "@BeforeEach",
+      "explanation": "`@BeforeEach` is used in JUnit 5 to specify methods that run before every test method.",
+      "keywords": ["junit", "testing", "annotations", "beforeeach", "setup", "Java", "test method", "test lifecycle", "unit test", "TDD"]
+    },
+    {
+      "id": 20,
+      "topic": "Java 8+ Features (Record, Pattern Matching, etc.)",
+      "question": "Which statement correctly defines a Java Record?",
+      "options": [
+        "record Person(String name, int age) {}",
+        "class Person(String name, int age) {}",
+        "@Data class Person { String name; int age; }",
+        "data class Person(String name, int age)",
+        "val Person = Record.of(String, int)"
+      ],
+      "response": "record Person(String name, int age) {}",
+      "explanation": "Records, introduced in Java 14+, are concise syntax for immutable data carriers using the `record` keyword.",
+      "keywords": ["record", "java 14", "immutable", "data class", "constructor", "fields", "syntax", "accessor", "modern java", "lightweight"]
     }
   ]
 }

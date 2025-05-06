@@ -267,6 +267,146 @@
       "response": "HashSet",
       "explanation": "A HashSet is a collection that contains no duplicate elements. It is backed by a hash table, which ensures O(1) average time complexity for operations like add, remove, and contains.",
       "keywords": ["HashSet", "set", "unique elements", "Java"]
+    },
+    {
+      "id": 120,
+      "topic": "Java",
+      "question": "Which of the following is true about a TreeSet?",
+      "options": [
+        "It allows duplicates.",
+        "It does not maintain order.",
+        "It is not thread-safe.",
+        "It stores elements in sorted order."
+      ],
+      "response": "It stores elements in sorted order.",
+      "explanation": "TreeSet implements the NavigableSet interface and stores its elements in sorted order, according to their natural ordering or by a comparator provided at set creation.",
+      "keywords": ["TreeSet", "sorted order", "Java", "collection", "NavigableSet"]
+    },
+    {
+      "id": 121,
+      "topic": "Java",
+      "question": "What type of collection is HashMap?",
+      "options": [
+        "Ordered",
+        "Unordered",
+        "Sorted",
+        "Thread-safe"
+      ],
+      "response": "Unordered",
+      "explanation": "A HashMap is an unordered collection, meaning it does not guarantee any specific order of elements. The elements are stored based on the hash value of the keys.",
+      "keywords": ["HashMap", "unordered", "Java", "collection"]
+    },
+    {
+      "id": 122,
+      "topic": "Java",
+      "question": "Which of the following methods is used to remove an element from a LinkedList?",
+      "options": [
+        "remove()",
+        "delete()",
+        "pop()",
+        "discard()"
+      ],
+      "response": "remove()",
+      "explanation": "The `remove()` method is used to remove elements from a LinkedList. It can remove elements by index or by value.",
+      "keywords": ["LinkedList", "remove", "Java", "method"]
+    },
+    {
+      "id": 123,
+      "topic": "Java",
+      "question": "What is the main feature of a HashSet?",
+      "options": [
+        "It allows duplicate elements.",
+        "It maintains elements in insertion order.",
+        "It does not allow duplicate elements.",
+        "It is thread-safe."
+      ],
+      "response": "It does not allow duplicate elements.",
+      "explanation": "A HashSet is a collection that ensures all elements are unique, meaning it does not allow duplicate values. It is backed by a hash table.",
+      "keywords": ["HashSet", "duplicate elements", "Java", "collection"]
+    },
+    {
+      "id": 124,
+      "topic": "Java",
+      "question": "Which method is used to retrieve the first element in a LinkedList?",
+      "options": [
+        "getFirst()",
+        "first()",
+        "peek()",
+        "head()"
+      ],
+      "response": "getFirst()",
+      "explanation": "The `getFirst()` method in a LinkedList is used to retrieve the first element of the list without removing it.",
+      "keywords": ["LinkedList", "getFirst", "Java", "method"]
+    },
+    {
+      "id": 125,
+      "topic": "Java",
+      "question": "What is the primary characteristic of a PriorityQueue?",
+      "options": [
+        "It stores elements in random order.",
+        "It does not allow null elements.",
+        "It guarantees order based on priority.",
+        "It uses a hash table for storage."
+      ],
+      "response": "It guarantees order based on priority.",
+      "explanation": "A PriorityQueue orders elements based on their natural ordering or a comparator provided during the creation of the queue, ensuring that the highest priority element is always at the front.",
+      "keywords": ["PriorityQueue", "priority", "Java", "queue", "ordering"]
+    },
+    {
+      "id": 126,
+      "topic": "Java",
+      "question": "Which of the following collections does not allow null elements?",
+      "options": [
+        "HashSet",
+        "TreeSet",
+        "LinkedHashSet",
+        "PriorityQueue"
+      ],
+      "response": "PriorityQueue",
+      "explanation": "PriorityQueue does not allow null elements, as it relies on comparing elements to determine priority, and null values cannot be compared.",
+      "keywords": ["PriorityQueue", "null elements", "Java", "collection"]
+    },
+    {
+      "id": 127,
+      "topic": "Java",
+      "question": "Which collection type is most efficient for searching for an element by key?",
+      "options": [
+        "HashMap",
+        "TreeMap",
+        "LinkedHashMap",
+        "ArrayList"
+      ],
+      "response": "HashMap",
+      "explanation": "HashMap provides constant time O(1) complexity for searching by key on average, making it the most efficient for key-based lookups.",
+      "keywords": ["HashMap", "search", "efficiency", "Java", "key"]
+    },
+    {
+      "id": 128,
+      "topic": "Java",
+      "question": "Which of the following is a feature of a ConcurrentHashMap?",
+      "options": [
+        "It is synchronized.",
+        "It allows null keys and values.",
+        "It allows concurrent updates.",
+        "It does not support thread-safety."
+      ],
+      "response": "It allows concurrent updates.",
+      "explanation": "ConcurrentHashMap allows concurrent updates from multiple threads without blocking, making it suitable for multi-threaded environments.",
+      "keywords": ["ConcurrentHashMap", "concurrent updates", "Java", "thread-safety"]
+    },
+    {
+      "id": 129,
+      "topic": "Java",
+      "question": "Which collection is used for storing key-value pairs in Java?",
+      "options": [
+        "List",
+        "Map",
+        "Set",
+        "Queue"
+      ],
+      "response": "Map",
+      "explanation": "A `Map` is used to store key-value pairs. Examples include `HashMap`, `TreeMap`, and `LinkedHashMap`.",
+      "keywords": ["Map", "key-value", "pair", "Java", "collection"]
     }
   ]
 }

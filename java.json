@@ -1,0 +1,96 @@
+{
+  "id": 9,
+  "topic": 1,
+  "data": [
+    {
+      "id": 1,
+      "topic": "Variables, Data Types, and Operators",
+      "question": "What is the output of the following code?\n\nint x = 10;\ndouble y = 3.5;\ndouble z = x + y;\nSystem.out.println(z);",
+      "options": ["13.5", "10", "3.5", "Compilation Error", "Runtime Error"],
+      "response": "13.5",
+      "explanation": "Java promotes the int to double before addition. So 10 + 3.5 results in 13.5.",
+      "keywords": ["data types", "casting", "promotion", "double", "int", "variables", "operators", "addition", "Java", "output"]
+    },
+    {
+      "id": 2,
+      "topic": "Control Flow (if, switch, loops)",
+      "question": "Which control flow statement is best suited for iterating over an array?",
+      "options": ["if", "switch", "for", "break", "return"],
+      "response": "for",
+      "explanation": "`for` loops are ideal for iterating through arrays when the index is known.",
+      "keywords": ["control flow", "loop", "for", "iteration", "arrays", "Java", "syntax", "statements", "conditions", "index"]
+    },
+    {
+      "id": 3,
+      "topic": "Arrays and Strings",
+      "question": "What is the output?\n\nString s = \"Java\";\ns = s.concat(\" Programming\");\nSystem.out.println(s);",
+      "options": ["Java", "Programming", "Java Programming", "concat error", "null"],
+      "response": "Java Programming",
+      "explanation": "String is immutable, and `concat()` returns a new string. The assignment updates `s`.",
+      "keywords": ["strings", "concat", "immutable", "assignment", "Java", "output", "methods", "String class", "text", "reference"]
+    },
+    {
+      "id": 4,
+      "topic": "Methods and Functions",
+      "question": "Which keyword is used to define a method that returns nothing in Java?",
+      "options": ["method", "function", "def", "void", "fun"],
+      "response": "void",
+      "explanation": "`void` is used to define methods that return no value in Java.",
+      "keywords": ["methods", "functions", "void", "return type", "definition", "Java", "syntax", "declaration", "parameters", "keyword"]
+    },
+    {
+      "id": 5,
+      "topic": "Classes, Objects, and OOP (Inheritance, Polymorphism, Encapsulation, Abstraction)",
+      "question": "Which concept allows objects to take many forms?",
+      "options": ["Inheritance", "Abstraction", "Encapsulation", "Polymorphism", "Overloading"],
+      "response": "Polymorphism",
+      "explanation": "Polymorphism enables a method to perform differently based on the object.",
+      "keywords": ["OOP", "polymorphism", "inheritance", "dynamic binding", "objects", "Java", "abstraction", "override", "runtime", "behavior"]
+    },
+    {
+      "id": 6,
+      "topic": "Interfaces and Enums",
+      "question": "Which statement correctly defines a Java interface?",
+      "options": ["interface A {}", "class interface A {}", "public class A implements interface {}", "A interface {}", "def interface A"],
+      "response": "interface A {}",
+      "explanation": "Java uses the `interface` keyword to declare interfaces.",
+      "keywords": ["interface", "Java", "keyword", "declaration", "abstraction", "OOP", "syntax", "implements", "contracts", "methods"]
+    },
+    {
+      "id": 7,
+      "topic": "Exception Handling",
+      "question": "What is the base class for all exceptions in Java?",
+      "options": ["Throwable", "Error", "Exception", "RuntimeException", "IOException"],
+      "response": "Throwable",
+      "explanation": "`Throwable` is the superclass of all exceptions and errors in Java.",
+      "keywords": ["exceptions", "throwable", "error", "exception handling", "Java", "try-catch", "runtime", "hierarchy", "base class", "throw"]
+    },
+    {
+      "id": 8,
+      "topic": "Collections and Generics",
+      "question": "Which collection maintains insertion order and allows duplicates?",
+      "options": ["HashSet", "TreeSet", "ArrayList", "LinkedHashSet", "Map"],
+      "response": "ArrayList",
+      "explanation": "`ArrayList` maintains insertion order and allows duplicates.",
+      "keywords": ["collections", "arraylist", "list", "duplicates", "order", "Java", "set", "hashset", "iterator", "structure"]
+    },
+    {
+      "id": 9,
+      "topic": "File I/O and Serialization",
+      "question": "Which class is used to write text to a file in Java?",
+      "options": ["Scanner", "FileWriter", "File", "FileInputStream", "ObjectOutputStream"],
+      "response": "FileWriter",
+      "explanation": "`FileWriter` writes character data to files.",
+      "keywords": ["file", "filewriter", "write", "io", "java.io", "serialization", "output", "character stream", "Java", "files"]
+    },
+    {
+      "id": 10,
+      "topic": "Threads and Concurrency",
+      "question": "Which method starts a thread in Java?",
+      "options": ["run()", "init()", "execute()", "start()", "create()"],
+      "response": "start()",
+      "explanation": "`start()` launches a new thread and calls `run()` internally.",
+      "keywords": ["thread", "start", "run", "concurrency", "multithreading", "Java", "asynchronous", "parallel", "runnable", "execution"]
+    }
+  ]
+}

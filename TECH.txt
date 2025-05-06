@@ -1,0 +1,66 @@
+Estás intentando instalar `cocoapods` globalmente en una ruta donde **tu usuario no tiene permisos de escritura** porque sigues usando la versión de Ruby instalada por Homebrew (`/opt/homebrew/...`) en lugar de una versión manejada por el usuario, como con `rbenv`.
+
+---
+
+## ✅ Solución recomendada: Usar `rbenv` para instalar Ruby local
+
+### 1. 📦 Instala `rbenv` y `ruby-build`
+
+```bash
+brew install rbenv ruby-build
+```
+
+### 2. 🧱 Añade `rbenv` al entorno (`~/.zshrc` o temporalmente):
+
+```bash
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+O simplemente para la sesión actual:
+
+```bash
+eval "$(rbenv init -)"
+```
+
+### 3. 🧪 Instala Ruby 3.1 (versión compatible con CocoaPods 1.12.1)
+
+```bash
+rbenv install 3.1.4
+rbenv global 3.1.4
+```
+
+Confirma:
+
+```bash
+ruby -v   # → ruby 3.1.4
+which ruby   # → algo como ~/.rbenv/versions/3.1.4/bin/ruby
+```
+
+---
+
+### 4. ✅ Instala CocoaPods sin `sudo`
+
+```bash
+gem install cocoapods -v 1.12.1
+```
+
+---
+
+### 5. 🚀 Borra y reinstala Pods
+
+```bash
+rm -rf Pods Podfile.lock *.xcworkspace
+pod install
+```
+
+---
+
+Si lo deseas, puedo prepararte un `.zip` con:
+
+* Proyecto de Xcode
+* Realm funcionando
+* MVVM para quizzes
+* Carga desde JSON remoto
+
+¿Quieres eso para avanzar más rápido?

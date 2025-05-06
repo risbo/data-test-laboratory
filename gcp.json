@@ -1,34 +1,258 @@
 {
-  "id": 1,
+  "id": 4,
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 401,
+      "topic": "GCP",
+      "question": "Which Google Cloud service is typically used for running a Spring Boot application in a containerized environment?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "App Engine",
+        "Compute Engine",
+        "Kubernetes Engine",
+        "Cloud Functions"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Kubernetes Engine",
+      "explanation": "Google Kubernetes Engine (GKE) is ideal for running containerized Spring Boot applications, as it provides a managed environment for deploying and scaling containers.",
+      "keywords": ["GKE", "Spring Boot", "Kubernetes", "GCP", "containerized"]
     },
     {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "id": 402,
+      "topic": "GCP",
+      "question": "What is the main benefit of using Google Cloud Pub/Sub with Spring Boot?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Real-time messaging",
+        "SQL-based storage",
+        "Cloud Function triggers",
+        "Serverless computing"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Real-time messaging",
+      "explanation": "Google Cloud Pub/Sub allows real-time messaging between services, making it an ideal solution for Spring Boot applications that need to handle asynchronous events or messaging patterns.",
+      "keywords": ["Pub/Sub", "Spring Boot", "real-time messaging", "GCP"]
+    },
+    {
+      "id": 403,
+      "topic": "GCP",
+      "question": "Which GCP service would you use for storing data in a fully managed NoSQL database for a Spring Boot application?",
+      "options": [
+        "Cloud SQL",
+        "Firestore",
+        "Bigtable",
+        "Cloud Storage"
+      ],
+      "response": "Firestore",
+      "explanation": "Cloud Firestore is a fully managed NoSQL database that scales automatically and provides real-time synchronization, making it a good choice for Spring Boot applications that require NoSQL data storage.",
+      "keywords": ["Firestore", "NoSQL", "Spring Boot", "database", "GCP"]
+    },
+    {
+      "id": 404,
+      "topic": "GCP",
+      "question": "How can you secure API endpoints in a Spring Boot application hosted on GCP?",
+      "options": [
+        "Use Google Identity Platform",
+        "Configure Cloud IAM policies",
+        "Use API Gateway with JWT authentication",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "You can secure API endpoints using Google Identity Platform for user authentication, Cloud IAM for resource access management, and API Gateway with JWT authentication for API-level security.",
+      "keywords": ["Google Identity", "Cloud IAM", "API Gateway", "JWT", "Spring Boot"]
+    },
+    {
+      "id": 405,
+      "topic": "GCP",
+      "question": "Which service in GCP can be used to stream data from Angular or React applications to backend services in real-time?",
+      "options": [
+        "Cloud Pub/Sub",
+        "Cloud Functions",
+        "Firestore",
+        "Cloud Run"
+      ],
+      "response": "Cloud Pub/Sub",
+      "explanation": "Google Cloud Pub/Sub is used to stream data in real-time between applications and backend services. It helps in handling asynchronous events and messaging for Angular, React, and other applications.",
+      "keywords": ["Cloud Pub/Sub", "real-time", "Angular", "React", "GCP"]
+    },
+    {
+      "id": 406,
+      "topic": "GCP",
+      "question": "Which GCP service is ideal for deploying a Spring Boot application that scales automatically based on demand?",
+      "options": [
+        "App Engine",
+        "Compute Engine",
+        "Cloud Functions",
+        "Cloud Run"
+      ],
+      "response": "App Engine",
+      "explanation": "Google App Engine is a fully managed service that automatically scales Spring Boot applications based on demand, handling traffic spikes without requiring manual configuration.",
+      "keywords": ["App Engine", "Spring Boot", "auto-scaling", "GCP"]
+    },
+    {
+      "id": 407,
+      "topic": "GCP",
+      "question": "Which GCP database service is suitable for high-performance and low-latency workloads with large datasets in Spring Boot applications?",
+      "options": [
+        "Cloud SQL",
+        "Cloud Spanner",
+        "Firestore",
+        "Bigtable"
+      ],
+      "response": "Bigtable",
+      "explanation": "Google Cloud Bigtable is designed for high-performance, low-latency workloads with large datasets, making it suitable for Spring Boot applications that need to handle vast amounts of data efficiently.",
+      "keywords": ["Bigtable", "high-performance", "database", "Spring Boot", "GCP"]
+    },
+    {
+      "id": 408,
+      "topic": "GCP",
+      "question": "How can you integrate React applications with Google Cloud Pub/Sub for real-time messaging?",
+      "options": [
+        "Using Google Cloud Client Library for JavaScript",
+        "Using Firebase Cloud Messaging",
+        "Using Google Cloud Functions",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "You can integrate React applications with Cloud Pub/Sub by using the Google Cloud Client Library for JavaScript, Firebase Cloud Messaging, or Google Cloud Functions for event-driven architectures and real-time communication.",
+      "keywords": ["React", "Cloud Pub/Sub", "real-time messaging", "GCP"]
+    },
+    {
+      "id": 409,
+      "topic": "GCP",
+      "question": "What is the best GCP service for managing authentication and authorization in a mobile iOS app?",
+      "options": [
+        "Google Identity Platform",
+        "Firebase Authentication",
+        "Cloud IAM",
+        "Cloud Security Command Center"
+      ],
+      "response": "Firebase Authentication",
+      "explanation": "Firebase Authentication provides an easy way to integrate user authentication and authorization in iOS apps, supporting email/password, Google, and social logins.",
+      "keywords": ["Firebase Authentication", "iOS", "authentication", "authorization", "GCP"]
+    },
+    {
+      "id": 410,
+      "topic": "GCP",
+      "question": "Which GCP service can you use to store user-uploaded files such as images in a Spring Boot application?",
+      "options": [
+        "Cloud Storage",
+        "Cloud SQL",
+        "Firestore",
+        "Bigtable"
+      ],
+      "response": "Cloud Storage",
+      "explanation": "Google Cloud Storage provides scalable and durable object storage for user-uploaded files such as images, videos, and backups in Spring Boot applications.",
+      "keywords": ["Cloud Storage", "file storage", "Spring Boot", "GCP"]
+    },
+    {
+      "id": 411,
+      "topic": "GCP",
+      "question": "Which GCP service allows you to process real-time streaming data from an Android app?",
+      "options": [
+        "Cloud Pub/Sub",
+        "Dataflow",
+        "Cloud Storage",
+        "BigQuery"
+      ],
+      "response": "Cloud Pub/Sub",
+      "explanation": "Google Cloud Pub/Sub is used to process and handle real-time streaming data from Android applications, enabling event-driven architectures.",
+      "keywords": ["Cloud Pub/Sub", "Android", "real-time", "GCP"]
+    },
+    {
+      "id": 412,
+      "topic": "GCP",
+      "question": "Which GCP service is most appropriate for deploying a React app as a static website?",
+      "options": [
+        "Cloud Run",
+        "Firebase Hosting",
+        "App Engine",
+        "Compute Engine"
+      ],
+      "response": "Firebase Hosting",
+      "explanation": "Firebase Hosting is optimized for serving static files such as React apps. It provides fast and secure hosting with global content delivery.",
+      "keywords": ["Firebase Hosting", "React", "static website", "GCP"]
+    },
+    {
+      "id": 413,
+      "topic": "GCP",
+      "question": "Which service would you use to trigger backend logic when a new file is uploaded to Google Cloud Storage from an Android app?",
+      "options": [
+        "Cloud Functions",
+        "App Engine",
+        "Cloud Pub/Sub",
+        "Cloud Run"
+      ],
+      "response": "Cloud Functions",
+      "explanation": "Google Cloud Functions can automatically trigger backend logic when a new file is uploaded to Cloud Storage, making it an ideal solution for Android apps with file upload features.",
+      "keywords": ["Cloud Functions", "trigger", "Android", "file upload", "GCP"]
+    },
+    {
+      "id": 414,
+      "topic": "GCP",
+      "question": "What is the purpose of Google Cloud Pub/Sub in a microservices architecture?",
+      "options": [
+        "Asynchronous messaging",
+        "Data storage",
+        "Compute management",
+        "Database management"
+      ],
+      "response": "Asynchronous messaging",
+      "explanation": "Google Cloud Pub/Sub is used for asynchronous messaging between microservices, enabling them to communicate with each other by sending and receiving messages without direct dependencies.",
+      "keywords": ["Pub/Sub", "microservices", "asynchronous messaging", "GCP"]
+    },
+    {
+      "id": 415,
+      "topic": "GCP",
+      "question": "Which GCP service would you use to ensure high availability and automatic failover for a Spring Boot application deployed on virtual machines?",
+      "options": [
+        "Cloud Load Balancing",
+        "Compute Engine",
+        "Cloud Functions",
+        "Cloud Storage"
+      ],
+      "response": "Cloud Load Balancing",
+      "explanation": "Google Cloud Load Balancing distributes traffic across multiple instances of a Spring Boot application to ensure high availability and automatic failover in case of instance failure.",
+      "keywords": ["Cloud Load Balancing", "availability", "failover", "Spring Boot", "GCP"]
+    },
+    {
+      "id": 416,
+      "topic": "GCP",
+      "question": "Which of the following GCP services is best for querying and analyzing large datasets in a Spring Boot application?",
+      "options": [
+        "BigQuery",
+        "Cloud Pub/Sub",
+        "Cloud SQL",
+        "Firestore"
+      ],
+      "response": "BigQuery",
+      "explanation": "BigQuery is a fully managed data warehouse that allows you to query and analyze large datasets quickly, making it ideal for data analytics in Spring Boot applications.",
+      "keywords": ["BigQuery", "data analysis", "Spring Boot", "GCP"]
+    },
+    {
+      "id": 417,
+      "topic": "GCP",
+      "question": "Which GCP service can be used to monitor and log activities of your Spring Boot application?",
+      "options": [
+        "Cloud Monitoring",
+        "Cloud Logging",
+        "Stackdriver",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "Google Cloud offers Cloud Monitoring and Cloud Logging (previously known as Stackdriver) to monitor, log, and analyze the performance and activity of applications hosted on GCP, including Spring Boot applications.",
+      "keywords": ["Cloud Monitoring", "Cloud Logging", "Stackdriver", "Spring Boot", "GCP"]
+    },
+    {
+      "id": 418,
+      "topic": "GCP",
+      "question": "Which service would you use for running containerized applications in GCP with automatic scaling?",
+      "options": [
+        "Google Kubernetes Engine",
+        "Cloud Functions",
+        "Compute Engine",
+        "App Engine"
+      ],
+      "response": "Google Kubernetes Engine",
+      "explanation": "Google Kubernetes Engine (GKE) is ideal for running containerized applications with automatic scaling based on demand.",
+      "keywords": ["Google Kubernetes Engine", "containerized", "scaling", "GCP"]
     }
   ]
 }

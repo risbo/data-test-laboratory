@@ -1,17 +1,12 @@
 {
-  "id": 1,
+  "id": 13,
   "topic": 1,
   "data": [
     {
       "id": 101,
       "topic": "Java",
       "question": "What is the size of an int in Java?",
-      "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
-      ],
+      "options": ["4 bytes", "2 bytes", "8 bytes", "Depends on the system"],
       "response": "4 bytes",
       "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
       "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
@@ -19,16 +14,587 @@
     {
       "id": 102,
       "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "question": "Which SOLID principle is violated when a class is forced to implement methods it does not use?",
+      "options": ["Single Responsibility", "Open/Closed", "Liskov Substitution", "Interface Segregation", "Dependency Inversion"],
+      "response": "Interface Segregation",
+      "explanation": "The Interface Segregation Principle states that clients should not be forced to depend on interfaces they do not use.",
+      "keywords": ["SOLID", "Interface Segregation", "OOP", "principles", "Java"]
+    },
+    {
+      "id": 103,
+      "topic": "Java",
+      "question": "Which keyword is used to define an abstract class in Java?",
+      "options": ["interface", "abstract", "class", "final", "extends"],
+      "response": "abstract",
+      "explanation": "The 'abstract' keyword is used to define a class that cannot be instantiated directly and may contain abstract methods.",
+      "keywords": ["abstract", "Java", "class", "inheritance", "OOP"]
+    },
+    {
+      "id": 104,
+      "topic": "Java",
+      "question": "What does the Open/Closed principle state?",
+      "options": ["Software entities should be open for extension but closed for modification", "Classes should have only one reason to change", "High-level modules should not depend on low-level modules", "Interfaces should be segregated", "Objects should be easily replaceable"],
+      "response": "Software entities should be open for extension but closed for modification",
+      "explanation": "The Open/Closed Principle encourages the use of abstraction and inheritance to extend functionality without modifying existing code.",
+      "keywords": ["SOLID", "Open/Closed", "extension", "modification", "Java"]
+    },
+    {
+      "id": 105,
+      "topic": "Java",
+      "question": "Which Java feature supports functional programming by allowing functions as parameters?",
+      "options": ["Interfaces", "Classes", "Lambdas", "Constructors", "Annotations"],
+      "response": "Lambdas",
+      "explanation": "Lambdas allow you to pass behavior as data, enabling functional programming in Java.",
+      "keywords": ["functional programming", "Java", "lambdas", "syntax", "functions"]
+    },
+    {
+      "id": 106,
+      "topic": "Java",
+      "question": "What is a pure function in functional programming?",
+      "options": ["A function that returns void", "A function that does not modify state", "A function that calls other functions", "A recursive function", "None of the above"],
+      "response": "A function that does not modify state",
+      "explanation": "Pure functions always return the same result for the same input and have no side effects.",
+      "keywords": ["pure function", "state", "immutability", "functional", "side effects"]
+    },
+    {
+      "id": 107,
+      "topic": "Java",
+      "question": "Which SOLID principle promotes high-level modules not depending on low-level modules?",
+      "options": ["Single Responsibility", "Open/Closed", "Liskov Substitution", "Interface Segregation", "Dependency Inversion"],
+      "response": "Dependency Inversion",
+      "explanation": "The Dependency Inversion Principle states that both high-level and low-level modules should depend on abstractions.",
+      "keywords": ["SOLID", "Dependency Inversion", "abstractions", "Java", "OOP"]
+    },
+    {
+      "id": 108,
+      "topic": "Java",
+      "question": "Which of the following best describes declarative programming?",
+      "options": ["Telling the system how to do something", "Using loops for iteration", "Describing what should be done", "Writing imperative code", "Modifying variables directly"],
+      "response": "Describing what should be done",
+      "explanation": "Declarative programming expresses the logic of a computation without describing its control flow.",
+      "keywords": ["declarative", "paradigm", "functional", "programming", "Java"]
+    },
+    {
+      "id": 109,
+      "topic": "Java",
+      "question": "What is a key feature of reactive programming?",
+      "options": ["Polling data manually", "Synchronous execution", "Event-driven, asynchronous data streams", "Static typing", "Object inheritance"],
+      "response": "Event-driven, asynchronous data streams",
+      "explanation": "Reactive programming focuses on asynchronous data streams that react to changes and propagate updates automatically.",
+      "keywords": ["reactive", "streams", "asynchronous", "event-driven", "Java"]
+    },
+    {
+      "id": 110,
+      "topic": "Java",
+      "question": "Which annotation is used in Java to define a functional interface?",
+      "options": ["@Override", "@FunctionalInterface", "@Interface", "@Lambda", "@Code"],
+      "response": "@FunctionalInterface",
+      "explanation": "The @FunctionalInterface annotation indicates that the interface is intended to be used as a functional interface.",
+      "keywords": ["@FunctionalInterface", "Java", "lambdas", "functional", "interface"]
+    },
+    {
+      "id": 111,
+      "topic": "Java",
+      "question": "Which OOP concept promotes restricting access to class members?",
+      "options": ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance", "Composition"],
+      "response": "Encapsulation",
+      "explanation": "Encapsulation is achieved by making fields private and providing access through public getters/setters.",
+      "keywords": ["OOP", "encapsulation", "access", "Java", "modifiers"]
+    },
+    {
+      "id": 112,
+      "topic": "Java",
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "options": ["To inherit a class", "To override a method", "To define constants", "To create anonymous classes", "To enable polymorphism"],
+      "response": "To define constants",
+      "explanation": "The 'final' keyword prevents a variable from being reassigned, a method from being overridden, or a class from being extended.",
+      "keywords": ["Java", "final", "constants", "inheritance", "immutability"]
+    },
+    {
+      "id": 113,
+      "topic": "Java",
+      "question": "Which concept is being used when a subclass object is referenced by a superclass type?",
+      "options": ["Abstraction", "Polymorphism", "Inheritance", "Encapsulation", "Composition"],
+      "response": "Polymorphism",
+      "explanation": "Polymorphism allows objects of different types to be treated as instances of the same class through inheritance.",
+      "keywords": ["Java", "OOP", "polymorphism", "inheritance", "interface"]
+    },
+    {
+      "id": 114,
+      "topic": "Java",
+      "question": "Which of the following is a declarative operation in Java Streams?",
+      "options": ["for loop", "while loop", "filter()", "switch statement", "try-catch block"],
+      "response": "filter()",
+      "explanation": "Operations like filter(), map(), and reduce() in Java Streams represent declarative programming constructs.",
+      "keywords": ["Streams", "filter", "declarative", "Java", "lambda"]
+    },
+    {
+      "id": 115,
+      "topic": "Java",
+      "question": "What is the result of violating the Liskov Substitution Principle?",
+      "options": ["Memory leaks", "Broken inheritance", "Incorrect program behavior when using subclass", "Syntax error", "Slower performance"],
+      "response": "Incorrect program behavior when using subclass",
+      "explanation": "The Liskov Substitution Principle requires that subclasses be substitutable for their superclasses without altering expected behavior.",
+      "keywords": ["Liskov", "substitution", "SOLID", "inheritance", "Java"]
+    },
+    {
+      "id": 116,
+      "topic": "Java",
+      "question": "In Java, what does the keyword 'super' refer to?",
+      "options": ["The current object", "A static method", "The parent class", "An inner class", "None of the above"],
+      "response": "The parent class",
+      "explanation": "The 'super' keyword in Java is used to access methods and constructors of the parent class.",
+      "keywords": ["Java", "super", "inheritance", "OOP", "constructor"]
+    },
+    {
+      "id": 117,
+      "topic": "Java",
+      "question": "What does the 'default' keyword in interfaces enable?",
+      "options": ["Abstract methods", "Multiple inheritance of behavior", "Thread-safe code", "Polymorphism", "None of the above"],
+      "response": "Multiple inheritance of behavior",
+      "explanation": "Default methods in interfaces allow adding new methods to interfaces with a default implementation, enabling multiple inheritance of behavior.",
+      "keywords": ["Java", "interface", "default method", "inheritance", "OOP"]
+    },
+    {
+      "id": 118,
+      "topic": "Java",
+      "question": "Which is an example of immutability in Java?",
+      "options": ["Using a final class", "String objects", "Creating setters", "Mutable lists", "Using while loops"],
+      "response": "String objects",
+      "explanation": "In Java, String objects are immutable; once created, their values cannot be changed.",
+      "keywords": ["immutability", "Java", "String", "final", "memory safe"]
+    },
+    {
+      "id": 119,
+      "topic": "Java",
+      "question": "Which Java feature helps support reactive streams?",
+      "options": ["ExecutorService", "Observable", "CompletableFuture", "Stream API", "Project Reactor"],
+      "response": "Project Reactor",
+      "explanation": "Project Reactor provides a fully non-blocking reactive programming foundation for the JVM.",
+      "keywords": ["Java", "reactive", "streams", "Project Reactor", "asynchronous"]
+    },
+    {
+      "id": 120,
+      "topic": "Java",
+      "question": "Which of these paradigms focuses on using expressions rather than statements?",
+      "options": ["Imperative", "Object-Oriented", "Functional", "Procedural", "Structured"],
+      "response": "Functional",
+      "explanation": "Functional programming emphasizes expressions and declarations over statements and control flow.",
+      "keywords": ["functional programming", "expressions", "stateless", "pure", "Java"]
+    },
+    {
+      "id": 101,
+      "topic": "OOP",
+      "question": "What are the four fundamental principles of Object-Oriented Programming (OOP)?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Inheritance, Polymorphism, Abstraction, Encapsulation",
+        "Classes, Objects, Methods, Properties",
+        "Constructors, Destructors, Overloading, Overriding",
+        "Static, Final, Abstract, Interface"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Inheritance, Polymorphism, Abstraction, Encapsulation",
+      "explanation": "The four pillars of OOP are Inheritance (extending classes), Polymorphism (same interface, different implementations), Abstraction (hiding complexity), and Encapsulation (data protection).",
+      "keywords": ["OOP", "inheritance", "polymorphism", "abstraction", "encapsulation"]
+    },
+    {
+      "id": 102,
+      "topic": "OOP",
+      "question": "What is the difference between an abstract class and an interface in Java?",
+      "options": [
+        "Abstract classes can have state; interfaces cannot (before Java 8)",
+        "Interfaces support multiple inheritance; abstract classes do not",
+        "Abstract classes can have constructors; interfaces cannot",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "Abstract classes can have fields, constructors, and partial implementations, while interfaces (pre-Java 8) were purely abstract. Java 8+ allows default methods in interfaces, but they still can't have state.",
+      "keywords": ["abstract class", "interface", "Java", "OOP"]
+    },
+    {
+      "id": 103,
+      "topic": "SOLID Principles",
+      "question": "Which SOLID principle states that a class should have only one reason to change?",
+      "options": [
+        "Single Responsibility Principle (SRP)",
+        "Open/Closed Principle (OCP)",
+        "Liskov Substitution Principle (LSP)",
+        "Interface Segregation Principle (ISP)"
+      ],
+      "response": "Single Responsibility Principle (SRP)",
+      "explanation": "SRP dictates that a class should have only one responsibility (one reason to change), making code more maintainable.",
+      "keywords": ["SOLID", "SRP", "Single Responsibility", "OOP"]
+    },
+    {
+      "id": 104,
+      "topic": "SOLID Principles",
+      "question": "What does the Liskov Substitution Principle (LSP) enforce?",
+      "options": [
+        "Subclasses must extend superclasses without altering behavior",
+        "Interfaces should be small and focused",
+        "Classes should be open for extension but closed for modification",
+        "Dependencies should be on abstractions, not concretions"
+      ],
+      "response": "Subclasses must extend superclasses without altering behavior",
+      "explanation": "LSP ensures that derived classes can replace base classes without affecting correctness, preserving the 'is-a' relationship.",
+      "keywords": ["SOLID", "LSP", "Liskov", "inheritance"]
+    },
+    {
+      "id": 105,
+      "topic": "Functional Programming",
+      "question": "What is a pure function in functional programming?",
+      "options": [
+        "A function with no parameters",
+        "A function that always returns the same output for the same input and has no side effects",
+        "A static method in a utility class",
+        "A function marked with the 'pure' keyword"
+      ],
+      "response": "A function that always returns the same output for the same input and has no side effects",
+      "explanation": "Pure functions are deterministic (same input → same output) and do not modify external state or produce side effects.",
+      "keywords": ["functional", "pure function", "side effects", "immutability"]
+    },
+    {
+      "id": 106,
+      "topic": "Functional Programming",
+      "question": "Which Java feature introduced functional programming support?",
+      "options": [
+        "Java 5 (Generics)",
+        "Java 8 (Lambdas & Streams)",
+        "Java 11 (var keyword)",
+        "Java 17 (Records)"
+      ],
+      "response": "Java 8 (Lambdas & Streams)",
+      "explanation": "Java 8 added lambda expressions, the Stream API, and functional interfaces (e.g., `Function`, `Predicate`), enabling functional-style programming.",
+      "keywords": ["Java", "functional", "lambdas", "streams"]
+    },
+    {
+      "id": 107,
+      "topic": "Declarative Programming",
+      "question": "How does declarative programming differ from imperative programming?",
+      "options": [
+        "Declarative focuses on 'what' to achieve; imperative focuses on 'how'",
+        "Declarative is faster but harder to read",
+        "Imperative is used only in low-level languages",
+        "There is no difference"
+      ],
+      "response": "Declarative focuses on 'what' to achieve; imperative focuses on 'how'",
+      "explanation": "Declarative programming (e.g., SQL, React) describes the desired outcome, while imperative programming (e.g., Java loops) specifies step-by-step instructions.",
+      "keywords": ["declarative", "imperative", "paradigm"]
+    },
+    {
+      "id": 108,
+      "topic": "Reactive Programming",
+      "question": "What is the core idea of reactive programming?",
+      "options": [
+        "Using immutable data structures",
+        "Asynchronous data streams and propagation of change",
+        "Avoiding object-oriented principles",
+        "Compile-time code generation"
+      ],
+      "response": "Asynchronous data streams and propagation of change",
+      "explanation": "Reactive programming revolves around data streams (e.g., Observables) and reactions to changes (e.g., callbacks, subscribers).",
+      "keywords": ["reactive", "streams", "asynchronous", "RxJava"]
+    },
+    {
+      "id": 109,
+      "topic": "Other Paradigms",
+      "question": "What is the actor model used for?",
+      "options": [
+        "Encapsulating state and communicating via messages",
+        "Replacing OOP with functional programming",
+        "Automatically generating getters/setters",
+        "Designing user interfaces"
+      ],
+      "response": "Encapsulating state and communicating via messages",
+      "explanation": "The actor model (e.g., Akka) treats 'actors' as isolated units of state that interact only through asynchronous messages, simplifying concurrency.",
+      "keywords": ["actor model", "concurrency", "Akka", "messages"]
+    },
+    {
+      "id": 110,
+      "topic": "Java",
+      "question": "What is the default value of an uninitialized 'int' in Java?",
+      "options": [
+        "0",
+        "null",
+        "Compiler error",
+        "Undefined"
+      ],
+      "response": "0",
+      "explanation": "Primitives in Java have default values (e.g., `int` is 0, `boolean` is false), while objects default to `null`.",
+      "keywords": ["Java", "primitives", "default values"]
+    },
+    {
+      "id": 111,
+      "topic": "OOP",
+      "question": "What is method overriding in Java?",
+      "options": [
+        "Changing a method's parameters in a subclass",
+        "Providing a new implementation for an inherited method",
+        "Making a method static in a child class",
+        "Hiding a superclass method with the same name"
+      ],
+      "response": "Providing a new implementation for an inherited method",
+      "explanation": "Overriding redefines a superclass method in a subclass with the same signature, enabling polymorphism.",
+      "keywords": ["overriding", "OOP", "polymorphism", "Java"]
+    },
+    {
+      "id": 112,
+      "topic": "SOLID Principles",
+      "question": "Which SOLID principle suggests favoring composition over inheritance?",
+      "options": [
+        "Dependency Inversion Principle (DIP)",
+        "Interface Segregation Principle (ISP)",
+        "Open/Closed Principle (OCP)",
+        "Not explicitly stated, but implied by SRP and LSP"
+      ],
+      "response": "Not explicitly stated, but implied by SRP and LSP",
+      "explanation": "While not a SOLID principle itself, composition over inheritance aligns with SRP (smaller classes) and LSP (fewer hierarchy issues).",
+      "keywords": ["SOLID", "composition", "inheritance", "OOP"]
+    },
+    {
+      "id": 113,
+      "topic": "Functional Programming",
+      "question": "What does 'immutability' mean in functional programming?",
+      "options": [
+        "Variables can't be reassigned",
+        "Objects can't be modified after creation",
+        "Methods can't have side effects",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "Immutability ensures data consistency by preventing changes to state after creation, often via final fields or immutable collections.",
+      "keywords": ["immutability", "functional", "Java", "records"]
+    },
+    {
+      "id": 114,
+      "topic": "Declarative Programming",
+      "question": "Which Java feature is declarative rather than imperative?",
+      "options": [
+        "for-loops",
+        "Stream API",
+        "if-else statements",
+        "try-catch blocks"
+      ],
+      "response": "Stream API",
+      "explanation": "The Stream API (e.g., `list.stream().filter(...).map(...)`) is declarative, describing transformations rather than how to iterate.",
+      "keywords": ["declarative", "Stream API", "Java", "functional"]
+    },
+    {
+      "id": 115,
+      "topic": "Reactive Programming",
+      "question": "What is backpressure in reactive streams?",
+      "response": "A mechanism to handle cases where a producer is faster than a consumer",
+      "explanation": "Backpressure (e.g., in RxJava or Project Reactor) allows consumers to signal producers to slow down, preventing overflow.",
+      "keywords": ["reactive", "backpressure", "streams", "RxJava"]
+    },
+    {
+      "id": 116,
+      "topic": "Other Paradigms",
+      "question": "What is the purpose of the 'volatile' keyword in Java?",
+      "options": [
+        "To make a variable immutable",
+        "To ensure thread-safe atomic operations",
+        "To guarantee visibility of changes across threads",
+        "To optimize garbage collection"
+      ],
+      "response": "To guarantee visibility of changes across threads",
+      "explanation": "`volatile` ensures reads/writes to a variable are visible to all threads (but doesn't make operations atomic).",
+      "keywords": ["volatile", "concurrency", "Java", "threads"]
+    },
+    {
+      "id": 117,
+      "topic": "OOP",
+      "question": "What is encapsulation in Java?",
+      "options": [
+        "Hiding implementation details using private fields and public methods",
+        "Using inheritance to reuse code",
+        "Making all methods static",
+        "Overriding superclass methods"
+      ],
+      "response": "Hiding implementation details using private fields and public methods",
+      "explanation": "Encapsulation protects an object's state by restricting direct access (e.g., via getters/setters).",
+      "keywords": ["encapsulation", "OOP", "Java", "getters"]
+    },
+    {
+      "id": 118,
+      "topic": "SOLID Principles",
+      "question": "What does the Dependency Inversion Principle (DIP) advocate?",
+      "options": [
+        "High-level modules should depend on low-level modules",
+        "Both should depend on abstractions",
+        "Low-level modules should depend on high-level modules",
+        "Avoid dependencies altogether"
+      ],
+      "response": "Both should depend on abstractions",
+      "explanation": "DIP states that both high-level and low-level modules should depend on abstractions (e.g., interfaces), not concretions.",
+      "keywords": ["SOLID", "DIP", "dependency", "abstractions"]
+    },
+    {
+      "id": 119,
+      "topic": "Functional Programming",
+      "question": "What is a higher-order function?",
+      "options": [
+        "A function that takes another function as a parameter or returns one",
+        "A function with more than 10 parameters",
+        "A static utility method",
+        "A recursive function"
+      ],
+      "response": "A function that takes another function as a parameter or returns one",
+      "explanation": "Higher-order functions treat functions as first-class citizens (e.g., `Stream.map(Function)` in Java).",
+      "keywords": ["functional", "higher-order", "lambdas", "Java"]
+    },
+    {
+      "id": 120,
+      "topic": "Java",
+      "question": "What is the 'final' keyword used for in Java?",
+      "options": [
+        "To prevent inheritance (on classes)",
+        "To prevent method overriding (on methods)",
+        "To create constants (on variables)",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "`final` has multiple uses: classes (no inheritance), methods (no overriding), variables (immutable references).",
+      "keywords": ["final", "Java", "immutability", "OOP"]
+    },
+    {
+      "id": 101,
+      "topic": "OOP",
+      "question": "What is the difference between method overloading and overriding in Java?",
+      "options": [
+        "Overloading changes method signatures; overriding redefines inherited methods",
+        "Overriding is compile-time polymorphism; overloading is runtime",
+        "Overloading only works with static methods",
+        "They are the same"
+      ],
+      "response": "Overloading changes method signatures; overriding redefines inherited methods",
+      "explanation": "Overloading (same name, different parameters) is compile-time polymorphism. Overriding (same signature in subclass) is runtime polymorphism.",
+      "keywords": ["overloading", "overriding", "polymorphism", "Java"]
+    },
+    {
+      "id": 102,
+      "topic": "SOLID",
+      "question": "Which SOLID principle is violated if a class has multiple responsibilities?",
+      "options": [
+        "Open/Closed Principle",
+        "Single Responsibility Principle",
+        "Liskov Substitution Principle",
+        "Interface Segregation Principle"
+      ],
+      "response": "Single Responsibility Principle",
+      "explanation": "SRP states that a class should have only one reason to change (i.e., one responsibility).",
+      "keywords": ["SOLID", "SRP", "responsibility", "OOP"]
+    },
+    {
+      "id": 103,
+      "topic": "Functional Programming",
+      "question": "What is a lambda expression in Java?",
+      "options": [
+        "An anonymous function",
+        "A named static method",
+        "A subclass of Runnable",
+        "A type of loop"
+      ],
+      "response": "An anonymous function",
+      "explanation": "Lambdas (e.g., `(a, b) -> a + b`) are concise anonymous functions introduced in Java 8 for functional programming.",
+      "keywords": ["lambda", "functional", "Java 8", "anonymous"]
+    },
+    {
+      "id": 104,
+      "topic": "OOP",
+      "question": "Why is composition favored over inheritance in OOP?",
+      "options": [
+        "It reduces tight coupling",
+        "It avoids fragile base class problems",
+        "It provides better flexibility",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "Composition (using objects as fields) is more flexible than inheritance and avoids issues like rigid hierarchies.",
+      "keywords": ["composition", "inheritance", "OOP", "design"]
+    },
+    {
+      "id": 105,
+      "topic": "Java",
+      "question": "What is the purpose of the 'static' keyword in Java?",
+      "options": [
+        "To make a variable immutable",
+        "To associate a member with the class (not instances)",
+        "To prevent method overriding",
+        "To enable threading"
+      ],
+      "response": "To associate a member with the class (not instances)",
+      "explanation": "`static` members belong to the class itself, not individual objects (e.g., `Math.PI`).",
+      "keywords": ["static", "Java", "class", "OOP"]
+    },
+    {
+      "id": 106,
+      "topic": "Reactive Programming",
+      "question": "What is an Observable in reactive programming?",
+      "options": [
+        "A data structure that emits values over time",
+        "A Java annotation",
+        "A type of loop",
+        "A thread-safe collection"
+      ],
+      "response": "A data structure that emits values over time",
+      "explanation": "Observables (e.g., in RxJava) represent asynchronous data streams that can be subscribed to.",
+      "keywords": ["reactive", "Observable", "RxJava", "streams"]
+    },
+    {
+      "id": 107,
+      "topic": "Functional Programming",
+      "question": "What does the 'map' operation do in Java Streams?",
+      "options": [
+        "Filters elements based on a condition",
+        "Transforms each element to another type/value",
+        "Groups elements by a key",
+        "Sorts the collection"
+      ],
+      "response": "Transforms each element to another type/value",
+      "explanation": "`map` applies a function to each element (e.g., `stream.map(x -> x * 2)`).",
+      "keywords": ["map", "Stream", "functional", "Java"]
+    },
+    {
+      "id": 108,
+      "topic": "SOLID",
+      "question": "What does the Open/Closed Principle (OCP) state?",
+      "options": [
+        "Classes should be open for modification but closed for extension",
+        "Classes should be open for extension but closed for modification",
+        "All methods should be public",
+        "Interfaces must have default methods"
+      ],
+      "response": "Classes should be open for extension but closed for modification",
+      "explanation": "OCP encourages extending behavior (e.g., via inheritance/composition) without modifying existing code.",
+      "keywords": ["SOLID", "OCP", "Open/Closed", "design"]
+    },
+    {
+      "id": 109,
+      "topic": "Java",
+      "question": "What is type erasure in Java generics?",
+      "options": [
+        "Runtime type information is removed",
+        "Generics are enforced at runtime",
+        "All generic types become Object",
+        "A and C"
+      ],
+      "response": "A and C",
+      "explanation": "Type erasure means generic type info is removed at runtime (e.g., `List<String>` becomes `List<Object>`).",
+      "keywords": ["generics", "type erasure", "Java", "compiler"]
+    },
+    {
+      "id": 110,
+      "topic": "Functional Programming",
+      "question": "What is a functional interface in Java?",
+      "options": [
+        "An interface with multiple methods",
+        "An interface with exactly one abstract method",
+        "An interface marked with @Functional",
+        "An abstract class"
+      ],
+      "response": "An interface with exactly one abstract method",
+      "explanation": "Functional interfaces (e.g., `Runnable`, `Predicate`) enable lambdas. They must have only one abstract method.",
+      "keywords": ["functional interface", "lambda", "Java 8", "SAM"]
     }
   ]
 }

@@ -15,20 +15,6 @@
       "response": "4 bytes",
       "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
       "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
-    },
-    {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
-      "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
-      ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
     }
   ]
 }

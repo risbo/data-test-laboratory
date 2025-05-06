@@ -3,32 +3,564 @@
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 1,
+      "topic": "Composables",
+      "question": "How would you create a reusable @Composable function for a healthcare app’s patient card UI?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "Hardcode UI elements in XML",
+        "Define a @Composable with parameters for patient data",
+        "Use ViewBinding with fragments",
+        "Avoid reusable components"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Define a @Composable with parameters for patient data",
+      "explanation": "A reusable @Composable function for a patient card UI is created by defining a function annotated with @Composable, accepting parameters like patient name or ID, ensuring modularity and reusability in a healthcare app.",
+      "keywords": ["Composable", "reusable", "patient card", "Jetpack Compose", "healthcare"]
     },
     {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "id": 2,
+      "topic": "State Management",
+      "question": "How would you manage the state of a TextField in a healthcare form using Jetpack Compose?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Use local variables without state",
+        "Use mutableStateOf for reactive updates",
+        "Store state in SharedPreferences",
+        "Avoid state management"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Use mutableStateOf for reactive updates",
+      "explanation": "Managing a TextField’s state in a healthcare form involves using mutableStateOf to hold the input value, triggering recomposition on changes to ensure a reactive UI.",
+      "keywords": ["state management", "mutableStateOf", "TextField", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 3,
+      "topic": "Layouts",
+      "question": "Which Jetpack Compose layout would you use to display a horizontal list of medical alerts?",
+      "options": [
+        "Column",
+        "Row",
+        "Box",
+        "LazyRow"
+      ],
+      "response": "LazyRow",
+      "explanation": "LazyRow is ideal for a horizontal list of medical alerts in Jetpack Compose, as it lazily loads items, improving performance for potentially large datasets in a healthcare app.",
+      "keywords": ["LazyRow", "layout", "medical alerts", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 4,
+      "topic": "Modifiers",
+      "question": "How would you apply consistent padding and background color to a healthcare app’s Button using Modifiers?",
+      "options": [
+        "Hardcode styles in XML",
+        "Use Modifier.padding() and .background()",
+        "Apply styles in a ViewModel",
+        "Avoid Modifiers"
+      ],
+      "response": "Use Modifier.padding() and .background()",
+      "explanation": "In Jetpack Compose, Modifiers like padding() and background() are chained to a Button to apply consistent padding and background color, ensuring a polished UI for a healthcare app.",
+      "keywords": ["Modifiers", "padding", "background", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 5,
+      "topic": "UI Elements",
+      "question": "How would you display a patient’s profile image in a healthcare app using Jetpack Compose?",
+      "options": [
+        "Use Text with image URL",
+        "Use Image with painterResource or Coil",
+        "Embed XML ImageView",
+        "Avoid images"
+      ],
+      "response": "Use Image with painterResource or Coil",
+      "explanation": "The Image composable in Jetpack Compose, paired with painterResource for local images or Coil for remote URLs, is used to display a patient’s profile image efficiently in a healthcare app.",
+      "keywords": ["Image", "UI elements", "patient profile", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 6,
+      "topic": "Input Controls",
+      "question": "How would you implement a TextField for entering medical notes with validation in Jetpack Compose?",
+      "options": [
+        "Use TextField without state",
+        "Use TextField with mutableStateOf and validation logic",
+        "Use XML EditText",
+        "Avoid input validation"
+      ],
+      "response": "Use TextField with mutableStateOf and validation logic",
+      "explanation": "A TextField with mutableStateOf manages medical notes input, and validation logic (e.g., checking for empty input) ensures data integrity in a healthcare app’s form.",
+      "keywords": ["TextField", "input controls", "validation", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 7,
+      "topic": "Lists",
+      "question": "How would you display a scrollable list of patient appointments using Jetpack Compose?",
+      "options": [
+        "Use Column with manual scrolling",
+        "Use LazyColumn with items",
+        "Embed RecyclerView",
+        "Use Row"
+      ],
+      "response": "Use LazyColumn with items",
+      "explanation": "LazyColumn in Jetpack Compose efficiently renders a scrollable list of patient appointments using the items function, optimizing performance by loading only visible items.",
+      "keywords": ["LazyColumn", "lists", "appointments", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 8,
+      "topic": "Navigation",
+      "question": "How would you implement navigation between a patient list and detail screen in a healthcare app?",
+      "options": [
+        "Use Intents",
+        "Use NavHost with NavController",
+        "Hardcode screen transitions",
+        "Avoid navigation"
+      ],
+      "response": "Use NavHost with NavController",
+      "explanation": "Jetpack Compose’s NavHost and NavController enable navigation between a patient list and detail screen, providing a declarative and type-safe approach for a healthcare app.",
+      "keywords": ["navigation", "NavHost", "NavController", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 9,
+      "topic": "State Hoisting",
+      "question": "How would you apply state hoisting in a healthcare app’s form composable?",
+      "options": [
+        "Store state in the composable",
+        "Lift state to a parent composable or ViewModel",
+        "Use global variables",
+        "Avoid state management"
+      ],
+      "response": "Lift state to a parent composable or ViewModel",
+      "explanation": "State hoisting lifts the state of a form composable (e.g., input fields) to a parent composable or ViewModel, promoting unidirectional data flow and reusability in a healthcare app.",
+      "keywords": ["state hoisting", "unidirectional", "ViewModel", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 10,
+      "topic": "Themes",
+      "question": "How would you apply a custom theme to a healthcare app’s UI in Jetpack Compose?",
+      "options": [
+        "Hardcode colors in each composable",
+        "Use MaterialTheme with custom ColorScheme",
+        "Use XML themes",
+        "Avoid theming"
+      ],
+      "response": "Use MaterialTheme with custom ColorScheme",
+      "explanation": "A custom theme in Jetpack Compose is applied using MaterialTheme with a custom ColorScheme, ensuring consistent colors, typography, and shapes across a healthcare app’s UI.",
+      "keywords": ["themes", "MaterialTheme", "ColorScheme", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 11,
+      "topic": "Custom Components",
+      "question": "How would you create a custom composable for a healthcare app’s progress indicator?",
+      "options": [
+        "Use XML layouts",
+        "Define a @Composable with Canvas and animations",
+        "Use standard Button",
+        "Avoid custom components"
+      ],
+      "response": "Define a @Composable with Canvas and animations",
+      "explanation": "A custom progress indicator is created as a @Composable using Canvas for drawing and animations (e.g., animateFloatAsState) to reflect dynamic states in a healthcare app.",
+      "keywords": ["custom composable", "Canvas", "animations", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 12,
+      "topic": "Animations",
+      "question": "How would you animate the visibility of a medical alert in a healthcare app?",
+      "options": [
+        "Use static visibility",
+        "Use AnimatedVisibility with fade transition",
+        "Embed XML animations",
+        "Avoid animations"
+      ],
+      "response": "Use AnimatedVisibility with fade transition",
+      "explanation": "AnimatedVisibility in Jetpack Compose animates the visibility of a medical alert with a fade transition, enhancing the user experience in a healthcare app.",
+      "keywords": ["animations", "AnimatedVisibility", "medical alert", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 13,
+      "topic": "Gestures",
+      "question": "How would you implement swipe-to-dismiss for a patient notification in Jetpack Compose?",
+      "options": [
+        "Use XML OnTouchListener",
+        "Use pointerInput with detectDragGestures",
+        "Avoid gestures",
+        "Use Button clicks"
+      ],
+      "response": "Use pointerInput with detectDragGestures",
+      "explanation": "Swipe-to-dismiss for a patient notification is implemented using pointerInput and detectDragGestures in Jetpack Compose, enabling intuitive touch interactions in a healthcare app.",
+      "keywords": ["gestures", "pointerInput", "swipe", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 14,
+      "topic": "ConstraintLayout",
+      "question": "How would you use ConstraintLayout in Jetpack Compose for a complex healthcare form?",
+      "options": [
+        "Use Row and Column only",
+        "Use ConstraintLayout with createRefs and constraints",
+        "Embed XML ConstraintLayout",
+        "Avoid complex layouts"
+      ],
+      "response": "Use ConstraintLayout with createRefs and constraints",
+      "explanation": "ConstraintLayout in Jetpack Compose is used for a complex healthcare form by assigning createRefs to UI elements and defining constraints, enabling precise positioning and alignment.",
+      "keywords": ["ConstraintLayout", "form", "constraints", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 15,
+      "topic": "Dialogs",
+      "question": "How would you display a confirmation dialog for a medical action in Jetpack Compose?",
+      "options": [
+        "Use XML AlertDialog",
+        "Use AlertDialog composable with state",
+        "Use Toast messages",
+        "Avoid dialogs"
+      ],
+      "response": "Use AlertDialog composable with state",
+      "explanation": "A confirmation dialog for a medical action is implemented using the AlertDialog composable, managed with state to show/hide based on user interaction in a healthcare app.",
+      "keywords": ["AlertDialog", "dialogs", "confirmation", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 16,
+      "topic": "ViewModel",
+      "question": "How would you integrate a ViewModel with a Jetpack Compose healthcare app screen?",
+      "options": [
+        "Use local state only",
+        "Use viewModel() and collectAsState",
+        "Embed XML ViewModel",
+        "Avoid ViewModel"
+      ],
+      "response": "Use viewModel() and collectAsState",
+      "explanation": "A ViewModel is integrated in Jetpack Compose using viewModel() to access the ViewModel and collectAsState to reactively update the UI with data, ideal for a healthcare app screen.",
+      "keywords": ["ViewModel", "collectAsState", "integration", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 17,
+      "topic": "Interoperability",
+      "question": "How would you integrate an existing XML-based chart library into a Jetpack Compose healthcare app?",
+      "options": [
+        "Rewrite the library in Compose",
+        "Use AndroidView to wrap the XML view",
+        "Avoid interoperability",
+        "Use Compose charts only"
+      ],
+      "response": "Use AndroidView to wrap the XML view",
+      "explanation": "An XML-based chart library is integrated into a Jetpack Compose app using AndroidView to wrap the legacy view, enabling interoperability for displaying charts in a healthcare app.",
+      "keywords": ["interoperability", "AndroidView", "XML", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 18,
+      "topic": "Performance Optimization",
+      "question": "How would you optimize a LazyColumn displaying a large list of medical records in Jetpack Compose?",
+      "options": [
+        "Load all items at once",
+        "Use keys and derivedStateOf",
+        "Avoid LazyColumn",
+        "Disable recomposition"
+      ],
+      "response": "Use keys and derivedStateOf",
+      "explanation": "Optimizing a LazyColumn involves using keys to ensure stable item identities and derivedStateOf to minimize unnecessary recompositions, improving performance for medical records.",
+      "keywords": ["performance", "LazyColumn", "derivedStateOf", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 19,
+      "topic": "Preview Tools",
+      "question": "How would you use @Preview to test a healthcare app’s UI in Jetpack Compose?",
+      "options": [
+        "Run the app on a device",
+        "Annotate composables with @Preview for design-time rendering",
+        "Use XML previews",
+        "Avoid previews"
+      ],
+      "response": "Annotate composables with @Preview for design-time rendering",
+      "explanation": "@Preview annotations in Jetpack Compose allow developers to render UI components at design time, enabling quick testing of a healthcare app’s UI without running the app.",
+      "keywords": ["@Preview", "testing", "UI", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 20,
+      "topic": "UI Testing",
+      "question": "How would you test a Button’s click action in a healthcare app’s Jetpack Compose UI?",
+      "options": [
+        "Manually click the button",
+        "Use composeTestRule to find and perform click",
+        "Test in XML layouts",
+        "Avoid UI testing"
+      ],
+      "response": "Use composeTestRule to find and perform click",
+      "explanation": "Testing a Button’s click action in Jetpack Compose involves using composeTestRule to locate the button via semantics and perform a click, ensuring reliable UI testing for a healthcare app.",
+      "keywords": ["UI testing", "composeTestRule", "Button", "Jetpack Compose", "healthcare"]
+    },
+    {
+      "id": 21,
+      "topic": "Composables",
+      "question": "How do you ensure a @Composable function is reusable across multiple screens in an Android app?",
+      "options": [
+        "Hardcode UI logic in each screen",
+        "Pass data via parameters and use slots",
+        "Use global state variables",
+        "Embed XML layouts"
+      ],
+      "response": "Pass data via parameters and use slots",
+      "explanation": "A reusable @Composable function is created by accepting data through parameters and using slot APIs (e.g., content lambdas) to allow flexible content injection, enabling use across multiple screens.",
+      "keywords": ["Composable", "reusable", "slots", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 22,
+      "topic": "Recomposition",
+      "question": "What causes unnecessary recomposition in a Jetpack Compose UI and how can you prevent it?",
+      "options": [
+        "Using mutableStateOf excessively",
+        "Using derivedStateOf and stable parameters",
+        "Avoiding state altogether",
+        "Hardcoding UI elements"
+      ],
+      "response": "Using derivedStateOf and stable parameters",
+      "explanation": "Unnecessary recomposition occurs when state changes trigger excessive UI updates. Using derivedStateOf for computed state and ensuring stable parameters (e.g., immutable data classes) minimizes recomposition.",
+      "keywords": ["recomposition", "derivedStateOf", "stable", "Jetpack Compose", "performance"]
+    },
+    {
+      "id": 23,
+      "topic": "Layouts",
+      "question": "How would you create a responsive layout in Jetpack Compose that adapts to different screen sizes?",
+      "options": [
+        "Use fixed pixel sizes",
+        "Use Box with dp and weight modifiers",
+        "Embed XML layouts",
+        "Avoid layout adjustments"
+      ],
+      "response": "Use Box with dp and weight modifiers",
+      "explanation": "A responsive layout in Jetpack Compose uses Box, Row, or Column with dp units and weight modifiers to proportionally adjust UI elements, ensuring adaptability across screen sizes.",
+      "keywords": ["layouts", "responsive", "Box", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 24,
+      "topic": "Modifiers",
+      "question": "How do you chain Modifiers in Jetpack Compose to achieve a specific UI effect, like a bordered clickable area?",
+      "options": [
+        "Apply Modifiers randomly",
+        "Use Modifier.border().clickable().padding()",
+        "Hardcode styles in XML",
+        "Avoid Modifiers"
+      ],
+      "response": "Use Modifier.border().clickable().padding()",
+      "explanation": "Modifiers are chained in a specific order (e.g., border().clickable().padding()) to create a bordered, clickable area with padding, as the order affects the final UI rendering in Jetpack Compose.",
+      "keywords": ["Modifiers", "border", "clickable", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 25,
+      "topic": "UI Elements",
+      "question": "How would you implement a toggleable Icon in Jetpack Compose that changes based on state?",
+      "options": [
+        "Use Text with static content",
+        "Use Icon with mutableStateOf for toggling",
+        "Embed XML ImageView",
+        "Avoid state changes"
+      ],
+      "response": "Use Icon with mutableStateOf for toggling",
+      "explanation": "A toggleable Icon in Jetpack Compose uses the Icon composable with a mutableStateOf variable to switch between icons (e.g., filled vs. outlined) based on user interaction.",
+      "keywords": ["Icon", "mutableStateOf", "UI elements", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 26,
+      "topic": "Input Controls",
+      "question": "How would you restrict a TextField in Jetpack Compose to accept only numeric input?",
+      "options": [
+        "Use TextField without restrictions",
+        "Use keyboardOptions and visualTransformation",
+        "Embed XML EditText",
+        "Avoid input restrictions"
+      ],
+      "response": "Use keyboardOptions and visualTransformation",
+      "explanation": "Restricting a TextField to numeric input involves setting keyboardOptions to KeyboardType.Number and optionally using visualTransformation to format the input, ensuring a controlled user experience.",
+      "keywords": ["TextField", "numeric input", "keyboardOptions", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 27,
+      "topic": "Lazy Components",
+      "question": "What is the benefit of using LazyRow over Row for a horizontal list in Jetpack Compose?",
+      "options": [
+        "Row is more performant",
+        "LazyRow loads items on-demand",
+        "Row supports animations",
+        "LazyRow is for vertical lists"
+      ],
+      "response": "LazyRow loads items on-demand",
+      "explanation": "LazyRow in Jetpack Compose loads items only when they are visible, improving performance for large horizontal lists compared to Row, which loads all items at once.",
+      "keywords": ["LazyRow", "performance", "lists", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 28,
+      "topic": "Navigation",
+      "question": "How do you pass complex data between screens in Jetpack Compose navigation?",
+      "options": [
+        "Use Intent extras",
+        "Use NavController with Parcelable or serialized data",
+        "Hardcode data in composables",
+        "Avoid data passing"
+      ],
+      "response": "Use NavController with Parcelable or serialized data",
+      "explanation": "Complex data is passed between screens using NavController’s navigate function with Parcelable objects or serialized data (e.g., JSON), ensuring type-safe navigation in Jetpack Compose.",
+      "keywords": ["navigation", "NavController", "Parcelable", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 29,
+      "topic": "State Hoisting",
+      "question": "Why is state hoisting preferred in Jetpack Compose for managing UI state?",
+      "options": [
+        "It increases recomposition",
+        "It promotes reusability and unidirectional data flow",
+        "It simplifies XML integration",
+        "It avoids state management"
+      ],
+      "response": "It promotes reusability and unidirectional data flow",
+      "explanation": "State hoisting lifts state to a parent composable or ViewModel, making composables stateless and reusable while enforcing unidirectional data flow, a best practice in Jetpack Compose.",
+      "keywords": ["state hoisting", "unidirectional", "reusability", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 30,
+      "topic": "Themes",
+      "question": "How do you implement dark mode support in a Jetpack Compose app?",
+      "options": [
+        "Hardcode colors for each composable",
+        "Use MaterialTheme with dynamic ColorScheme",
+        "Use XML themes",
+        "Avoid dark mode"
+      ],
+      "response": "Use MaterialTheme with dynamic ColorScheme",
+      "explanation": "Dark mode is implemented in Jetpack Compose using MaterialTheme with a dynamic ColorScheme that switches between light and dark colors based on system settings or user preference.",
+      "keywords": ["themes", "dark mode", "MaterialTheme", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 31,
+      "topic": "Custom Components",
+      "question": "How would you create a custom loading spinner in Jetpack Compose?",
+      "options": [
+        "Use XML animations",
+        "Use Canvas with animateFloatAsState",
+        "Use standard ProgressBar",
+        "Avoid custom components"
+      ],
+      "response": "Use Canvas with animateFloatAsState",
+      "explanation": "A custom loading spinner is created using Canvas for drawing and animateFloatAsState to animate rotation or progress, providing a tailored UI element in Jetpack Compose.",
+      "keywords": ["custom component", "Canvas", "animateFloatAsState", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 32,
+      "topic": "Animations",
+      "question": "How would you animate a composable’s size change in Jetpack Compose?",
+      "options": [
+        "Use static sizes",
+        "Use animateContentSize modifier",
+        "Embed XML animations",
+        "Avoid size animations"
+      ],
+      "response": "Use animateContentSize modifier",
+      "explanation": "The animateContentSize modifier in Jetpack Compose smoothly animates a composable’s size change, ensuring a fluid UI transition for dynamic content.",
+      "keywords": ["animations", "animateContentSize", "size change", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 33,
+      "topic": "Gestures",
+      "question": "How would you detect a double-tap gesture on a composable in Jetpack Compose?",
+      "options": [
+        "Use XML OnClickListener",
+        "Use pointerInput with detectTapGestures",
+        "Use Button clicks",
+        "Avoid gestures"
+      ],
+      "response": "Use pointerInput with detectTapGestures",
+      "explanation": "A double-tap gesture is detected using pointerInput with detectTapGestures, specifying a tap count of 2, enabling precise touch handling in Jetpack Compose.",
+      "keywords": ["gestures", "double-tap", "pointerInput", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 34,
+      "topic": "ConstraintLayout",
+      "question": "How do you align two composables relative to each other in Jetpack Compose’s ConstraintLayout?",
+      "options": [
+        "Use Row with weights",
+        "Use createRefs and constrainAs",
+        "Use fixed positions",
+        "Avoid ConstraintLayout"
+      ],
+      "response": "Use createRefs and constrainAs",
+      "explanation": "In Jetpack Compose’s ConstraintLayout, createRefs assigns references to composables, and constrainAs defines relative constraints (e.g., align to another’s side), enabling precise alignment.",
+      "keywords": ["ConstraintLayout", "createRefs", "alignment", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 35,
+      "topic": "Bottom Sheets",
+      "question": "How would you implement a modal bottom sheet in Jetpack Compose for displaying options?",
+      "options": [
+        "Use XML BottomSheetDialog",
+        "Use ModalBottomSheet with state",
+        "Use Toast messages",
+        "Avoid bottom sheets"
+      ],
+      "response": "Use ModalBottomSheet with state",
+      "explanation": "A modal bottom sheet is implemented using ModalBottomSheet with a state object (e.g., BottomSheetState) to control visibility and display options in Jetpack Compose.",
+      "keywords": ["ModalBottomSheet", "bottom sheets", "options", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 36,
+      "topic": "ViewModel",
+      "question": "How do you handle configuration changes in a Jetpack Compose app using ViewModel?",
+      "options": [
+        "Store state in composables",
+        "Use viewModel() to retain state",
+        "Use SharedPreferences",
+        "Avoid ViewModel"
+      ],
+      "response": "Use viewModel() to retain state",
+      "explanation": "Configuration changes (e.g., screen rotation) are handled by using viewModel() to access a ViewModel, which retains state across configuration changes in Jetpack Compose.",
+      "keywords": ["ViewModel", "configuration changes", "state", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 37,
+      "topic": "Interoperability",
+      "question": "How would you integrate a legacy XML-based map view into a Jetpack Compose screen?",
+      "options": [
+        "Rewrite the map in Compose",
+        "Use AndroidView to embed the XML view",
+        "Avoid legacy views",
+        "Use Compose maps only"
+      ],
+      "response": "Use AndroidView to embed the XML view",
+      "explanation": "A legacy XML-based map view is integrated using AndroidView in Jetpack Compose, wrapping the XML view and enabling interoperability with minimal refactoring.",
+      "keywords": ["interoperability", "AndroidView", "XML", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 38,
+      "topic": "Performance Optimization",
+      "question": "How do you reduce overdraw in a Jetpack Compose UI with complex visuals?",
+      "options": [
+        "Use multiple overlapping composables",
+        "Use clip() and optimize Modifier usage",
+        "Avoid performance optimization",
+        "Hardcode visuals"
+      ],
+      "response": "Use clip() and optimize Modifier usage",
+      "explanation": "Reducing overdraw involves using clip() to limit drawing areas and optimizing Modifier usage (e.g., avoiding unnecessary backgrounds), improving rendering performance in Jetpack Compose.",
+      "keywords": ["performance", "overdraw", "clip", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 39,
+      "topic": "Debugging Tools",
+      "question": "How would you use Layout Inspector to debug a Jetpack Compose UI issue?",
+      "options": [
+        "Run manual tests",
+        "Inspect composable hierarchy and properties",
+        "Use XML debugger",
+        "Avoid debugging tools"
+      ],
+      "response": "Inspect composable hierarchy and properties",
+      "explanation": "Layout Inspector in Android Studio allows debugging Jetpack Compose UI by inspecting the composable hierarchy, properties, and layout issues, aiding in quick resolution.",
+      "keywords": ["Layout Inspector", "debugging", "UI", "Jetpack Compose", "Android"]
+    },
+    {
+      "id": 40,
+      "topic": "UI Testing",
+      "question": "How would you verify that a Text composable displays the correct value in a Jetpack Compose test?",
+      "options": [
+        "Manually check the UI",
+        "Use composeTestRule to assert text content",
+        "Test in XML layouts",
+        "Avoid UI testing"
+      ],
+      "response": "Use composeTestRule to assert text content",
+      "explanation": "Verifying a Text composable’s value involves using composeTestRule to find the composable by semantics and asserting its text content, ensuring accurate UI testing in Jetpack Compose.",
+      "keywords": ["UI testing", "composeTestRule", "Text", "Jetpack Compose", "Android"]
     }
   ]
 }

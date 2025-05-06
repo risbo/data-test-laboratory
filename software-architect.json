@@ -1,34 +1,706 @@
 {
-  "id": 1,
+  "id": 16,
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 1,
+      "topic": "System Design",
+      "question": "How would you design a scalable, HIPAA-compliant microservices architecture for a telemedicine platform?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "Use monolithic architecture with local storage",
+        "Leverage AWS ECS, RDS, and KMS for microservices, encryption, and compliance",
+        "Deploy a single EC2 instance with a relational database",
+        "Use on-premises servers with manual scaling"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Leverage AWS ECS, RDS, and KMS for microservices, encryption, and compliance",
+      "explanation": "A HIPAA-compliant telemedicine platform requires a scalable microservices architecture using AWS ECS for container orchestration, RDS for managed databases, and KMS for encryption to ensure data security and compliance with healthcare regulations.",
+      "keywords": ["system design", "microservices", "HIPAA", "AWS", "telemedicine"]
     },
     {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "id": 2,
+      "topic": "Healthcare Experience",
+      "question": "What specific challenges have you faced when developing software for the healthcare industry?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Managing user authentication",
+        "Ensuring interoperability and regulatory compliance",
+        "Optimizing front-end performance",
+        "Configuring DNS records"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Ensuring interoperability and regulatory compliance",
+      "explanation": "Healthcare software development often involves challenges like ensuring interoperability (e.g., HL7, FHIR standards) and compliance with regulations like HIPAA or GDPR, which require secure data handling and standardized interfaces.",
+      "keywords": ["healthcare", "interoperability", "compliance", "HIPAA", "FHIR"]
+    },
+    {
+      "id": 3,
+      "topic": "Full-Stack Development",
+      "question": "Which framework would you choose for a health-focused web application requiring real-time updates?",
+      "options": [
+        "Django with Python",
+        "React with WebSocket integration",
+        "Static HTML with JavaScript",
+        "PHP with Laravel"
+      ],
+      "response": "React with WebSocket integration",
+      "explanation": "React with WebSocket integration is ideal for a health-focused web application needing real-time updates, such as live patient monitoring, due to its component-based architecture and support for real-time communication.",
+      "keywords": ["React", "WebSocket", "real-time", "full-stack", "healthcare"]
+    },
+    {
+      "id": 4,
+      "topic": "Cloud Infrastructure",
+      "question": "How would you ensure high availability for a healthcare application hosted on AWS?",
+      "options": [
+        "Deploy on a single EC2 instance",
+        "Use Auto Scaling and multi-AZ deployments",
+        "Store all data in S3",
+        "Run serverless functions only"
+      ],
+      "response": "Use Auto Scaling and multi-AZ deployments",
+      "explanation": "High availability in AWS for a healthcare application can be achieved using Auto Scaling to adjust resources based on demand and multi-AZ deployments to ensure redundancy across isolated data centers.",
+      "keywords": ["AWS", "high availability", "Auto Scaling", "multi-AZ", "healthcare"]
+    },
+    {
+      "id": 5,
+      "topic": "AI and LLMs",
+      "question": "How have you integrated Large Language Models into a healthcare application?",
+      "options": [
+        "For front-end styling",
+        "To automate patient triage or data analysis",
+        "To manage network traffic",
+        "To configure DNS settings"
+      ],
+      "response": "To automate patient triage or data analysis",
+      "explanation": "Large Language Models can be integrated into healthcare applications to automate patient triage, analyze medical records, or provide decision support, leveraging tools like AWS SageMaker or Bedrock.",
+      "keywords": ["LLMs", "AI", "healthcare", "triage", "SageMaker"]
+    },
+    {
+      "id": 6,
+      "topic": "Leadership",
+      "question": "How do you mentor junior engineers to ensure project success in a healthcare project?",
+      "options": [
+        "Assign tasks without guidance",
+        "Provide code reviews, pair programming, and knowledge-sharing sessions",
+        "Focus only on client meetings",
+        "Delegate all coding tasks to seniors"
+      ],
+      "response": "Provide code reviews, pair programming, and knowledge-sharing sessions",
+      "explanation": "Mentoring junior engineers involves hands-on guidance through code reviews, pair programming, and knowledge-sharing to ensure they understand healthcare-specific requirements and maintain high-quality code.",
+      "keywords": ["mentoring", "leadership", "code reviews", "healthcare", "engineers"]
+    },
+    {
+      "id": 7,
+      "topic": "Client Communication",
+      "question": "How would you explain a complex cloud architecture to a non-technical healthcare client?",
+      "options": [
+        "Use technical jargon and detailed diagrams",
+        "Simplify concepts using analogies and focus on business benefits",
+        "Provide raw code samples",
+        "Avoid discussing technical details"
+      ],
+      "response": "Simplify concepts using analogies and focus on business benefits",
+      "explanation": "Explaining complex cloud architecture to non-technical clients requires simplifying technical concepts with analogies (e.g., comparing cloud to a utility) and emphasizing benefits like cost savings or scalability.",
+      "keywords": ["client communication", "cloud", "non-technical", "healthcare", "analogies"]
+    },
+    {
+      "id": 8,
+      "topic": "Docker",
+      "question": "Why would you use Docker in a healthcare application deployment?",
+      "options": [
+        "To manage user authentication",
+        "To ensure consistent environments across development and production",
+        "To run SQL queries",
+        "To configure network routes"
+      ],
+      "response": "To ensure consistent environments across development and production",
+      "explanation": "Docker ensures consistent environments by containerizing healthcare applications, reducing discrepancies between development, testing, and production, which is critical for compliance and reliability.",
+      "keywords": ["Docker", "containers", "consistency", "healthcare", "deployment"]
+    },
+    {
+      "id": 9,
+      "topic": "Architectural Patterns",
+      "question": "Which architectural pattern would you use for a healthcare system requiring loose coupling?",
+      "options": [
+        "Monolithic architecture",
+        "Event-driven architecture",
+        "Tightly coupled MVC",
+        "Single-tier architecture"
+      ],
+      "response": "Event-driven architecture",
+      "explanation": "An event-driven architecture promotes loose coupling in healthcare systems, allowing services to communicate via events (e.g., using AWS EventBridge), improving scalability and flexibility.",
+      "keywords": ["event-driven", "architecture", "loose coupling", "AWS", "healthcare"]
+    },
+    {
+      "id": 10,
+      "topic": "Mobile Development",
+      "question": "What framework would you choose for a cross-platform healthcare mobile app?",
+      "options": [
+        "Native Swift for iOS only",
+        "React Native for iOS and Android",
+        "Static HTML with JavaScript",
+        "Python with Django"
+      ],
+      "response": "React Native for iOS and Android",
+      "explanation": "React Native is ideal for a cross-platform healthcare mobile app, enabling code reuse across iOS and Android while supporting healthcare-specific features like secure data handling.",
+      "keywords": ["React Native", "mobile", "cross-platform", "healthcare", "app"]
+    },
+    {
+      "id": 11,
+      "topic": "Python",
+      "question": "How would you use Python in a healthcare application for data processing?",
+      "options": [
+        "To style front-end components",
+        "To process and analyze medical datasets",
+        "To manage DNS records",
+        "To configure VPCs"
+      ],
+      "response": "To process and analyze medical datasets",
+      "explanation": "Python is commonly used in healthcare applications for data processing and analysis, leveraging libraries like Pandas, NumPy, or AWS SDK for tasks like medical data aggregation or ETL.",
+      "keywords": ["Python", "data processing", "healthcare", "Pandas", "AWS"]
+    },
+    {
+      "id": 12,
+      "topic": "Generative AI",
+      "question": "How can Generative AI enhance patient engagement in a healthcare platform?",
+      "options": [
+        "By managing network traffic",
+        "By powering chatbots for patient support",
+        "By configuring cloud infrastructure",
+        "By running SQL queries"
+      ],
+      "response": "By powering chatbots for patient support",
+      "explanation": "Generative AI can enhance patient engagement by powering chatbots (e.g., using AWS Lex or Bedrock) to provide 24/7 support, answer queries, or schedule appointments.",
+      "keywords": ["Generative AI", "chatbots", "patient engagement", "AWS", "healthcare"]
+    },
+    {
+      "id": 13,
+      "topic": "Quality Assurance",
+      "question": "How do you ensure code quality in a healthcare project with strict regulatory requirements?",
+      "options": [
+        "Write code without testing",
+        "Implement automated testing and CI/CD pipelines",
+        "Rely on manual testing only",
+        "Use open-source code without review"
+      ],
+      "response": "Implement automated testing and CI/CD pipelines",
+      "explanation": "Ensuring code quality in healthcare requires automated testing (unit, integration) and CI/CD pipelines (e.g., AWS CodePipeline) to maintain compliance and reliability under strict regulations.",
+      "keywords": ["code quality", "testing", "CI/CD", "healthcare", "AWS"]
+    },
+    {
+      "id": 14,
+      "topic": "FastAPI",
+      "question": "Why would you choose FastAPI for a healthcare API backend?",
+      "options": [
+        "For front-end rendering",
+        "For high-performance, asynchronous APIs",
+        "For managing cloud infrastructure",
+        "For running machine learning models"
+      ],
+      "response": "For high-performance, asynchronous APIs",
+      "explanation": "FastAPI is ideal for healthcare API backends due to its high performance, support for asynchronous programming, and automatic generation of OpenAPI documentation, ensuring robust APIs.",
+      "keywords": ["FastAPI", "APIs", "asynchronous", "healthcare", "backend"]
+    },
+    {
+      "id": 15,
+      "topic": "Team Collaboration",
+      "question": "How do you foster collaboration in a remote, diverse HealthTech team?",
+      "options": [
+        "Limit communication to emails",
+        "Use tools like Slack, Jira, and regular stand-ups",
+        "Avoid team meetings",
+        "Assign tasks without feedback"
+      ],
+      "response": "Use tools like Slack, Jira, and regular stand-ups",
+      "explanation": "Fostering collaboration in a remote HealthTech team involves using tools like Slack for communication, Jira for task tracking, and regular stand-ups to align diverse team members.",
+      "keywords": ["collaboration", "remote", "HealthTech", "Slack", "Jira"]
+    },
+    {
+      "id": 16,
+      "topic": "C#",
+      "question": "How would you use C# in a healthcare application?",
+      "options": [
+        "To style web pages",
+        "To build secure backend services with .NET",
+        "To manage DNS records",
+        "To run client-side scripts"
+      ],
+      "response": "To build secure backend services with .NET",
+      "explanation": "C# with .NET is used in healthcare applications to build secure, scalable backend services, such as APIs or data processing systems, often integrated with AWS services.",
+      "keywords": ["C#", ".NET", "backend", "healthcare", "AWS"]
+    },
+    {
+      "id": 17,
+      "topic": "Azure",
+      "question": "How does Azure’s healthcare-specific services compare to AWS for a HealthTech project?",
+      "options": [
+        "Azure has no healthcare services",
+        "Azure offers FHIR and AI health tools, similar to AWS",
+        "Azure focuses only on DNS management",
+        "Azure is not cloud-based"
+      ],
+      "response": "Azure offers FHIR and AI health tools, similar to AWS",
+      "explanation": "Azure provides healthcare-specific services like Azure API for FHIR and AI health tools, comparable to AWS HealthLake and SageMaker, but AWS may offer broader cloud flexibility.",
+      "keywords": ["Azure", "AWS", "FHIR", "healthcare", "AI"]
+    },
+    {
+      "id": 18,
+      "topic": "Open-Source",
+      "question": "How would you leverage open-source solutions in a HealthTech project?",
+      "options": [
+        "Avoid open-source to ensure security",
+        "Use open-source FHIR libraries for interoperability",
+        "Use open-source only for front-end",
+        "Replace all proprietary tools with open-source"
+      ],
+      "response": "Use open-source FHIR libraries for interoperability",
+      "explanation": "Open-source solutions like FHIR libraries (e.g., HAPI FHIR) can be used in HealthTech projects to ensure interoperability while maintaining security and compliance with healthcare standards.",
+      "keywords": ["open-source", "FHIR", "interoperability", "HealthTech", "libraries"]
+    },
+    {
+      "id": 19,
+      "topic": "High-Pressure Environments",
+      "question": "How do you make decisions in a high-pressure HealthTech project with tight deadlines?",
+      "options": [
+        "Delay decisions until all data is available",
+        "Prioritize based on impact and consult stakeholders",
+        "Delegate all decisions to the team",
+        "Ignore deadlines to focus on quality"
+      ],
+      "response": "Prioritize based on impact and consult stakeholders",
+      "explanation": "In high-pressure HealthTech projects, decision-making involves prioritizing tasks based on business impact, consulting stakeholders, and balancing quality with deadlines.",
+      "keywords": ["decision-making", "high-pressure", "HealthTech", "prioritization", "stakeholders"]
+    },
+    {
+      "id": 20,
+      "topic": "Emerging Technologies",
+      "question": "How do you stay updated on emerging technologies for HealthTech projects?",
+      "options": [
+        "Rely on outdated resources",
+        "Follow industry blogs, attend conferences, and experiment with POCs",
+        "Avoid new technologies",
+        "Use only proprietary tools"
+      ],
+      "response": "Follow industry blogs, attend conferences, and experiment with POCs",
+      "explanation": "Staying updated involves following HealthTech blogs, attending conferences like HIMSS, and building proofs of concept (POCs) to evaluate emerging technologies like AI or blockchain.",
+      "keywords": ["emerging technologies", "HealthTech", "POCs", "conferences", "blogs"]
+    },
+    {
+      "id": 21,
+      "topic": "Microservices",
+      "question": "How would you handle service discovery in a microservices-based healthcare application on AWS?",
+      "options": [
+        "Hardcode service endpoints",
+        "Use AWS Service Discovery with ECS or EKS",
+        "Rely on manual DNS updates",
+        "Avoid microservices for simplicity"
+      ],
+      "response": "Use AWS Service Discovery with ECS or EKS",
+      "explanation": "AWS Service Discovery integrates with ECS or EKS to dynamically manage service endpoints in a microservices-based healthcare application, ensuring scalability and fault tolerance.",
+      "keywords": ["microservices", "service discovery", "AWS", "ECS", "healthcare"]
+    },
+    {
+      "id": 22,
+      "topic": "Data Security",
+      "question": "What strategy would you use to secure sensitive patient data in a cloud-based healthcare system?",
+      "options": [
+        "Store data unencrypted in S3",
+        "Implement encryption at rest and in transit with KMS",
+        "Use public APIs without authentication",
+        "Avoid cloud storage"
+      ],
+      "response": "Implement encryption at rest and in transit with KMS",
+      "explanation": "Securing patient data requires encryption at rest using AWS KMS and in transit using TLS, ensuring compliance with HIPAA and protecting sensitive information.",
+      "keywords": ["data security", "encryption", "KMS", "HIPAA", "healthcare"]
+    },
+    {
+      "id": 23,
+      "topic": "Frontend Frameworks",
+      "question": "Why would you choose Angular over React for a healthcare web application?",
+      "options": [
+        "Angular is better for static sites",
+        "Angular offers a full framework with two-way binding",
+        "React is not suitable for web apps",
+        "Angular is only for mobile apps"
+      ],
+      "response": "Angular offers a full framework with two-way binding",
+      "explanation": "Angular’s full framework, two-way data binding, and built-in features like dependency injection make it suitable for complex healthcare web applications requiring robust structure.",
+      "keywords": ["Angular", "React", "frontend", "healthcare", "framework"]
+    },
+    {
+      "id": 24,
+      "topic": "Cloud Cost Management",
+      "question": "How would you optimize cloud costs for a healthcare application on AWS?",
+      "options": [
+        "Run all services on dedicated EC2 instances",
+        "Use AWS Cost Explorer and Savings Plans",
+        "Avoid monitoring costs",
+        "Store all data in S3 Standard"
+      ],
+      "response": "Use AWS Cost Explorer and Savings Plans",
+      "explanation": "Optimizing cloud costs involves using AWS Cost Explorer to analyze usage and Savings Plans to commit to discounted compute resources, ensuring cost efficiency for healthcare applications.",
+      "keywords": ["cost management", "AWS", "Cost Explorer", "Savings Plans", "healthcare"]
+    },
+    {
+      "id": 25,
+      "topic": "AI Integration",
+      "question": "How would you use AI to improve diagnostic accuracy in a HealthTech platform?",
+      "options": [
+        "For front-end animations",
+        "To train models for pattern recognition in medical data",
+        "To manage network configurations",
+        "To automate DNS updates"
+      ],
+      "response": "To train models for pattern recognition in medical data",
+      "explanation": "AI can improve diagnostic accuracy by training models (e.g., using AWS SageMaker) to recognize patterns in medical data, such as imaging or patient records, supporting clinicians.",
+      "keywords": ["AI", "diagnostics", "SageMaker", "healthcare", "machine learning"]
+    },
+    {
+      "id": 26,
+      "topic": "Team Leadership",
+      "question": "How do you resolve conflicts between engineers on a HealthTech project?",
+      "options": [
+        "Ignore conflicts and focus on deliverables",
+        "Facilitate open discussions and align on goals",
+        "Assign blame to one party",
+        "Delay project timelines"
+      ],
+      "response": "Facilitate open discussions and align on goals",
+      "explanation": "Resolving conflicts involves facilitating open discussions, understanding perspectives, and aligning the team on project goals to maintain collaboration and progress in HealthTech projects.",
+      "keywords": ["leadership", "conflict resolution", "HealthTech", "collaboration", "team"]
+    },
+    {
+      "id": 27,
+      "topic": "Stakeholder Communication",
+      "question": "How would you justify adopting a new technology to a skeptical healthcare client?",
+      "options": [
+        "Provide technical documentation only",
+        "Demonstrate ROI and compliance benefits",
+        "Avoid discussing benefits",
+        "Use complex jargon"
+      ],
+      "response": "Demonstrate ROI and compliance benefits",
+      "explanation": "Justifying a new technology involves demonstrating its return on investment (ROI), such as cost savings or efficiency, and ensuring compliance with healthcare regulations to gain client trust.",
+      "keywords": ["stakeholder", "communication", "ROI", "compliance", "healthcare"]
+    },
+    {
+      "id": 28,
+      "topic": "Container Orchestration",
+      "question": "Why would you use AWS EKS for a healthcare application?",
+      "options": [
+        "To manage DNS records",
+        "To orchestrate Kubernetes workloads",
+        "To run SQL queries",
+        "To store static files"
+      ],
+      "response": "To orchestrate Kubernetes workloads",
+      "explanation": "AWS EKS (Elastic Kubernetes Service) is used to orchestrate Kubernetes workloads, providing scalable, managed containerized healthcare applications with high availability.",
+      "keywords": ["EKS", "Kubernetes", "containers", "AWS", "healthcare"]
+    },
+    {
+      "id": 29,
+      "topic": "CQRS",
+      "question": "How would you apply CQRS in a healthcare system handling patient records?",
+      "options": [
+        "Use a single database for all operations",
+        "Separate command and query responsibilities",
+        "Avoid data separation",
+        "Use CQRS for front-end only"
+      ],
+      "response": "Separate command and query responsibilities",
+      "explanation": "CQRS (Command Query Responsibility Segregation) separates read and write operations in a healthcare system, optimizing performance and scalability for patient record management.",
+      "keywords": ["CQRS", "architecture", "patient records", "healthcare", "scalability"]
+    },
+    {
+      "id": 30,
+      "topic": "Mobile Security",
+      "question": "How would you secure a healthcare mobile app handling sensitive data?",
+      "options": [
+        "Use unencrypted local storage",
+        "Implement OAuth 2.0 and encryption",
+        "Avoid authentication",
+        "Store data in plain text"
+      ],
+      "response": "Implement OAuth 2.0 and encryption",
+      "explanation": "Securing a healthcare mobile app involves using OAuth 2.0 for authentication and encryption (e.g., AES-256) for data at rest and in transit to protect sensitive patient information.",
+      "keywords": ["mobile security", "OAuth", "encryption", "healthcare", "app"]
+    },
+    {
+      "id": 31,
+      "topic": "JavaScript",
+      "question": "How would you optimize JavaScript performance in a healthcare web application?",
+      "options": [
+        "Use inline JavaScript extensively",
+        "Implement code splitting and lazy loading",
+        "Avoid JavaScript frameworks",
+        "Run all scripts synchronously"
+      ],
+      "response": "Implement code splitting and lazy loading",
+      "explanation": "Optimizing JavaScript performance involves code splitting and lazy loading to reduce initial load times, critical for responsive healthcare web applications.",
+      "keywords": ["JavaScript", "performance", "code splitting", "healthcare", "web"]
+    },
+    {
+      "id": 32,
+      "topic": "FHIR Standards",
+      "question": "How would you implement FHIR standards in a HealthTech platform?",
+      "options": [
+        "Use proprietary data formats",
+        "Integrate FHIR APIs for interoperability",
+        "Avoid standardized formats",
+        "Use FHIR for front-end only"
+      ],
+      "response": "Integrate FHIR APIs for interoperability",
+      "explanation": "Implementing FHIR (Fast Healthcare Interoperability Resources) standards involves integrating FHIR APIs to ensure interoperable data exchange between healthcare systems, supporting compliance and integration.",
+      "keywords": ["FHIR", "interoperability", "APIs", "HealthTech", "standards"]
+    },
+    {
+      "id": 33,
+      "topic": "CI/CD",
+      "question": "How would you set up a CI/CD pipeline for a HealthTech application on AWS?",
+      "options": [
+        "Manually deploy updates",
+        "Use AWS CodePipeline with CodeBuild",
+        "Avoid automated deployments",
+        "Use local scripts only"
+      ],
+      "response": "Use AWS CodePipeline with CodeBuild",
+      "explanation": "A CI/CD pipeline for a HealthTech application can be set up using AWS CodePipeline for orchestration and CodeBuild for compiling and testing, ensuring automated, reliable deployments.",
+      "keywords": ["CI/CD", "CodePipeline", "CodeBuild", "AWS", "HealthTech"]
+    },
+    {
+      "id": 34,
+      "topic": "Vue.js",
+      "question": "What advantage does Vue.js offer for a healthcare dashboard application?",
+      "options": [
+        "Complex backend processing",
+        "Lightweight and reactive UI",
+        "Database management",
+        "Network configuration"
+      ],
+      "response": "Lightweight and reactive UI",
+      "explanation": "Vue.js offers a lightweight, reactive UI framework, ideal for building responsive healthcare dashboards with real-time data visualization and user-friendly interfaces.",
+      "keywords": ["Vue.js", "UI", "reactive", "healthcare", "dashboard"]
+    },
+    {
+      "id": 35,
+      "topic": "Scalability",
+      "question": "How would you ensure a healthcare application scales during peak usage, like a flu season?",
+      "options": [
+        "Use a single server",
+        "Implement Auto Scaling with load balancers",
+        "Avoid cloud services",
+        "Limit user access"
+      ],
+      "response": "Implement Auto Scaling with load balancers",
+      "explanation": "Ensuring scalability during peak usage involves using AWS Auto Scaling to adjust resources and Elastic Load Balancers to distribute traffic, maintaining performance for healthcare applications.",
+      "keywords": ["scalability", "Auto Scaling", "load balancer", "AWS", "healthcare"]
+    },
+    {
+      "id": 36,
+      "topic": "Database Design",
+      "question": "What database would you choose for a healthcare app requiring real-time analytics?",
+      "options": [
+        "MySQL with manual scaling",
+        "Amazon Aurora for high performance",
+        "S3 for structured data",
+        "Local file storage"
+      ],
+      "response": "Amazon Aurora for high performance",
+      "explanation": "Amazon Aurora is a high-performance, scalable relational database suitable for real-time analytics in healthcare apps, supporting complex queries and high throughput.",
+      "keywords": ["Aurora", "database", "real-time", "healthcare", "AWS"]
+    },
+    {
+      "id": 37,
+      "topic": "Monitoring",
+      "question": "How would you monitor the health of a HealthTech application on AWS?",
+      "options": [
+        "Manually check logs",
+        "Use CloudWatch for metrics and alarms",
+        "Avoid monitoring tools",
+        "Rely on client feedback"
+      ],
+      "response": "Use CloudWatch for metrics and alarms",
+      "explanation": "Monitoring a HealthTech application involves using AWS CloudWatch to track metrics, set alarms, and analyze logs, ensuring proactive issue detection and resolution.",
+      "keywords": ["CloudWatch", "monitoring", "metrics", "AWS", "HealthTech"]
+    },
+    {
+      "id": 38,
+      "topic": "Disaster Recovery",
+      "question": "What strategy would you use for disaster recovery in a healthcare application?",
+      "options": [
+        "Store backups on local servers",
+        "Implement multi-region replication with AWS Backup",
+        "Avoid backups",
+        "Use a single Availability Zone"
+      ],
+      "response": "Implement multi-region replication with AWS Backup",
+      "explanation": "Disaster recovery for a healthcare application involves multi-region replication and AWS Backup to ensure data redundancy and quick recovery, critical for patient data availability.",
+      "keywords": ["disaster recovery", "AWS Backup", "multi-region", "healthcare", "redundancy"]
+    },
+    {
+      "id": 39,
+      "topic": "Technical Debt",
+      "question": "How would you manage technical debt in a fast-paced HealthTech project?",
+      "options": [
+        "Ignore technical debt",
+        "Prioritize refactoring and allocate time for debt reduction",
+        "Rewrite the application monthly",
+        "Avoid new features"
+      ],
+      "response": "Prioritize refactoring and allocate time for debt reduction",
+      "explanation": "Managing technical debt involves prioritizing refactoring, allocating time for debt reduction, and balancing new features to maintain code quality in HealthTech projects.",
+      "keywords": ["technical debt", "refactoring", "HealthTech", "code quality", "prioritization"]
+    },
+    {
+      "id": 40,
+      "topic": "Innovation",
+      "question": "How would you incorporate blockchain into a HealthTech platform?",
+      "options": [
+        "For front-end styling",
+        "To ensure secure, immutable patient records",
+        "To manage network traffic",
+        "To run SQL queries"
+      ],
+      "response": "To ensure secure, immutable patient records",
+      "explanation": "Blockchain can be incorporated into a HealthTech platform to ensure secure, immutable patient records, enhancing trust and compliance using services like AWS Managed Blockchain.",
+      "keywords": ["blockchain", "patient records", "security", "AWS", "HealthTech"]
+    },
+    {
+      "id": 41,
+      "topic": "Scalable Architecture",
+      "question": "How would you design a fault-tolerant architecture for a healthcare platform handling millions of patient records?",
+      "options": [
+        "Use a single EC2 instance with local storage",
+        "Implement multi-AZ RDS and DynamoDB with ELB",
+        "Store all data in S3 without redundancy",
+        "Avoid cloud services for simplicity"
+      ],
+      "response": "Implement multi-AZ RDS and DynamoDB with ELB",
+      "explanation": "A fault-tolerant architecture for a healthcare platform uses multi-AZ RDS for relational data, DynamoDB for NoSQL scalability, and Elastic Load Balancer (ELB) to distribute traffic, ensuring high availability and redundancy for patient records.",
+      "keywords": ["fault-tolerant", "architecture", "RDS", "DynamoDB", "healthcare"]
+    },
+    {
+      "id": 42,
+      "topic": "HIPAA Compliance",
+      "question": "What steps would you take to ensure a healthcare application is HIPAA-compliant on AWS?",
+      "options": [
+        "Use public S3 buckets for patient data",
+        "Enable encryption, logging, and access controls",
+        "Avoid cloud storage for sensitive data",
+        "Disable all security groups"
+      ],
+      "response": "Enable encryption, logging, and access controls",
+      "explanation": "HIPAA compliance on AWS requires encryption (using KMS for data at rest and TLS in transit), CloudTrail for logging, and IAM access controls to secure patient data and meet regulatory standards.",
+      "keywords": ["HIPAA", "compliance", "encryption", "AWS", "healthcare"]
+    },
+    {
+      "id": 43,
+      "topic": "API Design",
+      "question": "How would you design a secure REST API for a healthcare application integrating with external systems?",
+      "options": [
+        "Use public endpoints without authentication",
+        "Implement OAuth 2.0 and API Gateway",
+        "Avoid APIs and use direct database access",
+        "Use SOAP instead of REST"
+      ],
+      "response": "Implement OAuth 2.0 and API Gateway",
+      "explanation": "A secure REST API for a healthcare application uses OAuth 2.0 for authentication and AWS API Gateway for managing endpoints, ensuring secure integration with external systems like EHRs or payers.",
+      "keywords": ["REST API", "OAuth", "API Gateway", "healthcare", "security"]
+    },
+    {
+      "id": 44,
+      "topic": "AI and ML",
+      "question": "How would you leverage machine learning to predict patient outcomes in a HealthTech platform?",
+      "options": [
+        "Use ML for front-end styling",
+        "Train models with SageMaker on historical data",
+        "Avoid ML due to complexity",
+        "Use ML for network configuration"
+      ],
+      "response": "Train models with SageMaker on historical data",
+      "explanation": "Machine learning can predict patient outcomes by training models on historical data using AWS SageMaker, enabling insights for personalized care or risk stratification in HealthTech platforms.",
+      "keywords": ["machine learning", "SageMaker", "patient outcomes", "healthcare", "AWS"]
+    },
+    {
+      "id": 45,
+      "topic": "Leadership and Mentorship",
+      "question": "How do you ensure a team of engineers delivers a high-quality healthcare project under tight deadlines?",
+      "options": [
+        "Assign tasks without oversight",
+        "Set clear goals, conduct regular reviews, and provide mentorship",
+        "Avoid deadlines to focus on quality",
+        "Delegate all tasks to senior engineers"
+      ],
+      "response": "Set clear goals, conduct regular reviews, and provide mentorship",
+      "explanation": "Ensuring high-quality delivery involves setting clear goals, conducting regular code and design reviews, and mentoring engineers to maintain standards and meet deadlines in healthcare projects.",
+      "keywords": ["leadership", "mentorship", "deadlines", "healthcare", "quality"]
+    },
+    {
+      "id": 46,
+      "topic": "Client-Facing Skills",
+      "question": "How would you handle a healthcare client’s concerns about adopting cloud technology?",
+      "options": [
+        "Dismiss their concerns",
+        "Explain security, compliance, and cost benefits",
+        "Provide only technical details",
+        "Avoid discussing cloud adoption"
+      ],
+      "response": "Explain security, compliance, and cost benefits",
+      "explanation": "Addressing client concerns involves explaining how cloud technology (e.g., AWS) ensures HIPAA compliance, enhances security, and reduces costs, building trust for healthcare adoption.",
+      "keywords": ["client-facing", "cloud", "compliance", "healthcare", "communication"]
+    },
+    {
+      "id": 47,
+      "topic": "Open-Source Integration",
+      "question": "How would you use open-source tools to reduce costs in a HealthTech project?",
+      "options": [
+        "Replace all proprietary tools",
+        "Use open-source FHIR libraries and frameworks",
+        "Avoid open-source for security",
+        "Use open-source for DNS management"
+      ],
+      "response": "Use open-source FHIR libraries and frameworks",
+      "explanation": "Open-source tools like HAPI FHIR libraries and frameworks (e.g., FastAPI) reduce costs by enabling interoperability and rapid development while maintaining security in HealthTech projects.",
+      "keywords": ["open-source", "FHIR", "cost reduction", "HealthTech", "frameworks"]
+    },
+    {
+      "id": 48,
+      "topic": "Performance Optimization",
+      "question": "How would you optimize the performance of a healthcare application with high user traffic?",
+      "options": [
+        "Use a single server",
+        "Implement caching with ElastiCache and CDN",
+        "Avoid performance optimization",
+        "Store all data locally"
+      ],
+      "response": "Implement caching with ElastiCache and CDN",
+      "explanation": "Optimizing performance involves using AWS ElastiCache for in-memory caching and CloudFront as a CDN to reduce latency and handle high traffic in healthcare applications.",
+      "keywords": ["performance", "ElastiCache", "CloudFront", "healthcare", "AWS"]
+    },
+    {
+      "id": 49,
+      "topic": "DevOps Practices",
+      "question": "What DevOps practices would you implement for a HealthTech application on AWS?",
+      "options": [
+        "Manual deployments only",
+        "Infrastructure as Code with CDK and CI/CD",
+        "Avoid automation",
+        "Use local scripts for deployment"
+      ],
+      "response": "Infrastructure as Code with CDK and CI/CD",
+      "explanation": "DevOps practices for a HealthTech application include using AWS CDK for Infrastructure as Code and CI/CD pipelines (e.g., CodePipeline) to automate deployments and ensure consistency.",
+      "keywords": ["DevOps", "CDK", "CI/CD", "AWS", "HealthTech"]
+    },
+    {
+      "id": 50,
+      "topic": "Interoperability",
+      "question": "How would you ensure interoperability between a HealthTech platform and legacy healthcare systems?",
+      "options": [
+        "Use proprietary formats",
+        "Implement HL7 and FHIR standards",
+        "Avoid integration",
+        "Use file-based data transfer"
+      ],
+      "response": "Implement HL7 and FHIR standards",
+      "explanation": "Interoperability with legacy systems is achieved by implementing HL7 and FHIR standards, enabling standardized data exchange and integration in HealthTech platforms.",
+      "keywords": ["interoperability", "HL7", "FHIR", "healthcare", "standards"]
     }
   ]
 }

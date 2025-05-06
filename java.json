@@ -283,6 +283,571 @@
       "response": "Java",
       "explanation": "Generics enforce type safety. get(0) returns the string added.",
       "keywords": ["generics", "collections", "list", "ArrayList", "type", "safety", "get", "add", "Java", "output"]
+    },
+    {
+      "id": 31,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 31; int b = 4;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "3",
+      "explanation": "The modulo (%) operator returns the remainder of division between two integers. In this case, `31 % 4` equals 3.\n\nExamples:\n1. `int a = 10, b = 3;` → Output: 1 (10 / 3 = 3 R1)\n2. `int a = 8, b = 2;` → Output: 0 (8 is divisible by 2)\n3. `int a = 7, b = 5;` → Output: 2 (7 / 5 = 1 R2)\n4. `int a = 15, b = 4;` → Output: 3 (15 / 4 = 3 R3)\n// Useful in hashing, loops, and buffer rotation.",
+      "keywords": ["modulo", "arithmetic", "operators", "Java", "integer", "remainder", "division", "math", "interview", "syntax"]
+    },
+    {
+      "id": 32,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 32; int b = 1;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "0",
+      "explanation": "Any number modulo 1 returns 0, since there is no remainder.\n\nExamples:\n1. `int a = 5, b = 1;` → Output: 0\n2. `int a = 100, b = 1;` → Output: 0\n3. `int a = -10, b = 1;` → Output: 0\n4. `int a = 0, b = 1;` → Output: 0\n// Useful in fixed-size window computations.",
+      "keywords": ["modulo", "division", "zero", "Java", "arithmetic", "integer", "remainder", "math", "syntax", "operators"]
+    },
+    {
+      "id": 33,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 33; int b = 2;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "1",
+      "explanation": "`33 % 2` returns 1 because 33 divided by 2 gives a remainder of 1.\n\nExamples:\n1. `int a = 9, b = 2;` → Output: 1\n2. `int a = 13, b = 2;` → Output: 1\n3. `int a = 4, b = 2;` → Output: 0\n4. `int a = 1, b = 2;` → Output: 1\n// Helpful in checking if a number is even or odd.",
+      "keywords": ["modulo", "remainder", "even", "odd", "division", "Java", "math", "operators", "syntax", "interview"]
+    },
+    {
+      "id": 34,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 34; int b = 3;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "1",
+      "explanation": "34 divided by 3 is 11 remainder 1, so 34 % 3 = 1.\n\nExamples:\n1. `int a = 17, b = 3;` → Output: 2\n2. `int a = 30, b = 3;` → Output: 0\n3. `int a = 4, b = 3;` → Output: 1\n4. `int a = 1, b = 3;` → Output: 1\n// Used in modulo arithmetic and offset calculation.",
+      "keywords": ["modulo", "math", "division", "remainder", "operators", "Java", "examples", "looping", "buffer", "interview"]
+    },
+    {
+      "id": 35,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 35; int b = 4;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "3",
+      "explanation": "`35 % 4` yields 3 because 4 * 8 = 32 and 35 - 32 = 3.\n\nExamples:\n1. `int a = 9, b = 4;` → Output: 1\n2. `int a = 8, b = 4;` → Output: 0\n3. `int a = 5, b = 4;` → Output: 1\n4. `int a = 12, b = 4;` → Output: 0\n// Often used in wrap-around operations like clocks or circular buffers.",
+      "keywords": ["modulo", "wrap", "clock", "ring", "math", "Java", "remainder", "operators", "division", "examples"]
+    },
+    {
+      "id": 36,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 36; int b = 1;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "0",
+      "explanation": "Any number modulo 1 is always 0 since every integer is divisible by 1.\n\nExamples:\n1. `int x = 25, y = 1;` → Output: 0\n2. `int x = -10, y = 1;` → Output: 0\n3. `int x = 0, y = 1;` → Output: 0\n4. `int x = 999, y = 1;` → Output: 0\n// Useful in simplifying repetitive patterns.",
+      "keywords": ["modulo", "division", "remainder", "Java", "math", "operator", "integer", "zero", "pattern", "interview"]
+    },
+    {
+      "id": 37,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 37; int b = 2;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "1",
+      "explanation": "37 divided by 2 leaves a remainder of 1 (since 2 * 18 = 36).\n\nExamples:\n1. `int a = 5, b = 2;` → Output: 1\n2. `int a = 6, b = 2;` → Output: 0\n3. `int a = 13, b = 2;` → Output: 1\n4. `int a = 100, b = 2;` → Output: 0\n// Commonly used to check even/odd numbers.",
+      "keywords": ["modulo", "even", "odd", "math", "Java", "arithmetic", "remainder", "division", "operator", "parity"]
+    },
+    {
+      "id": 38,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 38; int b = 3;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "2",
+      "explanation": "`38 % 3` equals 2 because 3 * 12 = 36 and 38 - 36 = 2.\n\nExamples:\n1. `int a = 11, b = 3;` → Output: 2\n2. `int a = 12, b = 3;` → Output: 0\n3. `int a = 13, b = 3;` → Output: 1\n4. `int a = 14, b = 3;` → Output: 2\n// Useful in hashing and index distribution.",
+      "keywords": ["modulo", "index", "hashing", "distribution", "Java", "math", "division", "examples", "remainder", "coding"]
+    },
+    {
+      "id": 39,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 39; int b = 4;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "3",
+      "explanation": "`39 % 4` yields 3 because 4 * 9 = 36, and 39 - 36 = 3.\n\nExamples:\n1. `int a = 15, b = 4;` → Output: 3\n2. `int a = 8, b = 4;` → Output: 0\n3. `int a = 9, b = 4;` → Output: 1\n4. `int a = 16, b = 4;` → Output: 0\n// Seen in scenarios where periodic overflow must be avoided.",
+      "keywords": ["modulo", "periodic", "overflow", "cyclic", "Java", "arithmetic", "math", "wrap", "buffer", "examples"]
+    },
+    {
+      "id": 40,
+      "topic": "Java Interview Essentials",
+      "question": "What does the following code output?\n\nint a = 40; int b = 1;\nSystem.out.println(a % b);",
+      "options": ["0", "1", "2", "3", "Compilation Error"],
+      "response": "0",
+      "explanation": "Any integer modulo 1 always results in 0. Here, 40 % 1 = 0.\n\nExamples:\n1. `int x = 1 % 1;` → Output: 0\n2. `int x = 1000 % 1;` → Output: 0\n3. `int x = -50 % 1;` → Output: 0\n4. `int x = 99999 % 1;` → Output: 0\n// Use cases include normalizing indices and calendar rotations.",
+      "keywords": ["modulo", "arithmetic", "Java", "normalize", "rotation", "division", "integer", "examples", "buffer", "zero"]
+    },
+    {
+      "id": 41,
+      "topic": "Variables, Data Types, and Operators",
+      "question": "What is the output of the following code?\n\nbyte b = 127;\nb++;\nSystem.out.println(b);",
+      "options": ["128", "-128", "127", "Compilation Error", "0"],
+      "response": "-128",
+      "explanation": "In Java, `byte` has a range from -128 to 127. When it overflows (127 + 1), it wraps around to -128 due to 2's complement representation.\n\nExamples:\n1. `byte b = 127; b++;` → Output: -128\n2. `byte b = -128; b--;` → Output: 127\n3. `byte b = 0; b--;` → Output: -1\n4. `byte b = -1; b++;` → Output: 0\n// Byte is an 8-bit signed integer. Overflow behavior is expected in bounded types.",
+      "keywords": ["byte", "overflow", "data types", "operators", "Java", "increment", "range", "casting", "2's complement", "wrapping"]
+    },
+    {
+      "id": 42,
+      "topic": "Control Flow (if, switch, loops)",
+      "question": "What is the output?\n\nint i = 0;\nwhile (i < 3) {\n  if (i == 1) break;\n  System.out.print(i);\n  i++;\n}",
+      "options": ["0", "01", "012", "1", "None"],
+      "response": "0",
+      "explanation": "Loop runs while i < 3. On first iteration, i=0 is printed. On second, i=1 triggers `break` before print.\n\nExamples:\n1. `while(i < 2) i++;` → Loop runs twice\n2. `for(int i=0; i<3; i++) { if(i==2) continue; }` → skips i==2\n3. `do {} while(i<3);` → Executes once even if condition is false\n4. `if (true) return;` → Immediately exits method\n// Control statements alter execution flow.",
+      "keywords": ["control flow", "while", "break", "loop", "if", "Java", "execution", "statement", "condition", "exit"]
+    },
+    {
+      "id": 43,
+      "topic": "Arrays and Strings",
+      "question": "What is the output?\n\nString s = \"abc\";\ns.concat(\"def\");\nSystem.out.println(s);",
+      "options": ["abcdef", "abc", "def", "Compilation Error", "null"],
+      "response": "abc",
+      "explanation": "String is immutable. `concat()` returns a new string, but original `s` is unchanged unless reassigned.\n\nExamples:\n1. `s = s.concat(\"xyz\")` → Output: abcxyz\n2. \"hello\".replace(\"h\", \"j\") → Output: jello\n3. `char[] arr = {'a','b'}; new String(arr)` → Output: ab\n4. `String[] sa = new String[2]; sa[0] = \"hi\";` → Indexed string = hi\n// Always reassign string if you want to capture result.",
+      "keywords": ["string", "concat", "immutable", "Java", "arrays", "char", "reference", "heap", "value", "reassignment"]
+    },
+    {
+      "id": 44,
+      "topic": "Methods and Functions",
+      "question": "What is the output?\n\npublic class Main {\n  static int add(int a, int b) { return a + b; }\n  public static void main(String[] args) {\n    System.out.println(add(2, 3));\n  }\n}",
+      "options": ["2", "3", "5", "Compilation Error", "null"],
+      "response": "5",
+      "explanation": "`add` is a static method returning the sum of two integers. Examples:\n1. add(1, 1) → 2\n2. add(0, 0) → 0\n3. add(-5, 5) → 0\n4. add(10, -3) → 7\n// Methods encapsulate logic and support reusability.",
+      "keywords": ["method", "function", "static", "parameters", "return", "Java", "encapsulation", "logic", "addition", "call"]
+    },
+    {
+      "id": 45,
+      "topic": "Classes, Objects, and OOP",
+      "question": "What is the output?\n\nclass A { int x = 5; }\nclass Main {\n  public static void main(String[] args) {\n    A obj = new A();\n    System.out.println(obj.x);\n  }\n}",
+      "options": ["0", "5", "null", "Compilation Error", "Undefined"],
+      "response": "5",
+      "explanation": "Object `obj` is an instance of class A. Examples:\n1. new A().x → 5\n2. A obj = null; → accessing obj.x causes NullPointerException\n3. obj.x + 1 → 6\n4. obj.x = 10 → modifies field\n// Objects encapsulate state using fields.",
+      "keywords": ["class", "object", "field", "state", "OOP", "Java", "instance", "encapsulation", "value", "reference"]
+    },
+    {
+      "id": 46,
+      "topic": "Interfaces and Enums",
+      "question": "What is the output?\n\ninterface I { int get(); }\nclass C implements I { public int get() { return 42; } }\nclass Main {\n  public static void main(String[] args) {\n    I i = new C();\n    System.out.println(i.get());\n  }\n}",
+      "options": ["0", "42", "null", "Compilation Error", "Runtime Error"],
+      "response": "42",
+      "explanation": "C implements I and overrides get(). Examples:\n1. I i = new C(); i.get() → 42\n2. Anonymous: new I() { public int get() { return 1; } }\n3. Lambda: (I) () -> 99\n4. Interface enables polymorphism.\n// Interfaces define contracts.",
+      "keywords": ["interface", "implement", "Java", "polymorphism", "abstraction", "override", "method", "lambda", "anonymous", "contract"]
+    },
+    {
+      "id": 47,
+      "topic": "Exception Handling",
+      "question": "What is the output?\n\ntry {\n  String s = null;\n  s.length();\n} catch (NullPointerException e) {\n  System.out.println(\"Caught\");\n}",
+      "options": ["Caught", "null", "Exception", "Runtime Error", "Nothing"],
+      "response": "Caught",
+      "explanation": "Calling method on `null` throws NPE. Examples:\n1. s = null; s.length() → throws\n2. catch (Exception e) → catches all\n3. finally → always runs\n4. throw new IOException() → manual throw\n// Try-catch prevents app crash.",
+      "keywords": ["exception", "null", "catch", "try", "Java", "NPE", "runtime", "error", "handling", "graceful"]
+    },
+    {
+      "id": 48,
+      "topic": "Collections and Generics",
+      "question": "What is the output?\n\nList<String> list = new ArrayList<>();\nlist.add(\"A\");\nlist.add(\"B\");\nSystem.out.println(list.size());",
+      "options": ["1", "2", "0", "null", "Compilation Error"],
+      "response": "2",
+      "explanation": "Two elements are added. Examples:\n1. list.add(\"X\") → size grows\n2. list.clear() → becomes 0\n3. list.get(0) → 'A'\n4. list.contains(\"B\") → true\n// Generics improve type safety.",
+      "keywords": ["list", "collections", "generics", "size", "add", "Java", "arraylist", "type", "elements", "structure"]
+    },
+    {
+      "id": 49,
+      "topic": "File I/O and Serialization",
+      "question": "What does this code do?\n\nFiles.write(Paths.get(\"out.txt\"), \"data\".getBytes());",
+      "options": ["Writes 'data' to file", "Reads file", "Deletes file", "Compiles file", "Throws error"],
+      "response": "Writes 'data' to file",
+      "explanation": "It writes byte data to a file. Examples:\n1. Files.readAllLines(path) → reads text\n2. Files.exists(path) → checks presence\n3. Files.delete(path) → removes file\n4. Files.createFile(path) → new file\n// Java NIO simplifies I/O ops.",
+      "keywords": ["file", "io", "write", "Java", "nio", "filesystem", "serialization", "bytes", "path", "data"]
+    },
+    {
+      "id": 50,
+      "topic": "Threads and Concurrency",
+      "question": "What is the output?\n\nThread t = new Thread(() -> System.out.println(\"Running\"));\nt.start();",
+      "options": ["Running", "Compilation Error", "null", "Nothing", "Exception"],
+      "response": "Running",
+      "explanation": "Creates a thread with a lambda Runnable. Examples:\n1. new Thread(() -> {}).start() → async\n2. Thread.sleep(1000) → pause\n3. t.join() → wait\n4. ExecutorService → thread pool\n// Use for parallel tasks.",
+      "keywords": ["thread", "start", "Java", "lambda", "concurrency", "runnable", "parallel", "execution", "async", "multithreading"]
+    },
+    {
+      "id": 51,
+      "topic": "Lambda Expressions and Functional Interfaces",
+      "question": "What does this print?\n\nFunction<Integer, Integer> square = x -> x * x;\nSystem.out.println(square.apply(4));",
+      "options": ["4", "8", "16", "2", "Compilation Error"],
+      "response": "16",
+      "explanation": "Lambda `x -> x * x` applied to 4 returns 16. Examples:\n1. x -> x + 1 → increment\n2. (a, b) -> a + b → sum\n3. () -> 42 → constant\n4. str -> str.length() → string length\n// Introduced in Java 8.",
+      "keywords": ["lambda", "function", "Java", "functional", "interface", "apply", "expression", "arrow", "input", "output"]
+    },
+    {
+      "id": 52,
+      "topic": "Streams and Optional",
+      "question": "What is the output?\n\nList<String> names = Arrays.asList(\"a\", \"b\", \"c\");\nnames.stream().filter(x -> x.equals(\"b\")).forEach(System.out::print);",
+      "options": ["a", "abc", "b", "c", "Compilation Error"],
+      "response": "b",
+      "explanation": "Stream filters for 'b'. Examples:\n1. map(String::toUpperCase) → transforms\n2. count() → totals\n3. findFirst().orElse(\"x\") → safe retrieval\n4. sorted() → orders\n// Streams simplify data ops.",
+      "keywords": ["stream", "filter", "lambda", "Java", "processing", "functional", "list", "foreach", "filtering", "print"]
+    },
+    {
+      "id": 53,
+      "topic": "Annotations and Reflection",
+      "question": "What is the output?\n\n@Deprecated\nvoid oldMethod() {}\n\nboolean isDeprecated = Main.class.getDeclaredMethod(\"oldMethod\").isAnnotationPresent(Deprecated.class);\nSystem.out.println(isDeprecated);",
+      "options": ["true", "false", "Compilation Error", "null", "Exception"],
+      "response": "true",
+      "explanation": "Checks if method has @Deprecated annotation. Examples:\n1. @Override → compiler validates\n2. @Retention(RUNTIME) → reflection visible\n3. getAnnotations() → lists\n4. isAnnotationPresent(...) → boolean\n// Annotations add metadata.",
+      "keywords": ["annotation", "reflection", "Java", "metadata", "deprecated", "method", "runtime", "class", "present", "check"]
+    },{
+      "id": 54,
+      "topic": "Access Modifiers and Static/Final",
+      "question": "What is the output?\n\nfinal int x = 5;\nx = 10;\nSystem.out.println(x);",
+      "options": ["10", "5", "Compilation Error", "Runtime Error", "null"],
+      "response": "Compilation Error",
+      "explanation": "`final` variables cannot be reassigned after initialization. Examples: final int x = 5 → OK, x = 6 → error. Useful for constants and immutability.",
+      "keywords": ["final", "static", "Java", "constant", "access", "modifier", "immutability", "compile", "variable", "assignment"]
+    },
+    {
+      "id": 55,
+      "topic": "Inner Classes",
+      "question": "What is the output?\n\nclass Outer {\n  class Inner { int x = 7; }\n  Inner getInner() { return new Inner(); }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Outer o = new Outer();\n    System.out.println(o.getInner().x);\n  }\n}",
+      "options": ["0", "7", "null", "Compilation Error", "Runtime Error"],
+      "response": "7",
+      "explanation": "An inner class has access to its enclosing class. Must instantiate outer before inner. Accessed via o.getInner().x.",
+      "keywords": ["inner class", "outer", "Java", "encapsulation", "nested", "structure", "instance", "field", "constructor", "access"]
+    },
+    {
+      "id": 56,
+      "topic": "Packages, Imports, and Modules",
+      "question": "What is the purpose of the 'package' keyword in Java?",
+      "options": ["To import a library", "To declare visibility", "To define class grouping", "To run main()", "To allocate memory"],
+      "response": "To define class grouping",
+      "explanation": "`package` groups related classes. Helps organize large codebases logically, such as `package com.myapp.models`.",
+      "keywords": ["package", "Java", "import", "module", "grouping", "structure", "organization", "namespace", "access", "class"]
+    },
+    {
+      "id": 57,
+      "topic": "JVM, Memory Model, and Garbage Collection",
+      "question": "What is the role of Garbage Collector in Java?",
+      "options": ["Manage threads", "Compile code", "Free unused memory", "Optimize loops", "Store constants"],
+      "response": "Free unused memory",
+      "explanation": "GC reclaims memory used by objects with no references. Triggered automatically or via System.gc().",
+      "keywords": ["garbage collection", "memory", "JVM", "heap", "object", "GC", "finalize", "cleanup", "reference", "lifecycle"]
+    },
+    {
+      "id": 58,
+      "topic": "JDBC and Database Access",
+      "question": "What does this JDBC code do?\n\nConnection con = DriverManager.getConnection(url);\nStatement stmt = con.createStatement();\nResultSet rs = stmt.executeQuery(\"SELECT 1\");",
+      "options": ["Insert record", "Create table", "Execute query", "Throw error", "Close connection"],
+      "response": "Execute query",
+      "explanation": "`executeQuery()` runs a read-only SQL query. Results are accessed via ResultSet.",
+      "keywords": ["jdbc", "query", "sql", "Java", "database", "resultset", "execute", "statement", "connection", "read"]
+    },
+    {
+      "id": 59,
+      "topic": "JUnit and Testing",
+      "question": "What is the output?\n\n@Test\npublic void testAdd() {\n  assertEquals(4, 2 + 2);\n}",
+      "options": ["Pass", "Fail", "Compilation Error", "Exception", "No Output"],
+      "response": "Pass",
+      "explanation": "assertEquals verifies that 2+2 equals expected 4. Common in unit testing to validate logic.",
+      "keywords": ["junit", "test", "assert", "pass", "fail", "Java", "unit", "validation", "annotation", "framework"]
+    },
+    {
+      "id": 60,
+      "topic": "Java 8+ Features",
+      "question": "What is the output?\n\nrecord Point(int x, int y) {}\n\nPoint p = new Point(1, 2);\nSystem.out.println(p.x());",
+      "options": ["1", "2", "x", "Compilation Error", "null"],
+      "response": "1",
+      "explanation": "`record` creates immutable data classes with auto-generated methods. Here, p.x() returns 1.",
+      "keywords": ["record", "Java 14", "immutable", "data class", "getter", "concise", "structure", "fields", "accessor", "boilerplate"]
+    },
+    {
+      "id": 61,
+      "topic": "Streams (Advanced)",
+      "question": "What is the result?\n\nIntStream.range(1, 4).map(x -> x * x).sum();",
+      "options": ["14", "13", "12", "10", "9"],
+      "response": "14",
+      "explanation": "range(1,4) yields 1,2,3. Squares are 1,4,9 → sum is 14. Demonstrates functional style processing.",
+      "keywords": ["stream", "range", "map", "sum", "Java", "intstream", "lambda", "transform", "pipeline", "fluent"]
+    },
+    {
+      "id": 62,
+      "topic": "Optional (Advanced)",
+      "question": "What is printed?\n\nOptional<String> opt = Optional.of(\"hello\");\nSystem.out.println(opt.orElse(\"none\"));",
+      "options": ["hello", "none", "Optional[hello]", "null", "Exception"],
+      "response": "hello",
+      "explanation": "If value is present, `orElse` returns it. Otherwise, it would fallback to \"none\".",
+      "keywords": ["optional", "null-safe", "Java", "value", "present", "default", "map", "get", "safe access", "nullable"]
+    },
+    {
+      "id": 63,
+      "topic": "Switch Expressions (Java 14+)",
+      "question": "What is the output?\n\nint x = switch (\"B\") {\n  case \"A\" -> 1;\n  case \"B\" -> 2;\n  default -> 0;\n};\nSystem.out.println(x);",
+      "options": ["1", "2", "0", "Compilation Error", "Runtime Error"],
+      "response": "2",
+      "explanation": "Java 14 introduced switch expressions with return values. \"B\" matches case → returns 2.",
+      "keywords": ["switch", "expression", "Java 14", "case", "arrow", "return", "control flow", "concise", "pattern", "value"]
+    },
+    {
+      "id": 64,
+      "topic": "Polymorphism",
+      "question": "What is the output?\n\nclass Animal { void speak() { System.out.println(\"Animal\"); } }\nclass Dog extends Animal { void speak() { System.out.println(\"Dog\"); } }\npublic class Test {\n  public static void main(String[] args) {\n    Animal a = new Dog();\n    a.speak();\n  }\n}",
+      "options": ["Animal", "Dog", "Compilation Error", "Runtime Error", "null"],
+      "response": "Dog",
+      "explanation": "Polymorphism allows a subclass (Dog) to override methods of the superclass (Animal). The method invoked is determined at runtime. Examples: (1) Animal a = new Dog(); → Dog, (2) Animal a = new Animal(); → Animal, (3) Dog d = (Dog) a; → valid cast, (4) a instanceof Dog → true.",
+      "keywords": ["polymorphism", "inheritance", "override", "method", "Java", "OOP", "runtime", "dynamic dispatch", "animal", "dog"]
+    },
+    {
+      "id": 65,
+      "topic": "Abstraction",
+      "question": "Which of the following is true about abstract classes in Java?",
+      "options": ["They cannot have methods", "They must have all abstract methods", "They can be instantiated", "They can have constructors", "They cannot extend other classes"],
+      "response": "They can have constructors",
+      "explanation": "Abstract classes cannot be instantiated but can have constructors, concrete methods, and fields. Examples: abstract class A {} → valid, A a = new A(); → error, A() {} → constructor.",
+      "keywords": ["abstraction", "abstract class", "constructor", "Java", "OOP", "design", "instantiation", "method", "class", "partial implementation"]
+    },
+    {
+      "id": 66,
+      "topic": "Encapsulation",
+      "question": "Which access modifier enforces encapsulation best for class fields?",
+      "options": ["public", "private", "protected", "default", "static"],
+      "response": "private",
+      "explanation": "`private` restricts access to within the class. Encapsulation is achieved by hiding fields and providing public getters/setters. Examples: private int age; public int getAge(); public void setAge(int a);",
+      "keywords": ["encapsulation", "private", "getter", "setter", "Java", "access", "modifier", "OOP", "fields", "hiding"]
+    },
+    {
+      "id": 67,
+      "topic": "Functional Interfaces",
+      "question": "Which of the following is a valid functional interface in Java?",
+      "options": ["Runnable", "List", "Serializable", "Comparator", "Thread"],
+      "response": "Runnable",
+      "explanation": "A functional interface has exactly one abstract method. Runnable has run(). Examples: Runnable r = () -> {}; @FunctionalInterface interface X { void act(); }",
+      "keywords": ["functional interface", "Java", "lambda", "runnable", "abstract method", "SAM", "interface", "stream", "functional", "functional programming"]
+    },
+    {
+      "id": 68,
+      "topic": "Method Overloading",
+      "question": "What is printed?\n\nvoid print(int a) { System.out.println(\"int\"); }\nvoid print(double a) { System.out.println(\"double\"); }\n\nprint(5);",
+      "options": ["int", "double", "Compilation Error", "Runtime Error", "5"],
+      "response": "int",
+      "explanation": "Overloading chooses the most specific match. `print(5)` matches print(int). Examples: print(5.0) → double, print('c') → int, print(5L) → error unless long exists.",
+      "keywords": ["overloading", "method", "Java", "compile time", "signature", "int", "double", "specific", "resolution", "argument"]
+    },
+    {
+      "id": 69,
+      "topic": "Inheritance",
+      "question": "Which keyword is used to call superclass constructor?",
+      "options": ["this", "super", "base", "parent", "init"],
+      "response": "super",
+      "explanation": "super() calls superclass constructor. Must be first in subclass constructor. Examples: super(); super(5); super.name.",
+      "keywords": ["inheritance", "super", "constructor", "Java", "base", "class", "subclass", "parent", "initialization", "OOP"]
+    },
+    {
+      "id": 70,
+      "topic": "Static Keyword",
+      "question": "What is the output?\n\nclass A {\n  static int x = 5;\n  static void update() { x++; }\n}\n\nA.update();\nSystem.out.println(A.x);",
+      "options": ["5", "6", "0", "Compilation Error", "Runtime Error"],
+      "response": "6",
+      "explanation": "Static members belong to the class, not instances. `x++` increments the shared field. Examples: A.x = 10; new A().x; main is static.",
+      "keywords": ["static", "field", "method", "Java", "shared", "class", "value", "increment", "instance", "global"]
+    },
+    {
+      "id": 71,
+      "topic": "Constructor Overloading",
+      "question": "What is the output?\n\nclass A {\n  int x;\n  A() { this(10); }\n  A(int x) { this.x = x; }\n}\n\nSystem.out.println(new A().x);",
+      "options": ["0", "10", "null", "Compilation Error", "Runtime Error"],
+      "response": "10",
+      "explanation": "Constructor chaining using `this()` calls another constructor in the class. A() calls A(int). Result: x = 10.",
+      "keywords": ["constructor", "overloading", "this", "Java", "chaining", "class", "field", "value", "new", "initialization"]
+    },
+    {
+      "id": 72,
+      "topic": "Default Methods in Interfaces",
+      "question": "What is true about default methods in interfaces?",
+      "options": ["They cannot have a body", "They must be static", "They were added in Java 8", "They override abstract methods", "They are mandatory"],
+      "response": "They were added in Java 8",
+      "explanation": "Default methods were introduced in Java 8 to provide method bodies in interfaces. Allows backward compatibility.",
+      "keywords": ["default method", "interface", "Java 8", "implementation", "compatibility", "evolution", "method", "optional", "override", "functional"]
+    },
+    {
+      "id": 73,
+      "topic": "Primitive vs Wrapper",
+      "question": "What is the output?\n\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);",
+      "options": ["true", "false", "Compilation Error", "null", "Exception"],
+      "response": "true",
+      "explanation": "Integer caching for values from -128 to 127 makes `a` and `b` refer to the same object. Use `equals()` for value comparison.",
+      "keywords": ["wrapper", "integer", "primitive", "==", "equals", "Java", "caching", "autoboxing", "value", "reference"]
+    },
+    {
+      "id": 74,
+      "topic": "Autoboxing and Equality",
+      "question": "What is the output?\n\nInteger a = 128;\nInteger b = 128;\nSystem.out.println(a == b);",
+      "options": ["true", "false", "Compilation Error", "null", "Exception"],
+      "response": "false",
+      "explanation": "`Integer` objects are compared by reference with `==`. Values > 127 are not cached, so different objects. Use `.equals()` for value comparison.",
+      "keywords": ["autoboxing", "wrapper", "==", "equals", "integer", "reference", "value", "comparison", "caching", "Java"]
+    },
+    {
+      "id": 75,
+      "topic": "String Pool and Comparison",
+      "question": "What is the output?\n\nString s1 = \"hello\";\nString s2 = new String(\"hello\");\nSystem.out.println(s1 == s2);",
+      "options": ["true", "false", "Compilation Error", "null", "Exception"],
+      "response": "false",
+      "explanation": "`==` compares references. `new String()` creates a new object. Use `.equals()` for content comparison.",
+      "keywords": ["string", "pool", "comparison", "reference", "equals", "==", "Java", "object", "memory", "intern"]
+    },
+    {
+      "id": 76,
+      "topic": "Array Initialization",
+      "question": "What is the output?\n\nint[] arr = new int[3];\nSystem.out.println(arr[0]);",
+      "options": ["0", "null", "undefined", "Compilation Error", "Exception"],
+      "response": "0",
+      "explanation": "Primitive arrays are initialized with default values. `int` defaults to 0.",
+      "keywords": ["array", "initialization", "default", "Java", "int", "primitive", "memory", "values", "index", "bounds"]
+    },
+    {
+      "id": 77,
+      "topic": "Try-Catch-Finally Flow",
+      "question": "What is the output?\n\ntry {\n  return 1;\n} finally {\n  return 2;\n}",
+      "options": ["1", "2", "Compilation Error", "Exception", "None"],
+      "response": "2",
+      "explanation": "A return in `finally` overrides the `try` return. Execution always goes through finally.",
+      "keywords": ["finally", "try", "return", "Java", "execution", "override", "flow", "catch", "priority", "control"]
+    },
+    {
+      "id": 78,
+      "topic": "Integer.parseInt",
+      "question": "What happens with this code?\n\nInteger.parseInt(\"012\");",
+      "options": ["12", "10", "Exception", "8", "Compilation Error"],
+      "response": "12",
+      "explanation": "Java parses the string as decimal unless a radix is specified. `012` is not octal unless explicitly told.",
+      "keywords": ["parseInt", "integer", "string", "radix", "Java", "decimal", "number", "exception", "octal", "conversion"]
+    },
+    {
+      "id": 79,
+      "topic": "Null Checks",
+      "question": "What is the output?\n\nString s = null;\nif (s.equals(\"test\")) {\n  System.out.println(\"yes\");\n}",
+      "options": ["yes", "no output", "Compilation Error", "Exception", "null"],
+      "response": "Exception",
+      "explanation": "Calling `.equals` on a null object causes a `NullPointerException`. Check for null before calling methods.",
+      "keywords": ["null", "exception", "npe", "equals", "Java", "check", "safe", "optional", "reference", "nullpointer"]
+    },
+    {
+      "id": 80,
+      "topic": "Switch Fallthrough",
+      "question": "What is the output?\n\nint x = 1;\nswitch (x) {\n  case 1: System.out.print(\"A\");\n  case 2: System.out.print(\"B\");\n}",
+      "options": ["A", "AB", "B", "Compilation Error", "None"],
+      "response": "AB",
+      "explanation": "Without `break`, control falls through to the next case. Always use `break` unless fallthrough is desired.",
+      "keywords": ["switch", "fallthrough", "case", "break", "Java", "control flow", "branch", "match", "execution", "statement"]
+    },
+    {
+      "id": 81,
+      "topic": "Constructor Misuse",
+      "question": "What is the output?\n\nclass A {\n  void A() { System.out.println(\"A\"); }\n}\nnew A();",
+      "options": ["A", "Compilation Error", "Runtime Error", "No Output", "Exception"],
+      "response": "No Output",
+      "explanation": "`void A()` is a method, not a constructor. Java uses default constructor silently.",
+      "keywords": ["constructor", "method", "Java", "default", "declaration", "syntax", "return type", "object", "new", "class"]
+    },
+    {
+      "id": 82,
+      "topic": "Boolean Logic",
+      "question": "What is the output?\n\nboolean b = false;\nif (b = true) {\n  System.out.println(\"yes\");\n}",
+      "options": ["yes", "no", "Compilation Error", "Exception", "null"],
+      "response": "yes",
+      "explanation": "`b = true` assigns true to `b`, so the condition is always true. Common bug is confusing `=` with `==`.",
+      "keywords": ["boolean", "assignment", "comparison", "logic", "Java", "if", "condition", "truth", "operator", "trap"]
+    },
+    {
+      "id": 83,
+      "topic": "StringBuilder vs String",
+      "question": "What is the output?\n\nString s = \"a\";\ns.concat(\"b\");\nSystem.out.println(s);",
+      "options": ["a", "ab", "b", "null", "Exception"],
+      "response": "a",
+      "explanation": "Strings are immutable in Java. `concat()` returns a new string. `s` remains unchanged unless reassigned.",
+      "keywords": ["string", "immutable", "concat", "Java", "reference", "value", "builder", "assignment", "reassign", "object"]
+    },{
+      "id": 84,
+      "topic": "Array Indexing",
+      "question": "What is the output?\n\nint[] nums = {1, 2, 3};\nSystem.out.println(nums[3]);",
+      "options": ["3", "null", "0", "ArrayIndexOutOfBoundsException", "Compilation Error"],
+      "response": "ArrayIndexOutOfBoundsException",
+      "explanation": "Java arrays are zero-indexed. Accessing index 3 in a 3-element array causes an exception.",
+      "keywords": ["array", "index", "out of bounds", "Java", "exception", "length", "error", "zero-based", "access", "validation"]
+    },
+    {
+      "id": 85,
+      "topic": "Access Modifiers",
+      "question": "Which modifier makes a method accessible only within its class?",
+      "options": ["public", "protected", "private", "default", "static"],
+      "response": "private",
+      "explanation": "`private` is the most restrictive access level, allowing visibility only within the same class.",
+      "keywords": ["access", "modifier", "private", "Java", "visibility", "encapsulation", "method", "field", "restriction", "scope"]
+    },
+    {
+      "id": 86,
+      "topic": "Immutable Objects",
+      "question": "Which of the following classes is immutable?",
+      "options": ["StringBuilder", "String", "ArrayList", "Date", "HashMap"],
+      "response": "String",
+      "explanation": "Strings are immutable. Any operation returns a new String object without altering the original.",
+      "keywords": ["immutable", "String", "Java", "thread safety", "modification", "final", "object", "StringBuilder", "data", "structure"]
+    },
+    {
+      "id": 87,
+      "topic": "Static vs Instance",
+      "question": "What happens here?\n\nclass A {\n  static int x = 0;\n  void increment() { x++; }\n}\n\nnew A().increment();\nnew A().increment();\nSystem.out.println(A.x);",
+      "options": ["0", "1", "2", "Compilation Error", "Exception"],
+      "response": "2",
+      "explanation": "Static variables are shared across all instances. The method `increment()` increases the same static variable.",
+      "keywords": ["static", "instance", "field", "Java", "shared", "class", "method", "counter", "object", "increment"]
+    },
+    {
+      "id": 88,
+      "topic": "Instanceof Operator",
+      "question": "What is the output?\n\nString s = \"abc\";\nSystem.out.println(s instanceof Object);",
+      "options": ["true", "false", "Compilation Error", "Runtime Error", "null"],
+      "response": "true",
+      "explanation": "`instanceof` checks object type. Every object in Java extends Object, so this is true.",
+      "keywords": ["instanceof", "Java", "type", "check", "class", "inheritance", "object", "cast", "runtime", "interface"]
+    },
+    {
+      "id": 89,
+      "topic": "Recursion",
+      "question": "What is the output?\n\nint fact(int n) {\n  if (n == 0) return 1;\n  else return n * fact(n - 1);\n}\nSystem.out.println(fact(3));",
+      "options": ["3", "6", "9", "1", "Compilation Error"],
+      "response": "6",
+      "explanation": "Recursive factorial function: 3 * 2 * 1 = 6.",
+      "keywords": ["recursion", "factorial", "Java", "function", "stack", "base case", "call", "math", "loop", "return"]
+    },
+    {
+      "id": 90,
+      "topic": "Type Casting",
+      "question": "What happens here?\n\ndouble d = 9.8;\nint x = (int) d;\nSystem.out.println(x);",
+      "options": ["9", "10", "9.8", "Exception", "Compilation Error"],
+      "response": "9",
+      "explanation": "Casting from double to int truncates the decimal part. Value becomes 9.",
+      "keywords": ["type casting", "double", "int", "truncate", "Java", "conversion", "precision", "loss", "value", "cast"]
+    },
+    {
+      "id": 91,
+      "topic": "Overriding vs Overloading",
+      "question": "Which statement is true?",
+      "options": ["Overloading requires same parameters", "Overriding occurs at compile time", "Overriding allows changing return type", "Overloading can have different parameter types", "Overriding can change method name"],
+      "response": "Overloading can have different parameter types",
+      "explanation": "Overloading means same method name but different parameter types. Overriding means same method signature in subclass.",
+      "keywords": ["overloading", "overriding", "Java", "parameters", "compile", "runtime", "method", "inheritance", "signature", "subclass"]
+    },
+    {
+      "id": 92,
+      "topic": "Do-While Loop",
+      "question": "What is the output?\n\nint x = 1;\ndo {\n  System.out.print(x);\n} while (x < 1);",
+      "options": ["1", "0", "No output", "Infinite loop", "Compilation Error"],
+      "response": "1",
+      "explanation": "`do-while` executes the body once before evaluating the condition, so it prints 1.",
+      "keywords": ["do-while", "loop", "Java", "execution", "condition", "minimum", "iteration", "flow", "logic", "print"]
+    },
+    {
+      "id": 93,
+      "topic": "Final Keyword on Method",
+      "question": "What does `final` on a method mean?",
+      "options": ["Cannot be called", "Cannot be overridden", "Cannot be assigned", "Cannot be static", "Can only be used once"],
+      "response": "Cannot be overridden",
+      "explanation": "A method marked `final` cannot be overridden by subclasses. This preserves the implementation.",
+      "keywords": ["final", "method", "override", "Java", "inheritance", "OOP", "restriction", "design", "security", "subclass"]
     }
   ]
 }

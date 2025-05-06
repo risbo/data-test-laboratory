@@ -1,20 +1,246 @@
 {
-  "id": 1,
+  "id": 3,
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 301,
+      "topic": "Spring Boot",
+      "question": "Which of the following is the default scope of a Spring bean?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "Singleton",
+        "Prototype",
+        "Request",
+        "Session"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Singleton",
+      "explanation": "By default, Spring beans are created with singleton scope, meaning that only one instance of the bean is created per Spring container.",
+      "keywords": ["Singleton", "bean scope", "Spring", "default"]
+    },
+    {
+      "id": 302,
+      "topic": "Spring Boot",
+      "question": "Which annotation in Spring Boot is used to mark a class as a configuration class?",
+      "options": [
+        "@Component",
+        "@Configuration",
+        "@Service",
+        "@Controller"
+      ],
+      "response": "@Configuration",
+      "explanation": "The `@Configuration` annotation is used to indicate that a class has `@Bean` definition methods, and it is a source of Spring bean definitions.",
+      "keywords": ["@Configuration", "Spring", "bean definition"]
+    },
+    {
+      "id": 303,
+      "topic": "Spring Boot",
+      "question": "What is the purpose of the `@SpringBootApplication` annotation?",
+      "options": [
+        "It enables automatic configuration.",
+        "It sets up a web application context.",
+        "It is used for database connection.",
+        "It is a shortcut for `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`."
+      ],
+      "response": "It is a shortcut for `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`.",
+      "explanation": "The `@SpringBootApplication` annotation is a convenience annotation that combines several commonly used annotations in Spring Boot, including `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`.",
+      "keywords": ["@SpringBootApplication", "auto configuration", "component scan", "Spring Boot"]
+    },
+    {
+      "id": 304,
+      "topic": "Spring Boot",
+      "question": "Which of the following annotations is used to inject dependencies into Spring beans?",
+      "options": [
+        "@Autowired",
+        "@Inject",
+        "@Resource",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "The `@Autowired`, `@Inject`, and `@Resource` annotations are all used to inject dependencies into Spring beans, with `@Autowired` being the most commonly used in Spring Boot.",
+      "keywords": ["@Autowired", "@Inject", "@Resource", "dependency injection"]
+    },
+    {
+      "id": 305,
+      "topic": "Spring Boot",
+      "question": "In Spring Boot, what is the purpose of the `@EnableAutoConfiguration` annotation?",
+      "options": [
+        "It enables the automatic configuration of Spring beans.",
+        "It configures Spring Security settings.",
+        "It enables AOP configurations.",
+        "It sets up the application context."
+      ],
+      "response": "It enables the automatic configuration of Spring beans.",
+      "explanation": "The `@EnableAutoConfiguration` annotation is used to enable the auto-configuration feature in Spring Boot, which automatically configures Spring beans based on the application's classpath.",
+      "keywords": ["@EnableAutoConfiguration", "auto configuration", "Spring Boot"]
+    },
+    {
+      "id": 306,
+      "topic": "Spring Boot",
+      "question": "What is the default behavior of the `@Transactional` annotation in Spring Boot?",
+      "options": [
+        "It commits the transaction immediately after the method completes.",
+        "It ensures that the method's changes are committed to the database at the end of the method.",
+        "It rolls back the transaction if a runtime exception occurs.",
+        "It ensures that no exceptions can be thrown inside the method."
+      ],
+      "response": "It rolls back the transaction if a runtime exception occurs.",
+      "explanation": "By default, the `@Transactional` annotation in Spring Boot will roll back the transaction if a runtime exception occurs, ensuring atomicity of the transaction.",
+      "keywords": ["@Transactional", "transaction", "Spring Boot", "rollback"]
+    },
+    {
+      "id": 307,
+      "topic": "Spring Boot",
+      "question": "Which of the following scopes is available in Spring Boot for bean management?",
+      "options": [
+        "Singleton",
+        "Prototype",
+        "Request",
+        "Session",
+        "Application",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "Spring Boot supports several bean scopes, including `Singleton`, `Prototype`, `Request`, `Session`, and `Application`, allowing beans to be scoped in different ways depending on the application's requirements.",
+      "keywords": ["bean scope", "Spring Boot", "singleton", "prototype", "request"]
+    },
+    {
+      "id": 308,
+      "topic": "Spring Boot",
+      "question": "Which of the following annotations is used to mark an aspect in Spring AOP?",
+      "options": [
+        "@Aspect",
+        "@Service",
+        "@Controller",
+        "@Repository"
+      ],
+      "response": "@Aspect",
+      "explanation": "The `@Aspect` annotation is used to mark a class as an aspect in Spring AOP (Aspect-Oriented Programming), allowing the class to contain cross-cutting concerns such as logging or security.",
+      "keywords": ["@Aspect", "Spring AOP", "aspect", "cross-cutting concerns"]
+    },
+    {
+      "id": 309,
+      "topic": "Spring Boot",
+      "question": "What does Spring Boot's `@EnableAspectJAutoProxy` annotation do?",
+      "options": [
+        "Enables AOP in Spring Boot.",
+        "Automatically configures the aspect-oriented programming aspects.",
+        "Enables the proxy for Spring beans.",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "The `@EnableAspectJAutoProxy` annotation enables AOP support in Spring Boot, allowing proxy creation for beans and enabling AspectJ-style aspect weaving.",
+      "keywords": ["@EnableAspectJAutoProxy", "AOP", "Spring Boot", "proxy"]
+    },
+    {
+      "id": 310,
+      "topic": "Spring Boot",
+      "question": "Which of the following is true about the `@RequestMapping` annotation in Spring Boot?",
+      "options": [
+        "It maps HTTP requests to handler methods of MVC controllers.",
+        "It is used to configure transaction management.",
+        "It is used to define a Spring bean.",
+        "It is used to bind request parameters to method parameters."
+      ],
+      "response": "It maps HTTP requests to handler methods of MVC controllers.",
+      "explanation": "The `@RequestMapping` annotation is used to map HTTP requests to handler methods in Spring MVC controllers, providing flexibility in defining the endpoints.",
+      "keywords": ["@RequestMapping", "HTTP request", "controller", "Spring Boot"]
+    },
+    {
+      "id": 311,
+      "topic": "Spring Boot",
+      "question": "What is the function of Spring Boot's autoconfiguration feature?",
+      "options": [
+        "It automatically configures beans based on the application's environment.",
+        "It configures the web server used by the application.",
+        "It configures the security settings for the application.",
+        "It creates the database schema automatically."
+      ],
+      "response": "It automatically configures beans based on the application's environment.",
+      "explanation": "Spring Boot's autoconfiguration feature automatically configures Spring beans and other application components based on the application's environment and dependencies, reducing manual configuration.",
+      "keywords": ["autoconfiguration", "Spring Boot", "beans", "environment"]
+    },
+    {
+      "id": 312,
+      "topic": "Spring Boot",
+      "question": "Which of the following Spring Boot annotations allows you to handle HTTP POST requests?",
+      "options": [
+        "@GetMapping",
+        "@PostMapping",
+        "@RequestMapping",
+        "@PutMapping"
+      ],
+      "response": "@PostMapping",
+      "explanation": "The `@PostMapping` annotation is specifically used to handle HTTP POST requests in Spring Boot controllers, simplifying the mapping of POST methods.",
+      "keywords": ["@PostMapping", "HTTP POST", "Spring Boot", "controller"]
+    },
+    {
+      "id": 313,
+      "topic": "Spring Boot",
+      "question": "Which annotation is used to mark a class as a Spring MVC controller that handles RESTful requests?",
+      "options": [
+        "@Controller",
+        "@RestController",
+        "@Service",
+        "@Repository"
+      ],
+      "response": "@RestController",
+      "explanation": "The `@RestController` annotation is used to mark a class as a Spring MVC controller that handles RESTful requests, automatically serializing responses to JSON or XML.",
+      "keywords": ["@RestController", "REST", "Spring Boot", "controller"]
+    },
+    {
+      "id": 314,
+      "topic": "Spring Boot",
+      "question": "What is the default port for a Spring Boot application when running locally?",
+      "options": [
+        "8080",
+        "8000",
+        "3000",
+        "9000"
+      ],
+      "response": "8080",
+      "explanation": "By default, Spring Boot applications run on port 8080 when deployed locally. This can be changed through application properties.",
+      "keywords": ["port", "default", "Spring Boot", "application"]
+    },
+    {
+      "id": 315,
+      "topic": "Spring Boot",
+      "question": "What is the purpose of Spring Boot's `application.properties` or `application.yml` file?",
+      "options": [
+        "It configures the database connection.",
+        "It contains configuration settings for the Spring Boot application.",
+        "It defines the build dependencies for the application.",
+        "It configures the Spring Security settings."
+      ],
+      "response": "It contains configuration settings for the Spring Boot application.",
+      "explanation": "The `application.properties` or `application.yml` file is used to define configuration settings such as database connection details, server settings, and custom application properties.",
+      "keywords": ["application.properties", "application.yml", "Spring Boot", "configuration"]
+    },
+    {
+      "id": 316,
+      "topic": "Spring Boot",
+      "question": "Which of the following methods is used to explicitly create a Spring Bean definition?",
+      "options": [
+        "@Bean",
+        "@Component",
+        "@Service",
+        "@Repository"
+      ],
+      "response": "@Bean",
+      "explanation": "The `@Bean` annotation is used to explicitly define a Spring bean within a `@Configuration` class, allowing Spring to manage the lifecycle of the bean.",
+      "keywords": ["@Bean", "Spring", "bean definition", "Spring Boot"]
+    },
+    {
+      "id": 317,
+      "topic": "Spring Boot",
+      "question": "Which of the following annotations is used to enable Spring Security in a Spring Boot application?",
+      "options": [
+        "@EnableSecurity",
+        "@EnableWebSecurity",
+        "@EnableGlobalSecurity",
+        "@EnableOAuth2"
+      ],
+      "response": "@EnableWebSecurity",
+      "explanation": "The `@EnableWebSecurity` annotation is used to enable Spring Security in a Spring Boot application, allowing configuration of authentication and authorization.",
+      "keywords": ["@EnableWebSecurity", "Spring Security", "Spring Boot", "security"]
     }
   ]
 }

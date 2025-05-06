@@ -1,34 +1,509 @@
 {
-  "id": 1,
+  "id": 2,
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "id": 201,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to create a single instance of a class?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "Singleton",
+        "Factory",
+        "Builder",
+        "Prototype"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "Singleton",
+      "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.",
+      "keywords": ["Singleton", "design pattern", "instance", "Java", "object creation"]
     },
     {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "id": 202,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to decouple the abstraction from the implementation?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "Bridge",
+        "Adapter",
+        "Composite",
+        "Decorator"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "Bridge",
+      "explanation": "The Bridge pattern is used to decouple abstraction from implementation, allowing both to vary independently.",
+      "keywords": ["Bridge", "decoupling", "abstraction", "implementation", "design pattern"]
+    },
+    {
+      "id": 203,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows an object to alter its behavior when its internal state changes?",
+      "options": [
+        "State",
+        "Strategy",
+        "Visitor",
+        "Observer"
+      ],
+      "response": "State",
+      "explanation": "The State pattern allows an object to change its behavior based on its internal state, making the object appear to change its class.",
+      "keywords": ["State", "behavior", "internal state", "design pattern", "object"]
+    },
+    {
+      "id": 204,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used when you want to create families of related or dependent objects?",
+      "options": [
+        "Abstract Factory",
+        "Factory Method",
+        "Singleton",
+        "Prototype"
+      ],
+      "response": "Abstract Factory",
+      "explanation": "The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.",
+      "keywords": ["Abstract Factory", "family", "objects", "related", "design pattern"]
+    },
+    {
+      "id": 205,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to convert one interface to another that a client expects?",
+      "options": [
+        "Adapter",
+        "Facade",
+        "Composite",
+        "Decorator"
+      ],
+      "response": "Adapter",
+      "explanation": "The Adapter pattern is used to convert one interface to another that the client expects, allowing incompatible interfaces to work together.",
+      "keywords": ["Adapter", "interface", "conversion", "design pattern"]
+    },
+    {
+      "id": 206,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to represent a part-whole hierarchy?",
+      "options": [
+        "Composite",
+        "Decorator",
+        "Flyweight",
+        "Proxy"
+      ],
+      "response": "Composite",
+      "explanation": "The Composite pattern is used to compose objects into tree structures to represent part-whole hierarchies, allowing clients to treat individual objects and compositions uniformly.",
+      "keywords": ["Composite", "part-whole", "hierarchy", "design pattern"]
+    },
+    {
+      "id": 207,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to add responsibilities to an object dynamically?",
+      "options": [
+        "Decorator",
+        "Observer",
+        "Strategy",
+        "Composite"
+      ],
+      "response": "Decorator",
+      "explanation": "The Decorator pattern allows dynamic addition of responsibilities to an object without altering its structure, providing more flexible alternatives than subclassing.",
+      "keywords": ["Decorator", "responsibilities", "dynamic", "object", "design pattern"]
+    },
+    {
+      "id": 208,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to provide a simplified interface to a complex subsystem?",
+      "options": [
+        "Facade",
+        "Abstract Factory",
+        "Bridge",
+        "Adapter"
+      ],
+      "response": "Facade",
+      "explanation": "The Facade pattern provides a simplified interface to a complex subsystem, making it easier for clients to interact with it.",
+      "keywords": ["Facade", "simplified interface", "complex subsystem", "design pattern"]
+    },
+    {
+      "id": 209,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to allow a class to alter its behavior when its internal state changes?",
+      "options": [
+        "State",
+        "Strategy",
+        "Command",
+        "Observer"
+      ],
+      "response": "State",
+      "explanation": "The State pattern allows an object to change its behavior when its internal state changes. The object appears to change its class as well.",
+      "keywords": ["State", "internal state", "behavior", "design pattern"]
+    },
+    {
+      "id": 210,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to reduce the number of objects created, thus reducing memory usage?",
+      "options": [
+        "Flyweight",
+        "Singleton",
+        "Prototype",
+        "Factory"
+      ],
+      "response": "Flyweight",
+      "explanation": "The Flyweight pattern is used to minimize memory usage by sharing as many data as possible with similar objects.",
+      "keywords": ["Flyweight", "memory", "objects", "design pattern"]
+    },
+    {
+      "id": 211,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows an object to be constructed step by step?",
+      "options": [
+        "Builder",
+        "Prototype",
+        "Abstract Factory",
+        "Singleton"
+      ],
+      "response": "Builder",
+      "explanation": "The Builder pattern allows an object to be constructed step by step, enabling fine-grained control over the construction process.",
+      "keywords": ["Builder", "object construction", "step by step", "design pattern"]
+    },
+    {
+      "id": 212,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to allow an object to notify other objects about changes in its state?",
+      "options": [
+        "Observer",
+        "Command",
+        "State",
+        "Strategy"
+      ],
+      "response": "Observer",
+      "explanation": "The Observer pattern allows an object (subject) to notify its observers (clients) about changes in its state, ensuring that all observers are updated automatically.",
+      "keywords": ["Observer", "notify", "state", "design pattern"]
+    },
+    {
+      "id": 213,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to allow a class to delegate certain responsibilities to helper classes?",
+      "options": [
+        "Delegate",
+        "Facade",
+        "Composite",
+        "Strategy"
+      ],
+      "response": "Delegate",
+      "explanation": "The Delegate pattern allows a class to delegate certain responsibilities to other helper classes, promoting composition over inheritance.",
+      "keywords": ["Delegate", "delegation", "responsibilities", "design pattern"]
+    },
+    {
+      "id": 214,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to convert a request into a more suitable form for the receiver?",
+      "options": [
+        "Command",
+        "Adapter",
+        "State",
+        "Decorator"
+      ],
+      "response": "Command",
+      "explanation": "The Command pattern converts a request into a form that is more suitable for the receiver. It encapsulates a request as an object.",
+      "keywords": ["Command", "request", "design pattern", "receiver"]
+    },
+    {
+      "id": 215,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to represent complex data as a flat collection of objects?",
+      "options": [
+        "Iterator",
+        "Composite",
+        "Flyweight",
+        "Chain of Responsibility"
+      ],
+      "response": "Iterator",
+      "explanation": "The Iterator pattern allows traversing through a collection of objects sequentially without exposing the underlying structure.",
+      "keywords": ["Iterator", "traversal", "collection", "design pattern"]
+    },
+    {
+      "id": 216,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to decouple a request from the action that performs the request?",
+      "options": [
+        "Command",
+        "State",
+        "Observer",
+        "Strategy"
+      ],
+      "response": "Command",
+      "explanation": "The Command pattern decouples the sender of a request from the object that performs the action, allowing for better flexibility and extension.",
+      "keywords": ["Command", "decouple", "request", "design pattern"]
+    },
+    {
+      "id": 217,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to define a family of algorithms and make them interchangeable?",
+      "options": [
+        "Strategy",
+        "State",
+        "Observer",
+        "Command"
+      ],
+      "response": "Strategy",
+      "explanation": "The Strategy pattern defines a family of algorithms and allows them to be interchangeable at runtime, providing flexibility and reusability.",
+      "keywords": ["Strategy", "algorithms", "interchangeable", "design pattern"]
+    },
+    {
+      "id": 218,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to allow an object to control its own state and behavior?",
+      "options": [
+        "State",
+        "Observer",
+        "Command",
+        "Chain of Responsibility"
+      ],
+      "response": "State",
+      "explanation": "The State pattern allows an object to control its own state and behavior by changing its internal state based on certain conditions.",
+      "keywords": ["State", "behavior", "internal state", "design pattern"]
+    },{
+      "id": 219,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to ensure that a class has only one instance, while providing a global point of access to it?",
+      "options": [
+        "Singleton",
+        "Prototype",
+        "Factory",
+        "Abstract Factory"
+      ],
+      "response": "Singleton",
+      "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it, ensuring controlled access to the single instance.",
+      "keywords": ["Singleton", "global point of access", "instance", "design pattern"]
+    },
+    {
+      "id": 220,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used when you need to allow an object to change its behavior when its internal state changes?",
+      "options": [
+        "State",
+        "Strategy",
+        "Command",
+        "Observer"
+      ],
+      "response": "State",
+      "explanation": "The State pattern allows an object to change its behavior based on its internal state, making it appear as though the object has changed its class.",
+      "keywords": ["State", "behavior", "internal state", "design pattern"]
+    },
+    {
+      "id": 221,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used when creating a new object based on a template or prototype and then modifying it as necessary?",
+      "options": [
+        "Prototype",
+        "Factory",
+        "Builder",
+        "Singleton"
+      ],
+      "response": "Prototype",
+      "explanation": "The Prototype pattern allows cloning an object and modifying it as needed. It is used when you want to create new objects by copying existing ones.",
+      "keywords": ["Prototype", "cloning", "template", "design pattern"]
+    },
+    {
+      "id": 222,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to provide a simplified interface to a complex subsystem?",
+      "options": [
+        "Facade",
+        "Adapter",
+        "Composite",
+        "Decorator"
+      ],
+      "response": "Facade",
+      "explanation": "The Facade pattern provides a simplified interface to a complex subsystem, making it easier for clients to interact with the subsystem.",
+      "keywords": ["Facade", "simplified interface", "complex subsystem", "design pattern"]
+    },
+    {
+      "id": 223,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows an object to alter its behavior when its internal state changes?",
+      "options": [
+        "State",
+        "Strategy",
+        "Observer",
+        "Command"
+      ],
+      "response": "State",
+      "explanation": "The State pattern allows an object to alter its behavior when its internal state changes, and it appears to change its class.",
+      "keywords": ["State", "internal state", "behavior", "design pattern"]
+    },
+    {
+      "id": 224,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows for the creation of a family of related objects without specifying their concrete classes?",
+      "options": [
+        "Abstract Factory",
+        "Factory Method",
+        "Builder",
+        "Prototype"
+      ],
+      "response": "Abstract Factory",
+      "explanation": "The Abstract Factory pattern provides an interface for creating families of related objects without specifying their concrete classes, enabling flexibility in object creation.",
+      "keywords": ["Abstract Factory", "related objects", "family", "design pattern"]
+    },
+    {
+      "id": 225,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows for behavior modification of a class without altering its structure?",
+      "options": [
+        "Decorator",
+        "Proxy",
+        "Facade",
+        "Strategy"
+      ],
+      "response": "Decorator",
+      "explanation": "The Decorator pattern allows you to add behavior to an object dynamically by wrapping it with a decorator class without changing the object's structure.",
+      "keywords": ["Decorator", "behavior", "dynamic", "design pattern"]
+    },
+    {
+      "id": 226,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used when you need to provide an object with a simplified interface to complex systems?",
+      "options": [
+        "Facade",
+        "Composite",
+        "Adapter",
+        "Observer"
+      ],
+      "response": "Facade",
+      "explanation": "The Facade pattern provides a simplified interface to a complex subsystem, abstracting its complexity from the client.",
+      "keywords": ["Facade", "interface", "complex subsystem", "design pattern"]
+    },
+    {
+      "id": 227,
+      "topic": "Pattern Design",
+      "question": "Which design pattern provides a way to access the elements of a collection sequentially without exposing its underlying representation?",
+      "options": [
+        "Iterator",
+        "State",
+        "Visitor",
+        "Proxy"
+      ],
+      "response": "Iterator",
+      "explanation": "The Iterator pattern provides a way to access the elements of a collection sequentially without exposing its underlying representation.",
+      "keywords": ["Iterator", "collection", "sequential", "design pattern"]
+    },
+    {
+      "id": 228,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to allow objects to subscribe and receive notifications of state changes in another object?",
+      "options": [
+        "Observer",
+        "Strategy",
+        "State",
+        "Command"
+      ],
+      "response": "Observer",
+      "explanation": "The Observer pattern allows one object (subject) to notify other objects (observers) about changes in its state, ensuring that all observers are updated automatically.",
+      "keywords": ["Observer", "notification", "state changes", "design pattern"]
+    },
+    {
+      "id": 229,
+      "topic": "Pattern Design",
+      "question": "Which design pattern provides an interface for creating a family of related or dependent objects?",
+      "options": [
+        "Abstract Factory",
+        "Prototype",
+        "Builder",
+        "Composite"
+      ],
+      "response": "Abstract Factory",
+      "explanation": "The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.",
+      "keywords": ["Abstract Factory", "related objects", "family", "design pattern"]
+    },
+    {
+      "id": 230,
+      "topic": "Pattern Design",
+      "question": "Which design pattern helps to ensure that only one instance of a class is created and provides access to it globally?",
+      "options": [
+        "Singleton",
+        "Factory",
+        "Prototype",
+        "Abstract Factory"
+      ],
+      "response": "Singleton",
+      "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.",
+      "keywords": ["Singleton", "single instance", "global access", "design pattern"]
+    },
+    {
+      "id": 231,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to decouple the client from the implementation of an interface?",
+      "options": [
+        "Bridge",
+        "Adapter",
+        "Composite",
+        "Decorator"
+      ],
+      "response": "Bridge",
+      "explanation": "The Bridge pattern decouples the abstraction from the implementation, allowing both to vary independently.",
+      "keywords": ["Bridge", "abstraction", "implementation", "design pattern"]
+    },
+    {
+      "id": 232,
+      "topic": "Pattern Design",
+      "question": "Which design pattern allows an object to be replaced dynamically without altering the client's behavior?",
+      "options": [
+        "Strategy",
+        "Command",
+        "State",
+        "Visitor"
+      ],
+      "response": "Strategy",
+      "explanation": "The Strategy pattern allows an object to change its behavior by switching between different strategies, allowing dynamic behavior change without altering the client.",
+      "keywords": ["Strategy", "behavior", "dynamic", "design pattern"]
+    },
+    {
+      "id": 233,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to create a complex object step by step?",
+      "options": [
+        "Builder",
+        "Factory",
+        "Singleton",
+        "Prototype"
+      ],
+      "response": "Builder",
+      "explanation": "The Builder pattern is used to create a complex object step by step, providing more control over the construction process.",
+      "keywords": ["Builder", "complex object", "step by step", "design pattern"]
+    },
+    {
+      "id": 234,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to provide a way to execute requests without knowing the request's receiver?",
+      "options": [
+        "Command",
+        "Strategy",
+        "Visitor",
+        "Chain of Responsibility"
+      ],
+      "response": "Command",
+      "explanation": "The Command pattern encapsulates a request as an object, allowing it to be executed without the client needing to know the details of the receiver.",
+      "keywords": ["Command", "encapsulation", "request", "design pattern"]
+    },
+    {
+      "id": 235,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used when you need to chain multiple operations and process them sequentially?",
+      "options": [
+        "Chain of Responsibility",
+        "Command",
+        "State",
+        "Observer"
+      ],
+      "response": "Chain of Responsibility",
+      "explanation": "The Chain of Responsibility pattern allows you to chain multiple operations together and process them sequentially, passing the request through each handler in the chain.",
+      "keywords": ["Chain of Responsibility", "chain", "operations", "design pattern"]
+    },
+    {
+      "id": 236,
+      "topic": "Pattern Design",
+      "question": "Which design pattern is used to handle requests that can have multiple variations and need to decide the appropriate response based on the context?",
+      "options": [
+        "Strategy",
+        "State",
+        "Command",
+        "Visitor"
+      ],
+      "response": "Strategy",
+      "explanation": "The Strategy pattern defines a family of algorithms, allowing the client to choose the appropriate one at runtime based on the context.",
+      "keywords": ["Strategy", "algorithm", "runtime", "design pattern"]
     }
   ]
 }

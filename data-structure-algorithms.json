@@ -29,6 +29,244 @@
       "response": "Boolean",
       "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
       "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+    },
+    {
+      "id": 103,
+      "topic": "Java",
+      "question": "Which data structure uses a LIFO (Last In, First Out) principle?",
+      "options": [
+        "Queue",
+        "Stack",
+        "ArrayList",
+        "LinkedList"
+      ],
+      "response": "Stack",
+      "explanation": "A Stack follows the LIFO principle, meaning the last element inserted is the first one to be removed.",
+      "keywords": ["LIFO", "Stack", "data structure", "Java", "collection", "principle"]
+    },
+    {
+      "id": 104,
+      "topic": "Java",
+      "question": "Which of the following is not part of the Java Collections Framework?",
+      "options": [
+        "ArrayList",
+        "HashMap",
+        "Vector",
+        "Array"
+      ],
+      "response": "Array",
+      "explanation": "An array is not part of the Java Collections Framework. The collections framework includes classes like `ArrayList`, `HashMap`, and `Vector`.",
+      "keywords": ["Java", "collections framework", "Array", "data structure", "Java API"]
+    },
+    {
+      "id": 105,
+      "topic": "Java",
+      "question": "What is the time complexity of accessing an element by index in an ArrayList?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "response": "O(1)",
+      "explanation": "Accessing an element by index in an ArrayList is O(1) because it uses an array internally and the index directly maps to a position in the array.",
+      "keywords": ["ArrayList", "time complexity", "index", "Java", "performance"]
+    },
+    {
+      "id": 106,
+      "topic": "Java",
+      "question": "What is the time complexity of adding an element to the end of an ArrayList?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n^2)"
+      ],
+      "response": "O(1)",
+      "explanation": "Adding an element to the end of an ArrayList is typically O(1), but in some cases when resizing is needed, it could be O(n).",
+      "keywords": ["ArrayList", "time complexity", "add", "Java", "performance"]
+    },
+    {
+      "id": 107,
+      "topic": "Java",
+      "question": "Which of the following is true about HashMap in Java?",
+      "options": [
+        "It allows null keys and values.",
+        "It preserves the order of elements.",
+        "It is synchronized.",
+        "It uses a linked list for storage."
+      ],
+      "response": "It allows null keys and values.",
+      "explanation": "HashMap allows one null key and any number of null values, but it does not preserve the order of elements. It is not synchronized by default.",
+      "keywords": ["HashMap", "null keys", "order", "Java", "synchronization"]
+    },
+    {
+      "id": 108,
+      "topic": "Java",
+      "question": "What is the main difference between HashMap and Hashtable?",
+      "options": [
+        "HashMap is synchronized, Hashtable is not.",
+        "Hashtable is faster than HashMap.",
+        "HashMap allows null keys, while Hashtable does not.",
+        "Both HashMap and Hashtable are the same."
+      ],
+      "response": "HashMap allows null keys, while Hashtable does not.",
+      "explanation": "HashMap allows null keys and values, whereas Hashtable does not allow null keys or values. Hashtable is also synchronized, whereas HashMap is not.",
+      "keywords": ["HashMap", "Hashtable", "null keys", "synchronization", "Java"]
+    },
+    {
+      "id": 109,
+      "topic": "Java",
+      "question": "Which of the following is a thread-safe collection in Java?",
+      "options": [
+        "ArrayList",
+        "HashSet",
+        "Vector",
+        "HashMap"
+      ],
+      "response": "Vector",
+      "explanation": "Vector is a thread-safe collection in Java. Both `ArrayList` and `HashSet` are not thread-safe by default, while `HashMap` is not thread-safe either.",
+      "keywords": ["Vector", "thread-safe", "Java", "collections", "synchronization"]
+    },
+    {
+      "id": 110,
+      "topic": "Java",
+      "question": "Which data structure is most suitable for implementing a queue?",
+      "options": [
+        "LinkedList",
+        "Stack",
+        "ArrayList",
+        "HashMap"
+      ],
+      "response": "LinkedList",
+      "explanation": "LinkedList is ideal for implementing a queue because it supports efficient insertions and deletions from both ends of the list.",
+      "keywords": ["queue", "LinkedList", "data structure", "Java"]
+    },
+    {
+      "id": 111,
+      "topic": "Java",
+      "question": "Which of the following methods is not part of the List interface?",
+      "options": [
+        "add()",
+        "remove()",
+        "get()",
+        "put()"
+      ],
+      "response": "put()",
+      "explanation": "The `put()` method is part of the Map interface, not the List interface. List methods include `add()`, `remove()`, and `get()`.",
+      "keywords": ["List", "method", "Java", "interface", "add", "put"]
+    },
+    {
+      "id": 112,
+      "topic": "Java",
+      "question": "What is the default capacity of an ArrayList in Java?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "response": "10",
+      "explanation": "The default capacity of an ArrayList in Java is 10. If the ArrayList grows beyond this capacity, it is automatically resized.",
+      "keywords": ["ArrayList", "default capacity", "Java", "collection", "resize"]
+    },
+    {
+      "id": 113,
+      "topic": "Java",
+      "question": "Which of the following collections is ordered?",
+      "options": [
+        "HashSet",
+        "TreeSet",
+        "LinkedHashSet",
+        "HashMap"
+      ],
+      "response": "LinkedHashSet",
+      "explanation": "LinkedHashSet maintains the insertion order of elements, unlike HashSet or TreeSet which do not guarantee any specific order.",
+      "keywords": ["LinkedHashSet", "ordered", "collection", "Java"]
+    },
+    {
+      "id": 114,
+      "topic": "Java",
+      "question": "Which of the following operations has a time complexity of O(log n) in a TreeMap?",
+      "options": [
+        "Adding an element",
+        "Accessing an element by key",
+        "Removing an element",
+        "All of the above"
+      ],
+      "response": "All of the above",
+      "explanation": "In a TreeMap, adding, accessing, and removing elements all have a time complexity of O(log n) because it uses a Red-Black tree for storage.",
+      "keywords": ["TreeMap", "time complexity", "log n", "Java"]
+    },
+    {
+      "id": 115,
+      "topic": "Java",
+      "question": "What is the default load factor of a HashMap?",
+      "options": [
+        "0.25",
+        "0.50",
+        "0.75",
+        "1.0"
+      ],
+      "response": "0.75",
+      "explanation": "The default load factor of a HashMap is 0.75. This means that when the HashMap is 75% full, it will be resized to accommodate more entries.",
+      "keywords": ["HashMap", "load factor", "Java", "performance"]
+    },
+    {
+      "id": 116,
+      "topic": "Java",
+      "question": "What type of data structure is a LinkedList?",
+      "options": [
+        "Array-based",
+        "Tree-based",
+        "Graph-based",
+        "Node-based"
+      ],
+      "response": "Node-based",
+      "explanation": "A LinkedList is a node-based data structure, where each element (node) contains a value and a reference to the next node in the list.",
+      "keywords": ["LinkedList", "node-based", "data structure", "Java"]
+    },
+    {
+      "id": 117,
+      "topic": "Java",
+      "question": "Which of the following methods is used to add an element to a HashSet?",
+      "options": [
+        "add()",
+        "insert()",
+        "put()",
+        "append()"
+      ],
+      "response": "add()",
+      "explanation": "In a HashSet, the `add()` method is used to insert elements into the set. It returns true if the element was added, false otherwise.",
+      "keywords": ["HashSet", "add", "method", "Java"]
+    },
+    {
+      "id": 118,
+      "topic": "Java",
+      "question": "Which of the following is the most efficient way to access the elements of a priority queue?",
+      "options": [
+        "Using a linked list",
+        "Using an array",
+        "Using a heap",
+        "Using a HashMap"
+      ],
+      "response": "Using a heap",
+      "explanation": "A priority queue is typically implemented using a heap, which ensures efficient access to the highest (or lowest) priority element.",
+      "keywords": ["priority queue", "heap", "data structure", "Java"]
+    },
+    {
+      "id": 119,
+      "topic": "Java",
+      "question": "Which of the following collections is best suited for implementing a set that contains unique elements?",
+      "options": [
+        "ArrayList",
+        "HashSet",
+        "LinkedList",
+        "TreeSet"
+      ],
+      "response": "HashSet",
+      "explanation": "A HashSet is a collection that contains no duplicate elements. It is backed by a hash table, which ensures O(1) average time complexity for operations like add, remove, and contains.",
+      "keywords": ["HashSet", "set", "unique elements", "Java"]
     }
   ]
 }

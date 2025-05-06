@@ -340,7 +340,7 @@
     },
     {
       "id": 26,
-      "-topic": "WAF",
+      "topic": "WAF",
       "question": "What is the primary purpose of AWS WAF?",
       "options": [
         "Encryption key management",

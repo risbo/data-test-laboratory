@@ -1,34 +1,426 @@
 {
   "id": 1,
-  "topic": 1,
+  "topic": "Angular",
   "data": [
     {
       "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
+      "topic": "Angular",
+      "question": "What is the purpose of Angular decorators like @Component and @NgModule?",
       "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
+        "To add metadata to classes",
+        "To define CSS styles",
+        "To create HTTP requests",
+        "To handle user events"
       ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
+      "response": "To add metadata to classes",
+      "explanation": "Decorators like @Component and @NgModule are used to attach metadata to classes, defining their behavior in Angular (e.g., templates, dependencies).",
+      "keywords": ["decorators", "metadata", "@Component", "@NgModule", "Angular"]
     },
     {
       "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
+      "topic": "Angular",
+      "question": "Which directive is used for two-way data binding in Angular?",
       "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
+        "ngModel",
+        "ngFor",
+        "ngIf",
+        "ngSwitch"
       ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
+      "response": "ngModel",
+      "explanation": "`ngModel` enables two-way data binding between form inputs and component properties.",
+      "keywords": ["two-way binding", "ngModel", "directives", "forms"]
+    },
+    {
+      "id": 103,
+      "topic": "Angular",
+      "question": "What is the default change detection strategy in Angular?",
+      "options": [
+        "Default",
+        "OnPush",
+        "Manual",
+        "Lazy"
+      ],
+      "response": "Default",
+      "explanation": "Angular uses `Default` change detection, which checks for changes in every component tree on every event.",
+      "keywords": ["change detection", "Default", "OnPush", "performance"]
+    },
+    {
+      "id": 104,
+      "topic": "Angular",
+      "question": "Which Angular CLI command generates a new component?",
+      "options": [
+        "ng generate component",
+        "ng new component",
+        "ng create component",
+        "ng add component"
+      ],
+      "response": "ng generate component",
+      "explanation": "The command `ng generate component` (or `ng g c`) creates a new component with all necessary files.",
+      "keywords": ["Angular CLI", "generate component", "commands"]
+    },
+    {
+      "id": 105,
+      "topic": "Angular",
+      "question": "What is the purpose of the Angular Router?",
+      "options": [
+        "To navigate between views/components",
+        "To manage HTTP requests",
+        "To validate forms",
+        "To handle state management"
+      ],
+      "response": "To navigate between views/components",
+      "explanation": "The Angular Router enables navigation between different views/components based on URL changes.",
+      "keywords": ["Router", "navigation", "routes", "SPA"]
+    },
+    {
+      "id": 106,
+      "topic": "Angular",
+      "question": "Which lifecycle hook is called after Angular initializes a component's views and child views?",
+      "options": [
+        "ngAfterViewInit",
+        "ngOnInit",
+        "ngOnChanges",
+        "ngAfterContentInit"
+      ],
+      "response": "ngAfterViewInit",
+      "explanation": "`ngAfterViewInit` runs after the component's view and child views are fully initialized.",
+      "keywords": ["lifecycle hooks", "ngAfterViewInit", "component lifecycle"]
+    },
+    {
+      "id": 107,
+      "topic": "Angular",
+      "question": "What is the use of the async pipe in Angular?",
+      "options": [
+        "To subscribe to Observables/Promises automatically",
+        "To create asynchronous functions",
+        "To delay template rendering",
+        "To handle HTTP errors"
+      ],
+      "response": "To subscribe to Observables/Promises automatically",
+      "explanation": "The async pipe subscribes to Observables/Promises and returns the latest emitted value, managing subscriptions automatically.",
+      "keywords": ["async pipe", "Observables", "Promises", "reactive"]
+    },
+    {
+      "id": 108,
+      "topic": "Angular",
+      "question": "Which decorator marks a class as an injectable service?",
+      "options": [
+        "@Injectable",
+        "@Service",
+        "@Inject",
+        "@Provider"
+      ],
+      "response": "@Injectable",
+      "explanation": "The `@Injectable` decorator marks a class as a service that can be injected via Angular's DI system.",
+      "keywords": ["Dependency Injection", "@Injectable", "services", "providers"]
+    },
+    {
+      "id": 109,
+      "topic": "Angular",
+      "question": "What is the purpose of *ngFor in Angular templates?",
+      "options": [
+        "To loop over iterable data",
+        "To conditionally render elements",
+        "To bind styles dynamically",
+        "To handle form submissions"
+      ],
+      "response": "To loop over iterable data",
+      "explanation": "`*ngFor` is a structural directive used to iterate over arrays/collections and render template blocks for each item.",
+      "keywords": ["*ngFor", "structural directives", "loops", "templates"]
+    },
+    {
+      "id": 110,
+      "topic": "Angular",
+      "question": "Which file defines the root module of an Angular app?",
+      "options": [
+        "app.module.ts",
+        "main.ts",
+        "index.html",
+        "angular.json"
+      ],
+      "response": "app.module.ts",
+      "explanation": "`app.module.ts` declares the root module (`AppModule`) with dependencies, components, and services.",
+      "keywords": ["AppModule", "root module", "NgModule", "bootstrap"]
+    },
+    {
+      "id": 111,
+      "topic": "Angular",
+      "question": "What is the role of RxJS in Angular?",
+      "options": [
+        "To handle reactive programming with Observables",
+        "To manage component styles",
+        "To define routes",
+        "To create directives"
+      ],
+      "response": "To handle reactive programming with Observables",
+      "explanation": "RxJS provides Observable-based utilities for handling asynchronous operations and event-driven programming.",
+      "keywords": ["RxJS", "Observables", "reactive programming", "HTTP"]
+    },
+    {
+      "id": 112,
+      "topic": "Angular",
+      "question": "How do you pass data from a parent to a child component?",
+      "options": [
+        "Using @Input",
+        "Using @Output",
+        "Using @Injectable",
+        "Using @ViewChild"
+      ],
+      "response": "Using @Input",
+      "explanation": "The `@Input` decorator allows a parent component to pass data to a child component via property binding.",
+      "keywords": ["@Input", "component communication", "parent-child"]
+    },
+    {
+      "id": 113,
+      "topic": "Angular",
+      "question": "Which service is used for HTTP requests in Angular?",
+      "options": [
+        "HttpClient",
+        "HttpService",
+        "FetchService",
+        "ApiService"
+      ],
+      "response": "HttpClient",
+      "explanation": "`HttpClient` is Angular's built-in service for making HTTP requests (GET, POST, etc.).",
+      "keywords": ["HttpClient", "HTTP", "API", "services"]
+    },
+    {
+      "id": 114,
+      "topic": "Angular",
+      "question": "What is the purpose of trackBy in *ngFor?",
+      "options": [
+        "To optimize rendering by tracking items uniquely",
+        "To filter items in the loop",
+        "To sort items dynamically",
+        "To style items conditionally"
+      ],
+      "response": "To optimize rendering by tracking items uniquely",
+      "explanation": "`trackBy` improves performance by helping Angular identify changed items in a list to avoid re-rendering the entire list.",
+      "keywords": ["trackBy", "*ngFor", "performance", "rendering"]
+    },
+    {
+      "id": 115,
+      "topic": "Angular",
+      "question": "Which Angular feature helps prevent XSS attacks?",
+      "options": [
+        "Automatic sanitization",
+        "HTTP interceptors",
+        "Route guards",
+        "Dependency Injection"
+      ],
+      "response": "Automatic sanitization",
+      "explanation": "Angular automatically sanitizes untrusted values in templates to prevent Cross-Site Scripting (XSS).",
+      "keywords": ["XSS", "security", "sanitization", "templates"]
+    },
+    {
+      "id": 116,
+      "topic": "Angular",
+      "question": "What is the purpose of ViewChild?",
+      "options": [
+        "To access a child component/directive/DOM element",
+        "To inject a service",
+        "To define a route parameter",
+        "To create a dynamic component"
+      ],
+      "response": "To access a child component/directive/DOM element",
+      "explanation": "`@ViewChild` allows a parent component to query and interact with a child component, directive, or DOM element.",
+      "keywords": ["@ViewChild", "component interaction", "DOM access"]
+    },
+    {
+      "id": 117,
+      "topic": "Angular",
+      "question": "Which command builds an Angular app for production?",
+      "options": [
+        "ng build --prod",
+        "ng serve --prod",
+        "ng deploy",
+        "ng compile"
+      ],
+      "response": "ng build --prod",
+      "explanation": "`ng build --prod` compiles the app with optimizations like AOT compilation and minification.",
+      "keywords": ["build", "production", "Angular CLI", "optimizations"]
+    },
+    {
+      "id": 118,
+      "topic": "Angular",
+      "question": "What is Angular Ivy?",
+      "options": [
+        "A next-generation rendering engine",
+        "A state management library",
+        "A testing framework",
+        "A CSS preprocessor"
+      ],
+      "response": "A next-generation rendering engine",
+      "explanation": "Ivy is Angular's advanced compilation and rendering pipeline, improving bundle size and performance.",
+      "keywords": ["Ivy", "rendering", "compiler", "performance"]
+    },
+    {
+      "id": 119,
+      "topic": "Angular",
+      "question": "Which interface is used to implement custom form validators?",
+      "options": [
+        "ValidatorFn",
+        "FormValidator",
+        "ValidationHandler",
+        "AbstractControl"
+      ],
+      "response": "ValidatorFn",
+      "explanation": "`ValidatorFn` is a function interface for creating custom synchronous validators for reactive forms.",
+      "keywords": ["validators", "reactive forms", "ValidatorFn", "custom validation"]
+    },
+    {
+      "id": 120,
+      "topic": "Angular",
+      "question": "What is the purpose of ng-content?",
+      "options": [
+        "To project content into a component",
+        "To load lazy modules",
+        "To bind CSS classes",
+        "To handle HTTP errors"
+      ],
+      "response": "To project content into a component",
+      "explanation": "`<ng-content>` is used for content projection (transclusion), allowing parent components to inject content into a child component.",
+      "keywords": ["ng-content", "content projection", "slots", "transclusion"]
+    },
+    {
+      "id": 121,
+      "topic": "Angular",
+      "question": "Which operator is used to handle errors in RxJS Observables?",
+      "options": [
+        "catchError",
+        "map",
+        "filter",
+        "tap"
+      ],
+      "response": "catchError",
+      "explanation": "`catchError` intercepts errors in an Observable stream and allows graceful handling or recovery.",
+      "keywords": ["RxJS", "error handling", "catchError", "Observables"]
+    },
+    {
+      "id": 122,
+      "topic": "Angular",
+      "question": "What is the purpose of Angular Pipes?",
+      "options": [
+        "To transform data in templates",
+        "To connect to databases",
+        "To manage component state",
+        "To define routes"
+      ],
+      "response": "To transform data in templates",
+      "explanation": "Pipes format/transform data (e.g., dates, currencies) directly in templates (e.g., `{{ value | date }}`).",
+      "keywords": ["pipes", "templates", "data transformation", "built-in pipes"]
+    },
+    {
+      "id": 123,
+      "topic": "Angular",
+      "question": "Which decorator listens to DOM events in a component?",
+      "options": [
+        "@HostListener",
+        "@EventListener",
+        "@DomListener",
+        "@Output"
+      ],
+      "response": "@HostListener",
+      "explanation": "`@HostListener` decorates methods to handle DOM events (e.g., clicks, keypresses) on the host element.",
+      "keywords": ["@HostListener", "DOM events", "event handling"]
+    },
+    {
+      "id": 124,
+      "topic": "Angular",
+      "question": "What is the purpose of the providedIn property in @Injectable?",
+      "options": [
+        "To specify the injector scope for the service",
+        "To define service dependencies",
+        "To register the service in a module",
+        "To export the service globally"
+      ],
+      "response": "To specify the injector scope for the service",
+      "explanation": "`providedIn: 'root'` makes the service a singleton available app-wide without manual module registration.",
+      "keywords": ["@Injectable", "providedIn", "DI", "singleton"]
+    },
+    {
+      "id": 125,
+      "topic": "Angular",
+      "question": "Which Angular CLI command runs unit tests?",
+      "options": [
+        "ng test",
+        "ng serve",
+        "ng lint",
+        "ng e2e"
+      ],
+      "response": "ng test",
+      "explanation": "`ng test` executes unit tests using Karma (or the configured test runner).",
+      "keywords": ["testing", "Karma", "Jasmine", "Angular CLI"]
+    },
+    {
+      "id": 126,
+      "topic": "Angular",
+      "question": "What is the difference between ngOnInit and constructor?",
+      "options": [
+        "ngOnInit runs after component initialization; constructor is for dependency injection",
+        "constructor is for AngularJS; ngOnInit is for Angular",
+        "ngOnInit is synchronous; constructor is asynchronous",
+        "There is no difference"
+      ],
+      "response": "ngOnInit runs after component initialization; constructor is for dependency injection",
+      "explanation": "The `constructor` is for DI and basic setup, while `ngOnInit` runs after Angular initializes the component's data-bound properties.",
+      "keywords": ["ngOnInit", "constructor", "lifecycle hooks", "DI"]
+    },
+    {
+      "id": 127,
+      "topic": "Angular",
+      "question": "Which method is used to navigate programmatically in Angular?",
+      "options": [
+        "router.navigate()",
+        "window.location.href",
+        "navigateTo()",
+        "location.go()"
+      ],
+      "response": "router.navigate()",
+      "explanation": "The `Router` service's `navigate()` method allows navigation to routes via component code.",
+      "keywords": ["Router", "navigation", "programmatic", "routes"]
+    },
+    {
+      "id": 128,
+      "topic": "Angular",
+      "question": "What is the purpose of Angular Universal?",
+      "options": [
+        "Server-side rendering (SSR)",
+        "State management",
+        "Mobile app development",
+        "Internationalization"
+      ],
+      "response": "Server-side rendering (SSR)",
+      "explanation": "Angular Universal enables server-side rendering for improved SEO and initial load performance.",
+      "keywords": ["Universal", "SSR", "server-side", "SEO"]
+    },
+    {
+      "id": 129,
+      "topic": "Angular",
+      "question": "Which decorator emits custom events from a child to a parent component?",
+      "options": [
+        "@Output",
+        "@Input",
+        "@Emit",
+        "@Event"
+      ],
+      "response": "@Output",
+      "explanation": "`@Output` with `EventEmitter` allows a child component to emit events to its parent.",
+      "keywords": ["@Output", "EventEmitter", "component communication", "events"]
+    },
+    {
+      "id": 130,
+      "topic": "Angular",
+      "question": "What is the purpose of the async pipe in Angular?",
+      "options": [
+        "To subscribe to Observables/Promises automatically",
+        "To create asynchronous functions",
+        "To delay template rendering",
+        "To handle HTTP errors"
+      ],
+      "response": "To subscribe to Observables/Promises automatically",
+      "explanation": "The async pipe subscribes to Observables/Promises and returns the latest emitted value, managing subscriptions automatically.",
+      "keywords": ["async pipe", "Observables", "Promises", "reactive"]
     }
   ]
 }

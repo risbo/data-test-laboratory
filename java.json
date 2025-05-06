@@ -193,6 +193,96 @@
       "response": "record Person(String name, int age) {}",
       "explanation": "Records, introduced in Java 14+, are concise syntax for immutable data carriers using the `record` keyword.",
       "keywords": ["record", "java 14", "immutable", "data class", "constructor", "fields", "syntax", "accessor", "modern java", "lightweight"]
+    },
+    {
+      "id": 21,
+      "topic": "Lambda Expressions",
+      "question": "What does this code print?\n\nList<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nnames.forEach(name -> System.out.print(name + \" \"));",
+      "options": ["Alice Bob Charlie", "Charlie Bob Alice", "Compilation Error", "Runtime Error", "Nothing"],
+      "response": "Alice Bob Charlie",
+      "explanation": "The lambda expression iterates over the list and prints each name in order.",
+      "keywords": ["lambda", "list", "foreach", "java.util", "java 8", "functional", "stream", "print", "order", "syntax"]
+    },
+    {
+      "id": 22,
+      "topic": "Streams",
+      "question": "What is the output?\n\nList<Integer> nums = Arrays.asList(1, 2, 3);\nint sum = nums.stream().mapToInt(i -> i * 2).sum();\nSystem.out.println(sum);",
+      "options": ["6", "12", "3", "9", "Compilation Error"],
+      "response": "12",
+      "explanation": "Stream multiplies each number by 2: 2 + 4 + 6 = 12.",
+      "keywords": ["stream", "map", "sum", "lambda", "java.util", "int", "iteration", "functional", "aggregation", "transform"]
+    },
+    {
+      "id": 23,
+      "topic": "Exception Handling",
+      "question": "What happens when this code runs?\n\ntry {\n  int x = 5 / 0;\n} catch (ArithmeticException e) {\n  System.out.println(\"Error\");\n}",
+      "options": ["Error", "0", "5", "Infinity", "Runtime Crash"],
+      "response": "Error",
+      "explanation": "Dividing by zero throws ArithmeticException, which is caught and handled.",
+      "keywords": ["exception", "try catch", "division", "arithmetic", "error", "Java", "runtime", "handler", "crash", "zero"]
+    },
+    {
+      "id": 24,
+      "topic": "Inheritance",
+      "question": "What is the output?\n\nclass A { void show() { System.out.println(\"A\"); } }\nclass B extends A { void show() { System.out.println(\"B\"); } }\n\nA obj = new B();\nobj.show();",
+      "options": ["A", "B", "Compilation Error", "Runtime Error", "null"],
+      "response": "B",
+      "explanation": "Dynamic method dispatch resolves to class B's version of `show`.",
+      "keywords": ["inheritance", "polymorphism", "override", "dynamic dispatch", "object", "Java", "method", "extends", "runtime", "OOP"]
+    },
+    {
+      "id": 25,
+      "topic": "File I/O",
+      "question": "What does this write to file?\n\nFiles.write(Paths.get(\"test.txt\"), \"Hello\".getBytes());",
+      "options": ["Writes 'Hello'", "Compilation Error", "Does nothing", "Writes byte size", "Creates empty file"],
+      "response": "Writes 'Hello'",
+      "explanation": "The `Files.write` method writes byte content to the given path.",
+      "keywords": ["file io", "files", "write", "java.nio", "bytes", "path", "filesystem", "write", "output", "java"]
+    },
+    {
+      "id": 26,
+      "topic": "Multithreading",
+      "question": "What does this thread print?\n\nnew Thread(() -> System.out.println(\"Hello from thread\")).start();",
+      "options": ["Hello from thread", "Compilation Error", "Nothing", "Thread", "null"],
+      "response": "Hello from thread",
+      "explanation": "This lambda-based thread prints once when run asynchronously.",
+      "keywords": ["thread", "lambda", "runnable", "Java", "start", "asynchronous", "multithreading", "execution", "print", "run"]
+    },
+    {
+      "id": 27,
+      "topic": "Switch Expressions",
+      "question": "What does this output?\n\nint day = 2;\nswitch (day) {\n  case 1 -> System.out.println(\"Mon\");\n  case 2 -> System.out.println(\"Tue\");\n}",
+      "options": ["Tue", "Mon", "Compilation Error", "null", "Crash"],
+      "response": "Tue",
+      "explanation": "Switch expressions introduced in Java 14 allow concise arrow-based cases.",
+      "keywords": ["switch", "expression", "arrow", "java 14", "control", "flow", "statement", "case", "syntax", "print"]
+    },
+    {
+      "id": 28,
+      "topic": "Optional",
+      "question": "What is the output?\n\nOptional<String> opt = Optional.empty();\nSystem.out.println(opt.orElse(\"default\"));",
+      "options": ["default", "null", "Compilation Error", "Optional", "Empty"],
+      "response": "default",
+      "explanation": "`orElse()` returns fallback when the Optional is empty.",
+      "keywords": ["optional", "java.util", "null", "safe", "default", "orElse", "empty", "container", "optional chaining", "fallback"]
+    },
+    {
+      "id": 29,
+      "topic": "Access Modifiers",
+      "question": "Which access modifier allows visibility within the same package only?",
+      "options": ["private", "public", "protected", "default", "static"],
+      "response": "default",
+      "explanation": "If no modifier is specified, Java assumes default (package-private) access.",
+      "keywords": ["access", "modifier", "default", "visibility", "scope", "Java", "package", "protected", "private", "public"]
+    },
+    {
+      "id": 30,
+      "topic": "Generics",
+      "question": "What does this print?\n\nList<String> list = new ArrayList<>();\nlist.add(\"Java\");\nSystem.out.println(list.get(0));",
+      "options": ["Java", "0", "Compilation Error", "null", "String"],
+      "response": "Java",
+      "explanation": "Generics enforce type safety. get(0) returns the string added.",
+      "keywords": ["generics", "collections", "list", "ArrayList", "type", "safety", "get", "add", "Java", "output"]
     }
   ]
 }

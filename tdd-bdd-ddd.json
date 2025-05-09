@@ -2,33 +2,215 @@
   "id": 1,
   "topic": 1,
   "data": [
+     {
+    "id": 1,
+    "topic": "BDD",
+    "question": "Which phrase best describes the purpose of the Given-When-Then structure?",
+    "options": [
+      "Document database schemas",
+      "Describe executable behaviour scenarios",
+      "Measure code coverage percentage",
+      "Define dependency injection graphs"
+    ],
+    "response": "Describe executable behaviour scenarios",
+    "explanation": "Given-When-Then arranges context, action, and expected outcome so examples become readable test cases that double as requirements.",
+    "keywords": ["Given-When-Then", "scenario", "executable", "behaviour", "readability", "requirements"]
+  },
+  {
+    "id": 2,
+    "topic": "TDD",
+    "question": "In the Red-Green-Refactor loop, what does the Red phase signify?",
+    "options": [
+      "All tests are passing",
+      "A new failing test exposes missing behaviour",
+      "Code has been optimised for performance",
+      "Legacy code has been deleted"
+    ],
+    "response": "A new failing test exposes missing behaviour",
+    "explanation": "The loop starts with writing a failing test (red) to clarify the requirement before implementing code to make it pass (green).",
+    "keywords": ["Red-Green-Refactor", "failing test", "feedback", "incremental", "requirement", "loop"]
+  },
+  {
+    "id": 3,
+    "topic": "DDD",
+    "question": "What is the primary role of an Aggregate in Domain-Driven Design?",
+    "options": [
+      "Provide UI styling",
+      "Enforce consistency boundaries around related entities",
+      "Generate random test data",
+      "Handle HTTP routing"
+    ],
+    "response": "Enforce consistency boundaries around related entities",
+    "explanation": "An Aggregate groups entities and value objects under a root to maintain invariants and transactional consistency.",
+    "keywords": ["Aggregate", "consistency", "root", "invariants", "transaction", "entities"]
+  },
+  {
+    "id": 4,
+    "topic": "TDD",
+    "question": "Which test double type verifies that specific interactions occurred with dependencies?",
+    "options": [
+      "Stub",
+      "Mock",
+      "Dummy",
+      "Fake"
+    ],
+    "response": "Mock",
+    "explanation": "Mocks are programmed with expected calls; the test fails if interactions differ, ensuring collaboration contracts are honoured.",
+    "keywords": ["Mock", "interaction", "verification", "test double", "collaboration", "expectation"]
+  },
+  {
+    "id": 5,
+    "topic": "BDD vs TDD",
+    "question": "Key distinction between BDD and classic TDD is that BDD emphasises:",
+    "options": [
+      "Low-level unit coverage only",
+      "Business-readable language and collaboration",
+      "Elimination of integration tests",
+      "Static code analysis tools"
+    ],
+    "response": "Business-readable language and collaboration",
+    "explanation": "BDD builds on TDD principles but focuses on a ubiquitous language enabling stakeholders to understand and help author specifications.",
+    "keywords": ["BDD", "collaboration", "ubiquitous language", "stakeholders", "readable tests", "specification"]
+  },
+  {
+    "id": 6,
+    "topic": "DDD",
+    "question": "A Bounded Context primarily defines:",
+    "options": [
+      "Physical server boundaries",
+      "Single responsibility classes",
+      "Semantic boundary with its own model and language",
+      "UI component library"
+    ],
+    "response": "Semantic boundary with its own model and language",
+    "explanation": "Within a bounded context, terms have precise meanings and the model stays consistent; integrations translate across contexts.",
+    "keywords": ["Bounded Context", "model", "language", "semantics", "translation", "consistency"]
+  },
+  {
+    "id": 7,
+    "topic": "TDD",
+    "question": "Why should unit tests run in isolation from external resources?",
+    "options": [
+      "Isolation slows execution for reliability",
+      "Isolation reduces hardware costs",
+      "Isolation yields fast, deterministic feedback enabling confident refactoring",
+      "Isolation ensures 100% branch coverage"
+    ],
+    "response": "Isolation yields fast, deterministic feedback enabling confident refactoring",
+    "explanation": "Removing file systems, networks, and shared state makes tests quick and repeatable, detecting logic regressions instantly.",
+    "keywords": ["unit test", "isolation", "deterministic", "speed", "refactoring", "feedback"]
+  },
+  {
+    "id": 8,
+    "topic": "BDD",
+    "question": "Cucumber and similar tools conventionally store scenarios in files with which extension?",
+    "options": [
+      ".spec",
+      ".feature",
+      ".story",
+      ".bdd"
+    ],
+    "response": ".feature",
+    "explanation": "A ‘.feature’ file groups related scenarios and starts with a Feature description followed by Given-When-Then examples.",
+    "keywords": ["Cucumber", ".feature", "scenarios", "gherkin", "automation", "examples"]
+  },
+  {
+    "id": 9,
+    "topic": "DDD",
+    "question": "Ubiquitous Language encourages teams to:",
+    "options": [
+      "Use only technical jargon in code",
+      "Adopt consistent business terminology across discussions, models, and tests",
+      "Translate every term into two languages",
+      "Avoid speaking with domain experts"
+    ],
+    "response": "Adopt consistent business terminology across discussions, models, and tests",
+    "explanation": "The shared language eliminates miscommunication, ensuring code and conversations reflect the same domain concepts faithfully.",
+    "keywords": ["Ubiquitous Language", "communication", "consistency", "domain experts", "terminology", "alignment"]
+  },
+  {
+    "id": 10,
+    "topic": "DDD",
+    "question": "Event Sourcing stores state by:",
+    "options": [
+      "Persisting latest object snapshot only",
+      "Saving SQL diff scripts",
+      "Appending immutable domain events that can reconstruct current state",
+      "Serialising entire memory heap per request"
+    ],
+    "response": "Appending immutable domain events that can reconstruct current state",
+    "explanation": "With event sourcing, every change is recorded as an event; replaying them recreates aggregate state and provides audit trails.",
+    "keywords": ["Event Sourcing", "immutable events", "replay", "audit", "state reconstruction", "history"]
+  },
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
-      "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
-      ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
-    },
-    {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
-      "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
-      ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
-    }
+    "id": 11,
+    "topic": "TDD",
+    "question": "What distinguishes a Spy from a Mock in unit testing?",
+    "options": [
+      "Spies record calls; Mocks pre-define expectations",
+      "Spies replace production logic; Mocks keep it",
+      "Spies simulate databases; Mocks simulate networks",
+      "There is no difference"
+    ],
+    "response": "Spies record calls; Mocks pre-define expectations",
+    "explanation": "A Spy lets real behaviour run but captures interactions for later assertions, while a Mock is pre-programmed with expectations verified during execution.",
+    "keywords": ["Spy", "Mock", "test double", "interaction", "verification", "unit test"]
+  },
+  {
+    "id": 12,
+    "topic": "DDD",
+    "question": "Which statement best describes an Anti-Corruption Layer?",
+    "options": [
+      "Layer enforcing HTML sanitisation",
+      "Translation boundary preventing external model pollution",
+      "Component handling user authentication",
+      "Logging adapter for infrastructure events"
+    ],
+    "response": "Translation boundary preventing external model pollution",
+    "explanation": "An Anti-Corruption Layer translates messages between bounded contexts, shielding the internal ubiquitous language from incompatible external concepts.",
+    "keywords": ["Anti-Corruption Layer", "translation", "bounded context", "integration", "protection", "model"]
+  },
+  {
+    "id": 13,
+    "topic": "TDD",
+    "question": "Why is high code coverage NOT a sufficient quality guarantee?",
+    "options": [
+      "Coverage tools ignore private methods",
+      "Tests may execute code without asserting behaviour",
+      "Coverage always equals performance",
+      "Coverage reports break builds"
+    ],
+    "response": "Tests may execute code without asserting behaviour",
+    "explanation": "Coverage only shows lines were run; assertions could still be missing, so behaviour correctness requires thoughtful test design beyond raw percentages.",
+    "keywords": ["code coverage", "assertions", "quality", "metrics", "limitations", "behaviour"]
+  },
+  {
+    "id": 14,
+    "topic": "BDD/TDD",
+    "question": "Outside-In TDD starts by writing tests at which level first?",
+    "options": [
+      "GUI automation",
+      "Acceptance level describing desired behaviour",
+      "Private helper methods",
+      "Database migration scripts"
+    ],
+    "response": "Acceptance level describing desired behaviour",
+    "explanation": "Outside-In drives development from outer behavioural expectations inward, crafting collaborator fakes until unit-level code satisfies high-level acceptance tests.",
+    "keywords": ["Outside-In", "acceptance test", "driving design", "collaborator", "behaviour", "levels"]
+  },
+  {
+    "id": 15,
+    "topic": "DDD",
+    "question": "The Specification Pattern primarily enables developers to:",
+    "options": [
+      "Persist aggregates in SQL",
+      "Encapsulate business rules as composable boolean objects",
+      "Generate UI layouts automatically",
+      "Encrypt domain events"
+    ],
+    "response": "Encapsulate business rules as composable boolean objects",
+    "explanation": "A Specification object answers ‘does candidate satisfy rule?’ and can combine with others (AND/OR/NOT) for reusable, testable domain logic.",
+    "keywords": ["Specification Pattern", "business rule", "composition", "boolean", "reusable", "domain logic"]
+  }
   ]
 }

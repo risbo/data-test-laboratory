@@ -2,6 +2,21 @@
   "id": 9,
   "topic": 1,
   "data": [
+    
+{
+  "id": 1,
+  "topic": "Matrices & Performance",
+  "question": "Which matrix multiplication approach is most cache-efficient for large matrices in Java?\n\nOptions:\nA) Naive triple-nested loop\nB) Transposing the second matrix first\nC) Using Java Streams\nD) Leveraging `Arrays.parallelSetAll`\n\nCode:\nint[][] A = new int[1000][1000];\nint[][] B = new int[1000][1000];\n// ... Initialize matrices ...",
+  "options": [
+    "Naive triple-nested loop",
+    "Transposing the second matrix first",
+    "Using Java Streams",
+    "Leveraging `Arrays.parallelSetAll`"
+  ],
+  "response": "Transposing the second matrix first",
+  "explanation": "Title: Cache-Efficient Matrix Multiplication\n\nTransposing the second matrix improves spatial locality by accessing contiguous memory.\nNaive loops cause cache misses due to row-column access patterns.\n\nExample 1:\n// Naive O(n³) approach\nfor (int i = 0; i < n; i++)\n  for (int j = 0; j < n; j++)\n    for (int k = 0; k < n; k++)\n      C[i][j] += A[i][k] * B[k][j]; // Poor cache performance\n\nExample 2:\n// Transposed B\nint[][] BT = transpose(B);\nfor (int i = 0; i < n; i++)\n  for (int j = 0; j < n; j++)\n    for (int k = 0; k < n; k++)\n      C[i][j] += A[i][k] * BT[j][k]; // Better cache hits\n\nExample 3:\n// Parallelized (but still inefficient without transposition)\nArrays.parallelSetAll(C, i -> {\n  for (int j = 0; j < n; j++)\n    for (int k = 0; k < n; k++)\n      C[i][j] += A[i][k] * B[k][j];\n  return C[i];\n});",
+  "keywords": ["matrix", "cache efficiency", "transpose", "multiplication", "performance", "spatial locality"]
+},
     {
       "id": 1,
       "topic": "Variables, Data Types, and Operators",

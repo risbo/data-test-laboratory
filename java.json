@@ -3,6 +3,90 @@
   "topic": 1,
   "data": [
     {
+  "id": 3,
+  "topic": "Native Memory Optimization",
+  "question": "When using ByteBuffer.allocateDirect() for high-performance I/O, what is the critical JVM parameter to prevent native OOM errors?\n\n\t- -XX:MaxDirectMemorySize\n\t- -Xss\n\t- -XX:MaxMetaspaceSize\n\t- -XX:ReservedCodeCacheSize",
+  "options": [
+    "MaxDirectMemorySize",
+    "Xss",
+    "MaxMetaspaceSize",
+    "ReservedCodeCacheSize"
+  ],
+  "response": "MaxDirectMemorySize",
+  "explanation": "Title: Direct Buffer Memory Limits\n\nMaxDirectMemorySize controls off-heap buffer allocation pool. Defaults to -Xmx value but requires explicit tuning for NIO-heavy apps.\n\nExample 1:\n// Critical setting for 10GB direct buffers:\n-XX:MaxDirectMemorySize=10g\n\nExample 2:\n// Monitoring:\njcmd <pid> VM.native_memory summary\n\nExample 3:\n// Common pitfall:\nByteBuffer.allocateDirect(2_000_000_000); // Fails silently if limit exceeded",
+  "keywords": ["ByteBuffer", "direct memory", "off-heap", "NIO", "memory limits", "native OOM", "JVM tuning"]
+},
+    {
+  "id": 2,
+  "topic": "Concurrency & Memory",
+  "question": "What is the most reliable way to share an immutable configuration object between threads without synchronization overhead?\n\n\t- volatile reference to the object\n\t- AtomicReference with lazy initialization\n\t- Final field in a properly constructed object\n\t- Static initialization holder pattern",
+  "options": [
+    "volatile reference",
+    "AtomicReference",
+    "Final field",
+    "Holder pattern"
+  ],
+  "response": "Final field",
+  "explanation": "Title: Safe Publication of Immutable Objects\n\nFinal fields guarantee safe publication under Java Memory Model (JLS 17.5). More efficient than volatile/atomic.\n\nExample 1:\nclass Config {\n  final Map<String,String> params;\n  Config(Map<String,String> p) { this.params = Map.copyOf(p); }\n}\n\nExample 2:\n// Unsafe publication:\nConfig c = new Config(map);\nnew Thread(() -> use(c)).start(); // Risk of seeing partially constructed object\n\nExample 3:\n// Proper usage:\nfinal Config safeConfig = new Config(map); // Safe publication to all threads",
+  "keywords": ["final field", "memory visibility", "safe publication", "immutable", "JMM", "concurrency", "synchronization"]
+},
+    {
+  "id": 1,
+  "topic": "GC Performance Optimization",
+  "question": "When tuning G1 GC for a latency-sensitive application with 20GB heap, which strategy most effectively reduces max pause times?\n\n\t- Setting -XX:MaxGCPauseMillis=10\n\t- Increasing -XX:G1NewSizePercent to 40%\n\t- Enabling -XX:+UseLargePages\n\t- Combining -XX:G1HeapRegionSize=32M with -XX:G1MixedGCLiveThresholdPercent=85",
+  "options": [
+    "Set MaxGCPauseMillis=10",
+    "Increase G1NewSizePercent",
+    "Enable UseLargePages",
+    "Custom region size + live threshold"
+  ],
+  "response": "Custom region size + live threshold",
+  "explanation": "Title: G1 GC Latency Optimization\n\nLarger regions (32M) reduce GC work, while higher live threshold (85%) minimizes mixed GC cycles. MaxGCPauseMillis is only a target hint.\n\nExample 1:\n// Effective settings for 20GB heap:\n-XX:G1HeapRegionSize=32M -XX:G1MixedGCLiveThresholdPercent=85\n\nExample 2:\n// Monitoring:\n-XX:+PrintGCDetails -XX:+PrintAdaptiveSizePolicy\n\nExample 3:\n// Danger of over-aggressive targets:\n-XX:MaxGCPauseMillis=5 // May cause excessive GC cycles",
+  "keywords": ["G1 GC", "pause times", "heap region", "mixed GC", "latency", "tuning", "JVM flags"]
+},
+    {
+  "id": 3,
+  "topic": "GC and Concurrency",
+  "question": "Why do modern GCs like ZGC require memory barriers during concurrent marking?\n\n\t- To flush CPU cache lines\n\t- Maintain mutator-GC thread visibility\n\t- Prevent compiler reordering\n\t- All of the above",
+  "options": [
+    "Flush CPU caches",
+    "Ensure visibility",
+    "Prevent reordering",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: GC Memory Barrier Necessity\n\nBarriers ensure: 1) Visibility of object graph changes 2) Cache coherence 3) Happens-before for concurrent mutations.\n\nExample 1:\n// ZGC load barrier:\nObject foo = obj.field; // Triggers barrier\n\nExample 2:\n// Shenandoah write barrier:\nobj.field = bar; // Marks card table\n\nExample 3:\n// JVM options:\n-XX:+UseZGC -XX:+UseStoreBarriers",
+  "keywords": ["memory barriers", "ZGC", "concurrent GC", "visibility", "cache coherence", "happens-before", "load barrier"]
+},
+    {
+  "id": 2,
+  "topic": "Garbage Collection",
+  "question": "How does G1 GC handle humongous objects (50%+ of region size)?\n\n\t- Splits them across multiple regions\n\t- Allocates in special contiguous regions\n\t- Immediately promotes to Old Generation\n\t- Stores off-heap in native memory",
+  "options": [
+    "Dedicated contiguous regions",
+    "Region splitting",
+    "Immediate promotion",
+    "Off-heap storage"
+  ],
+  "response": "Dedicated contiguous regions",
+  "explanation": "Title: G1 Humongous Object Handling\n\nG1 allocates humongous objects in contiguous regions, skipping Eden/Survivor spaces, but causes fragmentation.\n\nExample 1:\n// 4MB object with 2MB regions:\nbyte[] huge = new byte[4_000_000];\n\nExample 2:\n// Monitoring:\n-XX:+PrintGCDetails -XX:+PrintHumongousObjects\n\nExample 3:\n// Optimization:\n-XX:G1HeapRegionSize=4M // Larger regions reduce humongous allocations",
+  "keywords": ["G1 GC", "humongous objects", "memory regions", "fragmentation", "allocation", "performance", "JVM flags"]
+},
+    {
+  "id": 1,
+  "topic": "Memory Management",
+  "question": "What determines whether an object is allocated on the stack versus the heap in modern JVMs?\n\n\t- Object size exceeding 64 bytes\n\t- Escape analysis proving object doesn't escape method scope\n\t- Final modifier on object reference\n\t- Explicit @StackAllocation annotation",
+  "options": [
+    "Escape analysis results",
+    "Size threshold",
+    "Final modifier",
+    "Special annotation"
+  ],
+  "response": "Escape analysis results",
+  "explanation": "Title: Stack Allocation Optimization\n\nThe JVM may stack-allocate objects when escape analysis proves they don't escape the method (scalar replacement).\n\nExample 1:\nvoid process() {\n  Point p = new Point(1,2); // May be stack-allocated\n  System.out.println(p.x);\n}\n\nExample 2:\n// Disables optimization:\nPoint global;\nvoid leak() {\n  global = new Point(1,2); // Must be heap-allocated\n}\n\nExample 3:\n// JVM options:\n-XX:+DoEscapeAnalysis -XX:+EliminateAllocations",
+  "keywords": ["stack allocation", "escape analysis", "scalar replacement", "JIT optimization", "heap", "memory", "JVM"]
+},
+    {
   "id": 10,
   "topic": "Atomic Operations",
   "question": "What thread-safety guarantee does ConcurrentHashMap's compute() method provide for the remapping function?\n\n\t- Atomic execution per key\n\t- Process-wide exclusivity\n\t- Only single-writer guarantee\n\t- No guarantees under high contention",

@@ -2,6 +2,135 @@
   "id": 9,
   "topic": 1,
   "data": [
+    {
+  "id": 10,
+  "topic": "Threads & Memory",
+  "question": "How can `ThreadLocal` cause memory leaks in web applications?\n\nOptions:\nA) Thread reuse in pools\nB) Missing `remove()` calls\nC) Strong references to classes\nD) All of the above\n\nCode:\nThreadLocal<User> userContext = new ThreadLocal<>();\nuserContext.set(currentUser);",
+  "options": [
+    "Thread reuse in pools",
+    "Missing `remove()` calls",
+    "Strong references to classes",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: ThreadLocal Leak Risks\n\nThread pools reuse threads, retaining `ThreadLocal` values unless `remove()` is called.\nStrong references prevent GC of classloaders in containers.\n\nExample 1:\n// Leak in Tomcat\nuserContext.set(user); // Never removed\n\nExample 2:\n// Fix: Use try-finally\ntry {\n  userContext.set(user);\n  // ...\n} finally { userContext.remove(); }\n\nExample 3:\n// WeakReference alternative\nThreadLocal<WeakReference<User>> weakContext = new ThreadLocal<>();",
+  "keywords": ["ThreadLocal", "memory leak", "thread pool", "remove()", "WeakReference", "classloader"]
+},
+    
+{
+  "id": 9,
+  "topic": "JVM Optimization",
+  "question": "Which method is most likely to be inlined by the JIT compiler?\n\nOptions:\nA) Large recursive method\nB) Small `private static` method\nC) Method with `synchronized` block\nD) Virtual method with multiple overrides\n\nCode:\nprivate static int add(int a, int b) { return a + b; }\nsynchronized void update() { ... }",
+  "options": [
+    "Large recursive method",
+    "Small `private static` method",
+    "Method with `synchronized` block",
+    "Virtual method with multiple overrides"
+  ],
+  "response": "Small `private static` method",
+  "explanation": "Title: JIT Inlining Criteria\n\nSmall, static/final methods are prime candidates for inlining.\n`sync`/virtual methods complicate inlining; recursion is limited by depth.\n\nExample 1:\n// Ideal for inlining\nprivate static int square(int x) { return x * x; }\n\nExample 2:\n// Not inlined (synchronized)\nsynchronized void increment() { counter++; }\n\nExample 3:\n// Virtual call (runtime decision)\nvoid process() { ... } // Overridden in subclasses",
+  "keywords": ["JIT", "inlining", "optimization", "synchronized", "virtual method", "recursion"]
+},
+    {
+  "id": 8,
+  "topic": "Lists",
+  "question": "Which list implementation is immutable and memory-efficient?\n\nOptions:\nA) `List.of()`\nB) `Arrays.asList()`\nC) `new ArrayList<>()`\nD) `Collections.emptyList()`\n\nCode:\nList<String> l1 = List.of(\"a\", \"b\");\nList<String> l2 = Arrays.asList(\"a\", \"b\");",
+  "options": [
+    "`List.of()`",
+    "`Arrays.asList()`",
+    "`new ArrayList<>()`",
+    "`Collections.emptyList()`"
+  ],
+  "response": "`List.of()`",
+  "explanation": "Title: Immutable List Implementations\n\n`List.of()` creates compact, immutable lists. `Arrays.asList()` is a mutable view of an array.\n`ArrayList` is mutable and heap-allocated.\n\nExample 1:\n// Immutable (Java 9+)\nList<String> l = List.of(\"a\", \"b\");\nl.add(\"c\"); // UnsupportedOperationException\n\nExample 2:\n// Mutable view\nList<String> l = Arrays.asList(\"a\", \"b\");\nl.set(0, \"c\"); // OK\n\nExample 3:\n// Memory overhead\nList<String> l = new ArrayList<>(List.of(\"a\", \"b\")); // 16-byte array + metadata",
+  "keywords": ["List.of", "Arrays.asList", "immutable", "memory efficiency", "ArrayList", "UnsupportedOperationException"]
+},
+    {
+  "id": 7,
+  "topic": "Threads & Atomicity",
+  "question": "When should `AtomicInteger` be preferred over `volatile int`?\n\nOptions:\nA) For read-heavy workloads\nB) For compound actions (e.g., `i++`)\nC) When memory visibility is sufficient\nD) Never\n\nCode:\nvolatile int counter1 = 0;\nAtomicInteger counter2 = new AtomicInteger(0);",
+  "options": [
+    "For read-heavy workloads",
+    "For compound actions (e.g., `i++`)",
+    "When memory visibility is sufficient",
+    "Never"
+  ],
+  "response": "For compound actions (e.g., `i++`)",
+  "explanation": "Title: Atomicity vs. Visibility\n\n`volatile` ensures visibility but not atomicity (e.g., `counter++` is non-atomic).\n`AtomicInteger` provides CAS-based atomic operations.\n\nExample 1:\n// Unsafe with volatile\ncounter1++; // Race condition\n\nExample 2:\n// Safe with AtomicInteger\ncounter2.incrementAndGet(); // Atomic\n\nExample 3:\n// Read-only (volatile is enough)\nif (counter1 > 0) { ... } // Safe for visibility",
+  "keywords": ["volatile", "AtomicInteger", "CAS", "atomicity", "memory visibility", "race condition"]
+},
+    
+{
+  "id": 6,
+  "topic": "Threads",
+  "question": "What causes deadlock in a fixed-thread pool with nested tasks?\n\nOptions:\nA) Task dependency cycles\nB) Too few threads\nC) Unbounded queues\nD) All of the above\n\nCode:\nExecutorService pool = Executors.newFixedThreadPool(2);\npool.submit(() -> {\n  Future<?> f = pool.submit(() -> System.out.println(\"Nested\"));\n  f.get(); // Deadlock!\n});",
+  "options": [
+    "Task dependency cycles",
+    "Too few threads",
+    "Unbounded queues",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: Thread Pool Deadlock Risks\n\nDeadlock occurs if all threads wait for nested tasks (cycle) and the pool is undersized.\nUnbounded queues hide starvation but don’t prevent deadlock.\n\nExample 1:\n// Deadlock with 2 threads\npool.submit(() -> {\n  Future<?> f = pool.submit(() -> {});\n  f.get(); // Blocks forever\n});\n\nExample 2:\n// Fix: Use larger pool\nExecutorService pool = Executors.newFixedThreadPool(4);\n\nExample 3:\n// Fix: Avoid nested blocking\nCompletableFuture.supplyAsync(() -> {}, pool); // Non-blocking",
+  "keywords": ["thread pool", "deadlock", "ExecutorService", "nested tasks", "starvation", "CompletableFuture"]
+},
+    {
+  "id": 5,
+  "topic": "JVM Memory",
+  "question": "Which JVM flag controls the size of the G1 Heap regions?\n\nOptions:\nA) `-XX:G1HeapRegionSize`\nB) `-Xmn`\nC) `-XX:NewSize`\nD) `-XX:SurvivorRatio`\n\nCode:\n// JVM args for G1 GC\n// -XX:+UseG1GC -XX:G1HeapRegionSize=2M",
+  "options": [
+    "`-XX:G1HeapRegionSize`",
+    "`-Xmn`",
+    "`-XX:NewSize`",
+    "`-XX:SurvivorRatio`"
+  ],
+  "response": "`-XX:G1HeapRegionSize`",
+  "explanation": "Title: G1 Heap Region Configuration\n\n`-XX:G1HeapRegionSize` sets the size (1MB–32MB) of G1 regions.\n`-Xmn` sets young gen size; `SurvivorRatio` adjusts Eden/Survivor.\n\nExample 1:\n// 4MB regions (default is ergonomic)\n-XX:G1HeapRegionSize=4M\n\nExample 2:\n// Too small (overhead)\n-XX:G1HeapRegionSize=1M // May increase GC pauses\n\nExample 3:\n// Too large (waste)\n-XX:G1HeapRegionSize=32M // Poor heap utilization",
+  "keywords": ["G1GC", "HeapRegionSize", "JVM flags", "memory regions", "GC tuning", "ergonomics"]
+},
+    {
+  "id": 4,
+  "topic": "Lists & Maps",
+  "question": "How to safely iterate over a `ConcurrentHashMap` while another thread modifies it?\n\nOptions:\nA) `synchronized` block\nB) `Collections.unmodifiableMap()`\nC) CHM's `forEach()`\nD) Clone the map first\n\nCode:\nConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"a\", 1);\nmap.put(\"b\", 2);",
+  "options": [
+    "`synchronized` block",
+    "`Collections.unmodifiableMap()`",
+    "CHM's `forEach()`",
+    "Clone the map first"
+  ],
+  "response": "CHM's `forEach()`",
+  "explanation": "Title: Safe Iteration in ConcurrentHashMap\n\n`ConcurrentHashMap.forEach()` provides thread-safe traversal without locks.\nCloning/synchronization defeats CHM's purpose; `unmodifiableMap()` is a view, not thread-safe.\n\nExample 1:\n// Safe iteration\nmap.forEach((k, v) -> System.out.println(k + \": \" + v));\n\nExample 2:\n// Risky (ConcurrentModificationException possible)\nfor (Map.Entry<String, Integer> e : map.entrySet()) { ... }\n\nExample 3:\n// Overhead (unnecessary synchronization)\nsynchronized (map) {\n  map.forEach((k, v) -> { ... });\n}",
+  "keywords": ["ConcurrentHashMap", "thread-safe", "forEach", "iteration", "synchronized", "concurrency"]
+},
+    
+{
+  "id": 3,
+  "topic": "Data Types",
+  "question": "Why does `ArrayList<Integer>` perform worse than `int[]` for large datasets?\n\nOptions:\nA) Boxing overhead\nB) Memory fragmentation\nC) Cache misses\nD) All of the above\n\nCode:\nList<Integer> list = new ArrayList<>();\nint[] arr = new int[1_000_000];",
+  "options": [
+    "Boxing overhead",
+    "Memory fragmentation",
+    "Cache misses",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: Primitive vs. Boxed Performance\n\n`ArrayList<Integer>` stores objects (heap allocation), causing boxing/unboxing overhead, memory fragmentation, and cache inefficiency.\n`int[]` uses contiguous primitive data.\n\nExample 1:\n// Boxing overhead\nlist.add(42); // Implicit Integer.valueOf(42)\nint x = list.get(0); // Implicit list.get(0).intValue()\n\nExample 2:\n// Memory access\nfor (int i : arr) { ... } // Contiguous memory\nfor (int i : list) { ... } // Pointer chasing\n\nExample 3:\n// Cache locality test\nArrays.fill(arr, 1); // Faster than\nlist.forEach(i -> list.set(i, 1));",
+  "keywords": ["boxing", "primitive", "ArrayList", "performance", "cache", "memory fragmentation"]
+},
+    {
+  "id": 2,
+  "topic": "Vectors & SIMD",
+  "question": "How can Java leverage SIMD instructions for vector operations?\n\nOptions:\nA) Using `java.util.Vector`\nB) Manual loop unrolling\nC) JVM's auto-vectorization\nD) `var handles` with `MethodHandles.lookup()`\n\nCode:\ndouble[] a = new double[1000];\ndouble[] b = new double[1000];\n// ... Initialize arrays ...",
+  "options": [
+    "Using `java.util.Vector`",
+    "Manual loop unrolling",
+    "JVM's auto-vectorization",
+    "`var handles` with `MethodHandles.lookup()`"
+  ],
+  "response": "JVM's auto-vectorization",
+  "explanation": "Title: SIMD Optimization in Java\n\nThe JVM auto-vectorizes simple loops (e.g., array sums) into SIMD instructions (SSE/AVX).\n`java.util.Vector` is a legacy collection, not related to CPU vectors.\n\nExample 1:\n// Auto-vectorized sum\ndouble sum = 0;\nfor (double v : a) sum += v; // JVM may use SIMD\n\nExample 2:\n// Manual unrolling (less reliable)\nfor (int i = 0; i < n; i += 4) {\n  sum += a[i] + a[i+1] + a[i+2] + a[i+3];\n}\n\nExample 3:\n// Incorrect approach (no SIMD)\nVector<Double> vec = new Vector<>(); // Legacy collection class",
+  "keywords": ["SIMD", "vectorization", "JVM", "auto-vectorization", "loop unrolling", "AVX"]
+},
     
 {
   "id": 1,

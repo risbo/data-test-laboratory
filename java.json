@@ -4,6 +4,147 @@
   "data": [
     {
   "id": 10,
+  "topic": "Concurrency Strategies",
+  "question": "What is the primary advantage of java.util.concurrent collections over synchronized wrappers?\n\nOptions:\nA) Lower contention via fine-grained locking\nB) Built-in transaction support\nC) Guaranteed deadlock avoidance\nD) All of the above\n\nCode:\nMap<String, Integer> syncMap = Collections.synchronizedMap(new HashMap<>());\nConcurrentHashMap<String, Integer> concurrentMap = new ConcurrentHashMap<>();",
+  "options": [
+    "Lower contention via fine-grained locking",
+    "Built-in transaction support",
+    "Guaranteed deadlock avoidance",
+    "All of the above"
+  ],
+  "response": "Lower contention via fine-grained locking",
+  "explanation": "Title: Concurrent Collection Benefits\n\njava.util.concurrent uses lock striping (e.g., CHM), CAS operations, or copy-on-write for higher throughput under contention vs. global locks.\n\nExample 1:\n// High contention (synchronizedMap)\nsyncMap.get(k); // Blocks all other operations\n\nExample 2:\n// Lower contention (CHM)\nconcurrentMap.get(k); // Non-blocking\n\nExample 3:\n// Write performance\nconcurrentMap.put(k, v); // Locks only one bucket",
+  "keywords": ["java.util.concurrent", "fine-grained locking", "lock striping", "synchronizedMap", "ConcurrentHashMap", "throughput", "contention"]
+},
+    {
+  "id": 9,
+  "topic": "Specialized Collections",
+  "question": "When does WeakHashMap automatically remove entries?\n\nOptions:\nA) When the key is garbage collected\nB) When the value is garbage collected\nC) After a timeout\nD) During full GC only\n\nCode:\nWeakHashMap<Key, Value> map = new WeakHashMap<>();\nmap.put(new Key(), new Value());\nSystem.gc(); // Key becomes eligible for GC",
+  "options": [
+    "When the key is garbage collected",
+    "When the value is garbage collected",
+    "After a timeout",
+    "During full GC only"
+  ],
+  "response": "When the key is garbage collected",
+  "explanation": "Title: WeakHashMap Entry Cleanup\n\nWeakHashMap holds weak references to keys, allowing entry removal when keys are GC'd. Values are strongly referenced until then.\n\nExample 1:\n// Entry removed after key GC\nKey k = new Key();\nmap.put(k, new Value());\nk = null; // Eligible for GC\nSystem.gc(); // Entry removed\n\nExample 2:\n// Strong value reference\nValue v = new Value();\nmap.put(new Key(), v); // Entry keeps v reachable\n\nExample 3:\n// Alternative: WeakReference<Value>\nMap<Key, WeakReference<Value>> weakValueMap = new HashMap<>();",
+  "keywords": ["WeakHashMap", "weak references", "garbage collection", "entry cleanup", "memory management", "cache", "HashMap alternative"]
+},
+    {
+  "id": 8,
+  "topic": "Fail-Fast Iterators",
+  "question": "How can a single-threaded application trigger ConcurrentModificationException with an ArrayList?\n\nOptions:\nA) Using remove() during iteration\nB) Calling size() during iteration\nC) Using parallelStream()\nD) All of the above\n\nCode:\nList<String> list = new ArrayList<>(List.of(\"A\", \"B\"));\nfor (String s : list) {\n  list.remove(s); // Throws CME\n}",
+  "options": [
+    "Using remove() during iteration",
+    "Calling size() during iteration",
+    "Using parallelStream()",
+    "All of the above"
+  ],
+  "response": "Using remove() during iteration",
+  "explanation": "Title: Fail-Fast Iteration Mechanics\n\nFail-fast iterators throw CME when detecting structural modifications (add/remove) during iteration, even in single-threaded code.\n\nExample 1:\n// Direct removal (CME)\nfor (String s : list) list.remove(s);\n\nExample 2:\n// Safe removal with iterator\nIterator<String> it = list.iterator();\nwhile (it.hasNext()) it.remove();\n\nExample 3:\n// No CME (but still unsafe)\nlist.parallelStream().forEach(list::remove); // May throw CME or corrupt data",
+  "keywords": ["ConcurrentModificationException", "fail-fast iterator", "ArrayList", "structural modification", "single-threaded", "iterator.remove()", "parallelStream"]
+},
+    {
+  "id": 7,
+  "topic": "Legacy Synchronized Collections",
+  "question": "What distinguishes Vector from Collections.synchronizedList(new ArrayList<>())?\n\nOptions:\nA) Vector synchronizes per method\nB) Vector has dynamic growth\nC) Vector is thread-safe\nD) Nothing, they are equivalent\n\nCode:\nVector<String> vec = new Vector<>();\nList<String> syncList = Collections.synchronizedList(new ArrayList<>());",
+  "options": [
+    "Vector synchronizes per method",
+    "Vector has dynamic growth",
+    "Vector is thread-safe",
+    "Nothing, they are equivalent"
+  ],
+  "response": "Nothing, they are equivalent",
+  "explanation": "Title: Vector vs. SynchronizedList\n\nBoth synchronize all methods and grow dynamically. Vector is legacy; synchronizedList is more flexible for wrapping other List implementations.\n\nExample 1:\n// Vector\nvec.add(\"A\"); // Synchronized\n\nExample 2:\n// SynchronizedList\nsyncList.add(\"A\"); // Also synchronized\n\nExample 3:\n// Flexibility advantage\nList<String> syncLinkedList = Collections.synchronizedList(new LinkedList<>());",
+  "keywords": ["Vector", "synchronizedList", "legacy collections", "thread-safe list", "method synchronization", "dynamic growth", "ArrayList"]
+}
+    ,
+    {
+  "id": 6,
+  "topic": "Concurrent Collections",
+  "question": "When is ConcurrentSkipListMap preferable over ConcurrentHashMap?\n\nOptions:\nA) When requiring natural ordering\nB) For higher write throughput\nC) For better memory efficiency\nD) When needing null values\n\nCode:\nConcurrentSkipListMap<String, Integer> sortedMap = new ConcurrentSkipListMap<>();\nsortedMap.put(\"z\", 1);\nsortedMap.put(\"a\", 2);",
+  "options": [
+    "When requiring natural ordering",
+    "For higher write throughput",
+    "For better memory efficiency",
+    "When needing null values"
+  ],
+  "response": "When requiring natural ordering",
+  "explanation": "Title: Sorted Concurrent Maps\n\nConcurrentSkipListMap provides thread-safe sorting but has higher overhead than CHM. CHM is faster but unordered.\n\nExample 1:\n// Sorted iteration\nfor (Map.Entry<String, Integer> e : sortedMap.entrySet()) { ... } // a=2, z=1\n\nExample 2:\n// Unordered but faster\nConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"z\", 1); map.put(\"a\", 2);\n\nExample 3:\n// Null restriction\nmap.put(null, 1); // Throws NPE in both",
+  "keywords": ["ConcurrentSkipListMap", "natural ordering", "sorted map", "ConcurrentHashMap", "thread-safe sorting", "skip list", "performance trade-off"]
+},
+    {
+  "id": 5,
+  "topic": "Synchronized Collections",
+  "question": "What operation on a synchronizedMap is NOT thread-safe without external synchronization?\n\nOptions:\nA) map.put()\nB) map.get()\nC) map.containsKey() + map.putIfAbsent()\nD) map.size()\n\nCode:\nMap<String, Integer> syncMap = Collections.synchronizedMap(new HashMap<>());\nif (!syncMap.containsKey(\"k\")) {\n  syncMap.put(\"k\", 1); // Race condition\n}",
+  "options": [
+    "map.put()",
+    "map.get()",
+    "map.containsKey() + map.putIfAbsent()",
+    "map.size()"
+  ],
+  "response": "map.containsKey() + map.putIfAbsent()",
+  "explanation": "Title: Compound Operation Race Conditions\n\nIndividual methods are thread-safe, but sequences like check-then-act require external synchronization to remain atomic.\n\nExample 1:\n// Race condition\nif (!map.containsKey(k)) map.put(k, v);\n\nExample 2:\n// Thread-safe single operation\nmap.put(k, v); // Atomic\n\nExample 3:\n// Proper synchronization\nsynchronized (map) {\n  if (!map.containsKey(k)) map.put(k, v);\n}",
+  "keywords": ["synchronizedMap", "race condition", "compound operations", "check-then-act", "thread-safe", "atomicity", "external synchronization"]
+},
+    {
+  "id": 4,
+  "topic": "Blocking Collections",
+  "question": "Which BlockingQueue implementation is optimal for a producer-consumer system with backpressure handling?\n\nOptions:\nA) LinkedBlockingQueue\nB) ArrayBlockingQueue\nC) SynchronousQueue\nD) PriorityBlockingQueue\n\nCode:\nBlockingQueue<Task> queue = new ArrayBlockingQueue<>(100);\n// Producer:\nqueue.put(task); // Blocks if full\n// Consumer:\nTask t = queue.take();",
+  "options": [
+    "LinkedBlockingQueue",
+    "ArrayBlockingQueue",
+    "SynchronousQueue",
+    "PriorityBlockingQueue"
+  ],
+  "response": "ArrayBlockingQueue",
+  "explanation": "Title: Backpressure with BlockingQueue\n\nArrayBlockingQueue's fixed size enforces backpressure (producers block when full). LinkedBlockingQueue may grow unbounded, risking OOM.\n\nExample 1:\n// Unbounded risk (LinkedBlockingQueue)\nnew LinkedBlockingQueue<>(); // May grow indefinitely\n\nExample 2:\n// Bounded (ArrayBlockingQueue)\nnew ArrayBlockingQueue<>(100); // Safe backpressure\n\nExample 3:\n// Extreme (SynchronousQueue)\nnew SynchronousQueue(); // No buffering, direct handoff",
+  "keywords": ["BlockingQueue", "backpressure", "ArrayBlockingQueue", "LinkedBlockingQueue", "producer-consumer", "bounded queue", "SynchronousQueue"]
+},
+    {
+  "id": 3,
+  "topic": "Non-Blocking Collections",
+  "question": "When should CopyOnWriteArrayList be avoided despite its thread safety?\n\nOptions:\nA) Frequent write operations\nB) Large datasets\nC) Real-time latency requirements\nD) All of the above\n\nCode:\nCopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();\nlist.add(1); // Creates a new internal array",
+  "options": [
+    "Frequent write operations",
+    "Large datasets",
+    "Real-time latency requirements",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: CopyOnWriteArrayList Trade-offs\n\nCOWAL copies the entire array on modification, causing high overhead for writes/large datasets and unpredictable latency spikes.\n\nExample 1:\n// Expensive write\nfor (int i = 0; i < 100_000; i++) list.add(i); // O(n) per operation\n\nExample 2:\n// Memory churn\nlist.set(0, 99); // Allocates new array\n\nExample 3:\n// Alternative for frequent writes:\nCollections.synchronizedList(new ArrayList<>());",
+  "keywords": ["CopyOnWriteArrayList", "write overhead", "memory churn", "latency spikes", "thread-safe list", "concurrency trade-offs", "synchronizedList"]
+},
+    {
+  "id": 2,
+  "topic": "Concurrent Collections",
+  "question": "What is the key advantage of ConcurrentHashMap over Hashtable in high-contention scenarios?\n\nOptions:\nA) Full table-level locking\nB) Segment-level locking\nC) Lock-free reads\nD) Built-in transaction support\n\nCode:\nConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"key\", 1);\nint value = map.get(\"key\");",
+  "options": [
+    "Full table-level locking",
+    "Segment-level locking",
+    "Lock-free reads",
+    "Built-in transaction support"
+  ],
+  "response": "Lock-free reads",
+  "explanation": "Title: ConcurrentHashMap Locking Strategy\n\nConcurrentHashMap allows concurrent reads without locking and uses fine-grained locks for writes. Hashtable locks the entire table for all operations.\n\nExample 1:\n// Hashtable (global lock)\nHashtable<String, Integer> ht = new Hashtable<>();\nht.get(\"k\"); // Blocks all other operations\n\nExample 2:\n// CHM (non-blocking read)\nmap.get(\"k\"); // No lock, reads proceed concurrently\n\nExample 3:\n// CHM write (segment lock)\nmap.put(\"k\", 2); // Only locks one bucket",
+  "keywords": ["ConcurrentHashMap", "Hashtable", "lock-free reads", "segment-level locking", "high contention", "thread-safe map", "concurrency"]
+},
+    {
+  "id": 1,
+  "topic": "Synchronized Collections",
+  "question": "Why does iterating over a synchronized list require explicit synchronization despite the list being thread-safe?\n\nOptions:\nA) To prevent ConcurrentModificationException\nB) To ensure atomic compound operations\nC) The iterator is not thread-safe\nD) All of the above\n\nCode:\nList<String> syncList = Collections.synchronizedList(new ArrayList<>());\n// Thread 1:\nsyncList.add(\"A\");\n// Thread 2:\nfor (String s : syncList) { ... }",
+  "options": [
+    "To prevent ConcurrentModificationException",
+    "To ensure atomic compound operations",
+    "The iterator is not thread-safe",
+    "All of the above"
+  ],
+  "response": "All of the above",
+  "explanation": "Title: Synchronized List Iterator Pitfalls\n\nSynchronized collections only protect individual methods, not iteration sequences. Concurrent modifications during iteration cause undefined behavior.\n\nExample 1:\n// Unsafe iteration (may throw ConcurrentModificationException)\nfor (String s : syncList) { ... }\n\nExample 2:\n// Safe iteration with explicit lock\nsynchronized (syncList) {\n  for (String s : syncList) { ... }\n}\n\nExample 3:\n// Alternative: Use CopyOnWriteArrayList\nCopyOnWriteArrayList<String> safeList = new CopyOnWriteArrayList<>();\nfor (String s : safeList) { ... } // Thread-safe",
+  "keywords": ["synchronizedList", "iterator", "ConcurrentModificationException", "thread-safe iteration", "compound operations", "explicit synchronization", "CopyOnWriteArrayList"]
+},
+    {
+  "id": 10,
   "topic": "Threads & Memory",
   "question": "How can `ThreadLocal` cause memory leaks in web applications?\n\nOptions:\nA) Thread reuse in pools\nB) Missing `remove()` calls\nC) Strong references to classes\nD) All of the above\n\nCode:\nThreadLocal<User> userContext = new ThreadLocal<>();\nuserContext.set(currentUser);",
   "options": [

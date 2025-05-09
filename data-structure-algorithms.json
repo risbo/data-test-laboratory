@@ -3,6 +3,96 @@
   "topic": 1,
   "data": [
     {
+    "id": 1,
+    "topic": "Array – Maximum Subarray Sum",
+    "question": "Given the array [-2, 1, -3, 4, -1, 2, 1, -5, 4], what is the maximum subarray sum obtained using Kadane’s Algorithm?",
+    "options": ["4", "5", "6", "7"],
+    "response": "6",
+    "explanation": "Kadane’s Algorithm scans the array once, keeping a current_sum and a max_sum.\n\t• Start: current_sum = max_sum = -2.\n\t• Iterate: update current_sum = max(a[i], current_sum + a[i]).\n\t• Sequence progresses →   1 → -2 → 4 → 3 → 5 → 6 → 1 → 4.\n\t• max_sum is updated whenever current_sum exceeds it; final max_sum = 6 (subarray [4, -1, 2, 1]).\n\t• Time complexity: O(n); Space: O(1).",
+    "keywords": ["Kadane", "subarray", "dynamic-programming", "linear-time", "max_sum", "interview"]
+  },
+  {
+    "id": 2,
+    "topic": "Array – Trapping Rain Water",
+    "question": "For the height array [4, 2, 0, 3, 2, 5], how many unit blocks of water can be trapped after raining?",
+    "options": ["7", "8", "9", "10"],
+    "response": "9",
+    "explanation": "Two-pointer technique stores left_max and right_max.\n\t• left=0, right=5 → left_max=4, right_max=5 → add 1 (index 1).\n\t• Move pointers toward center, updating maxima and water.\n\t• Trapped units per index: [0,2,4,1,2,0] = 9 total.\n\t• Time: O(n); Space: O(1).",
+    "keywords": ["two-pointer", "water-trap", "left_max", "right_max", "array", "O(n)"]
+  },
+  {
+    "id": 3,
+    "topic": "String – Longest Palindromic Substring",
+    "question": "What is one longest palindromic substring in “babad” identified by the expand-around-center method?",
+    "options": ["bab", "aba", "bad", "ba"],
+    "response": "bab",
+    "explanation": "Expand-around-center checks 2n−1 centers.\n\t• Odd center at index 1 (‘a’) yields “bab”.\n\t• Even centers do not surpass length 3.\n\t• Longest choices: “bab” or “aba”; either is valid, first in scan is “bab”.\n\t• Time: O(n²); Space: O(1).",
+    "keywords": ["palindrome", "expand-center", "string", "babad", "O(n²)", "interview"]
+  },
+  {
+    "id": 4,
+    "topic": "Sorting – QuickSort Partition",
+    "question": "If the first element is chosen as pivot, what index will the pivot 10 occupy after the first partition of [10, 7, 8, 9, 1, 5] (Lomuto scheme)?",
+    "options": ["0", "1", "3", "5"],
+    "response": "3",
+    "explanation": "Lomuto places i at start-1, scans j.\n\t• After scanning, elements ≤ pivot are moved left.\n\t• Final swap puts 10 at index 3 → array [7,8,9,10,1,5].\n\t• Partition cost O(n); QuickSort average O(n log n).",
+    "keywords": ["QuickSort", "partition", "pivot", "Lomuto", "in-place", "O(n)"]
+  },
+  {
+    "id": 5,
+    "topic": "Searching – Binary Search",
+    "question": "What is the maximum number of element comparisons in a successful binary search on a sorted array of length 32?",
+    "options": ["5", "6", "7", "8"],
+    "response": "6",
+    "explanation": "Binary search depth = ⌈log₂(n)⌉ + 1 comparisons.\n\t• log₂(32) = 5; add final equality check → 6.\n\t• Each step halves the interval; complexity O(log n).",
+    "keywords": ["binary-search", "logarithmic", "comparisons", "complexity", "32-elements", "O(log n)"]
+  },
+  {
+    "id": 6,
+    "topic": "Backtracking – N-Queens",
+    "question": "How many distinct solutions exist for the 4-Queens problem?",
+    "options": ["1", "2", "4", "8"],
+    "response": "2",
+    "explanation": "Backtracking places queens row by row.\n\t• Conflict checks: columns and diagonals.\n\t• For n=4, only two board arrangements avoid attacks.\n\t• Time: O(n!), but pruning drastically cuts branches.",
+    "keywords": ["N-Queens", "backtracking", "pruning", "solutions", "4x4", "chess"]
+  },
+  {
+    "id": 7,
+    "topic": "Greedy – Fractional Knapsack",
+    "question": "Given items (value, weight): (60,10), (100,20), (120,30) and knapsack capacity 50, what is the maximum obtainable value using the fractional knapsack algorithm?",
+    "options": ["180", "200", "220", "240"],
+    "response": "240",
+    "explanation": "Sort by value/weight.\n\t• Ratios: 6,5,4.\n\t• Take full (60,10) + (100,20) → capacity left 20.\n\t• Take 20/30 of third item: 120×(20/30)=80.\n\t• Total = 60+100+80 = 240.\n\t• Greedy works because fractional choice keeps optimal substructure.",
+    "keywords": ["knapsack", "greedy", "ratio", "optimal", "fractional", "capacity"]
+  },
+  {
+    "id": 8,
+    "topic": "Greedy – Huffman Coding",
+    "question": "What is the optimal total encoded bit length for characters with frequencies {A:5, B:9, C:12, D:13, E:16, F:45} under Huffman coding?",
+    "options": ["224", "208", "154", "162"],
+    "response": "224",
+    "explanation": "Build min-heap of frequencies, repeatedly merge lowest two.\n\t• Merge steps weights: 5+9=14, 12+13=25, 14+16=30, 25+30=55, 45+55=100.\n\t• Weighted path length = sum of internal edge weights = 224 bits.\n\t• Huffman is optimal prefix-free.\n\t• Time: O(n log n).",
+    "keywords": ["Huffman", "prefix-code", "min-heap", "compression", "greedy", "optimal"]
+  },
+  {
+    "id": 9,
+    "topic": "Tree – Diameter of Binary Tree",
+    "question": "What is the diameter (longest path length in edges) of a full binary tree of height 3 (levels = 4)?",
+    "options": ["4", "5", "6", "7"],
+    "response": "6",
+    "explanation": "Diameter in full tree = 2×height.\n\t• Height 3 ⇒ edges from root to leaf =3.\n\t• Longest leaf-to-leaf path passes through root: 3+3 = 6 edges.\n\t• Compute with DFS returning subtree heights while updating global max.",
+    "keywords": ["binary-tree", "diameter", "DFS", "height", "longest-path", "edges"]
+  },
+  {
+    "id": 10,
+    "topic": "String – KMP LPS Table",
+    "question": "For the pattern “ABABAC”, what is the last value in its LPS (Longest Prefix Suffix) array used by the KMP algorithm?",
+    "options": ["0", "1", "2", "3"],
+    "response": "2",
+    "explanation": "Compute LPS iteratively.\n\t• Index 0→0, 1→0, 2→1, 3→2, 4→3? mismatch → fallback to 1 then 0 → value 0.\n\t• Index 5 (C): mismatch → fallback → final LPS[5] = 2.\n\t• LPS guides where to resume matching without rechecking characters.",
+    "keywords": ["KMP", "LPS", "pattern", "string-search", "prefix-suffix", "linear-time"]
+  },
+    {
       "id": 101,
       "topic": "Java",
       "question": "What is the size of an int in Java?",

@@ -4,6 +4,286 @@
   "data": [
     {
   "id": 10,
+  "topic": "Atomic Operations",
+  "question": "What thread-safety guarantee does ConcurrentHashMap's compute() method provide for the remapping function?\n\n\t- Atomic execution per key\n\t- Process-wide exclusivity\n\t- Only single-writer guarantee\n\t- No guarantees under high contention",
+  "options": [
+    "Per-key atomicity",
+    "Global exclusivity",
+    "Single-writer",
+    "No guarantees"
+  ],
+  "response": "Per-key atomicity",
+  "explanation": "Title: CHM Atomic Computations\n\nLocks only the affected hash bucket during compute(), allowing concurrent operations on other keys.\n\nExample 1:\nmap.compute(key, (k,v) -> v+1); // Atomic for this key\n\nExample 2:\n// Internal implementation:\nsynchronized (f) { // Node lock\n  if (tabAt(tab, i) == f) ...\n\nExample 3:\n// Concurrent update:\nmap.compute(keyA, ...); // Runs concurrently with\nmap.compute(keyB, ...);",
+  "keywords": ["ConcurrentHashMap", "compute", "atomic", "per-key locking", "remapping", "thread-safe", "bucket"]
+},
+    {
+  "id": 9,
+  "topic": "Legacy Thread Safety",
+  "question": "What critical difference exists between Vector and Collections.synchronizedList(new ArrayList())?\n\n\t- Vector synchronizes per method while synchronizedList uses a mutex\n\t- Only Vector supports concurrent iteration\n\t- synchronizedList has better memory locality\n\t- Vector uses copy-on-write internally",
+  "options": [
+    "Different lock mechanisms",
+    "Vector allows concurrent iteration",
+    "Better memory layout",
+    "Copy-on-write"
+  ],
+  "response": "Different lock mechanisms",
+  "explanation": "Title: Legacy Synchronization Approaches\n\nVector synchronizes on instance while synchronizedList uses separate mutex object, affecting extensibility.\n\nExample 1:\n// Vector synchronization:\npublic synchronized boolean add(E e) { ... }\n\nExample 2:\n// synchronizedList wrapper:\nfinal Object mutex;\npublic boolean add(E e) {\n  synchronized (mutex) { ... }\n\nExample 3:\n// Extension risk:\nclass CustomList extends Vector {...} // Inherits sync\nclass CustomList extends ArrayList {...} // Needs manual sync",
+  "keywords": ["Vector", "synchronizedList", "legacy", "mutex", "inheritance", "extension", "locking"]
+},
+    {
+  "id": 8,
+  "topic": "Fail-Fast Behavior",
+  "question": "What internal mechanism triggers ArrayList's ConcurrentModificationException during structural modifications?\n\n\t- Version counter in AbstractList\n\t- Hash code verification\n\t- Iterator's expectedModCount field\n\t- Thread-local modification stamps",
+  "options": [
+    "expectedModCount check",
+    "Hash verification",
+    "Version counter",
+    "Thread stamps"
+  ],
+  "response": "expectedModCount check",
+  "explanation": "Title: Fail-Fast Implementation\n\nIterators compare modCount against expectedModCount to detect concurrent structural changes.\n\nExample 1:\nArrayList<String> list = ...\nIterator<String> it = list.iterator();\nlist.add(\"new\"); // modCount++\nit.next(); // Checks modCount != expectedModCount\n\nExample 2:\n// AbstractList fields:\nprotected transient int modCount;\n\nExample 3:\n// Iterator initialization:\nint expectedModCount = modCount;",
+  "keywords": ["ConcurrentModificationException", "fail-fast", "modCount", "expectedModCount", "iterator", "structural modification", "ArrayList"]
+},
+    {
+  "id": 7,
+  "topic": "Reference-Based Collections",
+  "question": "When does WeakHashMap automatically purge entries after key garbage collection?\n\n\t- During next put/get operation\n\t- Immediately via ReferenceQueue\n\t- Only during full GC cycles\n\t- When explicitly calling size()",
+  "options": [
+    "During map operations",
+    "Via ReferenceQueue",
+    "Full GC only",
+    "On size() calls"
+  ],
+  "response": "During map operations",
+  "explanation": "Title: WeakHashMap Cleanup Mechanism\n\nExpunges stale entries during subsequent map operations via ReferenceQueue polling.\n\nExample 1:\nWeakHashMap<Key,Value> map = new ...\nKey k = new Key();\nmap.put(k, value);\nk = null; // Eligible for GC\nmap.get(new Key()); // Triggers cleanup\n\nExample 2:\n// Internal expunge:\nprivate void expungeStaleEntries() {\n  while ((x = queue.poll()) != null) ...\n\nExample 3:\n// Reference queue usage\nprivate final ReferenceQueue<Object> queue = new ...",
+  "keywords": ["WeakHashMap", "garbage collection", "ReferenceQueue", "expunge", "weak references", "cleanup", "map operations"]
+},
+    {
+  "id": 6,
+  "topic": "Non-Blocking Queues",
+  "question": "What distinguishes ConcurrentLinkedQueue's poll() from peek() in terms of thread visibility guarantees?\n\n\t- poll() provides happens-before for element removal\n\t- Both offer identical visibility\n\t- peek() forces memory barriers\n\t- Only poll() reads volatile fields",
+  "options": [
+    "poll() ensures removal visibility",
+    "Identical guarantees",
+    "peek() has barriers",
+    "poll() uses volatiles"
+  ],
+  "response": "poll() ensures removal visibility",
+  "explanation": "Title: CLQ Memory Consistency\n\npoll()'s atomic removal establishes happens-before for subsequent operations, while peek() only reads.\n\nExample 1:\n// Producer\nqueue.offer(item); // write to volatile tail\n\nExample 2:\n// Consumer 1\nItem i = queue.peek(); // no removal\n\nExample 3:\n// Consumer 2\nItem j = queue.poll(); // CAS on head\n\nExample 4:\n// Internal node link\nvolatile Node<E> next;",
+  "keywords": ["ConcurrentLinkedQueue", "poll", "peek", "memory barriers", "happens-before", "non-blocking", "CAS"]
+},
+    {
+  "id": 5,
+  "topic": "Legacy Synchronization",
+  "question": "Why does Collections.synchronizedMap() exhibit poor throughput for entrySet() iteration under contention?\n\n\t- Requires global lock on entire map\n\t- Creates defensive copies of all entries\n\t- Uses fine-grained locking per entry\n\t- Lacks iterator fail-fast behavior",
+  "options": [
+    "Global lock during iteration",
+    "Defensive copying",
+    "Per-entry locking",
+    "No fail-fast"
+  ],
+  "response": "Global lock during iteration",
+  "explanation": "Title: SynchronizedMap Iteration Bottleneck\n\nSynchronizes on the entire map during iteration, blocking all other operations.\n\nExample 1:\nMap<String,Integer> m = Collections.synchronizedMap(...);\nfor (Entry<String,Integer> e : m.entrySet()) { ... } // Locks map\n\nExample 2:\n// Internal synchronization\npublic Set<Map.Entry<K,V>> entrySet() {\n  synchronized (mutex) { ... }\n\nExample 3:\n// Concurrent alternative\nConcurrentHashMap.KeySetView<K,V> ks = chm.keySet();",
+  "keywords": ["synchronizedMap", "global lock", "entrySet", "contention", "throughput", "legacy", "iteration"]
+},
+    {
+  "id": 4,
+  "topic": "Sorted Concurrent Maps",
+  "question": "What is the time complexity for ConcurrentSkipListMap's put() operation compared to ConcurrentHashMap?\n\n\t- O(log n) vs O(1) average case\n\t- O(1) vs O(n) worst case\n\t- Both O(1) with different constants\n\t- O(n) vs O(log n) for large datasets",
+  "options": [
+    "O(log n) vs O(1)",
+    "O(1) vs O(n)",
+    "Both O(1)",
+    "O(n) vs O(log n)"
+  ],
+  "response": "O(log n) vs O(1)",
+  "explanation": "Title: SkipList vs Hash Map Complexity\n\nSkipList provides sorted order at log(n) cost per operation, while CHM offers constant-time access.\n\nExample 1:\nConcurrentSkipListMap<Integer,String> sl = new ...\nsl.put(42, \"val\"); // Traverses skip levels\n\nExample 2:\nConcurrentHashMap<Integer,String> chm = new ...\nchm.put(42, \"val\"); // Hashes to bucket\n\nExample 3:\n// SkipList node structure\nstatic final class Node<K,V> {\n  final K key;\n  volatile Object value;\n  volatile Node<K,V> next;",
+  "keywords": ["ConcurrentSkipListMap", "time complexity", "skip list", "logarithmic", "hashing", "sorted", "ConcurrentHashMap"]
+},
+    {
+  "id": 3,
+  "topic": "Blocking Queues",
+  "question": "What memory visibility guarantees does LinkedBlockingQueue provide between producer and consumer threads?\n\n\t- Happens-before for items put before take\n\t- Only eventual consistency\n\t- Requires explicit synchronization\n\t- Visibility limited to queue size changes",
+  "options": [
+    "Happens-before for put/take pairs",
+    "Eventual consistency",
+    "Needs manual synchronization",
+    "Size-only visibility"
+  ],
+  "response": "Happens-before for put/take pairs",
+  "explanation": "Title: BlockingQueue Memory Model\n\nEstablishes happens-before between put() and subsequent take()/poll() calls via volatile fields and locks.\n\nExample 1:\n// Producer thread\nqueue.put(item); // write to volatile 'count'\n\nExample 2:\n// Consumer thread\nItem i = queue.take(); // read of volatile 'count'\n\nExample 3:\n// Internal lock visibility\nfinal ReentrantLock putLock = new ReentrantLock();",
+  "keywords": ["BlockingQueue", "memory visibility", "happens-before", "volatile", "LinkedBlockingQueue", "producer-consumer", "ReentrantLock"]
+},
+    {
+  "id": 2,
+  "topic": "Fail-Safe Iterators",
+  "question": "Why does CopyOnWriteArrayList's iterator never throw ConcurrentModificationException?\n\n\t- Uses a snapshot of the backing array\n\t- Implements deep cloning for each element\n\t- Synchronizes all iterator operations\n\t- Maintains a version counter for validation",
+  "options": [
+    "Iterates over array snapshot",
+    "Deep cloning elements",
+    "Synchronized iteration",
+    "Version checking"
+  ],
+  "response": "Iterates over array snapshot",
+  "explanation": "Title: CopyOnWrite Iterator Guarantees\n\nCreates immutable snapshot of array at iterator creation time, isolating from subsequent modifications.\n\nExample 1:\nCopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();\nlist.add(\"A\");\nIterator<String> it = list.iterator();\nlist.add(\"B\");\nit.forEachRemaining(System.out::print); // Prints \"A\" only\n\nExample 2:\n// Backing array reference\nfinal transient Object[] elements; // Snapshot when iterator created\n\nExample 3:\n// Modification creates new array\npublic boolean add(E e) {\n  Object[] newElements = Arrays.copyOf(elements, len + 1);",
+  "keywords": ["CopyOnWriteArrayList", "fail-safe", "iterator", "snapshot", "ConcurrentModificationException", "immutable", "backing array"]
+},
+    {
+  "id": 1,
+  "topic": "Concurrent Collections",
+  "question": "In Java 8+, how does ConcurrentHashMap's internal segmentation differ from pre-Java 8 implementations?\n\n\t- Uses synchronized blocks per bucket instead of ReentrantLocks\n\t- Replaces segments with fine-grained node-level locking\n\t- Implements a global lock for all write operations\n\t- Removes synchronization entirely for read operations",
+  "options": [
+    "Node-level locking instead of segments",
+    "Global lock for writes",
+    "Unlocked reads",
+    "Double-locking per operation"
+  ],
+  "response": "Node-level locking instead of segments",
+  "explanation": "Title: ConcurrentHashMap Modernization\n\nJava 8+ replaces segment locks with CAS+synchronized per hash bucket node, improving throughput.\n\nExample 1:\n// Java 7: Segment array\nfinal Segment<K,V>[] segments;\n\nExample 2:\n// Java 8+: Node array\ntransient volatile Node<K,V>[] table;\n\nExample 3:\n// Java 17: Further optimized\nstatic class Node<K,V> implements Map.Entry<K,V> {\n  final int hash;\n  final K key;\n  volatile V val;\n  volatile Node<K,V> next;",
+  "keywords": ["ConcurrentHashMap", "segmentation", "Java 8", "node locking", "CAS", "throughput", "bucket"]
+},
+    {
+  "id": 10,
+  "topic": "Local Variable Types",
+  "question": "What is the compile-time type of `var list = Arrays.asList(1, 2.0)` in Java 10+?\n\n\t- `List<Integer>`\n\t- `List<Number>`\n\t- `List<Object>`\n\t- `List<Double>`",
+  "options": [
+    "List<Number>",
+    "List<Integer>",
+    "List<Serializable>",
+    "List<Comparable>"
+  ],
+  "response": "List<Number>",
+  "explanation": "Title: `var` and Generic Inference\n\n`var` inherits the most specific common supertype (Number for Integer and Double).\n\nExample 1:\nvar list = Arrays.asList(1, 2.0); // List<Number>\n\nExample 2:\nvar mixed = Arrays.asList(\"text\", 42); // List<Serializable & Comparable>\n\nExample 3:\n// Explicit type needed for clarity\nList<Number> nums = Arrays.asList(1, 2.0);",
+  "keywords": ["var", "type inference", "generics", "common supertype", "Java 10", "local variables", "compile-time type"]
+},
+    {
+  "id": 9,
+  "topic": "Primitive Types",
+  "question": "How does the JVM represent `boolean` values in memory at runtime?\n\n\t- As 1-bit flags\n\t- Using full bytes\n\t- Depends on JVM implementation\n\t- Always as integer 0/1",
+  "options": [
+    "JVM-dependent",
+    "1-bit storage",
+    "Always 4 bytes",
+    "As Strings"
+  ],
+  "response": "JVM-dependent",
+  "explanation": "Title: Boolean Storage Variability\n\nThe JVM spec doesn't mandate a size—HotSpot uses 1 byte per boolean, but arrays may pack them.\n\nExample 1:\nboolean b = true; // Typically 1 byte\n\nExample 2:\nboolean[] arr = new boolean[100]; // May use 1 bit per element\n\nExample 3:\n// JNI interaction\nnative void setFlag(boolean flag); // JVM-dependent ABI",
+  "keywords": ["boolean", "JVM implementation", "memory layout", "primitive types", "HotSpot", "bit packing", "JNI"]
+},
+    {
+  "id": 8,
+  "topic": "Character Encoding",
+  "question": "Why can't Java `char` type represent all Unicode characters despite using UTF-16?\n\n\t- Some codepoints require surrogate pairs\n\t- JVM uses ASCII internally\n\t- `char` is only 8-bit\n\t- Unicode standards prohibit it",
+  "options": [
+    "Surrogate pairs needed",
+    "8-bit limitation",
+    "ASCII restriction",
+    "Hardware dependency"
+  ],
+  "response": "Surrogate pairs needed",
+  "explanation": "Title: Unicode Character Representation\n\nUTF-16 uses 2 `char`s (surrogate pairs) for codepoints beyond BMP (Basic Multilingual Plane).\n\nExample 1:\nchar c = '𝄞'; // Compile error (U+1D11E needs 2 chars)\n\nExample 2:\n// Correct representation\nString s = \"𝄞\"; // Length=2 (surrogate pair)\n\nExample 3:\n// Codepoint handling\nint cp = s.codePointAt(0); // Returns 0x1D11E",
+  "keywords": ["char", "UTF-16", "Unicode", "surrogate pairs", "codepoint", "BMP", "String"]
+},
+    {
+  "id": 7,
+  "topic": "Large Number Handling",
+  "question": "What is the performance implication of `BigInteger`'s immutability for repeated arithmetic operations?\n\n\t- Requires object recreation\n\t- Enables thread safety\n\t- Allows JIT optimizations\n\t- Reduces garbage collection",
+  "options": [
+    "New objects per operation",
+    "Faster than primitives",
+    "Automatic memoization",
+    "Stack allocation"
+  ],
+  "response": "New objects per operation",
+  "explanation": "Title: BigInteger Operation Costs\n\nEach arithmetic operation returns a new object, increasing GC pressure for iterative calculations.\n\nExample 1:\nBigInteger x = BigInteger.ONE;\nfor (int i = 0; i < 100; i++) x = x.add(BigInteger.ONE); // 100 new objects\n\nExample 2:\n// Mutable alternative (third-party libs)\nMutableBigInteger y = new MutableBigInteger(1);\ny.add(1); // In-place modification\n\nExample 3:\n// Caching common values\nBigInteger.ZERO; // Reused instance",
+  "keywords": ["BigInteger", "immutability", "performance", "object creation", "garbage collection", "arbitrary precision", "mutable alternative"]
+},
+    {
+  "id": 6,
+  "topic": "Enum Types",
+  "question": "Why do enums consume more memory than integer constants despite similar functionality?\n\n\t- Each value is a full object\n\t- JVM stores metadata for reflection\n\t- Requires additional hash tables\n\t- All enum values are strings internally",
+  "options": [
+    "Full object overhead",
+    "String conversion cost",
+    "Slower comparison speed",
+    "No garbage collection"
+  ],
+  "response": "Full object overhead",
+  "explanation": "Title: Enum Memory Characteristics\n\nEach enum constant is an object with class metadata, ordinal tracking, and name storage.\n\nExample 1:\nenum Color { RED, GREEN }\n// Equivalent to 2 objects + class metadata\n\nExample 2:\n// Alternative: int constants\npublic static final int RED = 0;\n\nExample 3:\n// Memory comparison\nSystem.out.println(Color.RED instanceof Object); // true",
+  "keywords": ["enum", "memory footprint", "object overhead", "constants", "ordinal", "reflection", "JVM metadata"]
+},
+    {
+  "id": 5,
+  "topic": "Advanced Data Types",
+  "question": "How can varargs methods cause heap pollution warnings with generic types?\n\n\t- By forcing type erasure\n\t- Allowing non-reifiable types in arrays\n\t- Disabling JIT optimizations\n\t- Requiring explicit type parameters",
+  "options": [
+    "Non-reifiable type arrays",
+    "Compiler bugs",
+    "Stack overflow",
+    "Incorrect method overloading"
+  ],
+  "response": "Non-reifiable type arrays",
+  "explanation": "Title: Varargs and Generics Risks\n\nVarargs creates arrays of non-reifiable generic types, risking ClassCastException at runtime.\n\nExample 1:\nvoid unsafe(List<String>... lists) {}\n// Warning: Possible heap pollution\n\nExample 2:\n// Safe alternative\n@SafeVarargs\nfinal void safe(List<String>... lists) {}\n\nExample 3:\n// Runtime failure\nList<String>[] array = new List<String>[1]; // Compile error",
+  "keywords": ["varargs", "heap pollution", "generics", "type erasure", "reifiable types", "@SafeVarargs", "arrays"]
+},
+    {
+  "id": 4,
+  "topic": "Wrapper Classes",
+  "question": "What causes a `NullPointerException` when unboxing an `Integer` to `int`?\n\n\t- Automatic type conversion failure\n\t- Null value in Integer object\n\t- Arithmetic overflow\n\t- Compiler optimization bug",
+  "options": [
+    "Null Integer value",
+    "Type mismatch",
+    "Memory leak",
+    "Thread interference"
+  ],
+  "response": "Null Integer value",
+  "explanation": "Title: Autoboxing Null Hazards\n\nUnboxing `null` Integer to primitive `int` throws NPE because primitives cannot be null.\n\nExample 1:\nInteger num = null;\nint n = num; // NPE\n\nExample 2:\n// Safe unboxing\nint n = (num != null) ? num : 0;\n\nExample 3:\n// Map with potential null values\nMap<String, Integer> map = new HashMap<>();\nint val = map.get(\"missing\"); // NPE",
+  "keywords": ["autoboxing", "NullPointerException", "wrapper class", "primitive", "null check", "unboxing", "default value"]
+},
+    {
+  "id": 3,
+  "topic": "Numeric Types",
+  "question": "What is the output of `System.out.println(0.1 + 0.2 == 0.3)` and why?\n\n\t- `true` due to exact binary representation\n\t- `false` because of floating-point rounding\n\t- Compile error\n\t- Depends on JVM implementation",
+  "options": [
+    "`false` (rounding errors)",
+    "`true` (exact math)",
+    "Runtime exception",
+    "`null`"
+  ],
+  "response": "`false` (rounding errors)",
+  "explanation": "Title: Floating-Point Precision Limits\n\nBinary floating-point cannot precisely represent decimal fractions like 0.1, causing rounding errors in arithmetic.\n\nExample 1:\nSystem.out.println(0.1 + 0.2); // Prints 0.30000000000000004\n\nExample 2:\n// Solution: BigDecimal\nBigDecimal sum = new BigDecimal(\"0.1\").add(new BigDecimal(\"0.2\"));\n\nExample 3:\n// Integer workaround\nint cents = 10 + 20; // 30 cents = $0.30 exactly",
+  "keywords": ["floating-point", "precision", "rounding error", "BigDecimal", "binary representation", "arithmetic", "IEEE 754"]
+},
+    {
+  "id": 2,
+  "topic": "String Handling",
+  "question": "Why does concatenating strings in a loop with `+` operator degrade performance?\n\n\t- Creates intermediate String objects\n\t- JVM optimizes it automatically\n\t- Uses constant pool efficiently\n\t- No performance impact in modern Java",
+  "options": [
+    "Generates temporary objects",
+    "Uses StringBuffer internally",
+    "Compile-time optimization",
+    "Works identically to StringBuilder"
+  ],
+  "response": "Generates temporary objects",
+  "explanation": "Title: String Concatenation Overhead\n\nEach `+` operation creates a new String object, causing O(n²) time complexity for loops due to copying.\n\nExample 1:\nString s = \"\";\nfor (int i = 0; i < 100; i++) s += i; // 100 new objects\n\nExample 2:\n// Efficient alternative\nStringBuilder sb = new StringBuilder();\nfor (int i = 0; i < 100; i++) sb.append(i);\n\nExample 3:\n// Compile-time optimization (literal concatenation)\nString s = \"a\" + \"b\"; // Becomes \"ab\" at compile time",
+  "keywords": ["String immutability", "concatenation", "StringBuilder", "performance", "temporary objects", "loop optimization", "constant pool"]
+},
+    {
+  "id": 1,
+  "topic": "Data Types Fundamentals",
+  "question": "What is the key difference in memory usage between `int` and `Integer` when stored in an `ArrayList`?\n\n\t- Primitive `int` uses stack memory\n\t- `Integer` objects are heap-allocated\n\t- Autoboxing overhead occurs with `Integer`\n\t- Both behave identically in collections",
+  "options": [
+    "`Integer` causes heap allocation",
+    "`int` is faster for iteration",
+    "No difference in memory",
+    "`Integer` uses less memory"
+  ],
+  "response": "`Integer` causes heap allocation",
+  "explanation": "Title: Memory Impact of Wrapper Classes\n\nPrimitives like `int` use stack memory, while `Integer` objects require heap allocation, increasing GC pressure and memory overhead.\n\nExample 1:\nArrayList<Integer> list = new ArrayList<>();\nlist.add(42); // Heap allocation for Integer.valueOf(42)\n\nExample 2:\nint[] arr = new int[1000]; // Contiguous stack memory\n\nExample 3:\n// Autoboxing overhead\nfor (int i = 0; i < 1000; i++) list.add(i); // 1000 Integer objects",
+  "keywords": ["primitive", "wrapper class", "heap allocation", "autoboxing", "memory overhead", "ArrayList", "stack memory"]
+},
+    {
+  "id": 10,
   "topic": "Local Variable Types",
   "question": "What is the compile-time type of `var list = Arrays.asList(1, 2.0)` in Java 10+?\n\n\t- `List<Integer>`\n\t- `List<Number>`\n\t- `List<Object>`\n\t- `List<Double>`",
   "options": [

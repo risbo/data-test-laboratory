@@ -3,32 +3,284 @@
   "topic": 1,
   "data": [
     {
-      "id": 101,
-      "topic": "Java",
-      "question": "What is the size of an int in Java?",
-      "options": [
-        "4 bytes",
-        "2 bytes",
-        "8 bytes",
-        "Depends on the system"
-      ],
-      "response": "4 bytes",
-      "explanation": "In Java, an int is always 4 bytes regardless of the platform.",
-      "keywords": ["int", "primitive", "size", "Java", "memory", "platform-independent"]
-    },
+  "id": 1,
+  "topic": "Architecture Anti-Patterns",
+  "question": "What is the primary risk of circular dependencies between Spring beans?\n\n\t- Improved testability\n\t- Runtime BeanCurrentlyInCreationException\n\t- Faster component scanning\n\t- Automatic proxy creation",
+  "options": [
+    "Better test isolation",
+    "Runtime creation failure",
+    "Optimized component scan",
+    "AOP auto-proxying"
+  ],
+  "response": "Runtime creation failure",
+  "explanation": "Title: Circular Dependency Consequences\n\nCircular dependencies prevent Spring from completing dependency injection, causing startup failures. Even when resolvable through constructor/setter injection mixes, they indicate poor design.\n\nExample 1:\n@Service\nclass A {\n  private final B b;\n  public A(B b) { this.b = b; }\n}\n\n@Service\nclass B {\n  private final A a;\n  public B(A a) { this.a = a; }\n}\n\n// Result: BeanCurrentlyInCreationException\n\nExample 2:\n// Partial solution (still anti-pattern):\n@Autowired\nprivate A a; // Setter injection\n\nExample 3:\n// Proper fix:\nIntroduce service C that mediates A-B communication",
+  "keywords": ["circular dependency", "Spring beans", "dependency injection", "BeanCurrentlyInCreationException", "design smell", "tight coupling", "architecture"]
+},
     {
-      "id": 102,
-      "topic": "Java",
-      "question": "Which of the following is not a Java keyword?",
-      "options": [
-        "static",
-        "Boolean",
-        "void",
-        "private"
-      ],
-      "response": "Boolean",
-      "explanation": "`Boolean` is a class in Java, not a keyword. The keyword is `boolean`.",
-      "keywords": ["keywords", "Boolean", "Java", "syntax", "reserved words", "static"]
-    }
+  "id": 2,
+  "topic": "Service Layer Anti-Patterns",
+  "question": "Which symptom most clearly indicates a God Service anti-pattern?\n\n\t- Single service with 50+ public methods\n\t- Multiple small services sharing an interface\n\t- Services with <100 LoC\n\t- All methods marked @Transactional",
+  "options": [
+    "50+ method service",
+    "Multiple small services",
+    "Compact services",
+    "Transactional methods"
+  ],
+  "response": "50+ method service",
+  "explanation": "Title: God Service Identification\n\nGod Services violate Single Responsibility Principle, becoming maintenance nightmares. Typical signs include:\n- 1000+ LoC\n- Mixes unrelated domains\n- Frequent merge conflicts\n\nExample 1:\n@Service\nclass MegaService {\n  void processOrder() {}\n  void generateReport() {}\n  void sendAlerts() {}\n  // 47 more methods...\n}\n\nExample 2:\n// Refactoring approach:\nExtract OrderService, ReportService, AlertService\n\nExample 3:\n// Code smell detection:\nSonarQube rule: squid:S1200 (Classes should not be too long)",
+  "keywords": ["god service", "SRP violation", "service layer", "refactoring", "maintainability", "code smells", "SonarQube"]
+},
+    {
+  "id": 3,
+  "topic": "Performance Anti-Patterns",
+  "question": "What is the most likely negative outcome of using ThreadLocal for all service method calls 'just in case' we need caching later?\n\n\t- Improved memory efficiency\n\t- Memory leaks in web applications\n\t- Automatic thread pooling\n\t- Better garbage collection",
+  "options": [
+    "Memory savings",
+    "Memory leaks",
+    "Thread pool optimization",
+    "GC efficiency"
+  ],
+  "response": "Memory leaks",
+  "explanation": "Title: ThreadLocal Misuse Risks\n\nThreadLocal variables persist until thread termination. In web apps with thread pools, this causes:\n- Memory leaks (objects never GC'd)\n- Stale data between requests\n- Non-deterministic behavior\n\nExample 1:\nprivate static ThreadLocal<Cache> cache = new ThreadLocal<>();\n// Never removed => leaks in Tomcat pool\n\nExample 2:\n// Proper usage:\ntry {\n  cache.set(new Cache());\n  useCache();\n} finally {\n  cache.remove(); // Critical!\n}\n\nExample 3:\n// Detection:\nLeak suspects in heap dumps showing Thread -> ThreadLocalMap entries",
+  "keywords": ["ThreadLocal", "memory leak", "premature optimization", "thread pools", "web applications", "heap dumps", "stale data"]
+},
+    {
+  "id": 4,
+  "topic": "Error Handling Anti-Patterns",
+  "question": "Why is 'catch(Exception e) {}' particularly dangerous in financial transaction processing?\n\n\t- Improves performance by ignoring errors\n\t- Makes debugging impossible by hiding failures\n\t- Forces transaction rollbacks\n\t- Triggers JVM shutdown hooks",
+  "options": [
+    "Performance boost",
+    "Silent failure",
+    "Rollback guarantee",
+    "JVM shutdown"
+  ],
+  "response": "Silent failure",
+  "explanation": "Title: Exception Swallowing Impact\n\nEmpty catch blocks:\n- Hide data corruption\n- Mask balance discrepancies\n- Violate audit requirements\n- Create ghost transactions\n\nExample 1:\ntry {\n  account.debit(amount);\n} catch (Exception e) { /* Silent */ }\n\nExample 2:\n// Proper handling:\n} catch (InsufficientFundsException e) {\n  transaction.logFailure(e);\n  throw new TransactionException(e);\n}\n\nExample 3:\n// Detection:\nStatic analysis tools (SpotBugs REC_CATCH_EXCEPTION)",
+  "keywords": ["exception swallowing", "error handling", "silent failure", "transactions", "audit trails", "static analysis", "SpotBugs"]
+},
+    {
+  "id": 5,
+  "topic": "Class Design Anti-Patterns",
+  "question": "What maintenance problem does the 'Constant Interface' anti-pattern (interface with only static finals) create?\n\n\t- Improved enum conversion\n\t- Pollutes implementing classes' namespaces\n\t- Enables better JIT optimization\n\t- Simplifies annotation processing",
+  "options": [
+    "Better enum support",
+    "Namespace pollution",
+    "JIT benefits",
+    "Annotation handling"
+  ],
+  "response": "Namespace pollution",
+  "explanation": "Title: Constant Interface Consequences\n\nAnti-pattern example:\npublic interface Constants {\n  String API_KEY = \"secret\";\n  int TIMEOUT = 1000;\n}\n\nProblems:\n- Exposes all constants to implementers\n- Breaking changes when constants modified\n- No encapsulation\n\nBetter approaches:\nExample 1:\npublic final class Config {\n  private Config() {}\n  public static final String API_KEY = \"secret\";\n}\n\nExample 2:\n// Modern alternative:\npublic enum Constants {\n  API_KEY(\"secret\"),\n  TIMEOUT(1000);\n  \n  private final Object value;\n  Constants(Object v) { this.value = v; }\n}",
+  "keywords": ["constant interface", "namespace pollution", "static final", "encapsulation", "maintenance", "enum alternative", "class design"]
+},
+    {
+  "id": 6,
+  "topic": "Concurrency Anti-Patterns",
+  "question": "What can happen with double-checked locking in Java without proper volatile usage?\n\n\t- Guaranteed thread safety\n\t- Partially constructed objects visible\n\t- Automatic lock elision\n\t- Improved JIT inlining",
+  "options": [
+    "Perfect safety",
+    "Partial construction",
+    "Lock optimization",
+    "Better inlining"
+  ],
+  "response": "Partial construction",
+  "explanation": "Title: Double-Checked Locking Risks\n\nBroken pattern:\nclass Singleton {\n  private static Singleton instance;\n  public static Singleton getInstance() {\n    if (instance == null) {\n      synchronized (Singleton.class) {\n        if (instance == null) {\n          instance = new Singleton(); // Danger!\n        }\n      }\n    }\n    return instance;\n  }\n}\n\nIssues:\n- Memory visibility problems\n- Other threads may see non-null but uninitialized instance\n\nCorrect approach:\nExample 1:\nprivate static volatile Singleton instance;\n\nExample 2:\n// Modern solution:\nprivate static final Singleton INSTANCE = new Singleton();\n\nExample 3:\n// Enum singleton (most reliable):\nenum Singleton { INSTANCE; }",
+  "keywords": ["double-checked locking", "singleton", "volatile", "memory visibility", "partial construction", "concurrency bugs", "JMM"]
+},
+    {
+  "id": 7,
+  "topic": "DDD Anti-Patterns",
+  "question": "Why does an Anemic Domain Model (entities with only getters/setters) complicate business logic maintenance?\n\n\t- Encourages rich domain behaviors\n\t- Scatters logic across service classes\n\t- Improves ORM performance\n\t- Simplifies JSON serialization",
+  "options": [
+    "Encourages encapsulation",
+    "Logic fragmentation",
+    "ORM efficiency",
+    "Serialization ease"
+  ],
+  "response": "Logic fragmentation",
+  "explanation": "Title: Anemic Model Consequences\n\nSymptoms:\n- Business rules duplicated in services\n- No single responsibility for domain concepts\n- Hard to reason about invariants\n\nExample 1 (Anemic):\nclass Order {\n  private List<Item> items;\n  // Only getters/setters\n}\n\nclass OrderService {\n  public BigDecimal calculateTotal(Order o) { ... }\n}\n\nExample 2 (Proper DDD):\nclass Order {\n  private List<Item> items;\n  \n  public BigDecimal total() {\n    return items.stream()\n      .map(Item::subtotal)\n      .reduce(BigDecimal.ZERO, BigDecimal::add);\n  }\n}\n\nExample 3:\n// Detection:\nCode reviews showing services with 'calculateXForY' methods",
+  "keywords": ["anemic domain", "DDD", "business logic", "service layer", "encapsulation", "maintainability", "rich model"]
+},
+    {
+  "id": 8,
+  "topic": "Type Safety Anti-Patterns",
+  "question": "What risk arises from using raw primitives (e.g., long) for domain concepts like Money instead of value objects?\n\n\t- Faster arithmetic operations\n\t- Type confusion and incorrect calculations\n\t- Automatic currency conversion\n\t- Better JVM optimization",
+  "options": [
+    "Performance gains",
+    "Calculation errors",
+    "Auto-conversion",
+    "JVM efficiency"
+  ],
+  "response": "Calculation errors",
+  "explanation": "Title: Primitive Obsession Dangers\n\nCommon pitfalls:\n- Mixing currencies (USD + EUR)\n- Incorrect rounding (financial calculations)\n- No validation (negative amounts)\n\nExample 1 (Broken):\nlong amount = 1000; // What currency? Cents or dollars?\n\nExample 2 (Proper):\nclass Money {\n  private final BigDecimal amount;\n  private final Currency currency;\n  \n  Money add(Money other) {\n    requireSameCurrency(other);\n    return new Money(amount.add(other.amount), currency);\n  }\n}\n\nExample 3:\n// Detection:\nFindBugs rule: FI_USELESS for float/double money",
+  "keywords": ["primitive obsession", "value objects", "type safety", "domain modeling", "money pattern", "currency handling", "BigDecimal"]
+},
+    {
+  "id": 9,
+  "topic": "Code Quality Anti-Patterns",
+  "question": "What maintenance challenge do magic numbers (e.g., if (status == 3)) introduce in enterprise systems?\n\n\t- Improved code readability\n\t- Context loss during debugging\n\t- Better JIT constant folding\n\t- Simplified enum migration",
+  "options": [
+    "Readability",
+    "Debugging difficulty",
+    "JIT optimization",
+    "Enum conversion"
+  ],
+  "response": "Debugging difficulty",
+  "explanation": "Title: Magic Number Consequences\n\nProblems:\n- No semantic meaning (what is '3'?)\n- Changes require global search\n- Breaks type safety\n\nExample 1 (Bad):\nif (order.getStatus() == 3) { /* What's 3? */ }\n\nExample 2 (Better):\nenum OrderStatus { PENDING(1), PAID(2), FULFILLED(3); }\nif (order.getStatus() == OrderStatus.FULFILLED)\n\nExample 3:\n// Detection:\nSonarQube rule: squid:S109 (Magic numbers should not be used)",
+  "keywords": ["magic numbers", "code smells", "maintainability", "enums", "readability", "debugging", "SonarQube"]
+},
+    {
+  "id": 10,
+  "topic": "Concurrency Anti-Patterns",
+  "question": "Why is while(!ready) {} problematic compared to proper wait/notify mechanisms?\n\n\t- Reduces CPU cache misses\n\t- Wastes CPU cycles in tight loops\n\t- Improves thread scheduling fairness\n\t- Enables better garbage collection",
+  "options": [
+    "Cache efficiency",
+    "CPU waste",
+    "Scheduling fairness",
+    "GC benefits"
+  ],
+  "response": "CPU waste",
+  "explanation": "Title: Busy Waiting Costs\n\nNegative effects:\n- 100% CPU core usage\n- Starves other threads\n- Delays JVM safepoints\n\nExample 1 (Anti-pattern):\nwhile (!dataReady) { /* Burns CPU */ }\n\nExample 2 (Proper):\nsynchronized (lock) {\n  while (!dataReady) {\n    lock.wait();\n  }\n}\n\nExample 3:\n// Modern alternative:\nCompletableFuture.supplyAsync(() -> fetchData())\n  .thenAccept(this::process);",
+  "keywords": ["busy waiting", "spin loops", "CPU waste", "wait/notify", "CompletableFuture", "safepoints", "thread starvation"]
+},
+    {
+  "id": 11,
+  "topic": "Concurrency Anti-Patterns",
+  "question": "What performance issue arises when synchronizing entire service methods in high-throughput applications?\n\n\t- Reduced lock contention\n\t- Increased thread parallelism\n\t- Creation of synchronization bottlenecks\n\t- Automatic lock elision by JVM",
+  "options": [
+    "Lower contention",
+    "Better parallelism",
+    "Bottlenecks",
+    "JVM optimization"
+  ],
+  "response": "Bottlenecks",
+  "explanation": "Title: Over-Synchronization Impact\n\nSynchronizing coarse-grained operations forces sequential execution, defeating concurrency benefits. Fine-grained locking or concurrent collections often work better.\n\nExample 1:\n// Anti-pattern:\npublic synchronized void processOrder(Order o) { ... }\n\nExample 2:\n// Better approach:\nprivate final ConcurrentMap<OrderId, Order> orders = new ...\npublic void processOrder(Order o) {\n  orders.compute(o.id(), (k,v) -> ... );\n}\n\nExample 3:\n// Diagnostic:\nThread dumps showing many threads BLOCKED on the same lock",
+  "keywords": ["over-synchronization", "bottlenecks", "lock contention", "throughput", "concurrent collections", "thread dumps", "performance"]
+},
+    {
+  "id": 12,
+  "topic": "Error Handling Anti-Patterns",
+  "question": "Why is 'log-and-throw' (logging before throwing an exception) problematic in microservices?\n\n\t- Improves debug trace continuity\n\t- Creates duplicate stacktraces in logs\n\t- Enables better alert filtering\n\t- Reduces I/O overhead",
+  "options": [
+    "Better tracing",
+    "Duplicate logs",
+    "Alert management",
+    "I/O efficiency"
+  ],
+  "response": "Duplicate logs",
+  "explanation": "Title: Log-and-Throw Redundancy\n\nResults in:\n- Multiple log entries for same failure\n- Wasted storage/bandwidth\n- Confused triage efforts\n\nExample 1:\n// Anti-pattern:\ntry { ... }\ncatch (Exception e) {\n  log.error(\"Failed\", e);\n  throw new ServiceException(e); // Gets logged again upstream\n}\n\nExample 2:\n// Proper approach:\ncatch (Exception e) {\n  throw new ServiceException(\"Context: \" + e.getMessage(), e);\n} // Log once at system boundary\n\nExample 3:\n// Detection:\nLog analysis showing same stacktrace from multiple layers",
+  "keywords": ["log-and-throw", "error handling", "duplicate logs", "microservices", "observability", "logging", "exceptions"]
+},
+    {
+  "id": 13,
+  "topic": "Memory Management Anti-Patterns",
+  "question": "What problem occurs when overusing static collections for caching in cloud-native applications?\n\n\t- Improved garbage collection\n\t- Memory leaks during scaling events\n\t- Automatic cluster synchronization\n\t- Reduced classloading overhead",
+  "options": [
+    "GC efficiency",
+    "Memory leaks",
+    "Cluster sync",
+    "Classloading"
+  ],
+  "response": "Memory leaks",
+  "explanation": "Title: Static Collection Dangers\n\nStatic caches:\n- Aren't cleared on app redeploys\n- Grow indefinitely in container environments\n- Cause OOMs when scaling down\n\nExample 1:\n// Anti-pattern:\npublic class Cache {\n  private static final Map<String,Object> store = new HashMap<>();\n}\n\nExample 2:\n// Cloud-native solution:\n@Bean\n@Scope(\"refresh\")\npublic Map<String,Object> cache() { ... } // Spring Cloud RefreshScope\n\nExample 3:\n// Detection:\nKubernetes pod restarts due to OOM kills",
+  "keywords": ["static abuse", "memory leaks", "cloud-native", "caching", "scaling", "OOM", "refresh scope"]
+},
+    {
+  "id": 14,
+  "topic": "Type Safety Anti-Patterns",
+  "question": "How does overloading boolean parameters (e.g., process(invoice, true, false)) impact code maintenance?\n\n\t- Makes JIT optimizations easier\n\t- Obscures parameter intent/meaning\n\t- Enables better method inlining\n\t- Reduces bytecode size",
+  "options": [
+    "JIT benefits",
+    "Unclear intent",
+    "Inlining",
+    "Bytecode"
+  ],
+  "response": "Unclear intent",
+  "explanation": "Title: Boolean Parameter Confusion\n\nResults in:\n- Unreadable method calls\n- Easy argument swapping mistakes\n- Hidden business rules\n\nExample 1:\n// Anti-pattern:\nbookFlight(user, true, false); // What do true/false mean?\n\nExample 2:\n// Clear alternative:\nbookFlight(user, new BookingOptions()\n  .withPriorityBoarding()\n  .withoutInsurance());\n\nExample 3:\n// Detection:\nCode reviews finding methods with 3+ boolean parameters",
+  "keywords": ["boolean blindness", "method parameters", "readability", "type safety", "builder pattern", "maintainability", "code clarity"]
+},
+    {
+  "id": 15,
+  "topic": "Dependency Management Anti-Patterns",
+  "question": "Why is Service Locator pattern (e.g., static getInstance() lookups) discouraged in modern Spring applications?\n\n\t- Makes dependency graphs explicit\n\t- Introduces hidden dependencies\n\t- Improves AOP proxy creation\n\t- Simplifies JUnit testing",
+  "options": [
+    "Explicit dependencies",
+    "Hidden couplings",
+    "AOP support",
+    "Testability"
+  ],
+  "response": "Hidden couplings",
+  "explanation": "Title: Service Locator Issues\n\nProblems:\n- No clear interface contracts\n- Hard to mock in tests\n- Runtime failures instead of startup errors\n\nExample 1:\n// Anti-pattern:\npublic class OrderService {\n  public void process() {\n    PaymentService ps = ServiceLocator.getPaymentService();\n  }\n}\n\nExample 2:\n// Modern DI approach:\npublic class OrderService {\n  private final PaymentService paymentService;\n  \n  @Autowired\n  public OrderService(PaymentService ps) { ... }\n}\n\nExample 3:\n// Detection:\nStatic analysis tools finding ServiceLocator.* calls",
+  "keywords": ["service locator", "dependency injection", "hidden dependencies", "testability", "Spring", "AOP", "static analysis"]
+},
+    {
+  "id": 16,
+  "topic": "Persistence Anti-Patterns",
+  "question": "What happens when implementing pagination by loading entire tables then subList() in JPA applications?\n\n\t- Reduced database load\n\t- Memory exhaustion with large datasets\n\t- Improved GC efficiency\n\t- Automatic query optimization",
+  "options": [
+    "DB offload",
+    "OOM risks",
+    "GC benefits",
+    "Query optimization"
+  ],
+  "response": "OOM risks",
+  "explanation": "Title: In-Memory Pagination Dangers\n\nCauses:\n- Full table loaded into heap\n- No LIMIT/OFFSET in SQL\n- Scaling failures\n\nExample 1:\n// Anti-pattern:\nList<Order> all = em.createQuery(\"FROM Order\").getResultList();\nreturn all.subList(offset, offset+limit);\n\nExample 2:\n// Proper JPA pagination:\nTypedQuery<Order> q = em.createQuery(...);\nq.setFirstResult(offset);\nq.setMaxResults(limit);\n\nExample 3:\n// Detection:\nJDBC trace showing full table scans without LIMIT",
+  "keywords": ["pagination", "ORM", "OOM", "JPA", "database", "performance", "scaling"]
+},
+    {
+  "id": 17,
+  "topic": "Type Safety Anti-Patterns",
+  "question": "What maintenance challenge arises from using raw strings for typed concepts (e.g., orderStatus=\"CANCELED\")?\n\n\t- Enables faster string operations\n\t- Loses compile-time validation\n\t- Improves JVM string deduplication\n\t- Simplifies JSON serialization",
+  "options": [
+    "String performance",
+    "No type safety",
+    "JVM optimization",
+    "Serialization"
+  ],
+  "response": "No type safety",
+  "explanation": "Title: Stringly Typed Code Issues\n\nProblems:\n- Typos (\"CANCLED\") only fail at runtime\n- No IDE autocomplete\n- Hard to refactor\n\nExample 1:\n// Anti-pattern:\nif (\"CANCELED\".equals(order.getStatus())) { ... }\n\nExample 2:\n// Proper typing:\nenum OrderStatus { CANCELED, FULFILLED }\nif (order.getStatus() == OrderStatus.CANCELED)\n\nExample 3:\n// Detection:\nCode search for == or equals() with string literals",
+  "keywords": ["stringly typed", "type safety", "enums", "refactoring", "maintenance", "typos", "compile-time"]
+},
+    {
+  "id": 18,
+  "topic": "Control Flow Anti-Patterns",
+  "question": "Why is using exceptions for normal control flow (e.g., catching NoSuchElementException for isEmpty()) problematic?\n\n\t- Improves stacktrace clarity\n\t- Bypasses JIT optimizations\n\t- Makes logic flows explicit\n\t- Reduces bytecode size",
+  "options": [
+    "Better traces",
+    "JIT penalties",
+    "Clear logic",
+    "Compact code"
+  ],
+  "response": "JIT penalties",
+  "explanation": "Title: Exception-Driven Flow Costs\n\nImpacts:\n- Exception creation is expensive\n- Disrupts JIT inlining\n- Obscures business intent\n\nExample 1:\n// Anti-pattern:\ntry {\n  return queue.remove();\n} catch (NoSuchElementException e) {\n  return null; // Normal empty case\n}\n\nExample 2:\n// Proper approach:\nreturn queue.poll(); // Returns null if empty\n\nExample 3:\n// Benchmark:\nException-driven flow can be 100x slower than conditionals",
+  "keywords": ["exceptions", "control flow", "JIT", "performance", "optimization", "benchmarking", "intent"]
+},
+    {
+  "id": 19,
+  "topic": "Code Quality Anti-Patterns",
+  "question": "What risk do magic comments (e.g., // TODO: Fix before prod) introduce in production systems?\n\n\t- Improved documentation\n\t- Forgotten critical work items\n\t- Automatic ticket creation\n\t- Better Javadoc generation",
+  "options": [
+    "Docs quality",
+    "Lost TODOs",
+    "Ticket automation",
+    "Javadoc"
+  ],
+  "response": "Lost TODOs",
+  "explanation": "Title: Magic Comment Risks\n\nProblems:\n- No ownership tracking\n- Become technical debt\n- Often missed in code reviews\n\nExample 1:\n// Anti-pattern:\n// FIXME: Null check needed here (added 2020-03-15)\n\nExample 2:\n// Proper approach:\n- Track in JIRA/ADO\n- Use @Deprecated with explanation\n- Static analysis rules\n\nExample 3:\n// Detection:\nSonarQube rule: squid:S1135 (TODO tags should be handled)",
+  "keywords": ["magic comments", "TODOs", "technical debt", "code reviews", "static analysis", "SonarQube", "maintenance"]
+},
+    {
+  "id": 20,
+  "topic": "API Design Anti-Patterns",
+  "question": "What maintenance issue arises when interfaces declare 20+ methods (e.g., CustomerService)?\n\n\t- Easier mocking in tests\n\t- Forces implementers to break SRP\n\t- Improves JVM dynamic dispatch\n\t- Simplifies version upgrades",
+  "options": [
+    "Testability",
+    "SRP violation",
+    "Dispatch speed",
+    "Versioning"
+  ],
+  "response": "SRP violation",
+  "explanation": "Title: Bloated Interface Consequences\n\nCauses:\n- Implementers must provide dummy methods\n- Hard to evolve without breaking changes\n- Encourages god implementations\n\nExample 1:\n// Anti-pattern:\ninterface CustomerService {\n  void updateName();\n  void updateAddress();\n  // ...18 more unrelated methods\n}\n\nExample 2:\n// Proper segregation:\ninterface NameService { ... }\ninterface AddressService { ... }\n\nExample 3:\n// Detection:\nIDE metrics showing interfaces with high method count",
+  "keywords": ["interface pollution", "SRP", "API design", "mocking", "maintenance", "segregation", "metrics"]
+}
   ]
 }

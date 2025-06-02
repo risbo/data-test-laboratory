@@ -842,6 +842,708 @@
      "response": "Implement point-in-time recovery using transaction logs, message queues, and idempotent replay",
      "explanation": "Point-in-time recovery restores exact state, transaction logs provide replay capability, message queues preserve transaction intent, idempotent replay prevents duplicate processing, ensuring complete data recovery without side effects.",
      "keywords": ["disaster recovery", "point-in-time recovery", "transaction logs", "message queues", "idempotent replay", "data recovery"]
+   },
+   {
+     "id": 1,
+     "topic": "Java JDK 8",
+     "question": "What is the main advantage of using Lambda expressions introduced in Java 8?",
+     "options": [
+       "Faster execution speed",
+       "Functional programming support and concise code",
+       "Better memory management",
+       "Automatic garbage collection"
+     ],
+     "response": "Functional programming support and concise code",
+     "explanation": "Lambda expressions enable functional programming in Java, making code more concise and readable, especially when working with collections and streams.",
+     "keywords": ["Java 8", "Lambda expressions", "functional programming", "concise code"]
+   },
+   {
+     "id": 2,
+     "topic": "JDBC",
+     "question": "Which JDBC interface is used to execute SQL statements against a database?",
+     "options": [
+       "Connection",
+       "Statement",
+       "ResultSet",
+       "DriverManager"
+     ],
+     "response": "Statement",
+     "explanation": "The Statement interface is used to execute SQL statements. PreparedStatement and CallableStatement are specialized versions for parameterized queries and stored procedures.",
+     "keywords": ["JDBC", "Statement", "SQL execution", "database connectivity"]
+   },
+   {
+     "id": 3,
+     "topic": "Servlets",
+     "question": "What is the lifecycle method called when a servlet is first loaded into memory?",
+     "options": [
+       "service()",
+       "init()",
+       "doGet()",
+       "destroy()"
+     ],
+     "response": "init()",
+     "explanation": "The init() method is called once when the servlet is first loaded into memory by the servlet container. It's used for initialization tasks.",
+     "keywords": ["Servlets", "lifecycle", "init method", "servlet container"]
+   },
+   {
+     "id": 4,
+     "topic": "JSF",
+     "question": "In JSF (JavaServer Faces), what is a managed bean?",
+     "options": [
+       "A database entity",
+       "A Java class that provides data and business logic for JSF components",
+       "A servlet configuration",
+       "A JSP tag library"
+     ],
+     "response": "A Java class that provides data and business logic for JSF components",
+     "explanation": "Managed beans in JSF are Java classes that provide data and business logic for JSF components on web pages. They are managed by the JSF framework.",
+     "keywords": ["JSF", "managed bean", "business logic", "JSF components"]
+   },
+   {
+     "id": 5,
+     "topic": "EJB 3.0",
+     "question": "What annotation is used to mark a class as a Stateless Session Bean in EJB 3.0?",
+     "options": [
+       "@Entity",
+       "@Stateless",
+       "@Component",
+       "@Bean"
+     ],
+     "response": "@Stateless",
+     "explanation": "@Stateless annotation marks a class as a stateless session bean in EJB 3.0, indicating that the bean doesn't maintain client-specific state between method calls.",
+     "keywords": ["EJB 3.0", "@Stateless", "session bean", "annotations"]
+   },
+   {
+     "id": 6,
+     "topic": "Spring Framework",
+     "question": "What is the primary purpose of Dependency Injection in Spring?",
+     "options": [
+       "To improve performance",
+       "To reduce coupling between components",
+       "To handle database connections",
+       "To manage memory allocation"
+     ],
+     "response": "To reduce coupling between components",
+     "explanation": "Dependency Injection in Spring reduces coupling by allowing the framework to inject dependencies rather than having objects create their own dependencies.",
+     "keywords": ["Spring", "Dependency Injection", "coupling", "IoC container"]
+   },
+   {
+     "id": 7,
+     "topic": "Spring Boot",
+     "question": "What is the main advantage of using Spring Boot over traditional Spring framework?",
+     "options": [
+       "Better performance",
+       "Auto-configuration and embedded servers",
+       "More security features",
+       "Better database support"
+     ],
+     "response": "Auto-configuration and embedded servers",
+     "explanation": "Spring Boot provides auto-configuration and embedded servers, significantly reducing the amount of configuration needed to set up a Spring application.",
+     "keywords": ["Spring Boot", "auto-configuration", "embedded servers", "convention over configuration"]
+   },
+   {
+     "id": 8,
+     "topic": "REST Web Services",
+     "question": "Which HTTP method is typically used to create a new resource in RESTful web services?",
+     "options": [
+       "GET",
+       "POST",
+       "PUT",
+       "DELETE"
+     ],
+     "response": "POST",
+     "explanation": "POST is typically used to create new resources in RESTful services. The server determines the resource identifier for the new resource.",
+     "keywords": ["REST", "HTTP methods", "POST", "resource creation"]
+   },
+   {
+     "id": 9,
+     "topic": "Angular 5",
+     "question": "What is a component in Angular?",
+     "options": [
+       "A database table",
+       "A reusable piece of UI with associated logic",
+       "A server-side script",
+       "A CSS stylesheet"
+     ],
+     "response": "A reusable piece of UI with associated logic",
+     "explanation": "An Angular component is a reusable piece of user interface with associated TypeScript logic that controls the view and handles user interactions.",
+     "keywords": ["Angular", "component", "UI", "TypeScript"]
+   },
+   {
+     "id": 10,
+     "topic": "JavaScript",
+     "question": "What is the difference between '==' and '===' operators in JavaScript?",
+     "options": [
+       "No difference, they work the same",
+       "'==' checks type and value, '===' checks only value",
+       "'==' checks only value, '===' checks type and value",
+       "Both check only type"
+     ],
+     "response": "'==' checks only value, '===' checks type and value",
+     "explanation": "'==' performs type coercion and compares values, while '===' performs strict comparison checking both type and value without coercion.",
+     "keywords": ["JavaScript", "comparison operators", "type coercion", "strict equality"]
+   },
+   {
+     "id": 11,
+     "topic": "JMS",
+     "question": "What does JMS stand for and what is its primary purpose?",
+     "options": [
+       "Java Management System - for system monitoring",
+       "Java Messaging Service - for asynchronous communication",
+       "Java Module System - for modular applications",
+       "Java Memory Service - for memory management"
+     ],
+     "response": "Java Messaging Service - for asynchronous communication",
+     "explanation": "JMS (Java Messaging Service) is an API for sending messages between two or more clients asynchronously. It supports both point-to-point and publish-subscribe messaging models.",
+     "keywords": ["JMS", "Java Messaging Service", "asynchronous communication", "messaging"]
+   },
+   {
+     "id": 12,
+     "topic": "Maven",
+     "question": "What is the primary purpose of the pom.xml file in a Maven project?",
+     "options": [
+       "To store source code",
+       "To define project configuration, dependencies, and build instructions",
+       "To contain test cases",
+       "To store database connections"
+     ],
+     "response": "To define project configuration, dependencies, and build instructions",
+     "explanation": "The pom.xml (Project Object Model) file contains project configuration, dependencies, plugins, and build instructions for Maven to manage the project lifecycle.",
+     "keywords": ["Maven", "pom.xml", "project configuration", "dependencies", "build management"]
+   },
+   {
+     "id": 13,
+     "topic": "Jenkins",
+     "question": "What is Jenkins primarily used for in software development?",
+     "options": [
+       "Database management",
+       "Continuous Integration and Continuous Deployment (CI/CD)",
+       "Code editing",
+       "User interface design"
+     ],
+     "response": "Continuous Integration and Continuous Deployment (CI/CD)",
+     "explanation": "Jenkins is an automation server used for Continuous Integration and Continuous Deployment, automating the build, test, and deployment processes.",
+     "keywords": ["Jenkins", "CI/CD", "continuous integration", "automation", "build pipeline"]
+   },
+   {
+     "id": 14,
+     "topic": "SOAP Web Services",
+     "question": "What does SOAP stand for and what protocol does it typically use?",
+     "options": [
+       "Simple Object Access Protocol - uses HTTP/HTTPS",
+       "Secure Online Application Protocol - uses FTP",
+       "Standard Object API Protocol - uses TCP",
+       "Simple Operations Access Protocol - uses UDP"
+     ],
+     "response": "Simple Object Access Protocol - uses HTTP/HTTPS",
+     "explanation": "SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information in web services, typically using HTTP/HTTPS as the transport protocol.",
+     "keywords": ["SOAP", "Simple Object Access Protocol", "HTTP", "web services", "XML"]
+   },
+   {
+     "id": 15,
+     "topic": "SQL",
+     "question": "Which SQL clause is used to filter rows based on a specified condition?",
+     "options": [
+       "SELECT",
+       "FROM",
+       "WHERE",
+       "ORDER BY"
+     ],
+     "response": "WHERE",
+     "explanation": "The WHERE clause is used to filter rows that meet a specified condition in SQL queries, controlling which records are returned.",
+     "keywords": ["SQL", "WHERE clause", "filtering", "query conditions"]
+   },
+   {
+     "id": 16,
+     "topic": "Oracle Database",
+     "question": "What is a primary key in Oracle Database?",
+     "options": [
+       "A key used for encryption",
+       "A unique identifier for each row in a table",
+       "A password for database access",
+       "A foreign key reference"
+     ],
+     "response": "A unique identifier for each row in a table",
+     "explanation": "A primary key is a column or combination of columns that uniquely identifies each row in a table and cannot contain NULL values.",
+     "keywords": ["Oracle Database", "primary key", "unique identifier", "table constraints"]
+   },
+   {
+     "id": 17,
+     "topic": "Docker",
+     "question": "What is the main benefit of using Docker containers?",
+     "options": [
+       "Faster database queries",
+       "Application portability and consistent environments",
+       "Better user interface design",
+       "Improved network security"
+     ],
+     "response": "Application portability and consistent environments",
+     "explanation": "Docker containers provide application portability and consistent runtime environments across different platforms, making deployment and scaling easier.",
+     "keywords": ["Docker", "containers", "portability", "consistent environments", "deployment"]
+   },
+   {
+     "id": 18,
+     "topic": "Git",
+     "question": "What Git command is used to create a new branch?",
+     "options": [
+       "git new branch",
+       "git branch <branch-name>",
+       "git create <branch-name>",
+       "git add branch"
+     ],
+     "response": "git branch <branch-name>",
+     "explanation": "The 'git branch <branch-name>' command creates a new branch in Git. You can also use 'git checkout -b <branch-name>' to create and switch to the new branch in one command.",
+     "keywords": ["Git", "branch", "version control", "source code management"]
+   },
+   {
+     "id": 19,
+     "topic": "JNDI",
+     "question": "What does JNDI stand for and what is it used for?",
+     "options": [
+       "Java Network Directory Interface - for network configuration",
+       "Java Naming and Directory Interface - for resource lookup",
+       "Java Native Database Interface - for database access",
+       "Java New Development Interface - for application development"
+     ],
+     "response": "Java Naming and Directory Interface - for resource lookup",
+     "explanation": "JNDI (Java Naming and Directory Interface) provides a unified interface for looking up and accessing various naming and directory services like databases, JMS queues, and other resources.",
+     "keywords": ["JNDI", "Java Naming and Directory Interface", "resource lookup", "naming services"]
+   },
+   {
+     "id": 20,
+     "topic": "RMI",
+     "question": "What is RMI in Java and what is it used for?",
+     "options": [
+       "Remote Memory Interface - for memory management",
+       "Remote Method Invocation - for calling methods on remote objects",
+       "Relational Mapping Interface - for database mapping",
+       "Runtime Management Interface - for application monitoring"
+     ],
+     "response": "Remote Method Invocation - for calling methods on remote objects",
+     "explanation": "RMI (Remote Method Invocation) allows Java applications to call methods on objects running in different JVMs, enabling distributed computing.",
+     "keywords": ["RMI", "Remote Method Invocation", "distributed computing", "remote objects"]
+   },
+   {
+     "id": 21,
+     "topic": "J2EE",
+     "question": "What are the main tiers in a typical J2EE application architecture?",
+     "options": [
+       "Client tier and Server tier only",
+       "Client tier, Web tier, Business tier, and Data tier",
+       "Frontend and Backend only",
+       "Database and Application tier only"
+     ],
+     "response": "Client tier, Web tier, Business tier, and Data tier",
+     "explanation": "J2EE follows a multi-tier architecture with Client tier (presentation), Web tier (servlets/JSP), Business tier (EJBs), and Data tier (database).",
+     "keywords": ["J2EE", "multi-tier architecture", "enterprise applications", "tiers"]
+   },
+   {
+     "id": 22,
+     "topic": "Java Beans",
+     "question": "What are the requirements for a class to be considered a Java Bean?",
+     "options": [
+       "Must extend a specific class",
+       "Must have a no-argument constructor, getter/setter methods, and be serializable",
+       "Must implement a specific interface",
+       "Must be abstract"
+     ],
+     "response": "Must have a no-argument constructor, getter/setter methods, and be serializable",
+     "explanation": "Java Beans must have a public no-argument constructor, getter and setter methods for properties, and should implement Serializable interface.",
+     "keywords": ["Java Beans", "no-argument constructor", "getter/setter", "serializable", "properties"]
+   },
+   {
+     "id": 23,
+     "topic": "CSS",
+     "question": "What does CSS stand for and what is its primary purpose?",
+     "options": [
+       "Computer Style Sheets - for computer formatting",
+       "Cascading Style Sheets - for styling web pages",
+       "Creative Style System - for design creation",
+       "Content Style Specification - for content formatting"
+     ],
+     "response": "Cascading Style Sheets - for styling web pages",
+     "explanation": "CSS (Cascading Style Sheets) is used to style and layout web pages, controlling the visual presentation of HTML elements.",
+     "keywords": ["CSS", "Cascading Style Sheets", "styling", "web pages", "presentation"]
+   },
+   {
+     "id": 24,
+     "topic": "jQuery",
+     "question": "What is jQuery and what is its main advantage?",
+     "options": [
+       "A Java library for database access",
+       "A JavaScript library that simplifies DOM manipulation",
+       "A CSS framework for styling",
+       "A server-side programming language"
+     ],
+     "response": "A JavaScript library that simplifies DOM manipulation",
+     "explanation": "jQuery is a JavaScript library that simplifies HTML document traversal, manipulation, event handling, and AJAX interactions with a simple, cross-browser API.",
+     "keywords": ["jQuery", "JavaScript library", "DOM manipulation", "cross-browser", "AJAX"]
+   },
+   {
+     "id": 25,
+     "topic": "Agile Methodology",
+     "question": "What is the main principle of Agile methodology?",
+     "options": [
+       "Detailed documentation over working software",
+       "Individuals and interactions over processes and tools",
+       "Contract negotiation over customer collaboration",
+       "Following a plan over responding to change"
+     ],
+     "response": "Individuals and interactions over processes and tools",
+     "explanation": "Agile methodology values individuals and interactions over processes and tools, emphasizing collaboration, flexibility, and iterative development.",
+     "keywords": ["Agile", "methodology", "individuals and interactions", "collaboration", "iterative development"]
+   },
+   {
+     "id": 26,
+     "topic": "JIRA",
+     "question": "What is JIRA primarily used for in software development?",
+     "options": [
+       "Code compilation",
+       "Issue tracking and project management",
+       "Database administration",
+       "User interface design"
+     ],
+     "response": "Issue tracking and project management",
+     "explanation": "JIRA is a project management and issue tracking tool used for tracking bugs, features, tasks, and managing agile development workflows.",
+     "keywords": ["JIRA", "issue tracking", "project management", "bug tracking", "agile workflows"]
+   },
+   {
+     "id": 27,
+     "topic": "Spring REST",
+     "question": "Which annotation is used to create a RESTful controller in Spring?",
+     "options": [
+       "@Controller",
+       "@RestController",
+       "@Service",
+       "@Component"
+     ],
+     "response": "@RestController",
+     "explanation": "@RestController is a specialized version of @Controller that combines @Controller and @ResponseBody, making it convenient for RESTful web services.",
+     "keywords": ["Spring", "REST", "@RestController", "RESTful services", "annotations"]
+   },
+   {
+     "id": 28,
+     "topic": "JSON",
+     "question": "What does JSON stand for and what is it used for?",
+     "options": [
+       "Java Standard Object Notation - for Java objects",
+       "JavaScript Object Notation - for data interchange",
+       "Java Serialized Object Network - for networking",
+       "Just Simple Object Names - for naming"
+     ],
+     "response": "JavaScript Object Notation - for data interchange",
+     "explanation": "JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, commonly used in web services.",
+     "keywords": ["JSON", "JavaScript Object Notation", "data interchange", "lightweight format", "web services"]
+   },
+   {
+     "id": 29,
+     "topic": "Nexus",
+     "question": "What is Nexus Repository Manager used for in software development?",
+     "options": [
+       "Code editing and debugging",
+       "Storing and managing build artifacts and dependencies",
+       "User interface testing",
+       "Database design"
+     ],
+     "response": "Storing and managing build artifacts and dependencies",
+     "explanation": "Nexus Repository Manager is used to store, organize, and distribute build artifacts, dependencies, and other components in a centralized repository.",
+     "keywords": ["Nexus", "repository manager", "build artifacts", "dependencies", "centralized storage"]
+   },
+   {
+     "id": 30,
+     "topic": "EJB 2.0 vs 3.0",
+     "question": "What is the main difference between EJB 2.0 and EJB 3.0?",
+     "options": [
+       "EJB 3.0 has better performance",
+       "EJB 3.0 uses annotations and is more simplified",
+       "EJB 2.0 has more features",
+       "No significant difference"
+     ],
+     "response": "EJB 3.0 uses annotations and is more simplified",
+     "explanation": "EJB 3.0 introduced annotations-based configuration, reducing the need for XML descriptors and simplifying development compared to EJB 2.0's interface-heavy approach.",
+     "keywords": ["EJB 2.0", "EJB 3.0", "annotations", "simplified development", "XML descriptors"]
+   },
+   {
+     "id": 31,
+     "topic": "HTTP Methods",
+     "question": "Which HTTP method is idempotent and used to update an entire resource?",
+     "options": [
+       "POST",
+       "GET",
+       "PUT",
+       "DELETE"
+     ],
+     "response": "PUT",
+     "explanation": "PUT is idempotent and is used to update an entire resource. Multiple identical PUT requests should have the same effect as a single request.",
+     "keywords": ["HTTP methods", "PUT", "idempotent", "resource update", "REST"]
+   },
+   {
+     "id": 32,
+     "topic": "Servlet Lifecycle",
+     "question": "In what order are servlet lifecycle methods called?",
+     "options": [
+       "service(), init(), destroy()",
+       "init(), service(), destroy()",
+       "destroy(), init(), service()",
+       "service(), destroy(), init()"
+     ],
+     "response": "init(), service(), destroy()",
+     "explanation": "Servlet lifecycle methods are called in order: init() when servlet is first loaded, service() for each request, and destroy() when servlet is unloaded.",
+     "keywords": ["Servlet", "lifecycle", "init", "service", "destroy", "method order"]
+   },
+   {
+     "id": 33,
+     "topic": "Angular Services",
+     "question": "What is the purpose of services in Angular?",
+     "options": [
+       "To define HTML templates",
+       "To provide shared functionality and data across components",
+       "To handle CSS styling",
+       "To manage routing"
+     ],
+     "response": "To provide shared functionality and data across components",
+     "explanation": "Angular services provide shared functionality, data, and business logic that can be injected into components, promoting code reusability and separation of concerns.",
+     "keywords": ["Angular", "services", "shared functionality", "dependency injection", "components"]
+   },
+   {
+     "id": 34,
+     "topic": "SQL Joins",
+     "question": "Which type of SQL JOIN returns all records from both tables, with NULLs where there's no match?",
+     "options": [
+       "INNER JOIN",
+       "LEFT JOIN",
+       "RIGHT JOIN",
+       "FULL OUTER JOIN"
+     ],
+     "response": "FULL OUTER JOIN",
+     "explanation": "FULL OUTER JOIN returns all records from both tables, showing NULL values where there's no match between the tables.",
+     "keywords": ["SQL", "JOIN", "FULL OUTER JOIN", "NULL values", "table relationships"]
+   },
+   {
+     "id": 35,
+     "topic": "Spring IoC",
+     "question": "What does IoC stand for in Spring framework?",
+     "options": [
+       "Internet of Components",
+       "Inversion of Control",
+       "Integration of Classes",
+       "Input/Output Control"
+     ],
+     "response": "Inversion of Control",
+     "explanation": "IoC (Inversion of Control) is a design principle where the control of object creation and dependency management is inverted from the application code to the Spring container.",
+     "keywords": ["Spring", "IoC", "Inversion of Control", "dependency management", "container"]
+   },
+   {
+     "id": 36,
+     "topic": "JavaScript Hoisting",
+     "question": "What is hoisting in JavaScript?",
+     "options": [
+       "Moving functions to the top of the file",
+       "Variable and function declarations are moved to the top of their scope",
+       "Optimizing code performance",
+       "Sorting arrays automatically"
+     ],
+     "response": "Variable and function declarations are moved to the top of their scope",
+     "explanation": "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their containing scope during the compilation phase.",
+     "keywords": ["JavaScript", "hoisting", "variable declarations", "function declarations", "scope"]
+   },
+   {
+     "id": 37,
+     "topic": "Maven Lifecycle",
+     "question": "Which Maven lifecycle phase compiles the source code of the project?",
+     "options": [
+       "validate",
+       "compile",
+       "test",
+       "package"
+     ],
+     "response": "compile",
+     "explanation": "The 'compile' phase in Maven's default lifecycle compiles the source code of the project and places the compiled classes in the target directory.",
+     "keywords": ["Maven", "lifecycle", "compile phase", "source code", "build process"]
+   },
+   {
+     "id": 38,
+     "topic": "JSF Lifecycle",
+     "question": "What is the first phase in the JSF request processing lifecycle?",
+     "options": [
+       "Apply Request Values",
+       "Restore View",
+       "Process Validations",
+       "Render Response"
+     ],
+     "response": "Restore View",
+     "explanation": "Restore View is the first phase in the JSF lifecycle, where the component tree for the requested page is built or restored.",
+     "keywords": ["JSF", "lifecycle", "Restore View", "component tree", "request processing"]
+   },
+   {
+     "id": 39,
+     "topic": "JDBC Connection",
+     "question": "Which class is typically used to establish a database connection in JDBC?",
+     "options": [
+       "Connection",
+       "DriverManager",
+       "Statement",
+       "ResultSet"
+     ],
+     "response": "DriverManager",
+     "explanation": "DriverManager is used to establish a connection to the database by managing a set of JDBC drivers and providing the getConnection() method.",
+     "keywords": ["JDBC", "DriverManager", "database connection", "JDBC drivers", "getConnection"]
+   },
+   {
+     "id": 40,
+     "topic": "Angular Directives",
+     "question": "What are directives in Angular?",
+     "options": [
+       "Database queries",
+       "Classes that add behavior to elements in Angular templates",
+       "CSS styling rules",
+       "Server-side scripts"
+     ],
+     "response": "Classes that add behavior to elements in Angular templates",
+     "explanation": "Angular directives are classes that add behavior to elements in Angular templates. They include component directives, attribute directives, and structural directives.",
+     "keywords": ["Angular", "directives", "templates", "behavior", "DOM manipulation"]
+   },
+   {
+     "id": 41,
+     "topic": "Docker Images",
+     "question": "What is a Docker image?",
+     "options": [
+       "A running container instance",
+       "A read-only template used to create containers",
+       "A configuration file",
+       "A virtual machine"
+     ],
+     "response": "A read-only template used to create containers",
+     "explanation": "A Docker image is a read-only template that contains the application code, runtime, libraries, and dependencies needed to run an application in a container.",
+     "keywords": ["Docker", "image", "template", "containers", "application code"]
+   },
+   {
+     "id": 42,
+     "topic": "Spring MVC",
+     "question": "What is the role of DispatcherServlet in Spring MVC?",
+     "options": [
+       "To handle database connections",
+       "To act as the front controller that dispatches requests to handlers",
+       "To manage user sessions",
+       "To compile JSP pages"
+     ],
+     "response": "To act as the front controller that dispatches requests to handlers",
+     "explanation": "DispatcherServlet acts as the front controller in Spring MVC, receiving all requests and dispatching them to appropriate handlers (controllers).",
+     "keywords": ["Spring MVC", "DispatcherServlet", "front controller", "request dispatching", "handlers"]
+   },
+   {
+     "id": 43,
+     "topic": "JMS Message Types",
+     "question": "Which JMS message type is used to send plain text data?",
+     "options": [
+       "ObjectMessage",
+       "TextMessage",
+       "BytesMessage",
+       "MapMessage"
+     ],
+     "response": "TextMessage",
+     "explanation": "TextMessage is used to send plain text data in JMS. It's one of the standard message types along with ObjectMessage, BytesMessage, MapMessage, and StreamMessage.",
+     "keywords": ["JMS", "TextMessage", "message types", "plain text", "messaging"]
+   },
+   {
+     "id": 44,
+     "topic": "Git Merging",
+     "question": "What Git command is used to merge changes from one branch into the current branch?",
+     "options": [
+       "git merge <branch-name>",
+       "git combine <branch-name>",
+       "git join <branch-name>",
+       "git apply <branch-name>"
+     ],
+     "response": "git merge <branch-name>",
+     "explanation": "The 'git merge <branch-name>' command merges changes from the specified branch into the current branch, combining the commit histories.",
+     "keywords": ["Git", "merge", "branch", "version control", "commit history"]
+   },
+   {
+     "id": 45,
+     "topic": "Oracle Database Constraints",
+     "question": "Which Oracle constraint ensures that a column cannot contain NULL values?",
+     "options": [
+       "UNIQUE",
+       "CHECK",
+       "NOT NULL",
+       "FOREIGN KEY"
+     ],
+     "response": "NOT NULL",
+     "explanation": "The NOT NULL constraint ensures that a column cannot contain NULL values, making the column mandatory for all rows in the table.",
+     "keywords": ["Oracle Database", "NOT NULL", "constraint", "NULL values", "mandatory column"]
+   },
+   {
+     "id": 46,
+     "topic": "CSS Selectors",
+     "question": "Which CSS selector targets elements by their class attribute?",
+     "options": [
+       "#classname",
+       ".classname",
+       "classname",
+       "*classname"
+     ],
+     "response": ".classname",
+     "explanation": "The dot (.) selector targets elements by their class attribute. For example, '.myclass' selects all elements with class='myclass'.",
+     "keywords": ["CSS", "class selector", "dot selector", "class attribute", "styling"]
+   },
+   {
+     "id": 47,
+     "topic": "Jenkins Pipeline",
+     "question": "What is a Jenkins pipeline?",
+     "options": [
+       "A database connection",
+       "A series of automated steps for building, testing, and deploying code",
+       "A user interface component",
+       "A configuration file format"
+     ],
+     "response": "A series of automated steps for building, testing, and deploying code",
+     "explanation": "A Jenkins pipeline is a series of automated steps that define the entire build, test, and deployment process, typically defined in a Jenkinsfile.",
+     "keywords": ["Jenkins", "pipeline", "automated steps", "build", "test", "deployment", "Jenkinsfile"]
+   },
+   {
+     "id": 48,
+     "topic": "Spring Boot Annotations",
+     "question": "Which annotation is used to mark the main class of a Spring Boot application?",
+     "options": [
+       "@SpringBootMain",
+       "@SpringBootApplication",
+       "@MainApplication",
+       "@BootApplication"
+     ],
+     "response": "@SpringBootApplication",
+     "explanation": "@SpringBootApplication is a convenience annotation that combines @Configuration, @EnableAutoConfiguration, and @ComponentScan, marking the main class of a Spring Boot application.",
+     "keywords": ["Spring Boot", "@SpringBootApplication", "main class", "auto-configuration", "component scan"]
+   },
+   {
+     "id": 49,
+     "topic": "JavaScript Functions",
+     "question": "What is the difference between function declaration and function expression in JavaScript?",
+     "options": [
+       "No difference",
+       "Function declarations are hoisted, function expressions are not",
+       "Function expressions are faster",
+       "Function declarations cannot have parameters"
+     ],
+     "response": "Function declarations are hoisted, function expressions are not",
+     "explanation": "Function declarations are hoisted to the top of their scope and can be called before they're defined, while function expressions are not hoisted and must be defined before use.",
+     "keywords": ["JavaScript", "function declaration", "function expression", "hoisting", "scope"]
+   },
+   {
+     "id": 50,
+     "topic": "Agile Scrum",
+     "question": "What is a Sprint in Agile Scrum methodology?",
+     "options": [
+       "A type of software testing",
+       "A time-boxed iteration where development work is completed",
+       "A project management tool",
+       "A code review process"
+     ],
+     "response": "A time-boxed iteration where development work is completed",
+     "explanation": "A Sprint is a time-boxed iteration (usually 1-4 weeks) in Scrum where a potentially shippable product increment is developed by the team.",
+     "keywords": ["Agile", "Scrum", "Sprint", "time-boxed iteration", "product increment", "development work"]
    }
  ]
 }
+
+

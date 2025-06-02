@@ -26,6 +26,7 @@
     { "iid": 23, "topic": 23, "name": "SwiftUI", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/swiftui.json" },
     { "iid": 24, "topic": 24, "name": "TDD / BDD / DDD", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/tdd-bdd-ddd.json" },
     { "iid": 25, "topic": 25, "name": "Web Applications", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/web-app.json" },
-    { "iid": 26, "topic": 26, "name": "Interview V1", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/interviewv1.json" }
+    { "iid": 26, "topic": 26, "name": "Interview V1", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/interviewv1.json" },
+    { "iid": 27, "topic": 27, "name": "Problem Solving", "url": "https://raw.githubusercontent.com/risbo/data-test-laboratory/refs/heads/main/problemsolving.json" }
   ]
 }

@@ -1,1 +1,847 @@
 
+{
+ "id": 1,
+ "topic": "Senior Java API Developer - Moneris Fintech Position",
+ "data": [
+   {
+     "id": 1,
+     "topic": "Core Java",
+     "question": "In a payment processing system handling thousands of transactions per second, which Java feature would you use to process multiple payment validations concurrently without blocking the main thread?",
+     "options": [
+       "synchronized methods",
+       "CompletableFuture with async processing",
+       "Thread.sleep() in loops",
+       "Single-threaded sequential processing"
+     ],
+     "response": "CompletableFuture with async processing",
+     "explanation": "CompletableFuture allows non-blocking asynchronous processing, essential for high-throughput payment systems where you need to validate multiple transactions simultaneously without blocking the main application thread.",
+     "keywords": ["Java", "concurrency", "CompletableFuture", "async", "payment processing", "performance"]
+   },
+   {
+     "id": 2,
+     "topic": "Design Patterns",
+     "question": "When integrating with multiple payment gateways (Visa, Mastercard, PayPal) in a fintech application, which design pattern would best handle the different payment processing implementations?",
+     "options": [
+       "Singleton Pattern",
+       "Observer Pattern",
+       "Strategy Pattern",
+       "Builder Pattern"
+     ],
+     "response": "Strategy Pattern",
+     "explanation": "Strategy Pattern allows you to define different payment processing algorithms (one for each gateway) and switch between them at runtime, making the code flexible and maintainable when dealing with multiple payment providers.",
+     "keywords": ["design patterns", "strategy pattern", "payment gateways", "fintech", "architecture"]
+   },
+   {
+     "id": 3,
+     "topic": "Azure Cloud",
+     "question": "For a mission-critical payment API that must handle 10,000 requests per minute with 99.99% uptime, which Azure service combination would you choose?",
+     "options": [
+       "Single Azure VM with manual scaling",
+       "Azure App Service with auto-scaling + Azure SQL Database + Application Gateway",
+       "Azure Functions only",
+       "On-premises servers with Azure backup"
+     ],
+     "response": "Azure App Service with auto-scaling + Azure SQL Database + Application Gateway",
+     "explanation": "This combination provides automatic scaling based on demand, managed database with high availability, and load balancing through Application Gateway, ensuring the uptime and performance requirements for payment processing.",
+     "keywords": ["Azure", "scalability", "high availability", "App Service", "payment API", "cloud architecture"]
+   },
+   {
+     "id": 4,
+     "topic": "Spring Framework",
+     "question": "In a Spring Boot payment service, how would you implement transaction management to ensure that if a payment authorization fails, the inventory reservation is also rolled back?",
+     "options": [
+       "Use @Transactional annotation with proper propagation",
+       "Handle rollback manually with try-catch blocks",
+       "Use separate database connections",
+       "Ignore transaction management"
+     ],
+     "response": "Use @Transactional annotation with proper propagation",
+     "explanation": "Spring's @Transactional with proper propagation (like REQUIRED) ensures that multiple operations are treated as a single atomic unit, automatically rolling back all changes if any operation fails.",
+     "keywords": ["Spring Boot", "transactions", "@Transactional", "ACID", "payment processing", "rollback"]
+   },
+   {
+     "id": 5,
+     "topic": "API Security",
+     "question": "For a payment API handling sensitive financial data, which security implementation provides the best protection?",
+     "options": [
+       "Basic HTTP authentication only",
+       "OAuth 2.0 with JWT tokens + HTTPS + API rate limiting",
+       "Plain text passwords in headers",
+       "No authentication for faster processing"
+     ],
+     "response": "OAuth 2.0 with JWT tokens + HTTPS + API rate limiting",
+     "explanation": "This combination provides secure token-based authentication, encrypted communication, and protection against DoS attacks, meeting fintech security requirements and compliance standards like PCI DSS.",
+     "keywords": ["API security", "OAuth2", "JWT", "HTTPS", "rate limiting", "fintech compliance"]
+   },
+   {
+     "id": 6,
+     "topic": "Payment Processing",
+     "question": "In the merchant acquiring business, what is the correct sequence for processing a credit card payment?",
+     "options": [
+       "Capture → Authorization → Settlement",
+       "Authorization → Capture → Settlement",
+       "Settlement → Authorization → Capture",
+       "Authorization → Settlement → Capture"
+     ],
+     "response": "Authorization → Capture → Settlement",
+     "explanation": "Authorization checks if funds are available and holds them, Capture actually charges the customer, and Settlement transfers funds between banks. This is the standard payment processing flow in merchant acquiring.",
+     "keywords": ["payment processing", "merchant acquiring", "authorization", "capture", "settlement", "fintech"]
+   },
+   {
+     "id": 7,
+     "topic": "Microservices",
+     "question": "When designing a payment system with microservices architecture, how should you handle communication between the Payment Service and Fraud Detection Service?",
+     "options": [
+       "Direct database access between services",
+       "Synchronous REST calls with circuit breaker pattern",
+       "Shared memory between services",
+       "File-based communication"
+     ],
+     "response": "Synchronous REST calls with circuit breaker pattern",
+     "explanation": "Circuit breaker pattern prevents cascading failures when the fraud detection service is unavailable, while synchronous calls ensure real-time fraud checking before payment approval.",
+     "keywords": ["microservices", "circuit breaker", "REST API", "fault tolerance", "fraud detection", "resilience"]
+   },
+   {
+     "id": 8,
+     "topic": "Database Management",
+     "question": "For storing payment transaction data that requires ACID properties and complex queries, which database approach is most suitable?",
+     "options": [
+       "NoSQL document database only",
+       "In-memory cache only",
+       "Relational database (SQL) with proper indexing",
+       "Text files for simplicity"
+     ],
+     "response": "Relational database (SQL) with proper indexing",
+     "explanation": "Payment transactions require ACID properties for data consistency and integrity. Relational databases provide these guarantees along with complex query capabilities needed for financial reporting and compliance.",
+     "keywords": ["database", "ACID", "SQL", "transactions", "financial data", "indexing"]
+   },
+   {
+     "id": 9,
+     "topic": "Containerization",
+     "question": "When containerizing a Java payment API with Docker, which approach ensures the smallest and most secure container image?",
+     "options": [
+       "Use full Ubuntu image with all development tools",
+       "Use OpenJDK slim image with multi-stage build",
+       "Include source code in the container",
+       "Use Windows Server base image"
+     ],
+     "response": "Use OpenJDK slim image with multi-stage build",
+     "explanation": "OpenJDK slim images contain only the runtime needed for Java applications, and multi-stage builds separate build dependencies from runtime, resulting in smaller, more secure containers.",
+     "keywords": ["Docker", "containerization", "OpenJDK", "multi-stage build", "security", "optimization"]
+   },
+   {
+     "id": 10,
+     "topic": "Monitoring & Logging",
+     "question": "For a payment API that processes $1M+ daily, which monitoring approach would best help identify and prevent potential issues?",
+     "options": [
+       "Check logs manually once per day",
+       "Real-time APM with custom business metrics + automated alerting",
+       "Monitor only server CPU usage",
+       "No monitoring to avoid performance overhead"
+     ],
+     "response": "Real-time APM with custom business metrics + automated alerting",
+     "explanation": "Application Performance Monitoring with business metrics (payment success rates, transaction volumes) and automated alerts enables proactive issue detection and resolution before they impact revenue.",
+     "keywords": ["monitoring", "APM", "business metrics", "alerting", "observability", "payment processing"]
+   },
+   {
+     "id": 11,
+     "topic": "API Design",
+     "question": "When designing a RESTful payment API, which HTTP status code should be returned when a payment is declined due to insufficient funds?",
+     "options": [
+       "200 OK",
+       "500 Internal Server Error",
+       "422 Unprocessable Entity",
+       "404 Not Found"
+     ],
+     "response": "422 Unprocessable Entity",
+     "explanation": "422 indicates the request was well-formed but contains semantic errors (insufficient funds). The payment was processed but declined due to business logic, not a server error or missing resource.",
+     "keywords": ["REST API", "HTTP status codes", "payment declined", "API design", "semantic errors"]
+   },
+   {
+     "id": 12,
+     "topic": "Agile Methodology",
+     "question": "During a Sprint Review for a payment feature, stakeholders request a major change that would require 3 additional weeks. As a senior developer, what's the best approach?",
+     "options": [
+       "Immediately start working on the change",
+       "Refuse the change completely",
+       "Discuss with Product Owner to evaluate impact and potentially add to next sprint",
+       "Work overtime to finish everything in current sprint"
+     ],
+     "response": "Discuss with Product Owner to evaluate impact and potentially add to next sprint",
+     "explanation": "Agile principles emphasize collaboration and responding to change. The Product Owner should evaluate the change's priority and business value, potentially adding it to the product backlog for future sprints.",
+     "keywords": ["Agile", "Scrum", "Sprint Review", "change management", "Product Owner", "collaboration"]
+   },
+   {
+     "id": 13,
+     "topic": "Infrastructure as Code",
+     "question": "Using Terraform to provision Azure resources for a payment API, which approach ensures consistent environments across dev, staging, and production?",
+     "options": [
+       "Separate Terraform files for each environment with hardcoded values",
+       "Single Terraform configuration with variables and environment-specific tfvars files",
+       "Manual Azure portal configuration",
+       "Copy-paste configuration for each environment"
+     ],
+     "response": "Single Terraform configuration with variables and environment-specific tfvars files",
+     "explanation": "This approach maintains a single source of truth while allowing environment-specific customization through variables, ensuring consistency and reducing configuration drift between environments.",
+     "keywords": ["Terraform", "Infrastructure as Code", "Azure", "environment consistency", "variables", "DevOps"]
+   },
+   {
+     "id": 14,
+     "topic": "Performance Optimization",
+     "question": "A payment API is experiencing 5-second response times during peak hours. Which optimization would likely provide the most immediate improvement?",
+     "options": [
+       "Add more RAM to the server",
+       "Implement database connection pooling and query optimization",
+       "Increase the number of CPU cores",
+       "Add more disk storage"
+     ],
+     "response": "Implement database connection pooling and query optimization",
+     "explanation": "Payment APIs are typically I/O bound rather than CPU bound. Database connection pooling reduces connection overhead, and query optimization addresses the most common performance bottleneck in data-driven applications.",
+     "keywords": ["performance optimization", "database", "connection pooling", "query optimization", "scalability"]
+   },
+   {
+     "id": 15,
+     "topic": "Error Handling",
+     "question": "In a payment processing system, how should you handle a situation where the external payment gateway is temporarily unavailable?",
+     "options": [
+       "Return an error immediately to the user",
+       "Implement retry logic with exponential backoff and circuit breaker",
+       "Ignore the error and continue processing",
+       "Shut down the entire application"
+     ],
+     "response": "Implement retry logic with exponential backoff and circuit breaker",
+     "explanation": "Retry with exponential backoff handles temporary failures gracefully, while circuit breaker prevents overwhelming a failing service. This ensures system resilience and better user experience during outages.",
+     "keywords": ["error handling", "retry logic", "exponential backoff", "circuit breaker", "resilience", "fault tolerance"]
+   },
+   {
+     "id": 16,
+     "topic": "Kubernetes",
+     "question": "When deploying a payment API to Kubernetes, which strategy ensures zero-downtime deployments?",
+     "options": [
+       "Recreate deployment strategy",
+       "Rolling update deployment with readiness probes",
+       "Delete all pods and recreate",
+       "Manual pod replacement"
+     ],
+     "response": "Rolling update deployment with readiness probes",
+     "explanation": "Rolling updates gradually replace old pods with new ones, while readiness probes ensure new pods are fully ready to handle traffic before old pods are terminated, achieving zero-downtime deployments.",
+     "keywords": ["Kubernetes", "zero-downtime deployment", "rolling update", "readiness probes", "container orchestration"]
+   },
+   {
+     "id": 17,
+     "topic": "Testing",
+     "question": "For a critical payment processing method, which testing approach provides the most comprehensive coverage?",
+     "options": [
+       "Unit tests only",
+       "Integration tests only",
+       "Unit tests + Integration tests + Contract tests",
+       "Manual testing only"
+     ],
+     "response": "Unit tests + Integration tests + Contract tests",
+     "explanation": "Unit tests verify individual method logic, integration tests ensure components work together, and contract tests verify API compatibility with external services. This multi-layered approach provides comprehensive coverage for critical payment functions.",
+     "keywords": ["testing", "unit tests", "integration tests", "contract tests", "test coverage", "quality assurance"]
+   },
+   {
+     "id": 18,
+     "topic": "Compliance & Security",
+     "question": "When handling credit card data in a payment API, which approach ensures PCI DSS compliance?",
+     "options": [
+       "Store credit card numbers in plain text database",
+       "Use tokenization and never store sensitive card data",
+       "Encrypt data with simple password-based encryption",
+       "Store card data in application logs for debugging"
+     ],
+     "response": "Use tokenization and never store sensitive card data",
+     "explanation": "Tokenization replaces sensitive card data with non-sensitive tokens, reducing PCI DSS scope. The actual card data is stored securely by certified token providers, minimizing security risks and compliance requirements.",
+     "keywords": ["PCI DSS", "tokenization", "credit card security", "compliance", "data protection", "fintech regulations"]
+   },
+   {
+     "id": 19,
+     "topic": "Problem Solving",
+     "question": "You discover that 2% of payment transactions are failing silently (no error logged, but money not processed). What's your systematic approach to debug this issue?",
+     "options": [
+       "Restart the application server",
+       "Enable detailed logging, analyze failed transaction patterns, and trace the payment flow",
+       "Ignore it since 98% are working",
+       "Disable error handling to see what happens"
+     ],
+     "response": "Enable detailed logging, analyze failed transaction patterns, and trace the payment flow",
+     "explanation": "Systematic debugging involves gathering data through logging, identifying patterns in failures, and tracing the execution path. This methodical approach helps identify root causes in complex payment systems.",
+     "keywords": ["debugging", "problem solving", "logging", "transaction analysis", "systematic approach", "troubleshooting"]
+   },
+   {
+     "id": 20,
+     "topic": "System Architecture",
+     "question": "Designing a payment system that must handle Black Friday traffic (10x normal load), which architectural approach would you recommend?",
+     "options": [
+       "Single monolithic application with vertical scaling",
+       "Microservices with auto-scaling, event-driven architecture, and caching",
+       "Manual server provisioning on the day",
+       "Reduce functionality to handle the load"
+     ],
+     "response": "Microservices with auto-scaling, event-driven architecture, and caching",
+     "explanation": "This architecture provides horizontal scalability, loose coupling through events, and performance optimization through caching. Auto-scaling handles traffic spikes automatically, while microservices allow independent scaling of different components.",
+     "keywords": ["system architecture", "microservices", "auto-scaling", "event-driven", "caching", "high availability", "scalability"]
+   },
+   {
+     "id": 1,
+     "topic": "Java Memory Management",
+     "question": "In a high-throughput payment processing application, you notice frequent full GC pauses affecting transaction response times. Which JVM tuning approach would be most effective?",
+     "options": [
+       "Increase heap size to maximum available RAM",
+       "Use G1GC with appropriate heap sizing and tune GC parameters",
+       "Disable garbage collection completely",
+       "Use only young generation collections"
+     ],
+     "response": "Use G1GC with appropriate heap sizing and tune GC parameters",
+     "explanation": "G1GC is designed for low-latency applications with large heaps. It provides predictable pause times through incremental collection and can be tuned for specific latency requirements, ideal for payment processing systems.",
+     "keywords": ["JVM", "garbage collection", "G1GC", "memory management", "performance tuning", "heap sizing"]
+   },
+   {
+     "id": 2,
+     "topic": "Java Concurrency",
+     "question": "When processing multiple payment validations concurrently, which approach best handles thread safety for shared payment status updates?",
+     "options": [
+       "Use synchronized blocks on all methods",
+       "AtomicReference with CompareAndSet operations",
+       "volatile variables for all shared data",
+       "No synchronization needed"
+     ],
+     "response": "AtomicReference with CompareAndSet operations",
+     "explanation": "AtomicReference with CAS operations provides lock-free thread safety, ensuring atomic updates to payment status without the performance overhead of synchronized blocks, crucial for high-throughput payment systems.",
+     "keywords": ["concurrency", "thread safety", "AtomicReference", "CompareAndSet", "lock-free", "payment processing"]
+   },
+   {
+     "id": 3,
+     "topic": "Java Streams API",
+     "question": "You need to process a large list of transactions, filter by amount > $1000, group by merchant, and calculate totals. Which Stream operation chain is most efficient?",
+     "options": [
+       "filter().collect(groupingBy()).forEach()",
+       "filter().collect(groupingBy(summingDouble()))",
+       "forEach() with manual grouping",
+       "convert to array and use traditional loops"
+     ],
+     "response": "filter().collect(groupingBy(summingDouble()))",
+     "explanation": "This approach combines filtering and grouping with aggregation in a single pass, using collectors for optimal performance. It's more efficient than multiple iterations and leverages Stream API's internal optimizations.",
+     "keywords": ["Java Streams", "filtering", "grouping", "collectors", "functional programming", "performance optimization"]
+   },
+   {
+     "id": 4,
+     "topic": "Spring Boot Auto-Configuration",
+     "question": "In a Spring Boot payment service, how would you customize the default DataSource configuration to use connection pooling optimized for high transaction volumes?",
+     "options": [
+       "Manually create DataSource beans and disable auto-configuration",
+       "Use @ConfigurationProperties with custom DataSource configuration",
+       "Modify application.properties with spring.datasource.* properties",
+       "Override auto-configuration with @Primary DataSource bean"
+     ],
+     "response": "Use @ConfigurationProperties with custom DataSource configuration",
+     "explanation": "@ConfigurationProperties provides type-safe configuration binding while maintaining Spring Boot's auto-configuration benefits. It allows fine-tuned connection pool settings while keeping configuration externalized and testable.",
+     "keywords": ["Spring Boot", "auto-configuration", "@ConfigurationProperties", "DataSource", "connection pooling", "configuration management"]
+   },
+   {
+     "id": 5,
+     "topic": "Spring Security",
+     "question": "For a payment API requiring JWT token validation with custom claims (user roles, merchant permissions), which Spring Security configuration approach is most appropriate?",
+     "options": [
+       "Use basic HTTP authentication only",
+       "Implement custom JwtAuthenticationProvider with @PreAuthorize",
+       "Store JWT secrets in application.properties",
+       "Disable security for better performance"
+     ],
+     "response": "Implement custom JwtAuthenticationProvider with @PreAuthorize",
+     "explanation": "Custom JwtAuthenticationProvider allows validation of custom claims, while @PreAuthorize enables method-level security based on roles and permissions. This provides fine-grained access control essential for payment systems.",
+     "keywords": ["Spring Security", "JWT", "authentication", "authorization", "@PreAuthorize", "custom claims", "method security"]
+   },
+   {
+     "id": 6,
+     "topic": "Spring Data JPA",
+     "question": "When implementing a repository for payment transactions that requires both simple CRUD and complex reporting queries, what's the best approach?",
+     "options": [
+       "Use only @Query annotations for all methods",
+       "Extend JpaRepository and add @Query for complex queries",
+       "Use only native SQL queries",
+       "Implement all methods manually without Spring Data"
+     ],
+     "response": "Extend JpaRepository and add @Query for complex queries",
+     "explanation": "JpaRepository provides optimized CRUD operations, while @Query annotations allow custom JPQL or native SQL for complex reporting. This combination offers both convenience and flexibility for different query complexities.",
+     "keywords": ["Spring Data JPA", "JpaRepository", "@Query", "CRUD operations", "JPQL", "repository pattern"]
+   },
+   {
+     "id": 7,
+     "topic": "Spring Transaction Management",
+     "question": "In a payment processing flow involving inventory update, payment authorization, and notification sending, how should you configure transaction boundaries?",
+     "options": [
+       "Single @Transactional on the main service method",
+       "@Transactional(propagation=REQUIRES_NEW) for each operation",
+       "@Transactional for data operations, separate async for notifications",
+       "No transaction management needed"
+     ],
+     "response": "@Transactional for data operations, separate async for notifications",
+     "explanation": "Payment and inventory operations should be transactional to ensure data consistency, while notifications should be asynchronous and outside the transaction to prevent rollbacks due to external service failures.",
+     "keywords": ["Spring transactions", "@Transactional", "transaction propagation", "async processing", "data consistency", "payment processing"]
+   },
+   {
+     "id": 8,
+     "topic": "Java Exception Handling",
+     "question": "When designing exception handling for a payment API, which approach provides the best balance of information and security?",
+     "options": [
+       "Return detailed stack traces to clients",
+       "Use @ControllerAdvice with custom exception mapping and sanitized responses",
+       "Catch all exceptions and return generic 'Error' message",
+       "Let all exceptions propagate to the container"
+     ],
+     "response": "Use @ControllerAdvice with custom exception mapping and sanitized responses",
+     "explanation": "@ControllerAdvice provides centralized exception handling, allowing custom error responses while preventing sensitive information leakage. It maintains security while providing meaningful error information to API consumers.",
+     "keywords": ["exception handling", "@ControllerAdvice", "error mapping", "API security", "custom exceptions", "error responses"]
+   },
+   {
+     "id": 9,
+     "topic": "Spring Boot Actuator",
+     "question": "For monitoring a payment processing service in production, which Spring Boot Actuator endpoints should be enabled and secured?",
+     "options": [
+       "Enable all endpoints publicly for easy access",
+       "Enable health, metrics, and custom payment endpoints with proper security",
+       "Disable all actuator endpoints in production",
+       "Only enable info endpoint"
+     ],
+     "response": "Enable health, metrics, and custom payment endpoints with proper security",
+     "explanation": "Health and metrics endpoints provide essential monitoring data, while custom endpoints can expose payment-specific KPIs. Proper security (authentication/authorization) ensures sensitive operational data is protected.",
+     "keywords": ["Spring Boot Actuator", "monitoring", "health checks", "metrics", "endpoint security", "production monitoring"]
+   },
+   {
+     "id": 10,
+     "topic": "Java Collections",
+     "question": "For caching frequently accessed payment gateway configurations that are read-heavy with occasional updates, which collection type provides the best performance?",
+     "options": [
+       "HashMap with synchronized access",
+       "ConcurrentHashMap with atomic updates",
+       "Vector for thread safety",
+       "ArrayList with manual synchronization"
+     ],
+     "response": "ConcurrentHashMap with atomic updates",
+     "explanation": "ConcurrentHashMap provides excellent read performance with minimal locking, perfect for read-heavy scenarios. Atomic update operations ensure thread safety without blocking all readers during writes.",
+     "keywords": ["Java Collections", "ConcurrentHashMap", "thread safety", "caching", "read-heavy operations", "atomic updates"]
+   },
+   {
+     "id": 11,
+     "topic": "Spring Boot Testing",
+     "question": "When writing integration tests for a payment controller that depends on external payment gateway services, what's the best testing approach?",
+     "options": [
+       "Always use real external services in tests",
+       "Use @MockBean for external dependencies with @SpringBootTest",
+       "Skip integration tests for external dependencies",
+       "Use unit tests only"
+     ],
+     "response": "Use @MockBean for external dependencies with @SpringBootTest",
+     "explanation": "@SpringBootTest loads the full application context while @MockBean replaces external dependencies with mocks, allowing testing of integration logic without external service dependencies and ensuring predictable test results.",
+     "keywords": ["Spring Boot testing", "@SpringBootTest", "@MockBean", "integration testing", "mocking", "external dependencies"]
+   },
+   {
+     "id": 12,
+     "topic": "Java Generics",
+     "question": "When designing a generic payment processor that can handle different payment types (CreditCard, BankTransfer, DigitalWallet), which approach is most type-safe?",
+     "options": [
+       "Use raw types without generics",
+       "Create PaymentProcessor<T extends Payment> interface",
+       "Use Object type for all payments",
+       "Use reflection to determine payment type"
+     ],
+     "response": "Create PaymentProcessor<T extends Payment> interface",
+     "explanation": "Bounded generics (T extends Payment) provide compile-time type safety while allowing different payment type implementations. This ensures type safety and enables polymorphic behavior with proper constraints.",
+     "keywords": ["Java Generics", "bounded generics", "type safety", "polymorphism", "interface design", "payment processing"]
+   },
+   {
+     "id": 13,
+     "topic": "Spring AOP",
+     "question": "For implementing audit logging across all payment transaction methods, which Spring AOP approach is most efficient?",
+     "options": [
+       "Add logging code manually to each method",
+       "Use @Around advice with custom annotation for audit logging",
+       "Use @Before advice on all public methods",
+       "Use reflection to intercept all method calls"
+     ],
+     "response": "Use @Around advice with custom annotation for audit logging",
+     "explanation": "@Around advice provides full control over method execution and return values, while custom annotations allow selective application to specific methods, reducing overhead and providing precise audit control.",
+     "keywords": ["Spring AOP", "@Around advice", "audit logging", "cross-cutting concerns", "custom annotations", "method interception"]
+   },
+   {
+     "id": 14,
+     "topic": "Java CompletableFuture",
+     "question": "When processing a payment that requires parallel validation (fraud check, balance check, merchant verification), which CompletableFuture pattern provides the best performance?",
+     "options": [
+       "Sequential CompletableFuture chain with thenApply",
+       "CompletableFuture.allOf() with parallel execution",
+       "Single threaded execution for simplicity",
+       "Separate threads with manual synchronization"
+     ],
+     "response": "CompletableFuture.allOf() with parallel execution",
+     "explanation": "CompletableFuture.allOf() allows all validations to run in parallel and completes when all are finished, significantly reducing total processing time compared to sequential execution, crucial for payment processing latency.",
+     "keywords": ["CompletableFuture", "parallel processing", "async execution", "performance optimization", "payment validation", "concurrent execution"]
+   },
+   {
+     "id": 15,
+     "topic": "Spring Boot Configuration",
+     "question": "For managing different payment gateway configurations across dev, staging, and production environments, which Spring Boot approach is most maintainable?",
+     "options": [
+       "Hardcode values in application.properties",
+       "Use @Profile with environment-specific configuration classes",
+       "Use system properties only",
+       "Duplicate application files for each environment"
+     ],
+     "response": "Use @Profile with environment-specific configuration classes",
+     "explanation": "@Profile allows environment-specific bean configuration while keeping code DRY. Combined with externalized configuration, it provides clean separation of environment concerns and type-safe configuration management.",
+     "keywords": ["Spring Boot", "@Profile", "environment configuration", "externalized configuration", "configuration management", "maintainability"]
+   },
+   {
+     "id": 16,
+     "topic": "Java Optional",
+     "question": "When implementing a method that searches for a payment by transaction ID, which Optional usage pattern is most appropriate?",
+     "options": [
+       "Return null if payment not found",
+       "Return Optional<Payment> and use orElseThrow() with custom exception",
+       "Throw exception directly from the method",
+       "Return empty Payment object"
+     ],
+     "response": "Return Optional<Payment> and use orElseThrow() with custom exception",
+     "explanation": "Optional clearly indicates that the method may not return a value, while orElseThrow() allows the caller to specify appropriate exception handling. This makes the API more expressive and forces proper null handling.",
+     "keywords": ["Java Optional", "null safety", "API design", "exception handling", "method return types", "defensive programming"]
+   },
+   {
+     "id": 17,
+     "topic": "Spring Validation",
+     "question": "For validating payment request data (amount, currency, merchant ID), which Spring validation approach provides the most comprehensive validation?",
+     "options": [
+       "Manual validation in controller methods",
+       "Use @Valid with Bean Validation annotations and custom validators",
+       "Client-side validation only",
+       "Database constraints only"
+     ],
+     "response": "Use @Valid with Bean Validation annotations and custom validators",
+     "explanation": "@Valid triggers Bean Validation, while standard and custom validators provide declarative, reusable validation logic. This approach separates validation concerns and provides consistent error handling across the application.",
+     "keywords": ["Spring Validation", "@Valid", "Bean Validation", "custom validators", "data validation", "payment validation"]
+   },
+   {
+     "id": 18,
+     "topic": "Java Functional Interfaces",
+     "question": "When implementing a payment processing pipeline with multiple validation steps, which functional interface pattern is most suitable?",
+     "options": [
+       "Use only traditional inheritance",
+       "Create Function<Payment, ValidationResult> chain with compose/andThen",
+       "Use anonymous inner classes for all validations",
+       "Hardcode all validation logic in one method"
+     ],
+     "response": "Create Function<Payment, ValidationResult> chain with compose/andThen",
+     "explanation": "Function interface with compose/andThen allows building flexible validation pipelines, enabling easy addition/removal of validation steps and promoting code reusability and testability.",
+     "keywords": ["functional interfaces", "Function interface", "method composition", "validation pipeline", "functional programming", "code reusability"]
+   },
+   {
+     "id": 19,
+     "topic": "Spring Boot Caching",
+     "question": "For caching merchant configuration data that changes infrequently but must be consistent across application instances, which caching strategy is most appropriate?",
+     "options": [
+       "Local in-memory cache only",
+       "@Cacheable with Redis as cache provider and TTL configuration",
+       "Database-level caching only",
+       "No caching for data consistency"
+     ],
+     "response": "@Cacheable with Redis as cache provider and TTL configuration",
+     "explanation": "@Cacheable provides declarative caching, Redis ensures cache sharing across instances, and TTL prevents stale data. This combination offers performance benefits while maintaining data consistency in distributed environments.",
+     "keywords": ["Spring caching", "@Cacheable", "Redis", "distributed caching", "TTL", "data consistency", "performance optimization"]
+   },
+   {
+     "id": 20,
+     "topic": "Java Lambda Expressions",
+     "question": "When processing a stream of payment transactions to calculate merchant settlement amounts, which lambda expression approach is most efficient and readable?",
+     "options": [
+       "Use anonymous inner classes instead of lambdas",
+       "Single complex lambda with all logic inline",
+       "Method references with intermediate operations (filter, map, reduce)",
+       "Convert stream to list and use traditional loops"
+     ],
+     "response": "Method references with intermediate operations (filter, map, reduce)",
+     "explanation": "Method references improve readability, while intermediate operations create a clear processing pipeline. This approach is both efficient (lazy evaluation) and maintainable (clear separation of concerns).",
+     "keywords": ["lambda expressions", "method references", "stream processing", "functional programming", "code readability", "performance optimization"]
+   },
+   {
+     "id": 1,
+     "topic": "Performance Troubleshooting",
+     "question": "A payment API suddenly starts experiencing 30-second response times after a deployment. CPU usage is normal, but memory usage is at 95%. What's your systematic troubleshooting approach?",
+     "options": [
+       "Restart the application immediately",
+       "Analyze heap dump, check for memory leaks, review recent code changes, monitor GC logs",
+       "Increase server memory and hope it fixes the issue",
+       "Rollback deployment without investigation"
+     ],
+     "response": "Analyze heap dump, check for memory leaks, review recent code changes, monitor GC logs",
+     "explanation": "Memory issues require systematic analysis: heap dumps reveal object retention patterns, recent changes identify potential causes, and GC logs show collection behavior. This data-driven approach identifies root causes rather than symptoms.",
+     "keywords": ["performance troubleshooting", "memory leak", "heap dump", "GC analysis", "systematic debugging", "root cause analysis"]
+   },
+   {
+     "id": 2,
+     "topic": "Database Performance",
+     "question": "Payment transaction queries are taking 8 seconds during peak hours (was 200ms). Database CPU is at 90%. What optimization strategy would you implement first?",
+     "options": [
+       "Add more database servers immediately",
+       "Analyze slow query logs, identify missing indexes, and optimize query execution plans",
+       "Increase database memory allocation",
+       "Switch to a different database technology"
+     ],
+     "response": "Analyze slow query logs, identify missing indexes, and optimize query execution plans",
+     "explanation": "High CPU with slow queries typically indicates inefficient query execution. Slow query logs reveal problematic queries, missing indexes cause table scans, and execution plans show optimization opportunities. This addresses the root cause efficiently.",
+     "keywords": ["database performance", "slow query analysis", "indexing strategy", "execution plan optimization", "query tuning", "performance monitoring"]
+   },
+   {
+     "id": 3,
+     "topic": "Microservices Communication",
+     "question": "Your payment service depends on 5 external microservices. One service (fraud detection) has 20% failure rate, causing payment processing to fail. How do you design resilience?",
+     "options": [
+       "Remove fraud detection to improve reliability",
+       "Implement circuit breaker, fallback mechanism, and async retry with exponential backoff",
+       "Increase timeout values for all services",
+       "Process payments without fraud checking when service fails"
+     ],
+     "response": "Implement circuit breaker, fallback mechanism, and async retry with exponential backoff",
+     "explanation": "Circuit breaker prevents cascading failures, fallback provides alternative behavior, and exponential backoff reduces load on failing services. This creates a resilient system that degrades gracefully rather than failing completely.",
+     "keywords": ["microservices resilience", "circuit breaker", "fallback mechanism", "exponential backoff", "fault tolerance", "graceful degradation"]
+   },
+   {
+     "id": 4,
+     "topic": "Concurrency Issues",
+     "question": "Multiple threads are processing payment updates for the same account simultaneously, causing race conditions and incorrect balance calculations. What's the best solution?",
+     "options": [
+       "Use synchronized methods for all account operations",
+       "Implement optimistic locking with version fields and retry logic",
+       "Process all payments on a single thread",
+       "Use Thread.sleep() to avoid conflicts"
+     ],
+     "response": "Implement optimistic locking with version fields and retry logic",
+     "explanation": "Optimistic locking detects concurrent modifications without blocking threads, version fields ensure data integrity, and retry logic handles conflicts gracefully. This provides better performance than pessimistic locking while maintaining consistency.",
+     "keywords": ["concurrency control", "optimistic locking", "race conditions", "version control", "retry logic", "data consistency"]
+   },
+   {
+     "id": 5,
+     "topic": "API Rate Limiting",
+     "question": "A merchant's integration is sending 10,000 payment requests per minute, overwhelming your system and affecting other clients. How do you implement fair usage?",
+     "options": [
+       "Block the merchant completely",
+       "Implement token bucket algorithm with per-client rate limiting and graceful degradation",
+       "Process requests slower for this merchant",
+       "Ignore the issue since it generates revenue"
+     ],
+     "response": "Implement token bucket algorithm with per-client rate limiting and graceful degradation",
+     "explanation": "Token bucket provides smooth rate limiting, per-client limits ensure fairness, and graceful degradation (like queuing) maintains service quality. This protects system resources while allowing legitimate usage bursts.",
+     "keywords": ["rate limiting", "token bucket algorithm", "per-client limits", "graceful degradation", "resource protection", "fair usage"]
+   },
+   {
+     "id": 6,
+     "topic": "Data Consistency",
+     "question": "A payment appears as 'successful' in your database but failed at the payment gateway. This discrepancy is discovered 2 hours later. How do you handle this scenario?",
+     "options": [
+       "Manually fix the database record",
+       "Implement eventual consistency with reconciliation jobs and compensation transactions",
+       "Ignore the discrepancy to avoid complexity",
+       "Always trust the gateway status"
+     ],
+     "response": "Implement eventual consistency with reconciliation jobs and compensation transactions",
+     "explanation": "Reconciliation jobs detect discrepancies between systems, compensation transactions correct inconsistent states, and eventual consistency acknowledges that distributed systems may have temporary inconsistencies that need systematic resolution.",
+     "keywords": ["data consistency", "eventual consistency", "reconciliation", "compensation transactions", "distributed systems", "data integrity"]
+   },
+   {
+     "id": 7,
+     "topic": "Memory Optimization",
+     "question": "Your application processes large CSV files (500MB) containing transaction data, causing OutOfMemoryError. The files must be processed completely. What's your approach?",
+     "options": [
+       "Increase heap size to accommodate large files",
+       "Implement streaming processing with buffered readers and process records in batches",
+       "Load entire file into memory and optimize later",
+       "Split files manually before processing"
+     ],
+     "response": "Implement streaming processing with buffered readers and process records in batches",
+     "explanation": "Streaming processing reads data incrementally, batch processing controls memory usage, and buffered readers optimize I/O. This approach scales with file size and maintains consistent memory usage regardless of input size.",
+     "keywords": ["memory optimization", "streaming processing", "batch processing", "buffered I/O", "scalable file processing", "memory management"]
+   },
+   {
+     "id": 8,
+     "topic": "Security Incident Response",
+     "question": "You discover that API keys are being logged in plain text in application logs, and these logs are accessible to multiple teams. What's your immediate response plan?",
+     "options": [
+       "Stop all logging to prevent further exposure",
+       "Rotate all API keys, sanitize logs, implement log scrubbing, and audit access",
+       "Remove logs but continue with current keys",
+       "Notify customers about the security breach immediately"
+     ],
+     "response": "Rotate all API keys, sanitize logs, implement log scrubbing, and audit access",
+     "explanation": "Key rotation prevents unauthorized access, log sanitization removes exposed data, log scrubbing prevents future exposure, and access auditing identifies potential unauthorized access. This comprehensive approach addresses both immediate and future risks.",
+     "keywords": ["security incident", "key rotation", "log sanitization", "log scrubbing", "access audit", "data exposure"]
+   },
+   {
+     "id": 9,
+     "topic": "Cache Invalidation",
+     "question": "Merchant configuration data is cached for performance, but when configurations change, some application instances serve stale data for hours. How do you solve this distributed cache problem?",
+     "options": [
+       "Disable caching to ensure consistency",
+       "Implement cache invalidation with Redis pub/sub or event-driven cache updates",
+       "Set very short cache TTL (30 seconds)",
+       "Restart all application instances when data changes"
+     ],
+     "response": "Implement cache invalidation with Redis pub/sub or event-driven cache updates",
+     "explanation": "Redis pub/sub enables real-time cache invalidation across instances, event-driven updates ensure immediate consistency, and this approach maintains cache benefits while solving the distributed invalidation problem.",
+     "keywords": ["cache invalidation", "distributed caching", "Redis pub/sub", "event-driven architecture", "cache consistency", "real-time updates"]
+   },
+   {
+     "id": 10,
+     "topic": "Database Connection Issues",
+     "question": "During peak hours, your application throws 'Connection pool exhausted' errors, causing payment failures. Database server has capacity but connections are maxed out. What's your solution?",
+     "options": [
+       "Increase connection pool size indefinitely",
+       "Optimize connection usage, implement connection monitoring, and tune pool parameters",
+       "Use a single shared connection for all operations",
+       "Restart the application when errors occur"
+     ],
+     "response": "Optimize connection usage, implement connection monitoring, and tune pool parameters",
+     "explanation": "Connection optimization (proper closing, transaction scope), monitoring (leak detection, usage patterns), and parameter tuning (min/max pools, timeouts) address root causes while preventing resource exhaustion.",
+     "keywords": ["connection pool management", "resource optimization", "connection monitoring", "pool tuning", "database performance", "resource leaks"]
+   },
+   {
+     "id": 11,
+     "topic": "Integration Failure Handling",
+     "question": "A critical payment gateway API starts returning HTTP 503 errors intermittently (30% failure rate). Payments are time-sensitive. How do you maintain service availability?",
+     "options": [
+       "Queue all payments until gateway recovers",
+       "Implement failover to backup gateway with automatic retry and monitoring",
+       "Return errors to customers immediately",
+       "Process payments without gateway validation"
+     ],
+     "response": "Implement failover to backup gateway with automatic retry and monitoring",
+     "explanation": "Failover maintains service availability, automatic retry handles transient failures, backup gateway provides redundancy, and monitoring ensures quick problem detection. This minimizes business impact while maintaining payment security.",
+     "keywords": ["failover strategy", "backup systems", "automatic retry", "service availability", "redundancy", "business continuity"]
+   },
+   {
+     "id": 12,
+     "topic": "API Versioning Challenge",
+     "question": "You need to deploy a breaking change to the payment API, but 200+ merchants are using the current version and can't migrate immediately. How do you handle this?",
+     "options": [
+       "Force all merchants to migrate at once",
+       "Implement API versioning with backward compatibility and deprecation timeline",
+       "Create a completely separate API service",
+       "Never make breaking changes"
+     ],
+     "response": "Implement API versioning with backward compatibility and deprecation timeline",
+     "explanation": "API versioning allows gradual migration, backward compatibility maintains existing integrations, deprecation timeline provides clear migration path, and this approach balances innovation with stability for existing clients.",
+     "keywords": ["API versioning", "backward compatibility", "deprecation strategy", "gradual migration", "client impact", "API evolution"]
+   },
+   {
+     "id": 13,
+     "topic": "Load Testing Issues",
+     "question": "Load tests show your payment API handles 1000 TPS fine, but at 1500 TPS, response times increase exponentially and errors spike. What's your analysis approach?",
+     "options": [
+       "Accept 1000 TPS as the limit",
+       "Profile application under load, identify bottlenecks, and analyze resource utilization patterns",
+       "Add more servers immediately",
+       "Optimize random parts of the code"
+     ],
+     "response": "Profile application under load, identify bottlenecks, and analyze resource utilization patterns",
+     "explanation": "Load profiling reveals performance bottlenecks, resource analysis shows constraint points, and utilization patterns indicate where optimization is needed. This data-driven approach identifies specific performance limiters.",
+     "keywords": ["load testing", "performance profiling", "bottleneck analysis", "resource utilization", "scalability testing", "performance optimization"]
+   },
+   {
+     "id": 14,
+     "topic": "Data Migration",
+     "question": "You need to migrate 50 million payment records from legacy system to new database structure with zero downtime. The migration will take 12 hours. What's your strategy?",
+     "options": [
+       "Take the system offline for 12 hours",
+       "Implement dual-write pattern with eventual consistency and online migration",
+       "Migrate small batches during low-traffic hours over months",
+       "Keep both systems running permanently"
+     ],
+     "response": "Implement dual-write pattern with eventual consistency and online migration",
+     "explanation": "Dual-write maintains data consistency across systems, eventual consistency handles temporary discrepancies, online migration avoids downtime, and this pattern enables gradual cutover with rollback capability.",
+     "keywords": ["data migration", "dual-write pattern", "eventual consistency", "zero downtime", "online migration", "gradual cutover"]
+   },
+   {
+     "id": 15,
+     "topic": "Monitoring and Alerting",
+     "question": "Your payment success rate dropped from 99.5% to 97% over the past hour, but no alerts fired. How do you improve your monitoring to catch such issues faster?",
+     "options": [
+       "Check metrics manually every hour",
+       "Implement business metric monitoring with anomaly detection and multi-threshold alerting",
+       "Only monitor technical metrics like CPU and memory",
+       "Rely on customer complaints for issue detection"
+     ],
+     "response": "Implement business metric monitoring with anomaly detection and multi-threshold alerting",
+     "explanation": "Business metrics (success rates, transaction volumes) reflect actual user impact, anomaly detection catches deviations from normal patterns, multi-threshold alerting prevents false positives while ensuring early warning.",
+     "keywords": ["business metrics", "anomaly detection", "alerting strategy", "monitoring effectiveness", "early warning systems", "SLA monitoring"]
+   },
+   {
+     "id": 16,
+     "topic": "Debugging Production Issues",
+     "question": "Customers report payment failures, but your logs show all transactions as successful. The issue occurs randomly for different customers. How do you debug this distributed system problem?",
+     "options": [
+       "Assume customers are wrong since logs show success",
+       "Implement distributed tracing, correlation IDs, and end-to-end transaction monitoring",
+       "Add more logging and wait for the issue to reproduce",
+       "Check only database records for confirmation"
+     ],
+     "response": "Implement distributed tracing, correlation IDs, and end-to-end transaction monitoring",
+     "explanation": "Distributed tracing follows requests across services, correlation IDs link related events, end-to-end monitoring captures the complete user journey, revealing gaps between internal success and actual user experience.",
+     "keywords": ["distributed tracing", "correlation IDs", "end-to-end monitoring", "production debugging", "observability", "user experience tracking"]
+   },
+   {
+     "id": 17,
+     "topic": "Scalability Architecture",
+     "question": "Your monolithic payment application needs to handle 10x current traffic for Black Friday. You have 3 months to prepare. What's your architectural approach?",
+     "options": [
+       "Buy bigger servers and increase connection pools",
+       "Extract payment processing into microservices, implement async processing, and add caching layers",
+       "Optimize existing code and hope for the best",
+       "Limit the number of transactions during peak times"
+     ],
+     "response": "Extract payment processing into microservices, implement async processing, and add caching layers",
+     "explanation": "Microservices enable independent scaling, async processing handles traffic spikes without blocking, caching reduces database load, and this architectural approach provides horizontal scalability for traffic growth.",
+     "keywords": ["scalability architecture", "microservices extraction", "async processing", "caching strategy", "horizontal scaling", "traffic handling"]
+   },
+   {
+     "id": 18,
+     "topic": "Configuration Management",
+     "question": "A configuration change for payment gateway endpoints was deployed to production but caused 50% payment failures. The change was supposed to only affect the staging environment. How do you prevent this?",
+     "options": [
+       "Always test configuration changes manually",
+       "Implement environment-specific configuration with validation, approval workflows, and canary deployments",
+       "Stop making configuration changes",
+       "Only senior developers should handle configurations"
+     ],
+     "response": "Implement environment-specific configuration with validation, approval workflows, and canary deployments",
+     "explanation": "Environment-specific config prevents cross-environment contamination, validation catches errors before deployment, approval workflows add human verification, canary deployments limit blast radius of bad changes.",
+     "keywords": ["configuration management", "environment isolation", "configuration validation", "approval workflows", "canary deployment", "change management"]
+   },
+   {
+     "id": 19,
+     "topic": "Third-party Service Reliability",
+     "question": "Your application integrates with 3 payment gateways. Gateway A is fastest but unreliable (10% failure), Gateway B is slower but stable (1% failure), Gateway C is expensive but premium (0.1% failure). How do you optimize for both speed and reliability?",
+     "options": [
+       "Always use the fastest gateway",
+       "Implement intelligent routing with fallback cascade and performance-based selection",
+       "Use random selection among gateways",
+       "Always use the most reliable gateway"
+     ],
+     "response": "Implement intelligent routing with fallback cascade and performance-based selection",
+     "explanation": "Intelligent routing optimizes for speed primarily, fallback cascade ensures reliability when primary fails, performance-based selection adapts to real-time conditions, balancing business requirements of speed, reliability, and cost.",
+     "keywords": ["intelligent routing", "fallback cascade", "performance-based selection", "multi-gateway strategy", "reliability optimization", "business optimization"]
+   },
+   {
+     "id": 20,
+     "topic": "System Recovery",
+     "question": "A database corruption occurred during peak hours, affecting 1000 payment transactions. The database is restored from a backup, but 2 hours of transactions are lost. How do you handle the recovery?",
+     "options": [
+       "Accept the data loss and move forward",
+       "Implement point-in-time recovery using transaction logs, message queues, and idempotent replay",
+       "Ask customers to re-submit their payments",
+       "Restore the corrupted database and risk further issues"
+     ],
+     "response": "Implement point-in-time recovery using transaction logs, message queues, and idempotent replay",
+     "explanation": "Point-in-time recovery restores exact state, transaction logs provide replay capability, message queues preserve transaction intent, idempotent replay prevents duplicate processing, ensuring complete data recovery without side effects.",
+     "keywords": ["disaster recovery", "point-in-time recovery", "transaction logs", "message queues", "idempotent replay", "data recovery"]
+   }
+ ]
+}

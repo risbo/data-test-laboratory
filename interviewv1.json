@@ -1542,8 +1542,2176 @@
      "response": "A time-boxed iteration where development work is completed",
      "explanation": "A Sprint is a time-boxed iteration (usually 1-4 weeks) in Scrum where a potentially shippable product increment is developed by the team.",
      "keywords": ["Agile", "Scrum", "Sprint", "time-boxed iteration", "product increment", "development work"]
-   }
- ]
+   },
+   {
+     "id": 1,
+     "topic": "Java Basics",
+     "question": "What is the correct way to declare a variable in Java?",
+     "options": [
+       "var name = \"John\";",
+       "String name = \"John\";",
+       "name = \"John\";",
+       "declare String name = \"John\";"
+     ],
+     "response": "String name = \"John\";",
+     "explanation": "In Java, variables must be declared with their data type first, followed by the variable name, assignment operator, and value. String is the data type for text values.",
+     "keywords": ["Java", "variable declaration", "data types", "String", "syntax"]
+   },
+   {
+     "id": 2,
+     "topic": "Object-Oriented Programming",
+     "question": "What are the four main principles of Object-Oriented Programming?",
+     "options": [
+       "Variables, Methods, Classes, Objects",
+       "Encapsulation, Inheritance, Polymorphism, Abstraction",
+       "Public, Private, Protected, Static",
+       "Int, String, Boolean, Array"
+     ],
+     "response": "Encapsulation, Inheritance, Polymorphism, Abstraction",
+     "explanation": "The four pillars of OOP are: Encapsulation (data hiding), Inheritance (extending classes), Polymorphism (multiple forms), and Abstraction (hiding complexity).",
+     "keywords": ["OOP", "encapsulation", "inheritance", "polymorphism", "abstraction", "principles"]
+   },
+   {
+     "id": 3,
+     "topic": "HTML Basics",
+     "question": "Which HTML tag is used to create a hyperlink?",
+     "options": [
+       "<link>",
+       "<a>",
+       "<href>",
+       "<url>"
+     ],
+     "response": "<a>",
+     "explanation": "The <a> (anchor) tag is used to create hyperlinks in HTML. The href attribute specifies the URL or destination of the link.",
+     "keywords": ["HTML", "hyperlink", "anchor tag", "href attribute", "web development"]
+   },
+   {
+     "id": 4,
+     "topic": "SQL Basics",
+     "question": "Which SQL statement is used to retrieve data from a database?",
+     "options": [
+       "GET",
+       "RETRIEVE",
+       "SELECT",
+       "FETCH"
+     ],
+     "response": "SELECT",
+     "explanation": "The SELECT statement is used to query and retrieve data from one or more tables in a database. It's the most commonly used SQL command.",
+     "keywords": ["SQL", "SELECT", "database", "query", "data retrieval"]
+   },
+   {
+     "id": 5,
+     "topic": "Spring Framework Basics",
+     "question": "What is dependency injection in Spring?",
+     "options": [
+       "A way to create databases",
+       "A method where Spring provides dependencies to objects instead of objects creating them",
+       "A security feature",
+       "A way to compile Java code"
+     ],
+     "response": "A method where Spring provides dependencies to objects instead of objects creating them",
+     "explanation": "Dependency injection is a design pattern where the Spring framework injects dependencies into objects, rather than the objects creating their own dependencies. This promotes loose coupling.",
+     "keywords": ["Spring", "dependency injection", "IoC", "loose coupling", "design pattern"]
+   },
+   {
+     "id": 6,
+     "topic": "HTTP Methods",
+     "question": "Which HTTP method is used to retrieve data from a server?",
+     "options": [
+       "POST",
+       "GET",
+       "PUT",
+       "DELETE"
+     ],
+     "response": "GET",
+     "explanation": "The GET method is used to retrieve data from a server. It should be safe and idempotent, meaning it doesn't change server state and can be called multiple times with the same result.",
+     "keywords": ["HTTP", "GET method", "retrieve data", "server", "REST"]
+   },
+   {
+     "id": 7,
+     "topic": "JavaScript Basics",
+     "question": "How do you declare a function in JavaScript?",
+     "options": [
+       "function myFunction() {}",
+       "def myFunction() {}",
+       "create function myFunction() {}",
+       "func myFunction() {}"
+     ],
+     "response": "function myFunction() {}",
+     "explanation": "In JavaScript, functions are declared using the 'function' keyword followed by the function name, parentheses for parameters, and curly braces for the function body.",
+     "keywords": ["JavaScript", "function declaration", "function keyword", "syntax"]
+   },
+   {
+     "id": 8,
+     "topic": "Git Basics",
+     "question": "What Git command is used to save changes to the local repository?",
+     "options": [
+       "git save",
+       "git commit",
+       "git push",
+       "git store"
+     ],
+     "response": "git commit",
+     "explanation": "The 'git commit' command saves changes to the local repository with a commit message describing the changes. It creates a snapshot of the current state.",
+     "keywords": ["Git", "commit", "local repository", "version control", "save changes"]
+   },
+   {
+     "id": 9,
+     "topic": "CSS Basics",
+     "question": "How do you select an element with id 'header' in CSS?",
+     "options": [
+       ".header",
+       "#header",
+       "header",
+       "*header"
+     ],
+     "response": "#header",
+     "explanation": "In CSS, the hash symbol (#) is used to select elements by their ID attribute. So #header selects the element with id='header'.",
+     "keywords": ["CSS", "ID selector", "hash symbol", "element selection", "styling"]
+   },
+   {
+     "id": 10,
+     "topic": "Java Collections",
+     "question": "Which Java collection allows duplicate elements and maintains insertion order?",
+     "options": [
+       "Set",
+       "ArrayList",
+       "HashMap",
+       "TreeSet"
+     ],
+     "response": "ArrayList",
+     "explanation": "ArrayList allows duplicate elements and maintains the insertion order. Unlike Set which doesn't allow duplicates, ArrayList can store the same element multiple times.",
+     "keywords": ["Java", "ArrayList", "collections", "duplicates", "insertion order"]
+   },
+   {
+     "id": 11,
+     "topic": "Database Basics",
+     "question": "What is a primary key in a database table?",
+     "options": [
+       "The first column in a table",
+       "A unique identifier for each record in a table",
+       "A password for the database",
+       "The most important data in a table"
+     ],
+     "response": "A unique identifier for each record in a table",
+     "explanation": "A primary key is a column or combination of columns that uniquely identifies each record (row) in a database table. It cannot be null and must be unique.",
+     "keywords": ["database", "primary key", "unique identifier", "table", "records"]
+   },
+   {
+     "id": 12,
+     "topic": "Spring Boot Basics",
+     "question": "What is the main advantage of Spring Boot over traditional Spring?",
+     "options": [
+       "It's faster",
+       "It provides auto-configuration and reduces setup complexity",
+       "It's more secure",
+       "It uses less memory"
+     ],
+     "response": "It provides auto-configuration and reduces setup complexity",
+     "explanation": "Spring Boot's main advantage is auto-configuration, which automatically configures Spring applications based on dependencies, significantly reducing the amount of manual configuration needed.",
+     "keywords": ["Spring Boot", "auto-configuration", "setup complexity", "traditional Spring", "configuration"]
+   },
+   {
+     "id": 13,
+     "topic": "REST API Basics",
+     "question": "What does REST stand for?",
+     "options": [
+       "Rapid Enterprise System Technology",
+       "Representational State Transfer",
+       "Remote Execution State Transfer",
+       "Relational Enterprise Service Technology"
+     ],
+     "response": "Representational State Transfer",
+     "explanation": "REST stands for Representational State Transfer. It's an architectural style for designing web services that use HTTP methods to perform operations on resources.",
+     "keywords": ["REST", "Representational State Transfer", "web services", "architectural style", "HTTP"]
+   },
+   {
+     "id": 14,
+     "topic": "Maven Basics",
+     "question": "What is the purpose of the pom.xml file in a Maven project?",
+     "options": [
+       "To store source code",
+       "To define project dependencies and build configuration",
+       "To contain test cases",
+       "To store user credentials"
+     ],
+     "response": "To define project dependencies and build configuration",
+     "explanation": "The pom.xml (Project Object Model) file contains project information, dependencies, plugins, and build configuration that Maven uses to build and manage the project.",
+     "keywords": ["Maven", "pom.xml", "dependencies", "build configuration", "project management"]
+   },
+   {
+     "id": 15,
+     "topic": "Exception Handling",
+     "question": "Which Java keyword is used to handle exceptions?",
+     "options": [
+       "catch",
+       "handle",
+       "exception",
+       "error"
+     ],
+     "response": "catch",
+     "explanation": "The 'catch' keyword is used in Java to handle exceptions. It's part of the try-catch block where 'try' contains code that might throw an exception and 'catch' handles the exception.",
+     "keywords": ["Java", "exception handling", "catch", "try-catch", "error handling"]
+   },
+   {
+     "id": 16,
+     "topic": "Angular Basics",
+     "question": "What is a component in Angular?",
+     "options": [
+       "A database table",
+       "A reusable piece of UI with its own logic and template",
+       "A CSS file",
+       "A server configuration"
+     ],
+     "response": "A reusable piece of UI with its own logic and template",
+     "explanation": "An Angular component is a TypeScript class that controls a part of the user interface. It consists of a template (HTML), styles (CSS), and logic (TypeScript).",
+     "keywords": ["Angular", "component", "UI", "template", "TypeScript", "reusable"]
+   },
+   {
+     "id": 17,
+     "topic": "JSON Basics",
+     "question": "What is JSON primarily used for?",
+     "options": [
+       "Styling web pages",
+       "Data exchange between systems",
+       "Database storage",
+       "User authentication"
+     ],
+     "response": "Data exchange between systems",
+     "explanation": "JSON (JavaScript Object Notation) is primarily used for data exchange between different systems, especially in web APIs and AJAX requests. It's lightweight and easy to read.",
+     "keywords": ["JSON", "data exchange", "web APIs", "AJAX", "JavaScript Object Notation"]
+   },
+   {
+     "id": 18,
+     "topic": "JUnit Testing",
+     "question": "What annotation is used to mark a test method in JUnit?",
+     "options": [
+       "@TestMethod",
+       "@Test",
+       "@UnitTest",
+       "@Method"
+     ],
+     "response": "@Test",
+     "explanation": "The @Test annotation is used to mark a method as a test method in JUnit. When the test suite runs, JUnit will execute all methods marked with @Test.",
+     "keywords": ["JUnit", "@Test", "test method", "unit testing", "annotation"]
+   },
+   {
+     "id": 19,
+     "topic": "Web Development Basics",
+     "question": "What does MVC stand for in web development?",
+     "options": [
+       "Model View Controller",
+       "Multiple Version Control",
+       "Main View Component",
+       "Master View Configuration"
+     ],
+     "response": "Model View Controller",
+     "explanation": "MVC stands for Model View Controller, an architectural pattern that separates application logic into three components: Model (data), View (presentation), and Controller (logic).",
+     "keywords": ["MVC", "Model View Controller", "architectural pattern", "separation of concerns", "web development"]
+   },
+   {
+     "id": 20,
+     "topic": "Agile Basics",
+     "question": "What is the typical duration of a Sprint in Scrum?",
+     "options": [
+       "1 day",
+       "1-4 weeks",
+       "6 months",
+       "1 year"
+     ],
+     "response": "1-4 weeks",
+     "explanation": "A Sprint in Scrum is typically 1-4 weeks long, most commonly 2 weeks. It's a time-boxed period where the development team works to complete a set of features or user stories.",
+     "keywords": ["Agile", "Scrum", "Sprint", "time-boxed", "development cycle", "iteration"]
+   },
+   {
+     "id": 1,
+     "topic": "Java Memory Management",
+     "question": "What happens when you have a memory leak in Java, and how would you identify it?",
+     "options": [
+       "Java automatically fixes memory leaks",
+       "Monitor heap usage over time, use profiling tools, look for objects not being garbage collected",
+       "Memory leaks don't exist in Java due to garbage collection",
+       "Restart the application periodically"
+     ],
+     "response": "Monitor heap usage over time, use profiling tools, look for objects not being garbage collected",
+     "explanation": "Memory leaks in Java occur when objects are still referenced but no longer needed. You can identify them by monitoring heap usage trends, using profilers like JVisualVM or Eclipse MAT, and analyzing heap dumps for objects that should be garbage collected.",
+     "keywords": ["Java", "memory leak", "heap monitoring", "profiling tools", "garbage collection", "heap dump"]
+   },
+   {
+     "id": 2,
+     "topic": "Spring Transaction Management",
+     "question": "What happens if you call a @Transactional method from another method within the same class?",
+     "options": [
+       "The transaction works normally",
+       "The @Transactional annotation is ignored due to proxy limitations",
+       "A new transaction is always created",
+       "The application throws an exception"
+     ],
+     "response": "The @Transactional annotation is ignored due to proxy limitations",
+     "explanation": "When calling a @Transactional method from within the same class, Spring's proxy mechanism doesn't intercept the call, so the transaction annotation is ignored. This is a common pitfall in Spring applications.",
+     "keywords": ["Spring", "@Transactional", "proxy", "self-invocation", "transaction management", "AOP"]
+   },
+   {
+     "id": 3,
+     "topic": "Database Performance",
+     "question": "Your application queries are becoming slow as data grows. What's the most effective first step to improve performance?",
+     "options": [
+       "Add more RAM to the database server",
+       "Analyze query execution plans and add appropriate indexes",
+       "Switch to a NoSQL database",
+       "Increase the connection pool size"
+     ],
+     "response": "Analyze query execution plans and add appropriate indexes",
+     "explanation": "Query execution plans reveal how the database processes queries, showing table scans, joins, and other operations. Adding appropriate indexes based on this analysis typically provides the most significant performance improvement.",
+     "keywords": ["database performance", "execution plans", "indexes", "query optimization", "table scans"]
+   },
+   {
+     "id": 4,
+     "topic": "REST API Design",
+     "question": "How should you handle partial updates to a resource in a RESTful API?",
+     "options": [
+       "Always use PUT with the complete resource",
+       "Use PATCH with only the fields being updated",
+       "Use POST for all updates",
+       "Create a new resource for each update"
+     ],
+     "response": "Use PATCH with only the fields being updated",
+     "explanation": "PATCH is designed for partial updates, sending only the fields that need to be changed. PUT should be used for complete resource replacement, while PATCH is more efficient for partial updates.",
+     "keywords": ["REST API", "PATCH", "partial updates", "HTTP methods", "resource management"]
+   },
+   {
+     "id": 5,
+     "topic": "Concurrency",
+     "question": "In a multi-threaded environment, what's the best way to ensure thread-safe access to a shared counter variable?",
+     "options": [
+       "Use synchronized methods for all access",
+       "Use AtomicInteger for lock-free thread safety",
+       "Use volatile keyword only",
+       "Use Thread.sleep() to avoid conflicts"
+     ],
+     "response": "Use AtomicInteger for lock-free thread safety",
+     "explanation": "AtomicInteger provides lock-free thread safety for numeric operations using compare-and-swap operations, offering better performance than synchronized blocks for simple counter operations.",
+     "keywords": ["concurrency", "AtomicInteger", "thread safety", "lock-free", "compare-and-swap"]
+   },
+   {
+     "id": 6,
+     "topic": "Spring Boot Configuration",
+     "question": "How would you externalize configuration in Spring Boot for different environments (dev, staging, prod)?",
+     "options": [
+       "Hardcode values in application.properties",
+       "Use @Profile annotations with environment-specific property files",
+       "Use only command-line arguments",
+       "Create separate JAR files for each environment"
+     ],
+     "response": "Use @Profile annotations with environment-specific property files",
+     "explanation": "Spring Boot profiles allow environment-specific configurations using @Profile annotations and files like application-dev.properties, application-prod.properties, keeping code environment-agnostic.",
+     "keywords": ["Spring Boot", "profiles", "externalized configuration", "environment-specific", "application.properties"]
+   },
+   {
+     "id": 7,
+     "topic": "Exception Handling Strategy",
+     "question": "In a web application, what's the best approach for handling and returning meaningful error responses to clients?",
+     "options": [
+       "Let all exceptions propagate to the container",
+       "Use @ControllerAdvice with custom exception classes and standardized error responses",
+       "Catch all exceptions in each controller method",
+       "Return generic error messages for security"
+     ],
+     "response": "Use @ControllerAdvice with custom exception classes and standardized error responses",
+     "explanation": "@ControllerAdvice provides centralized exception handling across the application, allowing consistent error response formatting while maintaining security by not exposing sensitive information.",
+     "keywords": ["exception handling", "@ControllerAdvice", "error responses", "centralized handling", "custom exceptions"]
+   },
+   {
+     "id": 8,
+     "topic": "JPA/Hibernate",
+     "question": "What's the difference between FetchType.LAZY and FetchType.EAGER, and when should you use each?",
+     "options": [
+       "No difference, they work the same way",
+       "LAZY loads data immediately, EAGER loads on-demand",
+       "EAGER loads data immediately, LAZY loads on-demand for better performance",
+       "EAGER is always better than LAZY"
+     ],
+     "response": "EAGER loads data immediately, LAZY loads on-demand for better performance",
+     "explanation": "EAGER fetching loads related entities immediately with the parent, while LAZY fetching loads them only when accessed. LAZY is generally preferred to avoid N+1 problems and improve performance.",
+     "keywords": ["JPA", "Hibernate", "FetchType", "LAZY", "EAGER", "performance", "N+1 problem"]
+   },
+   {
+     "id": 9,
+     "topic": "Microservices Communication",
+     "question": "How should microservices handle failures when communicating with other services?",
+     "options": [
+       "Always fail fast and return errors immediately",
+       "Implement circuit breaker pattern with fallback mechanisms",
+       "Retry indefinitely until the service responds",
+       "Use only synchronous communication"
+     ],
+     "response": "Implement circuit breaker pattern with fallback mechanisms",
+     "explanation": "Circuit breaker pattern prevents cascading failures by monitoring service health and providing fallback responses when services are unavailable, maintaining system resilience.",
+     "keywords": ["microservices", "circuit breaker", "fallback", "resilience", "failure handling", "distributed systems"]
+   },
+   {
+     "id": 10,
+     "topic": "Caching Strategy",
+     "question": "For frequently accessed but rarely changed data, which caching strategy provides the best balance of performance and consistency?",
+     "options": [
+       "No caching for data consistency",
+       "Cache-aside (lazy loading) with TTL",
+       "Write-through caching only",
+       "Cache everything permanently"
+     ],
+     "response": "Cache-aside (lazy loading) with TTL",
+     "explanation": "Cache-aside with TTL provides good performance by caching on first access and ensures data freshness through time-based expiration, balancing performance with consistency for rarely changing data.",
+     "keywords": ["caching", "cache-aside", "lazy loading", "TTL", "performance", "data consistency"]
+   },
+   {
+     "id": 11,
+     "topic": "Security Implementation",
+     "question": "How should you implement JWT token validation in a Spring Boot REST API?",
+     "options": [
+       "Validate tokens in each controller method",
+       "Use Spring Security with custom JWT filter and token validation",
+       "Store tokens in session only",
+       "Trust all incoming tokens"
+     ],
+     "response": "Use Spring Security with custom JWT filter and token validation",
+     "explanation": "Spring Security provides comprehensive security framework where custom JWT filters can validate tokens centrally, ensuring consistent security across all endpoints with proper token verification.",
+     "keywords": ["JWT", "Spring Security", "token validation", "custom filter", "authentication", "REST API security"]
+   },
+   {
+     "id": 12,
+     "topic": "Testing Strategies",
+     "question": "When writing integration tests for a service that depends on external APIs, what's the best approach?",
+     "options": [
+       "Always test against real external APIs",
+       "Use WireMock or similar tools to mock external services",
+       "Skip integration tests for external dependencies",
+       "Only use unit tests"
+     ],
+     "response": "Use WireMock or similar tools to mock external services",
+     "explanation": "WireMock and similar tools allow you to simulate external API responses, making tests deterministic, fast, and independent of external service availability while still testing integration logic.",
+     "keywords": ["integration testing", "WireMock", "external APIs", "mocking", "test isolation", "deterministic tests"]
+   },
+   {
+     "id": 13,
+     "topic": "Performance Optimization",
+     "question": "Your Spring Boot application has slow startup time. What are the most effective optimization strategies?",
+     "options": [
+       "Increase heap size and CPU cores",
+       "Optimize component scanning, lazy initialization, and reduce auto-configuration",
+       "Remove all dependencies",
+       "Use only XML configuration"
+     ],
+     "response": "Optimize component scanning, lazy initialization, and reduce auto-configuration",
+     "explanation": "Spring Boot startup can be optimized by limiting component scanning scope, enabling lazy initialization for beans, and excluding unnecessary auto-configurations to reduce startup overhead.",
+     "keywords": ["Spring Boot", "startup optimization", "component scanning", "lazy initialization", "auto-configuration"]
+   },
+   {
+     "id": 14,
+     "topic": "Database Transactions",
+     "question": "In a distributed system, how should you handle transactions that span multiple databases?",
+     "options": [
+       "Use regular database transactions",
+       "Implement Saga pattern or eventual consistency",
+       "Avoid transactions completely",
+       "Use only one database"
+     ],
+     "response": "Implement Saga pattern or eventual consistency",
+     "explanation": "Distributed transactions are complex and often impractical. Saga pattern breaks transactions into smaller steps with compensation actions, while eventual consistency accepts temporary inconsistencies for better availability.",
+     "keywords": ["distributed systems", "Saga pattern", "eventual consistency", "distributed transactions", "microservices"]
+   },
+   {
+     "id": 15,
+     "topic": "API Versioning",
+     "question": "What's the best strategy for versioning REST APIs while maintaining backward compatibility?",
+     "options": [
+       "Never version APIs",
+       "Use URL path versioning (/v1/api) with deprecation timeline",
+       "Change existing endpoints directly",
+       "Create completely new applications for each version"
+     ],
+     "response": "Use URL path versioning (/v1/api) with deprecation timeline",
+     "explanation": "URL path versioning is clear and explicit, making it easy for clients to specify which version they're using. Combined with a deprecation timeline, it allows smooth transitions while maintaining backward compatibility.",
+     "keywords": ["API versioning", "backward compatibility", "URL path versioning", "deprecation", "REST API design"]
+   },
+   {
+     "id": 16,
+     "topic": "Application Monitoring",
+     "question": "What metrics are most important to monitor in a production web application?",
+     "options": [
+       "Only server CPU and memory",
+       "Application metrics (response time, error rate, throughput) plus business metrics",
+       "Only database performance",
+       "Only log file sizes"
+     ],
+     "response": "Application metrics (response time, error rate, throughput) plus business metrics",
+     "explanation": "Effective monitoring includes technical metrics (response time, error rate, throughput) and business metrics (user actions, transaction success) to understand both system health and business impact.",
+     "keywords": ["monitoring", "application metrics", "response time", "error rate", "throughput", "business metrics"]
+   },
+   {
+     "id": 17,
+     "topic": "Design Patterns",
+     "question": "When implementing a service that needs to handle multiple payment processors, which pattern provides the most flexibility?",
+     "options": [
+       "Singleton pattern",
+       "Strategy pattern with factory",
+       "Observer pattern",
+       "Template method pattern"
+     ],
+     "response": "Strategy pattern with factory",
+     "explanation": "Strategy pattern allows different payment processing algorithms to be swapped at runtime, while factory pattern helps create the appropriate strategy instance, providing flexibility for multiple payment processors.",
+     "keywords": ["design patterns", "Strategy pattern", "Factory pattern", "payment processors", "flexibility", "runtime selection"]
+   },
+   {
+     "id": 18,
+     "topic": "Code Quality",
+     "question": "How do you ensure code quality in a team environment with continuous integration?",
+     "options": [
+       "Manual code reviews only",
+       "Automated testing, static analysis, code reviews, and coding standards",
+       "Only unit tests",
+       "No quality checks for faster delivery"
+     ],
+     "response": "Automated testing, static analysis, code reviews, and coding standards",
+     "explanation": "Comprehensive code quality requires multiple layers: automated testing for functionality, static analysis for code issues, peer reviews for logic and design, and coding standards for consistency.",
+     "keywords": ["code quality", "automated testing", "static analysis", "code reviews", "coding standards", "continuous integration"]
+   },
+   {
+     "id": 19,
+     "topic": "Data Modeling",
+     "question": "When designing a database schema for an e-commerce application, how should you handle the relationship between Orders and Products?",
+     "options": [
+       "Direct foreign key from Orders to Products",
+       "Many-to-many relationship with OrderItems junction table",
+       "Store product data directly in Orders table",
+       "Use separate databases for orders and products"
+     ],
+     "response": "Many-to-many relationship with OrderItems junction table",
+     "explanation": "Orders can contain multiple products, and products can be in multiple orders. A junction table (OrderItems) properly models this many-to-many relationship while allowing additional attributes like quantity and price at order time.",
+     "keywords": ["database design", "many-to-many relationship", "junction table", "e-commerce", "data modeling", "normalization"]
+   },
+   {
+     "id": 20,
+     "topic": "System Architecture",
+     "question": "For a web application expecting high traffic spikes, which architectural approach provides the best scalability?",
+     "options": [
+       "Single large server with maximum specs",
+       "Horizontal scaling with load balancers and stateless services",
+       "Vertical scaling only",
+       "Multiple servers with shared state"
+     ],
+     "response": "Horizontal scaling with load balancers and stateless services",
+     "explanation": "Horizontal scaling allows adding more servers as needed, load balancers distribute traffic evenly, and stateless services enable easy scaling without session affinity concerns, providing the best scalability for traffic spikes.",
+     "keywords": ["system architecture", "horizontal scaling", "load balancers", "stateless services", "scalability", "high traffic"]
+   },
+   {
+     "id": 1,
+     "topic": "JPA N+1 Problem",
+     "question": "You have an Order entity with a List of OrderItems. When fetching all orders, you notice it executes 1 query for orders + N queries for each order's items. How do you solve this N+1 problem?",
+     "options": [
+       "Use FetchType.EAGER for all relationships",
+       "Use @Query with JOIN FETCH or @EntityGraph",
+       "Load items separately in service layer",
+       "Use native SQL queries only"
+     ],
+     "response": "Use @Query with JOIN FETCH or @EntityGraph",
+     "explanation": "The N+1 problem occurs when fetching a collection triggers additional queries. Using JOIN FETCH in JPQL or @EntityGraph annotation fetches related entities in a single query, eliminating the N+1 problem.",
+     "keywords": ["JPA", "N+1 problem", "JOIN FETCH", "@EntityGraph", "performance", "Hibernate"]
+   },
+   {
+     "id": 2,
+     "topic": "Spring Bean Scopes",
+     "question": "What is the default scope of a Spring bean, and what does it mean?",
+     "options": [
+       "Prototype - new instance for each request",
+       "Singleton - one instance per Spring container",
+       "Request - one instance per HTTP request",
+       "Session - one instance per HTTP session"
+     ],
+     "response": "Singleton - one instance per Spring container",
+     "explanation": "The default scope in Spring is singleton, meaning the Spring container creates only one instance of the bean and shares it across the entire application context. This is different from the Gang of Four singleton pattern.",
+     "keywords": ["Spring", "bean scope", "singleton", "default scope", "IoC container", "bean lifecycle"]
+   },
+   {
+     "id": 3,
+     "topic": "OAuth2 Implementation",
+     "question": "In Spring Security, which OAuth2 flow is most appropriate for a single-page application (SPA)?",
+     "options": [
+       "Authorization Code Flow",
+       "Authorization Code Flow with PKCE",
+       "Client Credentials Flow",
+       "Resource Owner Password Credentials Flow"
+     ],
+     "response": "Authorization Code Flow with PKCE",
+     "explanation": "For SPAs, Authorization Code Flow with PKCE (Proof Key for Code Exchange) is recommended as it provides security for public clients that cannot securely store client secrets, preventing authorization code interception attacks.",
+     "keywords": ["OAuth2", "Spring Security", "PKCE", "SPA", "authorization code flow", "public client"]
+   },
+   {
+     "id": 4,
+     "topic": "Spring Boot Auto-Configuration",
+     "question": "How does Spring Boot auto-configuration work, and how can you exclude specific auto-configurations?",
+     "options": [
+       "It automatically scans all JAR files",
+       "Uses @Conditional annotations and can be excluded with @EnableAutoConfiguration(exclude={})",
+       "It configures everything by default",
+       "Requires manual configuration for everything"
+     ],
+     "response": "Uses @Conditional annotations and can be excluded with @EnableAutoConfiguration(exclude={})",
+     "explanation": "Spring Boot auto-configuration uses @Conditional annotations to conditionally configure beans based on classpath, properties, and existing beans. You can exclude specific auto-configurations using the exclude attribute.",
+     "keywords": ["Spring Boot", "auto-configuration", "@Conditional", "@EnableAutoConfiguration", "exclude", "conditional beans"]
+   },
+   {
+     "id": 5,
+     "topic": "Algorithm Problem - Palindrome",
+     "question": "Write an efficient Java method to check if a string is a palindrome (ignoring case and spaces). Which approach is most optimal?",
+     "options": [
+       "Reverse the string and compare",
+       "Use two pointers from start and end, comparing characters",
+       "Use recursion only",
+       "Convert to array and sort"
+     ],
+     "response": "Use two pointers from start and end, comparing characters",
+     "explanation": "Two-pointer approach is most efficient with O(n) time and O(1) space complexity. Compare characters from both ends moving inward, skipping non-alphanumeric characters and ignoring case.",
+     "keywords": ["algorithm", "palindrome", "two pointers", "string manipulation", "time complexity", "space complexity"]
+   },
+   {
+     "id": 6,
+     "topic": "API Gateway Pattern",
+     "question": "What are the main benefits of using an API Gateway in a microservices architecture?",
+     "options": [
+       "Only for load balancing",
+       "Single entry point, authentication, rate limiting, request routing, and response aggregation",
+       "Just for logging requests",
+       "Only for SSL termination"
+     ],
+     "response": "Single entry point, authentication, rate limiting, request routing, and response aggregation",
+     "explanation": "API Gateway provides a single entry point for clients, handles cross-cutting concerns like authentication, rate limiting, request routing to appropriate microservices, and can aggregate responses from multiple services.",
+     "keywords": ["API Gateway", "microservices", "single entry point", "authentication", "rate limiting", "request routing"]
+   },
+   {
+     "id": 7,
+     "topic": "EJB Lifecycle",
+     "question": "What are the lifecycle states of a Stateful Session Bean in EJB?",
+     "options": [
+       "Created and Destroyed only",
+       "Does Not Exist, Method-Ready, and Passivated",
+       "Active and Inactive only",
+       "Running and Stopped only"
+     ],
+     "response": "Does Not Exist, Method-Ready, and Passivated",
+     "explanation": "Stateful Session Beans have three lifecycle states: Does Not Exist (before creation), Method-Ready (active and available for method calls), and Passivated (temporarily stored to disk to save memory).",
+     "keywords": ["EJB", "Stateful Session Bean", "lifecycle", "passivation", "method-ready", "does not exist"]
+   },
+   {
+     "id": 8,
+     "topic": "Java Memory Model",
+     "question": "What happens when you get an OutOfMemoryError in Java heap space?",
+     "options": [
+       "The application automatically restarts",
+       "The JVM cannot allocate more objects in heap memory",
+       "Only the current thread stops",
+       "The garbage collector fixes it automatically"
+     ],
+     "response": "The JVM cannot allocate more objects in heap memory",
+     "explanation": "OutOfMemoryError occurs when the JVM cannot allocate an object because heap memory is exhausted and garbage collector cannot free enough space. This typically indicates memory leaks or insufficient heap size.",
+     "keywords": ["Java", "OutOfMemoryError", "heap memory", "JVM", "garbage collection", "memory management"]
+   },
+   {
+     "id": 9,
+     "topic": "Spring Transaction Propagation",
+     "question": "What happens when a method with @Transactional(propagation = REQUIRES_NEW) is called from within another transactional method?",
+     "options": [
+       "Uses the existing transaction",
+       "Suspends current transaction and creates a new one",
+       "Throws an exception",
+       "Ignores the annotation"
+     ],
+     "response": "Suspends current transaction and creates a new one",
+     "explanation": "REQUIRES_NEW propagation suspends the current transaction and creates a completely new transaction. The new transaction can commit or rollback independently of the outer transaction.",
+     "keywords": ["Spring", "@Transactional", "REQUIRES_NEW", "transaction propagation", "suspend transaction", "independent transaction"]
+   },
+   {
+     "id": 10,
+     "topic": "Java Collections Performance",
+     "question": "For a collection that needs frequent insertions at the beginning and random access by index, which data structure is most appropriate?",
+     "options": [
+       "ArrayList",
+       "LinkedList",
+       "ArrayDeque",
+       "Vector"
+     ],
+     "response": "ArrayDeque",
+     "explanation": "ArrayDeque provides O(1) insertions at both ends and better performance than LinkedList for most operations. While it doesn't provide indexed access, for frequent insertions at the beginning, it's more efficient than ArrayList's O(n) insertion.",
+     "keywords": ["Java Collections", "ArrayDeque", "ArrayList", "LinkedList", "performance", "time complexity", "insertion"]
+   },
+   {
+     "id": 11,
+     "topic": "Spring AOP",
+     "question": "What's the difference between @Around and @Before advice in Spring AOP?",
+     "options": [
+       "@Around runs after method, @Before runs before",
+       "@Around can control method execution and modify return values, @Before only runs before method",
+       "No difference, they work the same",
+       "@Before is faster than @Around"
+     ],
+     "response": "@Around can control method execution and modify return values, @Before only runs before method",
+     "explanation": "@Around advice can control whether the target method is executed, modify arguments, handle exceptions, and change return values. @Before advice only executes before the method and cannot prevent execution.",
+     "keywords": ["Spring AOP", "@Around", "@Before", "advice", "method execution", "aspect-oriented programming"]
+   },
+   {
+     "id": 12,
+     "topic": "REST API Status Codes",
+     "question": "Which HTTP status code should you return when a user tries to access a resource they don't have permission for?",
+     "options": [
+       "401 Unauthorized",
+       "403 Forbidden",
+       "404 Not Found",
+       "400 Bad Request"
+     ],
+     "response": "403 Forbidden",
+     "explanation": "403 Forbidden indicates the server understood the request but refuses to authorize it. 401 Unauthorized means authentication is required or has failed. 403 is for authorization failures when the user is authenticated but lacks permission.",
+     "keywords": ["HTTP status codes", "403 Forbidden", "401 Unauthorized", "REST API", "authorization", "authentication"]
+   },
+   {
+     "id": 13,
+     "topic": "Java Functional Programming",
+     "question": "What's the difference between map() and flatMap() in Java Streams?",
+     "options": [
+       "No difference, they work the same",
+       "map() transforms elements 1:1, flatMap() flattens nested structures",
+       "flatMap() is slower than map()",
+       "map() only works with numbers"
+     ],
+     "response": "map() transforms elements 1:1, flatMap() flattens nested structures",
+     "explanation": "map() applies a function to each element and returns a stream of the same size. flatMap() applies a function that returns a stream for each element, then flattens all resulting streams into a single stream.",
+     "keywords": ["Java Streams", "map", "flatMap", "functional programming", "stream operations", "flattening"]
+   },
+   {
+     "id": 14,
+     "topic": "Database Connection Pooling",
+     "question": "Why is connection pooling important in Java applications, and what problems does it solve?",
+     "options": [
+       "It's not important, direct connections are better",
+       "Reduces connection creation overhead, manages resource usage, and improves performance",
+       "Only needed for large databases",
+       "Just for security purposes"
+     ],
+     "response": "Reduces connection creation overhead, manages resource usage, and improves performance",
+     "explanation": "Connection pooling reuses database connections instead of creating new ones for each request, reducing overhead, limiting resource usage, preventing connection exhaustion, and significantly improving application performance.",
+     "keywords": ["connection pooling", "database connections", "performance", "resource management", "overhead reduction", "HikariCP"]
+   },
+   {
+     "id": 15,
+     "topic": "Spring Security JWT",
+     "question": "How do you implement JWT token validation in Spring Security?",
+     "options": [
+       "Store tokens in database only",
+       "Create a custom JwtAuthenticationFilter that validates tokens on each request",
+       "Use session-based authentication instead",
+       "Validate tokens manually in each controller"
+     ],
+     "response": "Create a custom JwtAuthenticationFilter that validates tokens on each request",
+     "explanation": "Implement a custom filter that extends OncePerRequestFilter, extracts JWT from request headers, validates the token (signature, expiration), and sets authentication in SecurityContext for subsequent request processing.",
+     "keywords": ["Spring Security", "JWT", "JwtAuthenticationFilter", "token validation", "OncePerRequestFilter", "SecurityContext"]
+   },
+   {
+     "id": 16,
+     "topic": "Java Exception Hierarchy",
+     "question": "What's the difference between checked and unchecked exceptions in Java?",
+     "options": [
+       "Checked exceptions are faster",
+       "Checked exceptions must be declared or caught, unchecked exceptions don't",
+       "Unchecked exceptions are more secure",
+       "No difference between them"
+     ],
+     "response": "Checked exceptions must be declared or caught, unchecked exceptions don't",
+     "explanation": "Checked exceptions (extending Exception) must be either caught or declared in method signature. Unchecked exceptions (extending RuntimeException) don't require explicit handling and can propagate up the call stack.",
+     "keywords": ["Java", "checked exceptions", "unchecked exceptions", "Exception", "RuntimeException", "exception handling"]
+   },
+   {
+     "id": 17,
+     "topic": "Spring Data JPA Queries",
+     "question": "What's the difference between @Query and derived query methods in Spring Data JPA?",
+     "options": [
+       "@Query is faster than derived methods",
+       "@Query allows custom JPQL/SQL, derived methods generate queries from method names",
+       "Derived methods are more secure",
+       "No difference in functionality"
+     ],
+     "response": "@Query allows custom JPQL/SQL, derived methods generate queries from method names",
+     "explanation": "Derived query methods (like findByNameAndAge) automatically generate queries based on method names. @Query annotation allows writing custom JPQL or native SQL for complex queries that can't be expressed through method names.",
+     "keywords": ["Spring Data JPA", "@Query", "derived queries", "JPQL", "method names", "custom queries"]
+   },
+   {
+     "id": 18,
+     "topic": "Java Multithreading",
+     "question": "What's the difference between Callable and Runnable interfaces?",
+     "options": [
+       "Callable can return a value and throw checked exceptions, Runnable cannot",
+       "Runnable is faster than Callable",
+       "Callable is only for database operations",
+       "No difference between them"
+     ],
+     "response": "Callable can return a value and throw checked exceptions, Runnable cannot",
+     "explanation": "Callable<T> has a call() method that returns a value of type T and can throw checked exceptions. Runnable has a run() method with void return type and cannot throw checked exceptions.",
+     "keywords": ["Java", "Callable", "Runnable", "multithreading", "return value", "checked exceptions", "concurrency"]
+   },
+   {
+     "id": 19,
+     "topic": "Spring Bean Initialization",
+     "question": "What are the different ways to perform initialization logic when a Spring bean is created?",
+     "options": [
+       "Only constructor injection",
+       "@PostConstruct, InitializingBean interface, or init-method attribute",
+       "Only static blocks",
+       "Only @Autowired methods"
+     ],
+     "response": "@PostConstruct, InitializingBean interface, or init-method attribute",
+     "explanation": "Spring provides multiple ways for bean initialization: @PostConstruct annotation, implementing InitializingBean interface (afterPropertiesSet method), or specifying init-method in configuration. @PostConstruct is most commonly used.",
+     "keywords": ["Spring", "bean initialization", "@PostConstruct", "InitializingBean", "init-method", "lifecycle callbacks"]
+   },
+   {
+     "id": 20,
+     "topic": "JPA Entity States",
+     "question": "What are the four entity states in JPA/Hibernate lifecycle?",
+     "options": [
+       "Created, Updated, Deleted, Active",
+       "New, Managed, Detached, Removed",
+       "Persistent, Transient, Cached, Expired",
+       "Fresh, Stale, Dirty, Clean"
+     ],
+     "response": "New, Managed, Detached, Removed",
+     "explanation": "JPA entity states are: New (transient, not associated with persistence context), Managed (persistent, tracked by EntityManager), Detached (was managed but session closed), and Removed (marked for deletion).",
+     "keywords": ["JPA", "Hibernate", "entity states", "persistence context", "EntityManager", "lifecycle"]
+   },
+   {
+     "id": 21,
+     "topic": "Java Garbage Collection",
+     "question": "Which garbage collector is best for low-latency applications requiring predictable pause times?",
+     "options": [
+       "Serial GC",
+       "Parallel GC",
+       "G1 GC",
+       "ConcurrentMarkSweep (CMS)"
+     ],
+     "response": "G1 GC",
+     "explanation": "G1 GC (Garbage First) is designed for low-latency applications with large heaps. It provides predictable pause times through incremental collection and allows setting target pause time goals, making it ideal for latency-sensitive applications.",
+     "keywords": ["Java", "G1 GC", "garbage collection", "low latency", "predictable pause times", "incremental collection"]
+   },
+   {
+     "id": 22,
+     "topic": "Spring Profile Configuration",
+     "question": "How do you activate specific Spring profiles in a Spring Boot application?",
+     "options": [
+       "Only through application.properties",
+       "spring.profiles.active property, command line args, or environment variables",
+       "Only through Java system properties",
+       "Profiles are always active by default"
+     ],
+     "response": "spring.profiles.active property, command line args, or environment variables",
+     "explanation": "Spring profiles can be activated through: spring.profiles.active in application.properties, command line arguments (--spring.profiles.active=dev), environment variables (SPRING_PROFILES_ACTIVE), or programmatically.",
+     "keywords": ["Spring", "profiles", "spring.profiles.active", "environment configuration", "command line", "environment variables"]
+   },
+   {
+     "id": 23,
+     "topic": "REST API Idempotency",
+     "question": "Which HTTP methods are considered idempotent in REST APIs?",
+     "options": [
+       "Only GET",
+       "GET, PUT, DELETE",
+       "POST and PUT only",
+       "All HTTP methods are idempotent"
+     ],
+     "response": "GET, PUT, DELETE",
+     "explanation": "Idempotent methods produce the same result when called multiple times. GET retrieves data, PUT replaces resources, DELETE removes resources - all can be called multiple times safely. POST is not idempotent as it typically creates new resources.",
+     "keywords": ["REST API", "idempotent", "HTTP methods", "GET", "PUT", "DELETE", "POST", "safe operations"]
+   },
+   {
+     "id": 24,
+     "topic": "Java Design Patterns",
+     "question": "In the Singleton pattern, what's the thread-safe way to implement lazy initialization?",
+     "options": [
+       "Simple if-null check",
+       "Double-checked locking with volatile keyword",
+       "Synchronize the entire class",
+       "Use static initialization only"
+     ],
+     "response": "Double-checked locking with volatile keyword",
+     "explanation": "Double-checked locking with volatile ensures thread safety while maintaining performance. The volatile keyword prevents instruction reordering, and double-checking reduces synchronization overhead after the first initialization.",
+     "keywords": ["Singleton pattern", "thread safety", "double-checked locking", "volatile", "lazy initialization", "concurrency"]
+   },
+   {
+     "id": 25,
+     "topic": "Spring MVC Request Mapping",
+     "question": "What's the difference between @RequestParam and @PathVariable in Spring MVC?",
+     "options": [
+       "No difference, they work the same",
+       "@RequestParam extracts query parameters, @PathVariable extracts URL path segments",
+       "@PathVariable is only for POST requests",
+       "@RequestParam is more secure"
+     ],
+     "response": "@RequestParam extracts query parameters, @PathVariable extracts URL path segments",
+     "explanation": "@RequestParam extracts values from query string parameters (?name=value), while @PathVariable extracts values from URL path segments (/users/{id}). Both are used for different parts of the HTTP request URL.",
+     "keywords": ["Spring MVC", "@RequestParam", "@PathVariable", "query parameters", "path variables", "URL mapping"]
+   },
+   {
+     "id": 26,
+     "topic": "Java Streams Collectors",
+     "question": "How do you group a list of objects by a property and count elements in each group using Java Streams?",
+     "options": [
+       "Use forEach and manual counting",
+       "groupingBy(classifier, counting())",
+       "Use only filter and map",
+       "Convert to array first"
+     ],
+     "response": "groupingBy(classifier, counting())",
+     "explanation": "Collectors.groupingBy() groups elements by a classifier function, and Collectors.counting() counts elements in each group. Combined: .collect(groupingBy(Person::getCity, counting())) groups by city and counts people per city.",
+     "keywords": ["Java Streams", "Collectors", "groupingBy", "counting", "stream operations", "functional programming"]
+   },
+   {
+     "id": 27,
+     "topic": "Database Transaction Isolation",
+     "question": "What isolation level prevents dirty reads but allows non-repeatable reads?",
+     "options": [
+       "READ_UNCOMMITTED",
+       "READ_COMMITTED",
+       "REPEATABLE_READ",
+       "SERIALIZABLE"
+     ],
+     "response": "READ_COMMITTED",
+     "explanation": "READ_COMMITTED isolation level prevents dirty reads (reading uncommitted data) but allows non-repeatable reads (same query may return different results within the same transaction if another transaction commits changes).",
+     "keywords": ["database", "transaction isolation", "READ_COMMITTED", "dirty reads", "non-repeatable reads", "concurrency"]
+   },
+   {
+     "id": 28,
+     "topic": "Spring Boot Actuator",
+     "question": "Which Spring Boot Actuator endpoint provides health check information?",
+     "options": [
+       "/info",
+       "/health",
+       "/metrics",
+       "/status"
+     ],
+     "response": "/health",
+     "explanation": "The /health endpoint provides health check information about the application and its dependencies (database, message queues, etc.). It returns UP/DOWN status and can be customized with additional health indicators.",
+     "keywords": ["Spring Boot", "Actuator", "/health", "health check", "monitoring", "application status"]
+   },
+   {
+     "id": 29,
+     "topic": "Java Optional Best Practices",
+     "question": "What's the best practice for using Optional when a method might not return a value?",
+     "options": [
+       "Return null instead of Optional",
+       "Return Optional<T> and use orElse/orElseThrow in calling code",
+       "Always return Optional.empty()",
+       "Use Optional only for collections"
+     ],
+     "response": "Return Optional<T> and use orElse/orElseThrow in calling code",
+     "explanation": "Optional clearly indicates that a method might not return a value, forcing callers to handle the absence explicitly. Use orElse() for default values, orElseThrow() for exceptions, or ifPresent() for conditional actions.",
+     "keywords": ["Java", "Optional", "null safety", "orElse", "orElseThrow", "ifPresent", "best practices"]
+   },
+   {
+     "id": 30,
+     "topic": "Microservices Data Management",
+     "question": "How should microservices handle data consistency across service boundaries?",
+     "options": [
+       "Use distributed transactions (2PC)",
+       "Implement eventual consistency with saga patterns or event sourcing",
+       "Share the same database between services",
+       "Avoid data consistency entirely"
+     ],
+     "response": "Implement eventual consistency with saga patterns or event sourcing",
+     "explanation": "Microservices should avoid distributed transactions due to complexity and coupling. Instead, use eventual consistency through saga patterns (orchestration/choreography) or event sourcing to maintain data consistency across service boundaries.",
+     "keywords": ["microservices", "data consistency", "eventual consistency", "saga pattern", "event sourcing", "distributed systems"]
+   },
+   {
+     "id": 31,
+     "topic": "Spring Security Authentication",
+     "question": "What's the difference between authentication and authorization in Spring Security?",
+     "options": [
+       "They are the same thing",
+       "Authentication verifies identity, authorization verifies permissions",
+       "Authorization comes before authentication",
+       "Authentication is only for web applications"
+     ],
+     "response": "Authentication verifies identity, authorization verifies permissions",
+     "explanation": "Authentication answers 'who are you?' by verifying user identity (username/password, tokens). Authorization answers 'what can you do?' by checking if the authenticated user has permission to access specific resources or perform actions.",
+     "keywords": ["Spring Security", "authentication", "authorization", "identity verification", "permissions", "access control"]
+   },
+   {
+     "id": 32,
+     "topic": "Java CompletableFuture",
+     "question": "How do you handle exceptions in CompletableFuture chains?",
+     "options": [
+       "Use try-catch blocks only",
+       "Use exceptionally() or handle() methods",
+       "Exceptions cannot be handled in CompletableFuture",
+       "Use synchronized blocks"
+     ],
+     "response": "Use exceptionally() or handle() methods",
+     "explanation": "CompletableFuture provides exceptionally() to handle exceptions and provide fallback values, and handle() to process both successful results and exceptions. These methods allow graceful error handling in asynchronous pipelines.",
+     "keywords": ["Java", "CompletableFuture", "exception handling", "exceptionally", "handle", "asynchronous programming"]
+   },
+   {
+     "id": 33,
+     "topic": "JPA Cascade Types",
+     "question": "What does CascadeType.ALL mean in JPA relationships?",
+     "options": [
+       "Only persists related entities",
+       "Applies all cascade operations: PERSIST, MERGE, REMOVE, REFRESH, DETACH",
+       "Only removes related entities",
+       "Has no effect on operations"
+     ],
+     "response": "Applies all cascade operations: PERSIST, MERGE, REMOVE, REFRESH, DETACH",
+     "explanation": "CascadeType.ALL includes all cascade types: PERSIST (save), MERGE (update), REMOVE (delete), REFRESH (reload), and DETACH (detach from persistence context). Operations on parent entity are automatically applied to related entities.",
+     "keywords": ["JPA", "CascadeType", "ALL", "PERSIST", "MERGE", "REMOVE", "entity relationships", "cascade operations"]
+   },
+   {
+     "id": 34,
+     "topic": "Algorithm - Binary Search",
+     "question": "What's the time complexity of binary search, and what prerequisite does the data structure need?",
+     "options": [
+       "O(n) time, no prerequisites",
+       "O(log n) time, data must be sorted",
+       "O(n²) time, data must be unique",
+       "O(1) time, any data structure"
+     ],
+     "response": "O(log n) time, data must be sorted",
+     "explanation": "Binary search has O(log n) time complexity by repeatedly dividing the search space in half. It requires the data to be sorted beforehand. Each comparison eliminates half of the remaining elements.",
+     "keywords": ["algorithm", "binary search", "O(log n)", "time complexity", "sorted data", "divide and conquer"]
+   },
+   {
+     "id": 35,
+     "topic": "Spring Boot Testing",
+     "question": "What's the difference between @SpringBootTest and @WebMvcTest?",
+     "options": [
+       "No difference, they work the same",
+       "@SpringBootTest loads full application context, @WebMvcTest loads only web layer",
+       "@WebMvcTest is faster than @SpringBootTest",
+       "@SpringBootTest is only for unit tests"
+     ],
+     "response": "@SpringBootTest loads full application context, @WebMvcTest loads only web layer",
+     "explanation": "@SpringBootTest loads the complete application context including all beans, while @WebMvcTest loads only the web layer (controllers, security config) for focused testing. @WebMvcTest is faster and more targeted for controller testing.",
+     "keywords": ["Spring Boot", "testing", "@SpringBootTest", "@WebMvcTest", "application context", "web layer testing"]
+   },
+   {
+     "id": 36,
+     "topic": "Java Memory Areas",
+     "question": "Where are static variables stored in JVM memory?",
+     "options": [
+       "Heap memory",
+       "Method Area (Metaspace in Java 8+)",
+       "Stack memory",
+       "PC Register"
+     ],
+     "response": "Method Area (Metaspace in Java 8+)",
+     "explanation": "Static variables are stored in the Method Area (called Metaspace in Java 8+), which is part of non-heap memory. This area stores class-level information including static variables, method bytecode, and constant pool.",
+     "keywords": ["Java", "JVM memory", "static variables", "Method Area", "Metaspace", "non-heap memory"]
+   },
+   {
+     "id": 37,
+     "topic": "REST API Versioning",
+     "question": "What are the common strategies for versioning REST APIs?",
+     "options": [
+       "Only URL path versioning",
+       "URL path (/v1/api), query parameter (?version=1), or header versioning",
+       "Only header versioning",
+       "APIs should never be versioned"
+     ],
+     "response": "URL path (/v1/api), query parameter (?version=1), or header versioning",
+     "explanation": "Common API versioning strategies include: URL path versioning (/v1/users), query parameter versioning (/users?version=1), and header versioning (Accept: application/vnd.api.v1+json). Each has trade-offs in terms of clarity and caching.",
+     "keywords": ["REST API", "versioning", "URL path", "query parameter", "header versioning", "API evolution"]
+   },
+   {
+     "id": 38,
+     "topic": "Spring Data JPA Projections",
+     "question": "How do you fetch only specific fields from an entity in Spring Data JPA to improve performance?",
+     "options": [
+       "Always fetch complete entities",
+       "Use interface-based or class-based projections",
+       "Use only native SQL queries",
+       "Projections are not supported"
+     ],
+     "response": "Use interface-based or class-based projections",
+     "explanation": "Spring Data JPA supports projections to fetch only required fields: interface projections (define getters for needed fields) or class-based projections (DTOs). This reduces memory usage and improves performance by avoiding unnecessary data transfer.",
+     "keywords": ["Spring Data JPA", "projections", "interface-based", "class-based", "DTO", "performance optimization"]
+   },
+   {
+     "id": 39,
+     "topic": "Java Concurrency Utilities",
+     "question": "When should you use ConcurrentHashMap over HashMap?",
+     "options": [
+       "Always use ConcurrentHashMap",
+       "When multiple threads need to access/modify the map concurrently",
+       "Only for large datasets",
+       "Never, HashMap is always better"
+     ],
+     "response": "When multiple threads need to access/modify the map concurrently",
+     "explanation": "ConcurrentHashMap should be used when multiple threads need to read/write from the map simultaneously. It provides thread safety without synchronizing the entire map, offering better performance than synchronized HashMap in concurrent scenarios.",
+     "keywords": ["Java", "ConcurrentHashMap", "HashMap", "thread safety", "concurrency", "concurrent access"]
+   },
+   {
+     "id": 40,
+     "topic": "Spring Bean Validation",
+     "question": "How do you validate request data in Spring MVC controllers?",
+     "options": [
+       "Manual validation in each method",
+       "Use @Valid annotation with Bean Validation constraints",
+       "Only client-side validation",
+       "Validation is not needed"
+     ],
+     "response": "Use @Valid annotation with Bean Validation constraints",
+     "explanation": "@Valid triggers validation of request objects annotated with Bean Validation constraints (@NotNull, @Size, @Email, etc.). BindingResult parameter captures validation errors, allowing custom error handling.",
+     "keywords": ["Spring MVC", "@Valid", "Bean Validation", "validation constraints", "BindingResult", "request validation"]
+     },
+    {
+      "id": 1,
+      "topic": "Team Leadership",
+      "question": "Your development team is behind schedule on a critical project. Two senior developers are in conflict about the technical approach, and junior developers are confused about priorities. How do you handle this situation?",
+      "options": [
+        "Let them work it out themselves",
+        "Facilitate a technical discussion, align on approach, clarify priorities, and adjust timeline if needed",
+        "Assign work to different people to avoid conflict",
+        "Escalate to upper management immediately"
+      ],
+      "response": "Facilitate a technical discussion, align on approach, clarify priorities, and adjust timeline if needed",
+      "explanation": "Effective leadership involves facilitating resolution rather than avoiding conflict. Bring the team together to discuss technical approaches, make decisions, clarify priorities for junior developers, and communicate realistic timelines to stakeholders.",
+      "keywords": ["leadership", "conflict resolution", "team management", "technical decision making", "stakeholder communication"]
+    },
+    {
+      "id": 2,
+      "topic": "Proactive Communication",
+      "question": "You notice that a project requirement is ambiguous and could lead to different interpretations. The client hasn't explicitly asked for clarification. What's your proactive approach?",
+      "options": [
+        "Implement based on your best guess",
+        "Wait for the client to notice the issue",
+        "Immediately reach out to clarify requirements and document the discussion",
+        "Ask other team members to decide"
+      ],
+      "response": "Immediately reach out to clarify requirements and document the discussion",
+      "explanation": "Proactive communication prevents costly rework and demonstrates professionalism. Reach out early to clarify ambiguities, document decisions, and ensure all stakeholders are aligned before implementation begins.",
+      "keywords": ["proactive communication", "requirement clarification", "stakeholder management", "documentation", "risk prevention"]
+    },
+    {
+      "id": 3,
+      "topic": "Mentoring and Development",
+      "question": "A junior developer on your team is struggling with a complex feature and seems frustrated. They haven't asked for help directly. How do you approach this?",
+      "options": [
+        "Wait for them to ask for help",
+        "Take over the task yourself",
+        "Proactively offer guidance, pair programming, and break down the problem together",
+        "Assign the task to someone else"
+      ],
+      "response": "Proactively offer guidance, pair programming, and break down the problem together",
+      "explanation": "Good leaders identify when team members need help before they ask. Offer guidance, use pair programming for knowledge transfer, and help break complex problems into manageable pieces while building their confidence.",
+      "keywords": ["mentoring", "team development", "pair programming", "knowledge transfer", "emotional intelligence"]
+    },
+    {
+      "id": 4,
+      "topic": "Stakeholder Management",
+      "question": "The product manager wants to add a new feature that would require significant architecture changes 2 weeks before the release. How do you communicate the impact?",
+      "options": [
+        "Say 'yes' to avoid conflict",
+        "Refuse the request without explanation",
+        "Present options with clear trade-offs: scope, timeline, quality, and resource implications",
+        "Implement it quickly without proper design"
+      ],
+      "response": "Present options with clear trade-offs: scope, timeline, quality, and resource implications",
+      "explanation": "Effective communication involves presenting stakeholders with clear options and trade-offs. Explain the technical impact, timeline implications, quality risks, and resource needs to enable informed decision-making.",
+      "keywords": ["stakeholder communication", "trade-off analysis", "technical translation", "decision support", "project management"]
+    },
+    {
+      "id": 5,
+      "topic": "Change Management",
+      "question": "Your company is adopting a new technology stack, and some team members are resistant to change. How do you lead this transition?",
+      "options": [
+        "Force everyone to use the new technology immediately",
+        "Let people use whatever they prefer",
+        "Create a learning plan, address concerns, provide training, and celebrate early wins",
+        "Replace resistant team members"
+      ],
+      "response": "Create a learning plan, address concerns, provide training, and celebrate early wins",
+      "explanation": "Successful change management involves understanding resistance, providing adequate training and support, addressing concerns openly, and celebrating progress to build momentum and confidence in the new approach.",
+      "keywords": ["change management", "training and development", "resistance management", "team motivation", "learning culture"]
+    },
+    {
+      "id": 6,
+      "topic": "Crisis Communication",
+      "question": "A critical production issue affects major clients during business hours. Multiple teams are investigating. How do you manage communication during this crisis?",
+      "options": [
+        "Wait until the issue is completely resolved before communicating",
+        "Establish regular updates to stakeholders, coordinate team efforts, and maintain transparency",
+        "Let each team communicate separately",
+        "Only communicate if clients complain"
+      ],
+      "response": "Establish regular updates to stakeholders, coordinate team efforts, and maintain transparency",
+      "explanation": "Crisis communication requires transparency, regular updates, and coordination. Establish communication schedules, designate point persons, provide honest status updates, and coordinate efforts to prevent confusion and maintain trust.",
+      "keywords": ["crisis management", "transparent communication", "stakeholder updates", "team coordination", "incident response"]
+    },
+    {
+      "id": 7,
+      "topic": "Decision Making",
+      "question": "Your team needs to choose between two technical approaches. One is faster to implement but creates technical debt. The other is robust but takes longer. How do you make this decision?",
+      "options": [
+        "Always choose the faster option",
+        "Always choose the robust option",
+        "Gather input from team, assess business context, timeline constraints, and long-term implications",
+        "Let the team vote on the decision"
+      ],
+      "response": "Gather input from team, assess business context, timeline constraints, and long-term implications",
+      "explanation": "Good decision-making involves gathering diverse perspectives, understanding business context, evaluating short and long-term implications, and making informed choices that balance competing priorities.",
+      "keywords": ["decision making", "technical leadership", "business context", "long-term thinking", "collaborative input"]
+    },
+    {
+      "id": 8,
+      "topic": "Performance Management",
+      "question": "A team member consistently delivers good work but misses deadlines and doesn't communicate delays proactively. How do you address this?",
+      "options": [
+        "Ignore it since the work quality is good",
+        "Publicly criticize them in team meetings",
+        "Have a private conversation to understand root causes and develop improvement plan",
+        "Immediately escalate to HR"
+      ],
+      "response": "Have a private conversation to understand root causes and develop improvement plan",
+      "explanation": "Address performance issues privately and constructively. Understand underlying causes (workload, skills, personal issues), provide clear expectations, develop improvement plans, and offer support while maintaining accountability.",
+      "keywords": ["performance management", "constructive feedback", "root cause analysis", "improvement planning", "employee support"]
+    },
+    {
+      "id": 9,
+      "topic": "Cross-functional Collaboration",
+      "question": "The QA team and development team are having frequent conflicts about bug reports and fix priorities. How do you facilitate better collaboration?",
+      "options": [
+        "Tell QA to be less picky about bugs",
+        "Tell developers to fix everything immediately",
+        "Organize joint sessions to establish clear processes, communication protocols, and shared understanding",
+        "Keep the teams completely separate"
+      ],
+      "response": "Organize joint sessions to establish clear processes, communication protocols, and shared understanding",
+      "explanation": "Foster collaboration by bringing teams together to understand each other's perspectives, establish clear processes for bug reporting and prioritization, improve communication protocols, and build mutual respect.",
+      "keywords": ["cross-functional collaboration", "process improvement", "team dynamics", "communication protocols", "conflict resolution"]
+    },
+    {
+      "id": 10,
+      "topic": "Vision and Strategy Communication",
+      "question": "You need to communicate a complex technical architecture decision to non-technical stakeholders. How do you ensure they understand the value and implications?",
+      "options": [
+        "Use detailed technical diagrams and jargon",
+        "Skip the technical details entirely",
+        "Use business-focused language, analogies, and focus on benefits and risks",
+        "Send a long technical document"
+      ],
+      "response": "Use business-focused language, analogies, and focus on benefits and risks",
+      "explanation": "Effective technical communication to non-technical audiences requires translating complex concepts into business language, using relatable analogies, focusing on business value, and clearly explaining benefits and risks.",
+      "keywords": ["technical communication", "stakeholder communication", "business translation", "analogies", "value proposition"]
+    },
+    {
+      "id": 11,
+      "topic": "Team Motivation",
+      "question": "Your team has been working on a challenging project for months with little visible progress. Morale is declining. How do you re-energize the team?",
+      "options": [
+        "Push harder for faster results",
+        "Break work into smaller wins, celebrate progress, communicate project value, and address concerns",
+        "Promise rewards you can't guarantee",
+        "Ignore the morale issue"
+      ],
+      "response": "Break work into smaller wins, celebrate progress, communicate project value, and address concerns",
+      "explanation": "Rebuild morale by creating visible progress through smaller milestones, celebrating achievements, reminding the team of project importance, addressing concerns openly, and providing perspective on overall progress.",
+      "keywords": ["team motivation", "morale management", "milestone planning", "progress communication", "team engagement"]
+    },
+    {
+      "id": 12,
+      "topic": "Delegation and Empowerment",
+      "question": "You're overwhelmed with tasks and your team has capacity, but you're concerned about quality and timelines. How do you approach delegation?",
+      "options": [
+        "Do everything yourself to ensure quality",
+        "Delegate everything immediately without guidance",
+        "Identify suitable tasks, provide clear context and success criteria, and establish check-in points",
+        "Only delegate unimportant tasks"
+      ],
+      "response": "Identify suitable tasks, provide clear context and success criteria, and establish check-in points",
+      "explanation": "Effective delegation involves selecting appropriate tasks for team members' skill levels, providing clear context and success criteria, establishing regular check-ins for support, and gradually increasing complexity as confidence builds.",
+      "keywords": ["delegation", "team empowerment", "clear expectations", "skill development", "progressive responsibility"]
+    },
+    {
+      "id": 13,
+      "topic": "Innovation and Improvement",
+      "question": "Your team suggests implementing a new technology that could improve efficiency but requires learning time and some risk. How do you evaluate and communicate this proposal?",
+      "options": [
+        "Reject it to avoid risk",
+        "Implement it immediately without evaluation",
+        "Assess benefits vs. costs, create a pilot plan, and communicate decision rationale to stakeholders",
+        "Let the team decide without leadership input"
+      ],
+      "response": "Assess benefits vs. costs, create a pilot plan, and communicate decision rationale to stakeholders",
+      "explanation": "Evaluate innovation proposals by analyzing benefits, costs, and risks. Create pilot programs to test viability, involve stakeholders in decision-making, and clearly communicate rationale whether accepting or declining the proposal.",
+      "keywords": ["innovation management", "risk assessment", "pilot programs", "stakeholder buy-in", "decision communication"]
+    },
+    {
+      "id": 14,
+      "topic": "Meeting Leadership",
+      "question": "You're leading a technical discussion meeting where conversations keep going off-topic and some team members aren't participating. How do you improve meeting effectiveness?",
+      "options": [
+        "Let discussions flow naturally",
+        "Cancel all meetings",
+        "Set clear agenda, time-box discussions, actively facilitate participation, and summarize decisions",
+        "Only invite senior team members"
+      ],
+      "response": "Set clear agenda, time-box discussions, actively facilitate participation, and summarize decisions",
+      "explanation": "Run effective meetings by setting clear agendas, time-boxing discussions, actively facilitating to keep on track, encouraging quiet members to participate, and ending with clear action items and decisions.",
+      "keywords": ["meeting leadership", "facilitation", "agenda management", "participation encouragement", "decision documentation"]
+    },
+    {
+      "id": 15,
+      "topic": "Feedback and Recognition",
+      "question": "A team member has significantly improved their coding practices and is helping others. How do you recognize this positive behavior?",
+      "options": [
+        "Don't say anything to avoid appearing biased",
+        "Only mention it in their annual review",
+        "Provide immediate specific feedback privately and consider public recognition",
+        "Give them a generic 'good job' comment"
+      ],
+      "response": "Provide immediate specific feedback privately and consider public recognition",
+      "explanation": "Recognize good behavior immediately with specific feedback about what they did well and its impact. Consider public recognition to reinforce positive behaviors and motivate others, while being genuine and specific.",
+      "keywords": ["feedback", "recognition", "positive reinforcement", "specific feedback", "team motivation", "behavior reinforcement"]
+    },
+    {
+      "id": 16,
+      "topic": "Remote Team Management",
+      "question": "You're managing a distributed team across different time zones. Communication and collaboration are suffering. What's your strategy to improve team dynamics?",
+      "options": [
+        "Require everyone to work the same hours",
+        "Minimize all communication",
+        "Establish communication protocols, use async tools effectively, and create overlap time for collaboration",
+        "Let everyone work independently without coordination"
+      ],
+      "response": "Establish communication protocols, use async tools effectively, and create overlap time for collaboration",
+      "explanation": "Manage distributed teams by establishing clear communication protocols, leveraging asynchronous tools for documentation and updates, scheduling core overlap hours for real-time collaboration, and ensuring all team members feel included.",
+      "keywords": ["remote management", "distributed teams", "communication protocols", "asynchronous collaboration", "time zone coordination"]
+    },
+    {
+      "id": 17,
+      "topic": "Technical Debt Communication",
+      "question": "Your system has accumulated significant technical debt that's slowing development. How do you communicate this to business stakeholders to get support for refactoring?",
+      "options": [
+        "Use technical jargon to explain the complexity",
+        "Just fix it without asking for approval",
+        "Translate technical debt into business impact: slower features, higher costs, increased bugs",
+        "Ignore the technical debt until it breaks"
+      ],
+      "response": "Translate technical debt into business impact: slower features, higher costs, increased bugs",
+      "explanation": "Communicate technical debt in business terms: explain how it slows feature delivery, increases development costs, causes more bugs, and impacts customer satisfaction. Provide concrete examples and propose phased solutions.",
+      "keywords": ["technical debt communication", "business impact", "stakeholder education", "cost-benefit analysis", "solution proposal"]
+    },
+    {
+      "id": 18,
+      "topic": "Conflict Resolution",
+      "question": "Two experienced developers have opposing views on system architecture and the disagreement is affecting team dynamics. How do you resolve this constructively?",
+      "options": [
+        "Choose one person's approach arbitrarily",
+        "Avoid the conflict and hope it resolves itself",
+        "Facilitate a structured discussion focusing on criteria, trade-offs, and team consensus",
+        "Split the system so each can implement their approach"
+      ],
+      "response": "Facilitate a structured discussion focusing on criteria, trade-offs, and team consensus",
+      "explanation": "Resolve technical conflicts by establishing evaluation criteria, facilitating structured discussions about trade-offs, encouraging evidence-based arguments, and working toward team consensus while maintaining respect for all viewpoints.",
+      "keywords": ["conflict resolution", "structured facilitation", "technical decision making", "team consensus", "evidence-based discussions"]
+    },
+    {
+      "id": 19,
+      "topic": "Knowledge Sharing Leadership",
+      "question": "Your team has knowledge silos where only certain people understand specific parts of the system. How do you promote knowledge sharing and reduce this risk?",
+      "options": [
+        "Document everything but don't change work patterns",
+        "Rotate people randomly without preparation",
+        "Implement code reviews, documentation standards, pair programming, and knowledge sharing sessions",
+        "Hire more people to reduce individual workload"
+      ],
+      "response": "Implement code reviews, documentation standards, pair programming, and knowledge sharing sessions",
+      "explanation": "Reduce knowledge silos through systematic approaches: mandatory code reviews for knowledge transfer, documentation standards, pair programming for skill sharing, regular tech talks, and cross-training initiatives.",
+      "keywords": ["knowledge sharing", "knowledge management", "code reviews", "pair programming", "documentation", "cross-training"]
+    },
+    {
+      "id": 20,
+      "topic": "Growth and Career Development",
+      "question": "A high-performing team member expresses interest in leadership opportunities but lacks some management skills. How do you support their development?",
+      "options": [
+        "Promote them immediately",
+        "Tell them they're not ready",
+        "Create development opportunities, provide mentoring, and gradually increase leadership responsibilities",
+        "Send them to external training only"
+      ],
+      "response": "Create development opportunities, provide mentoring, and gradually increase leadership responsibilities",
+      "explanation": "Support career growth by creating safe opportunities to practice leadership skills, providing mentoring and feedback, gradually increasing responsibilities, offering training resources, and setting clear development milestones.",
+      "keywords": ["career development", "leadership development", "mentoring", "progressive responsibility", "skill building", "growth planning"]
+    },
+    {
+      "id": 1,
+      "topic": "Spring Boot Deployment on AWS",
+      "question": "What are the key steps to deploy a Spring Boot application to AWS Elastic Beanstalk?",
+      "options": [
+        "Just upload the JAR file directly",
+        "Create application, upload JAR/WAR, configure environment variables, set up RDS if needed, configure load balancer",
+        "Only use EC2 instances manually",
+        "Deploy directly to S3"
+      ],
+      "response": "Create application, upload JAR/WAR, configure environment variables, set up RDS if needed, configure load balancer",
+      "explanation": "AWS Elastic Beanstalk deployment involves: 1) Create EB application and environment, 2) Upload packaged JAR/WAR, 3) Configure environment variables (database URLs, API keys), 4) Set up RDS for database, 5) Configure load balancer and auto-scaling, 6) Set up monitoring and logging.",
+      "keywords": ["AWS", "Elastic Beanstalk", "Spring Boot", "JAR deployment", "RDS", "load balancer", "environment variables"]
+    },
+    {
+      "id": 2,
+      "topic": "React App Deployment on Azure",
+      "question": "How do you deploy a React application to Azure Static Web Apps with CI/CD integration?",
+      "options": [
+        "Upload files manually to Azure Blob Storage",
+        "Connect GitHub repo, configure build settings, set up routing, enable custom domain",
+        "Use only Azure VMs",
+        "Deploy to Azure App Service without configuration"
+      ],
+      "response": "Connect GitHub repo, configure build settings, set up routing, enable custom domain",
+      "explanation": "Azure Static Web Apps deployment: 1) Connect GitHub repository, 2) Configure build settings (npm run build), 3) Set up routing for SPA, 4) Configure environment variables, 5) Set up custom domain and SSL, 6) Enable API integration if needed. Azure automatically handles CI/CD through GitHub Actions.",
+      "keywords": ["Azure", "Static Web Apps", "React", "GitHub Actions", "CI/CD", "SPA routing", "custom domain"]
+    },
+    {
+      "id": 3,
+      "topic": "Spring Boot Containerization on GCP",
+      "question": "What are the steps to deploy a containerized Spring Boot application to Google Cloud Run?",
+      "options": [
+        "Upload JAR file directly to Cloud Run",
+        "Create Dockerfile, build image, push to Container Registry, deploy to Cloud Run with environment config",
+        "Use only Compute Engine",
+        "Deploy without containerization"
+      ],
+      "response": "Create Dockerfile, build image, push to Container Registry, deploy to Cloud Run with environment config",
+      "explanation": "GCP Cloud Run deployment: 1) Create Dockerfile for Spring Boot, 2) Build container image (docker build), 3) Push to Google Container Registry, 4) Deploy to Cloud Run with environment variables, 5) Configure memory/CPU limits, 6) Set up custom domain and SSL, 7) Configure IAM permissions.",
+      "keywords": ["GCP", "Cloud Run", "Docker", "Container Registry", "Spring Boot", "containerization", "serverless"]
+    },
+    {
+      "id": 4,
+      "topic": "API Gateway Deployment on AWS",
+      "question": "How do you set up and deploy an API Gateway in AWS to route requests to your microservices?",
+      "options": [
+        "Create API Gateway, define resources/methods, configure integration with backend services, deploy to stage",
+        "Just use ALB without API Gateway",
+        "Deploy services without any gateway",
+        "Use only CloudFront for routing"
+      ],
+      "response": "Create API Gateway, define resources/methods, configure integration with backend services, deploy to stage",
+      "explanation": "AWS API Gateway setup: 1) Create REST API, 2) Define resources and HTTP methods, 3) Configure integration (Lambda, ELB, HTTP), 4) Set up request/response transformations, 5) Configure authentication (IAM, Cognito, API keys), 6) Deploy to stage (dev/prod), 7) Configure custom domain and throttling.",
+      "keywords": ["AWS", "API Gateway", "REST API", "microservices", "integration", "authentication", "deployment stages"]
+    },
+    {
+      "id": 5,
+      "topic": "EJB Application Cloud Deployment",
+      "question": "What's the best approach to deploy a traditional EJB application to the cloud?",
+      "options": [
+        "Deploy directly without modification",
+        "Containerize with application server, use managed databases, configure clustering and load balancing",
+        "Convert everything to serverless functions",
+        "Use only static hosting"
+      ],
+      "response": "Containerize with application server, use managed databases, configure clustering and load balancing",
+      "explanation": "EJB cloud deployment: 1) Containerize with WildFly/WebSphere in Docker, 2) Use managed database (RDS/Cloud SQL), 3) Configure clustering for EJB containers, 4) Set up load balancer, 5) Configure JNDI for cloud resources, 6) Implement health checks, 7) Set up monitoring and logging.",
+      "keywords": ["EJB", "application server", "containerization", "clustering", "managed database", "JNDI", "load balancing"]
+    },
+    {
+      "id": 6,
+      "topic": "Cloud Security - SSL/TLS Configuration",
+      "question": "How do you secure a Spring Boot API deployed on Azure App Service with HTTPS and custom domain?",
+      "options": [
+        "HTTP is sufficient for cloud applications",
+        "Configure custom domain, upload SSL certificate, enable HTTPS only, configure security headers",
+        "Use only basic authentication",
+        "Rely on Azure's default security"
+      ],
+      "response": "Configure custom domain, upload SSL certificate, enable HTTPS only, configure security headers",
+      "explanation": "Azure App Service HTTPS setup: 1) Configure custom domain in App Service, 2) Upload SSL certificate or use App Service Certificate, 3) Enable HTTPS Only setting, 4) Configure security headers (HSTS, CSP), 5) Set up Application Gateway with WAF if needed, 6) Configure authentication (Azure AD, OAuth).",
+      "keywords": ["Azure", "App Service", "HTTPS", "SSL certificate", "custom domain", "security headers", "authentication"]
+    },
+    {
+      "id": 7,
+      "topic": "Infrastructure as Code - Terraform",
+      "question": "How would you use Terraform to provision AWS infrastructure for a Spring Boot application?",
+      "options": [
+        "Manual setup through AWS console only",
+        "Define resources in .tf files: VPC, subnets, EC2/ECS, RDS, ALB, security groups",
+        "Use only AWS CLI commands",
+        "Infrastructure as Code is not necessary"
+      ],
+      "response": "Define resources in .tf files: VPC, subnets, EC2/ECS, RDS, ALB, security groups",
+      "explanation": "Terraform AWS infrastructure: 1) Define VPC and subnets, 2) Configure security groups with proper ingress/egress rules, 3) Set up ECS cluster or EC2 instances, 4) Configure RDS database with security groups, 5) Set up Application Load Balancer, 6) Define auto-scaling groups, 7) Configure outputs for application deployment.",
+      "keywords": ["Terraform", "Infrastructure as Code", "AWS", "VPC", "ECS", "RDS", "ALB", "security groups"]
+    },
+    {
+      "id": 8,
+      "topic": "Database Security in Cloud",
+      "question": "How do you securely configure a cloud database (RDS/Cloud SQL) for your application?",
+      "options": [
+        "Use default settings with public access",
+        "Configure VPC, security groups, encryption at rest/transit, IAM authentication, regular backups",
+        "Allow access from anywhere for convenience",
+        "Use only username/password authentication"
+      ],
+      "response": "Configure VPC, security groups, encryption at rest/transit, IAM authentication, regular backups",
+      "explanation": "Cloud database security: 1) Deploy in private subnets within VPC, 2) Configure security groups to allow only application access, 3) Enable encryption at rest and in transit, 4) Use IAM database authentication, 5) Configure automated backups and point-in-time recovery, 6) Enable database activity monitoring, 7) Regular security patches.",
+      "keywords": ["cloud database", "RDS", "Cloud SQL", "VPC", "encryption", "IAM authentication", "security groups", "backups"]
+    },
+    {
+      "id": 9,
+      "topic": "CI/CD Pipeline for Cloud Deployment",
+      "question": "What are the essential stages in a CI/CD pipeline for deploying a Spring Boot application to the cloud?",
+      "options": [
+        "Just build and deploy",
+        "Source control trigger, build, test, security scan, build image, deploy to staging, integration tests, deploy to production",
+        "Manual deployment only",
+        "Deploy directly from development machine"
+      ],
+      "response": "Source control trigger, build, test, security scan, build image, deploy to staging, integration tests, deploy to production",
+      "explanation": "CI/CD pipeline stages: 1) Git commit triggers pipeline, 2) Build application (Maven/Gradle), 3) Run unit tests, 4) Security vulnerability scanning, 5) Build Docker image, 6) Deploy to staging environment, 7) Run integration/E2E tests, 8) Deploy to production with blue-green or rolling deployment.",
+      "keywords": ["CI/CD", "pipeline", "automated testing", "security scanning", "Docker", "staging", "blue-green deployment"]
+    },
+    {
+      "id": 10,
+      "topic": "Load Balancing and Auto-scaling",
+      "question": "How do you configure auto-scaling for a cloud-deployed application to handle traffic spikes?",
+      "options": [
+        "Always run maximum number of instances",
+        "Configure auto-scaling groups with CPU/memory thresholds, set up health checks, configure scale-out/scale-in policies",
+        "Manual scaling only",
+        "Use only one large instance"
+      ],
+      "response": "Configure auto-scaling groups with CPU/memory thresholds, set up health checks, configure scale-out/scale-in policies",
+      "explanation": "Auto-scaling setup: 1) Create auto-scaling group with min/max instances, 2) Configure scaling policies based on CPU/memory/custom metrics, 3) Set up health checks (ELB health checks), 4) Configure cool-down periods, 5) Set up CloudWatch alarms, 6) Test scaling behavior under load, 7) Configure predictive scaling if available.",
+      "keywords": ["auto-scaling", "load balancing", "health checks", "scaling policies", "CloudWatch", "traffic spikes", "performance metrics"]
+    },
+    {
+      "id": 11,
+      "topic": "Microservices Deployment Architecture",
+      "question": "What's the recommended architecture for deploying microservices to Kubernetes in the cloud?",
+      "options": [
+        "Deploy all services in a single pod",
+        "Use namespaces, service mesh, ingress controller, separate databases, monitoring and logging",
+        "Avoid containerization for microservices",
+        "Use only traditional VMs"
+      ],
+      "response": "Use namespaces, service mesh, ingress controller, separate databases, monitoring and logging",
+      "explanation": "Kubernetes microservices architecture: 1) Use namespaces for environment separation, 2) Deploy service mesh (Istio) for communication, 3) Configure ingress controller for external access, 4) Separate databases per service, 5) Implement centralized logging (ELK stack), 6) Set up monitoring (Prometheus/Grafana), 7) Configure secrets management.",
+      "keywords": ["Kubernetes", "microservices", "service mesh", "ingress controller", "namespaces", "monitoring", "logging"]
+    },
+    {
+      "id": 12,
+      "topic": "Environment Configuration Management",
+      "question": "How do you manage environment-specific configurations when deploying to multiple cloud environments (dev/staging/prod)?",
+      "options": [
+        "Hardcode values in application properties",
+        "Use environment variables, secret managers, configuration services, and infrastructure as code",
+        "Manually change files for each environment",
+        "Use the same configuration for all environments"
+      ],
+      "response": "Use environment variables, secret managers, configuration services, and infrastructure as code",
+      "explanation": "Environment configuration: 1) Use environment variables for non-sensitive config, 2) Store secrets in cloud secret managers (AWS Secrets Manager, Azure Key Vault), 3) Use configuration services (AWS Systems Manager, Azure App Configuration), 4) Define infrastructure differences in Terraform/ARM templates, 5) Use CI/CD pipelines to promote configurations.",
+      "keywords": ["environment configuration", "secret management", "environment variables", "AWS Secrets Manager", "Azure Key Vault", "configuration services"]
+    },
+    {
+      "id": 13,
+      "topic": "API Authentication and Authorization",
+      "question": "How do you implement OAuth2 authentication for APIs deployed in the cloud with an API Gateway?",
+      "options": [
+        "Use basic authentication only",
+        "Configure OAuth2 provider, set up API Gateway authorizers, implement JWT validation, configure scopes",
+        "No authentication needed in cloud",
+        "Use only IP whitelisting"
+      ],
+      "response": "Configure OAuth2 provider, set up API Gateway authorizers, implement JWT validation, configure scopes",
+      "explanation": "OAuth2 implementation: 1) Set up OAuth2 provider (Auth0, AWS Cognito, Azure AD), 2) Configure API Gateway authorizers, 3) Implement JWT token validation, 4) Define scopes and permissions, 5) Set up token refresh mechanism, 6) Configure CORS for web applications, 7) Implement proper error handling for auth failures.",
+      "keywords": ["OAuth2", "API Gateway", "JWT", "authentication", "authorization", "AWS Cognito", "Azure AD", "scopes"]
+    },
+    {
+      "id": 14,
+      "topic": "Monitoring and Logging Setup",
+      "question": "What monitoring and logging strategy should you implement for cloud-deployed applications?",
+      "options": [
+        "No monitoring needed in cloud",
+        "Set up application metrics, infrastructure monitoring, centralized logging, alerting, and dashboards",
+        "Only check logs manually when issues occur",
+        "Use only default cloud provider monitoring"
+      ],
+      "response": "Set up application metrics, infrastructure monitoring, centralized logging, alerting, and dashboards",
+      "explanation": "Comprehensive monitoring: 1) Application metrics (response time, error rate, throughput), 2) Infrastructure monitoring (CPU, memory, disk), 3) Centralized logging (ELK, Splunk, CloudWatch), 4) Custom business metrics, 5) Alerting rules for critical issues, 6) Dashboards for visualization, 7) Distributed tracing for microservices.",
+      "keywords": ["monitoring", "logging", "metrics", "alerting", "dashboards", "CloudWatch", "ELK stack", "distributed tracing"]
+    },
+    {
+      "id": 15,
+      "topic": "Cost Optimization Strategies",
+      "question": "How do you optimize costs when running applications in the cloud?",
+      "options": [
+        "Always use the largest instances available",
+        "Right-size instances, use reserved instances, implement auto-scaling, optimize storage, monitor usage",
+        "Cost optimization is not important",
+        "Use only free tier services"
+      ],
+      "response": "Right-size instances, use reserved instances, implement auto-scaling, optimize storage, monitor usage",
+      "explanation": "Cost optimization strategies: 1) Right-size instances based on actual usage, 2) Use reserved instances for predictable workloads, 3) Implement auto-scaling to match demand, 4) Optimize storage (lifecycle policies, compression), 5) Monitor and analyze costs regularly, 6) Use spot instances for non-critical workloads, 7) Clean up unused resources.",
+      "keywords": ["cost optimization", "right-sizing", "reserved instances", "auto-scaling", "storage optimization", "usage monitoring"]
+    },
+    {
+      "id": 16,
+      "topic": "Disaster Recovery and Backup",
+      "question": "How do you implement disaster recovery for a cloud-deployed application with database?",
+      "options": [
+        "No backup strategy needed in cloud",
+        "Multi-region deployment, automated backups, failover procedures, data replication, recovery testing",
+        "Single region deployment is sufficient",
+        "Manual backups only"
+      ],
+      "response": "Multi-region deployment, automated backups, failover procedures, data replication, recovery testing",
+      "explanation": "Disaster recovery implementation: 1) Deploy across multiple availability zones/regions, 2) Set up automated database backups and point-in-time recovery, 3) Configure data replication (read replicas), 4) Implement failover procedures, 5) Regular disaster recovery testing, 6) Document recovery processes, 7) Set RTO/RPO targets.",
+      "keywords": ["disaster recovery", "multi-region", "automated backups", "failover", "data replication", "RTO", "RPO"]
+    },
+    {
+      "id": 17,
+      "topic": "Container Orchestration Security",
+      "question": "What security measures should you implement when deploying containerized applications to Kubernetes?",
+      "options": [
+        "Default Kubernetes security is sufficient",
+        "Use RBAC, network policies, pod security standards, image scanning, secrets management",
+        "Disable all security features for performance",
+        "Only use basic authentication"
+      ],
+      "response": "Use RBAC, network policies, pod security standards, image scanning, secrets management",
+      "explanation": "Kubernetes security: 1) Implement RBAC for access control, 2) Configure network policies for pod communication, 3) Use pod security standards, 4) Scan container images for vulnerabilities, 5) Proper secrets management, 6) Enable audit logging, 7) Regular security updates and patches, 8) Use service mesh for encryption.",
+      "keywords": ["Kubernetes security", "RBAC", "network policies", "pod security", "image scanning", "secrets management", "audit logging"]
+    },
+    {
+      "id": 18,
+      "topic": "Blue-Green Deployment Strategy",
+      "question": "How do you implement blue-green deployment for a Spring Boot application in the cloud?",
+      "options": [
+        "Deploy directly to production",
+        "Maintain two identical environments, deploy to inactive, test, then switch traffic",
+        "Use only rolling updates",
+        "Manual deployment without automation"
+      ],
+      "response": "Maintain two identical environments, deploy to inactive, test, then switch traffic",
+      "explanation": "Blue-green deployment: 1) Maintain two identical production environments (blue/green), 2) Deploy new version to inactive environment, 3) Run smoke tests and validation, 4) Switch load balancer traffic to new environment, 5) Monitor for issues, 6) Keep old environment for quick rollback, 7) Automate the entire process through CI/CD.",
+      "keywords": ["blue-green deployment", "zero downtime", "load balancer", "rollback", "smoke testing", "identical environments"]
+    },
+    {
+      "id": 19,
+      "topic": "API Rate Limiting and Security",
+      "question": "How do you implement rate limiting and DDoS protection for APIs deployed through cloud API Gateway?",
+      "options": [
+        "No rate limiting needed",
+        "Configure API Gateway throttling, use WAF, implement circuit breakers, set up monitoring",
+        "Only use server-side rate limiting",
+        "Rate limiting is handled automatically"
+      ],
+      "response": "Configure API Gateway throttling, use WAF, implement circuit breakers, set up monitoring",
+      "explanation": "API protection implementation: 1) Configure rate limiting at API Gateway level, 2) Set up Web Application Firewall (WAF), 3) Implement circuit breakers in applications, 4) Use CloudFront for DDoS protection, 5) Monitor traffic patterns, 6) Set up alerting for unusual traffic, 7) Implement IP-based blocking for abuse.",
+      "keywords": ["rate limiting", "API Gateway", "WAF", "DDoS protection", "circuit breakers", "CloudFront", "traffic monitoring"]
+    },
+    {
+      "id": 20,
+      "topic": "Database Migration to Cloud",
+      "question": "What are the key steps to migrate an on-premises database to cloud while minimizing downtime?",
+      "options": [
+        "Export and import data during maintenance window",
+        "Set up replication, sync data, test applications, switch during low traffic, monitor",
+        "Copy database files directly",
+        "Rebuild database from scratch"
+      ],
+      "response": "Set up replication, sync data, test applications, switch during low traffic, monitor",
+      "explanation": "Database migration strategy: 1) Set up database replication from on-premises to cloud, 2) Initial data sync and continuous replication, 3) Test applications against cloud database, 4) Switch applications during low traffic period, 5) Monitor performance and data consistency, 6) Keep replication for rollback option, 7) Decommission on-premises after validation.",
+      "keywords": ["database migration", "replication", "data sync", "minimal downtime", "application testing", "rollback plan"]
+    },
+    {
+      "id": 21,
+      "topic": "Serverless Architecture Deployment",
+      "question": "How do you deploy a Java Spring Boot application using serverless architecture (AWS Lambda/Azure Functions)?",
+      "options": [
+        "Deploy traditional Spring Boot unchanged",
+        "Use Spring Cloud Function, optimize cold starts, configure triggers, implement proper error handling",
+        "Serverless doesn't support Java applications",
+        "Convert entire application to static files"
+      ],
+      "response": "Use Spring Cloud Function, optimize cold starts, configure triggers, implement proper error handling",
+      "explanation": "Serverless Spring Boot: 1) Use Spring Cloud Function or native compilation, 2) Optimize for cold start performance, 3) Configure event triggers (HTTP, SQS, etc.), 4) Implement proper error handling and retries, 5) Configure memory and timeout settings, 6) Set up monitoring and logging, 7) Consider connection pooling limitations.",
+      "keywords": ["serverless", "AWS Lambda", "Azure Functions", "Spring Cloud Function", "cold starts", "event triggers", "error handling"]
+    },
+    {
+      "id": 22,
+      "topic": "Multi-Cloud Deployment Strategy",
+      "question": "What considerations are important when deploying applications across multiple cloud providers?",
+      "options": [
+        "Use different technologies for each cloud",
+        "Standardize on containers, abstract cloud services, implement proper networking, data synchronization",
+        "Avoid multi-cloud complexity",
+        "Deploy identical copies without integration"
+      ],
+      "response": "Standardize on containers, abstract cloud services, implement proper networking, data synchronization",
+      "explanation": "Multi-cloud strategy: 1) Standardize on container technology (Docker/Kubernetes), 2) Abstract cloud-specific services through interfaces, 3) Implement secure networking between clouds, 4) Data synchronization and backup strategies, 5) Unified monitoring and logging, 6) Disaster recovery across clouds, 7) Cost and performance optimization.",
+      "keywords": ["multi-cloud", "containerization", "service abstraction", "networking", "data synchronization", "unified monitoring"]
+    },
+    {
+      "id": 23,
+      "topic": "Performance Optimization in Cloud",
+      "question": "How do you optimize the performance of a cloud-deployed web application?",
+      "options": [
+        "Just increase server size",
+        "Implement CDN, optimize database queries, use caching, configure auto-scaling, monitor performance",
+        "Performance optimization is not needed in cloud",
+        "Use only the fastest instance types"
+      ],
+      "response": "Implement CDN, optimize database queries, use caching, configure auto-scaling, monitor performance",
+      "explanation": "Performance optimization: 1) Use CDN for static content delivery, 2) Optimize database queries and indexing, 3) Implement caching (Redis, ElastiCache), 4) Configure proper auto-scaling policies, 5) Monitor application performance metrics, 6) Optimize images and assets, 7) Use appropriate instance types, 8) Implement connection pooling.",
+      "keywords": ["performance optimization", "CDN", "caching", "database optimization", "auto-scaling", "monitoring", "connection pooling"]
+    },
+    {
+      "id": 24,
+      "topic": "Security Compliance in Cloud",
+      "question": "How do you ensure compliance with security standards (SOC 2, GDPR) when deploying applications to the cloud?",
+      "options": [
+        "Cloud providers handle all compliance",
+        "Implement data encryption, access controls, audit logging, data residency, privacy controls",
+        "Compliance is not needed for cloud applications",
+        "Use only default security settings"
+      ],
+      "response": "Implement data encryption, access controls, audit logging, data residency, privacy controls",
+      "explanation": "Compliance implementation: 1) Encrypt data at rest and in transit, 2) Implement proper access controls and IAM, 3) Enable comprehensive audit logging, 4) Ensure data residency requirements, 5) Implement privacy controls and data deletion, 6) Regular security assessments, 7) Document security procedures, 8) Employee training on compliance.",
+      "keywords": ["compliance", "SOC 2", "GDPR", "data encryption", "access controls", "audit logging", "data residency", "privacy controls"]
+    },
+    {
+      "id": 25,
+      "topic": "Cloud Migration Strategy",
+      "question": "What's the best approach for migrating a monolithic enterprise application to the cloud?",
+      "options": [
+        "Migrate everything at once",
+        "Assess dependencies, plan phases, use strangler pattern, gradual migration with rollback plans",
+        "Rebuild everything from scratch immediately",
+        "Never migrate legacy applications"
+      ],
+      "response": "Assess dependencies, plan phases, use strangler pattern, gradual migration with rollback plans",
+      "explanation": "Migration strategy: 1) Assess application dependencies and architecture, 2) Plan migration in phases (lift-and-shift, optimize, modernize), 3) Use strangler pattern to gradually replace components, 4) Implement proper testing at each phase, 5) Maintain rollback capabilities, 6) Monitor performance and costs, 7) Train team on cloud technologies.",
+      "keywords": ["cloud migration", "monolithic applications", "strangler pattern", "phased migration", "dependency assessment", "rollback plans"]
+    },
+    {
+      "id": 1,
+      "topic": "SOLID Principles Application",
+      "question": "You're designing a payment processing system that needs to support multiple payment methods (credit card, PayPal, bank transfer). How do you apply SOLID principles to make it extensible?",
+      "options": [
+        "Create one large class with all payment logic",
+        "Use interfaces for payment methods, dependency injection, and separate responsibilities",
+        "Use inheritance only without interfaces",
+        "Hardcode all payment types in a single method"
+      ],
+      "response": "Use interfaces for payment methods, dependency injection, and separate responsibilities",
+      "explanation": "Apply SOLID: Single Responsibility (each payment method class has one purpose), Open/Closed (open for extension via new implementations), Liskov Substitution (payment implementations are interchangeable), Interface Segregation (specific payment interfaces), Dependency Inversion (depend on abstractions, not concrete classes).",
+      "keywords": ["SOLID principles", "interface design", "dependency injection", "extensibility", "payment processing", "separation of concerns"]
+    },
+    {
+      "id": 2,
+      "topic": "Microservices vs Monolith Decision",
+      "question": "Your team is building a new e-commerce platform. What factors should guide the decision between microservices and monolithic architecture?",
+      "options": [
+        "Always choose microservices for modern applications",
+        "Consider team size, domain complexity, scalability needs, operational capabilities, and business requirements",
+        "Always start with monolith regardless of requirements",
+        "Base decision only on technology preferences"
+      ],
+      "response": "Consider team size, domain complexity, scalability needs, operational capabilities, and business requirements",
+      "explanation": "Architecture decisions should consider: team size and expertise, domain complexity and bounded contexts, independent scalability requirements, operational maturity (monitoring, deployment), performance requirements, and business timeline. Start simple and evolve as needed.",
+      "keywords": ["microservices", "monolithic architecture", "architectural decisions", "team organization", "scalability", "operational complexity"]
+    },
+    {
+      "id": 3,
+      "topic": "CAP Theorem in Practice",
+      "question": "Your distributed system stores user profiles across multiple data centers. During a network partition, how do you balance Consistency, Availability, and Partition tolerance?",
+      "options": [
+        "Maintain all three properties equally",
+        "Choose AP (eventually consistent) for user reads, CP for critical operations like payments",
+        "Always prioritize consistency over availability",
+        "Ignore network partitions"
+      ],
+      "response": "Choose AP (eventually consistent) for user reads, CP (consistent) for critical operations like payments",
+      "explanation": "CAP theorem forces trade-offs during partitions. User profile reads can be eventually consistent (AP) for better availability, while financial operations require strong consistency (CP) even if some services become unavailable. Design different consistency models per use case.",
+      "keywords": ["CAP theorem", "distributed systems", "eventual consistency", "partition tolerance", "availability", "consistency models"]
+    },
+    {
+      "id": 4,
+      "topic": "Event-Driven Architecture Design",
+      "question": "How do you design an event-driven architecture for an order processing system that integrates inventory, payment, and shipping services?",
+      "options": [
+        "Use synchronous API calls between all services",
+        "Implement event sourcing with domain events, event bus, and saga orchestration",
+        "Share database between all services",
+        "Use only REST APIs for all communication"
+      ],
+      "response": "Implement event sourcing with domain events, event bus, and saga orchestration",
+      "explanation": "Event-driven design: Define domain events (OrderCreated, PaymentProcessed), use event bus for decoupled communication, implement saga pattern for distributed transactions, ensure idempotency, handle event ordering, and implement proper error handling and compensation.",
+      "keywords": ["event-driven architecture", "event sourcing", "saga pattern", "domain events", "event bus", "distributed transactions"]
+    },
+    {
+      "id": 5,
+      "topic": "Database Architecture Strategy",
+      "question": "For a high-traffic social media application, how do you design the database architecture to handle reads and writes efficiently?",
+      "options": [
+        "Use single database with more powerful server",
+        "Implement CQRS with read replicas, write sharding, and caching layers",
+        "Use only NoSQL databases",
+        "Avoid database optimization"
+      ],
+      "response": "Implement CQRS with read replicas, write sharding, and caching layers",
+      "explanation": "High-traffic database strategy: CQRS separates read/write models, read replicas handle query load, sharding distributes writes, caching reduces database load, implement eventual consistency where appropriate, and use appropriate database technologies per use case.",
+      "keywords": ["CQRS", "database sharding", "read replicas", "caching strategy", "high traffic", "database architecture"]
+    },
+    {
+      "id": 6,
+      "topic": "Scalability Patterns",
+      "question": "Your application experiences traffic spikes during events (Black Friday). What architectural patterns ensure it scales gracefully?",
+      "options": [
+        "Increase server size (vertical scaling) only",
+        "Implement horizontal scaling, load balancing, caching, async processing, and circuit breakers",
+        "Handle spikes manually by adding servers",
+        "Limit users during high traffic"
+      ],
+      "response": "Implement horizontal scaling, load balancing, caching, async processing, and circuit breakers",
+      "explanation": "Scalability patterns: horizontal auto-scaling for compute resources, load balancing for traffic distribution, multi-level caching, asynchronous processing for non-critical tasks, circuit breakers for fault tolerance, and database read replicas for query scaling.",
+      "keywords": ["horizontal scaling", "load balancing", "auto-scaling", "caching patterns", "async processing", "traffic spikes"]
+    },
+    {
+      "id": 7,
+      "topic": "Domain-Driven Design (DDD)",
+      "question": "How do you apply Domain-Driven Design principles when architecting a complex business application with multiple business domains?",
+      "options": [
+        "Create one large model for entire business",
+        "Identify bounded contexts, define aggregates, implement repositories, and establish context mapping",
+        "Use only technical architecture without business modeling",
+        "Avoid domain modeling complexity"
+      ],
+      "response": "Identify bounded contexts, define aggregates, implement repositories, and establish context mapping",
+      "explanation": "DDD implementation: identify bounded contexts for business domains, define aggregates as consistency boundaries, implement repositories for data access abstraction, establish context mapping between domains, use ubiquitous language, and align team structure with domain boundaries.",
+      "keywords": ["Domain-Driven Design", "bounded contexts", "aggregates", "repositories", "context mapping", "ubiquitous language"]
+    },
+    {
+      "id": 8,
+      "topic": "API Gateway Architecture",
+      "question": "What are the key architectural considerations when implementing an API Gateway for a microservices ecosystem?",
+      "options": [
+        "Just route requests to services",
+        "Handle authentication, rate limiting, request transformation, service discovery, monitoring, and fault tolerance",
+        "Use only for load balancing",
+        "Implement business logic in gateway"
+      ],
+      "response": "Handle authentication, rate limiting, request transformation, service discovery, monitoring, and fault tolerance",
+      "explanation": "API Gateway responsibilities: centralized authentication/authorization, rate limiting and throttling, request/response transformation, service discovery and routing, monitoring and analytics, circuit breaking, caching, and API versioning while avoiding business logic.",
+      "keywords": ["API Gateway", "authentication", "rate limiting", "service discovery", "request transformation", "fault tolerance"]
+    },
+    {
+      "id": 9,
+      "topic": "Clean Architecture Implementation",
+      "question": "How do you structure a Spring Boot application following Clean Architecture principles?",
+      "options": [
+        "Put everything in controller, service, and repository layers",
+        "Organize by layers: entities, use cases, interface adapters, frameworks with dependency inversion",
+        "Mix business logic with framework code",
+        "Use only MVC pattern"
+      ],
+      "response": "Organize by layers: entities, use cases, interface adapters, frameworks with dependency inversion",
+      "explanation": "Clean Architecture layers: Core entities (business rules), Use cases (application logic), Interface adapters (controllers, presenters), Frameworks (Spring, database). Dependencies point inward, business logic is independent of frameworks, and interfaces define contracts.",
+      "keywords": ["Clean Architecture", "dependency inversion", "use cases", "entities", "interface adapters", "separation of concerns"]
+    },
+    {
+      "id": 10,
+      "topic": "Performance Architecture Strategy",
+      "question": "Your application has performance bottlenecks under load. What systematic approach do you take to identify and resolve them?",
+      "options": [
+        "Randomly optimize code",
+        "Profile application, identify bottlenecks, implement targeted optimizations, measure improvements",
+        "Increase server resources without analysis",
+        "Optimize everything at once"
+      ],
+      "response": "Profile application, identify bottlenecks, implement targeted optimizations, measure improvements",
+      "explanation": "Performance optimization process: profile application under load, identify actual bottlenecks (database, CPU, memory, I/O), implement targeted optimizations, measure performance improvements, consider caching strategies, database optimization, and algorithmic improvements.",
+      "keywords": ["performance optimization", "profiling", "bottleneck analysis", "targeted optimization", "performance measurement", "systematic approach"]
+    },
+    {
+      "id": 11,
+      "topic": "Security Architecture Design",
+      "question": "How do you design security architecture for a multi-tenant SaaS application handling sensitive data?",
+      "options": [
+        "Use basic authentication only",
+        "Implement defense in depth: authentication, authorization, data isolation, encryption, audit logging",
+        "Rely on network security only",
+        "Security is not needed for SaaS"
+      ],
+      "response": "Implement defense in depth: authentication, authorization, data isolation, encryption, audit logging",
+      "explanation": "Security architecture layers: multi-factor authentication, role-based authorization, tenant data isolation, encryption at rest and transit, comprehensive audit logging, input validation, security monitoring, regular security assessments, and incident response procedures.",
+      "keywords": ["security architecture", "defense in depth", "multi-tenancy", "data isolation", "encryption", "audit logging"]
+    },
+    {
+      "id": 12,
+      "topic": "Hexagonal Architecture Pattern",
+      "question": "When implementing Hexagonal (Ports and Adapters) architecture, how do you handle external system integrations?",
+      "options": [
+        "Call external systems directly from business logic",
+        "Define ports (interfaces) in core, implement adapters for external systems, use dependency injection",
+        "Mix external API calls with business code",
+        "Avoid external integrations"
+      ],
+      "response": "Define ports (interfaces) in core, implement adapters for external systems, use dependency injection",
+      "explanation": "Hexagonal architecture: define ports (interfaces) in the application core, implement adapters for external systems (databases, APIs, message queues), use dependency injection to wire adapters, keep business logic isolated from external concerns, and enable easy testing with mock adapters.",
+      "keywords": ["Hexagonal architecture", "ports and adapters", "dependency injection", "external integrations", "business logic isolation", "testability"]
+    },
+    {
+      "id": 13,
+      "topic": "Data Consistency Strategies",
+      "question": "In a distributed e-commerce system, how do you maintain data consistency across order, inventory, and payment services?",
+      "options": [
+        "Use distributed transactions (2PC) for everything",
+        "Implement eventual consistency with saga patterns and compensation actions",
+        "Share database across all services",
+        "Ignore consistency issues"
+      ],
+      "response": "Implement eventual consistency with saga patterns and compensation actions",
+      "explanation": "Distributed consistency: use saga patterns (choreography or orchestration) for business transactions, implement compensation actions for rollback, accept eventual consistency where appropriate, use event sourcing for audit trails, and design idempotent operations.",
+      "keywords": ["distributed consistency", "saga pattern", "eventual consistency", "compensation actions", "event sourcing", "idempotency"]
+    },
+    {
+      "id": 14,
+      "topic": "Integration Architecture Patterns",
+      "question": "Your system needs to integrate with 10+ external partner APIs with different protocols and data formats. What integration architecture do you implement?",
+      "options": [
+        "Point-to-point integration with each partner",
+        "Enterprise Service Bus (ESB) with transformation, routing, and protocol adaptation",
+        "Direct database connections to partners",
+        "Manual data exchange processes"
+      ],
+      "response": "Enterprise Service Bus (ESB) with transformation, routing, and protocol adaptation",
+      "explanation": "Integration architecture: ESB or integration platform for centralized connectivity, message transformation for data format differences, protocol adaptation (REST, SOAP, messaging), routing based on content/rules, error handling and retry mechanisms, monitoring and analytics.",
+      "keywords": ["integration architecture", "ESB", "message transformation", "protocol adaptation", "routing", "partner integration"]
+    },
+    {
+      "id": 15,
+      "topic": "Caching Architecture Strategy",
+      "question": "Design a multi-level caching strategy for an application with varying data consistency requirements and access patterns.",
+      "options": [
+        "Use only one cache level",
+        "Implement browser cache, CDN, application cache, database cache with appropriate TTLs and invalidation",
+        "Cache everything permanently",
+        "Avoid caching for simplicity"
+      ],
+      "response": "Implement browser cache, CDN, application cache, database cache with appropriate TTLs and invalidation",
+      "explanation": "Multi-level caching: browser cache for static assets, CDN for global content delivery, application-level cache (Redis) for frequently accessed data, database query cache, implement cache invalidation strategies, set appropriate TTLs based on data characteristics.",
+      "keywords": ["caching strategy", "multi-level cache", "CDN", "cache invalidation", "TTL", "cache hierarchy"]
+    },
+    {
+      "id": 16,
+      "topic": "Fault Tolerance Architecture",
+      "question": "How do you design fault tolerance into a distributed system to handle various failure scenarios?",
+      "options": [
+        "Assume systems never fail",
+        "Implement circuit breakers, bulkheads, timeouts, retries, and graceful degradation",
+        "Use only redundant hardware",
+        "Handle failures manually when they occur"
+      ],
+      "response": "Implement circuit breakers, bulkheads, timeouts, retries, and graceful degradation",
+      "explanation": "Fault tolerance patterns: circuit breakers to prevent cascade failures, bulkhead pattern for resource isolation, appropriate timeouts and retry strategies, graceful degradation of functionality, health checks and monitoring, chaos engineering for testing resilience.",
+      "keywords": ["fault tolerance", "circuit breaker", "bulkhead pattern", "graceful degradation", "retry strategies", "resilience engineering"]
+    },
+    {
+      "id": 17,
+      "topic": "Legacy System Modernization",
+      "question": "You need to modernize a 20-year-old monolithic system while maintaining business continuity. What's your strategic approach?",
+      "options": [
+        "Rewrite everything from scratch immediately",
+        "Use strangler fig pattern, API facade, gradual decomposition, and parallel run strategy",
+        "Keep the legacy system unchanged",
+        "Migrate everything in one big release"
+      ],
+      "response": "Use strangler fig pattern, API facade, gradual decomposition, and parallel run strategy",
+      "explanation": "Legacy modernization: strangler fig pattern to gradually replace functionality, API facade for abstraction, decompose by business capabilities, run old and new systems in parallel, implement data synchronization, comprehensive testing, and phased rollout with rollback capabilities.",
+      "keywords": ["legacy modernization", "strangler fig pattern", "API facade", "gradual decomposition", "parallel run", "business continuity"]
+    },
+    {
+      "id": 18,
+      "topic": "Observability Architecture",
+      "question": "How do you design observability into a microservices architecture for effective monitoring and troubleshooting?",
+      "options": [
+        "Only log errors when they occur",
+        "Implement structured logging, distributed tracing, metrics collection, and correlation IDs",
+        "Use only basic server monitoring",
+        "Rely on user reports for issues"
+      ],
+      "response": "Implement structured logging, distributed tracing, metrics collection, and correlation IDs",
+      "explanation": "Observability pillars: structured logging with correlation IDs, distributed tracing across services, metrics collection (business and technical), alerting based on SLIs/SLOs, dashboards for visualization, and automated anomaly detection for proactive monitoring.",
+      "keywords": ["observability", "distributed tracing", "structured logging", "correlation IDs", "metrics collection", "SLI/SLO"]
+    },
+    {
+      "id": 19,
+      "topic": "API Design Principles",
+      "question": "What principles should guide the design of RESTful APIs for a platform that will be used by external developers?",
+      "options": [
+        "Design APIs based on internal database structure",
+        "Follow REST principles, consistent naming, versioning strategy, comprehensive documentation, rate limiting",
+        "Use only GET and POST methods",
+        "Design different APIs for each client"
+      ],
+      "response": "Follow REST principles, consistent naming, versioning strategy, comprehensive documentation, rate limiting",
+      "explanation": "API design principles: follow REST conventions, consistent resource naming, proper HTTP methods and status codes, versioning strategy, comprehensive documentation, rate limiting, error handling standards, pagination for collections, and developer-friendly authentication.",
+      "keywords": ["API design", "REST principles", "API versioning", "documentation", "rate limiting", "developer experience"]
+    },
+    {
+      "id": 20,
+      "topic": "Event Sourcing Architecture",
+      "question": "When is Event Sourcing appropriate, and how do you implement it effectively in a business application?",
+      "options": [
+        "Use for all applications regardless of requirements",
+        "Apply when audit trails, temporal queries, or complex business logic are needed; implement with event store, projections, snapshots",
+        "Never use event sourcing",
+        "Only for logging user actions"
+      ],
+      "response": "Apply when audit trails, temporal queries, or complex business logic are needed; implement with event store, projections, snapshots",
+      "explanation": "Event Sourcing use cases: audit requirements, temporal queries, complex business rules, or rebuilding state. Implementation: event store for persistence, projections for read models, snapshots for performance, event versioning, and proper serialization strategies.",
+      "keywords": ["event sourcing", "event store", "projections", "snapshots", "audit trails", "temporal queries"]
+    },
+    {
+      "id": 21,
+      "topic": "Distributed Lock Patterns",
+      "question": "How do you handle distributed coordination and locking in a microservices environment where multiple services need to access shared resources?",
+      "options": [
+        "Use database locks across services",
+        "Implement distributed locking with Redis/Zookeeper, lease-based locks, and timeout mechanisms",
+        "Avoid coordination entirely",
+        "Use local locks only"
+      ],
+      "response": "Implement distributed locking with Redis/Zookeeper, lease-based locks, and timeout mechanisms",
+      "explanation": "Distributed coordination: use Redis or Zookeeper for distributed locks, implement lease-based locks with expiration, timeout mechanisms for deadlock prevention, consider lock-free designs where possible, and use optimistic locking patterns when appropriate.",
+      "keywords": ["distributed locking", "Redis", "Zookeeper", "lease-based locks", "coordination", "deadlock prevention"]
+    },
+    {
+      "id": 22,
+      "topic": "Scalable Search Architecture",
+      "question": "How do you architect search functionality for an e-commerce platform with millions of products and complex filtering requirements?",
+      "options": [
+        "Use database LIKE queries only",
+        "Implement Elasticsearch with indexing strategy, search aggregations, auto-complete, and real-time updates",
+        "Search functionality is not important",
+        "Use only simple text matching"
+      ],
+      "response": "Implement Elasticsearch with indexing strategy, search aggregations, auto-complete, and real-time updates",
+      "explanation": "Search architecture: Elasticsearch for full-text search, design indexing strategy for product data, implement search aggregations for faceted search, auto-complete functionality, real-time index updates, search analytics, and performance optimization.",
+      "keywords": ["search architecture", "Elasticsearch", "indexing strategy", "search aggregations", "auto-complete", "faceted search"]
+    },
+    {
+      "id": 23,
+      "topic": "Message Queue Architecture",
+      "question": "Design a message queue architecture for processing high-volume orders that require reliable delivery and exactly-once processing.",
+      "options": [
+        "Use synchronous processing only",
+        "Implement message queues with dead letter queues, idempotency, acknowledgments, and monitoring",
+        "Process all orders in single thread",
+        "Use email for order notifications"
+      ],
+      "response": "Implement message queues with dead letter queues, idempotency, acknowledgments, and monitoring",
+      "explanation": "Message queue architecture: use reliable message brokers (RabbitMQ, Apache Kafka), implement dead letter queues for failed messages, ensure idempotent processing, proper acknowledgment strategies, message ordering where needed, and comprehensive monitoring.",
+      "keywords": ["message queues", "dead letter queues", "idempotency", "message acknowledgment", "reliable delivery", "exactly-once processing"]
+    },
+    {
+      "id": 24,
+      "topic": "Multi-Tenant Architecture",
+      "question": "How do you design a multi-tenant SaaS architecture that provides data isolation while maintaining cost efficiency?",
+      "options": [
+        "Separate application instance per tenant",
+        "Implement tenant isolation through database schemas, row-level security, and shared application infrastructure",
+        "Use single database table for all tenants",
+        "Avoid multi-tenancy complexity"
+      ],
+      "response": "Implement tenant isolation through database schemas, row-level security, and shared application infrastructure",
+      "explanation": "Multi-tenant strategies: shared application with tenant-specific database schemas, row-level security for data isolation, tenant context in application layer, shared infrastructure for cost efficiency, tenant-specific configurations, and proper security boundaries.",
+      "keywords": ["multi-tenancy", "tenant isolation", "database schemas", "row-level security", "shared infrastructure", "cost efficiency"]
+    },
+    {
+      "id": 25,
+      "topic": "Command Query Responsibility Segregation (CQRS)",
+      "question": "When should you implement CQRS, and how does it solve performance and scalability challenges?",
+      "options": [
+        "Use CQRS for all applications",
+        "Apply when read/write patterns differ significantly; separate read and write models with eventual consistency",
+        "CQRS is unnecessary complexity",
+        "Only for reporting applications"
+      ],
+      "response": "Apply when read/write patterns differ significantly; separate read and write models with eventual consistency",
+      "explanation": "CQRS implementation: separate command and query models when read/write patterns differ, optimize read models for specific queries, use event sourcing for commands, implement eventual consistency between models, and scale read and write sides independently.",
+      "keywords": ["CQRS", "command query separation", "read models", "write models", "eventual consistency", "independent scaling"]
+    },
+    {
+      "id": 26,
+      "topic": "Disaster Recovery Architecture",
+      "question": "Design a disaster recovery strategy for a critical business application with strict RTO and RPO requirements.",
+      "options": [
+        "Backup data once per week",
+        "Implement active-passive or active-active replication, automated failover, regular DR testing",
+        "Disaster recovery is not necessary",
+        "Manual recovery procedures only"
+      ],
+      "response": "Implement active-passive or active-active replication, automated failover, regular DR testing",
+      "explanation": "DR architecture: active-passive or active-active replication across regions, automated failover procedures, regular backup and restore testing, documented recovery procedures, RTO/RPO monitoring, and regular disaster recovery drills.",
+      "keywords": ["disaster recovery", "active-passive replication", "automated failover", "RTO", "RPO", "DR testing"]
+    },
+    {
+      "id": 27,
+      "topic": "Technical Debt Management",
+      "question": "How do you systematically manage and reduce technical debt while delivering new features?",
+      "options": [
+        "Ignore technical debt until system breaks",
+        "Assess debt impact, prioritize by business value, allocate dedicated time, track metrics",
+        "Rewrite everything to eliminate debt",
+        "Only fix debt during major releases"
+      ],
+      "response": "Assess debt impact, prioritize by business value, allocate dedicated time, track metrics",
+      "explanation": "Technical debt management: assess debt impact on velocity and quality, prioritize by business impact and cost to fix, allocate percentage of sprint capacity to debt reduction, track debt metrics, and integrate refactoring into feature development.",
+      "keywords": ["technical debt", "debt assessment", "prioritization", "refactoring", "velocity impact", "debt metrics"]
+    },
+    {
+      "id": 28,
+      "topic": "Service Mesh Architecture",
+      "question": "What problems does a service mesh solve in a microservices architecture, and when should you implement one?",
+      "options": [
+        "Service mesh is always necessary for microservices",
+        "Implement when you need traffic management, security, observability across many services",
+        "Service mesh adds unnecessary complexity",
+        "Use only for very small applications"
+      ],
+      "response": "Implement when you need traffic management, security, observability across many services",
+      "explanation": "Service mesh benefits: traffic management (load balancing, circuit breaking), security (mTLS, policies), observability (metrics, tracing), service discovery. Implement when you have many services and need consistent cross-cutting concerns without modifying application code.",
+      "keywords": ["service mesh", "traffic management", "mTLS", "observability", "cross-cutting concerns", "microservices complexity"]
+    },
+    {
+      "id": 29,
+      "topic": "Domain Event Architecture",
+      "question": "How do you design domain events to enable loose coupling between bounded contexts while maintaining data consistency?",
+      "options": [
+        "Share database between all contexts",
+        "Design domain events with stable schema, implement event handlers, ensure idempotency",
+        "Use synchronous calls between contexts",
+        "Avoid events to reduce complexity"
+      ],
+      "response": "Design domain events with stable schema, implement event handlers, ensure idempotency",
+      "explanation": "Domain event design: create events that represent business facts, design stable event schemas for backward compatibility, implement idempotent event handlers, use event versioning, ensure proper ordering where needed, and handle duplicate events gracefully.",
+      "keywords": ["domain events", "bounded contexts", "loose coupling", "event schema", "idempotency", "event versioning"]
+    },
+    {
+      "id": 30,
+      "topic": "Architecture Documentation Strategy",
+      "question": "How do you create and maintain architecture documentation that remains useful and current as the system evolves?",
+      "options": [
+        "Create comprehensive upfront documentation",
+        "Use C4 model, architecture decision records (ADRs), living documentation, and automated diagrams",
+        "Avoid documentation to focus on coding",
+        "Only document after system is complete"
+      ],
+      "response": "Use C4 model, architecture decision records (ADRs), living documentation, and automated diagrams",
+      "explanation": "Documentation strategy: C4 model for different abstraction levels, ADRs for capturing decisions and context, living documentation that evolves with code, automated diagram generation from code, focus on decisions and trade-offs rather than implementation details.",
+      "keywords": ["architecture documentation", "C4 model", "ADRs", "living documentation", "automated diagrams", "decision records"]
+    }
+  ]
 }
-
-

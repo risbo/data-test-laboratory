@@ -3,6 +3,357 @@
  "id": 1,
  "topic": 1,
  "data": [
+
+  {
+    "id": 1,
+    "topic": "Spring Boot REST API Development",
+    "question": "When building a REST API with Spring Boot for a fintech application, which annotation combination correctly creates a controller that handles JSON requests and responses?",
+    "options": [
+      "Option A: @Controller + @ResponseBody on each method",
+      "Option B: @RestController + @RequestMapping",
+      "Option C: @Component + @RequestMapping + @ResponseBody",
+      "Option D: @Service + @RestController"
+    ],
+    "response": "Option B: @RestController + @RequestMapping",
+    "explanation": "@RestController combines @Controller and @ResponseBody, automatically serializing return values to JSON. @RequestMapping defines the base path for the controller. This is the standard approach for REST APIs in Spring Boot.",
+    "keywords": ["spring boot", "rest api", "annotations", "json", "controller"]
+  },
+  {
+    "id": 2,
+    "topic": "EJB Transaction Management",
+    "question": "In a payment processing system using EJB 3.0, which transaction attribute ensures that a method always runs in a new transaction, even if called from within an existing transaction?",
+    "options": [
+      "Option A: @TransactionAttribute(TransactionAttributeType.REQUIRED)",
+      "Option B: @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)",
+      "Option C: @TransactionAttribute(TransactionAttributeType.MANDATORY)",
+      "Option D: @TransactionAttribute(TransactionAttributeType.SUPPORTS)"
+    ],
+    "response": "Option B: @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)",
+    "explanation": "REQUIRES_NEW always creates a new transaction, suspending any existing transaction. This is crucial for payment processing where certain operations need isolation from the calling transaction.",
+    "keywords": ["ejb", "transaction", "payment processing", "isolation", "requires_new"]
+  },
+  {
+    "id": 3,
+    "topic": "Docker Containerization",
+    "question": "When containerizing a Java Spring Boot application for deployment on Azure, which Dockerfile instruction is essential for running the application on port 8080?",
+    "options": [
+      "Option A: EXPOSE 8080",
+      "Option B: RUN java -jar app.jar",
+      "Option C: COPY target/app.jar app.jar",
+      "Option D: FROM openjdk:8-jre-alpine"
+    ],
+    "response": "Option A: EXPOSE 8080",
+    "explanation": "EXPOSE 8080 documents and exposes port 8080 from the container, allowing external access to the Spring Boot application. While other options are important for building the image, EXPOSE is essential for port access.",
+    "keywords": ["docker", "containerization", "spring boot", "azure", "port exposure"]
+  },
+  {
+    "id": 4,
+    "topic": "JDBC Connection Management",
+    "question": "In a high-volume fintech application using JDBC with Oracle Database, which approach provides the best performance for database connections?",
+    "options": [
+      "Option A: Create new connection for each database operation",
+      "Option B: Use a single static connection for the entire application",
+      "Option C: Implement connection pooling with HikariCP",
+      "Option D: Use DriverManager.getConnection() with caching"
+    ],
+    "response": "Option C: Implement connection pooling with HikariCP",
+    "explanation": "Connection pooling with HikariCP provides optimal performance by reusing connections, reducing connection overhead, and managing connection lifecycle efficiently. This is crucial for high-volume financial applications.",
+    "keywords": ["jdbc", "connection pooling", "hikaricp", "oracle", "performance"]
+  },
+  {
+    "id": 5,
+    "topic": "Jenkins CI/CD Pipeline",
+    "question": "When setting up a Jenkins pipeline for a Java API project with Maven, which stage should come immediately before deployment to Azure?",
+    "options": [
+      "Option A: Build and compile source code",
+      "Option B: Run unit and integration tests",
+      "Option C: Perform security scanning and code quality checks",
+      "Option D: Create Docker image and push to registry"
+    ],
+    "response": "Option D: Create Docker image and push to registry",
+    "explanation": "The Docker image creation and registry push should be the final step before deployment, ensuring the tested and validated code is packaged and available for deployment to Azure container services.",
+    "keywords": ["jenkins", "ci/cd", "docker", "azure", "deployment pipeline"]
+  },
+  {
+    "id": 6,
+    "topic": "REST API Security",
+    "question": "For a fintech API handling sensitive payment data, which security practice is most critical when implementing JWT token authentication?",
+    "options": [
+      "Option A: Store JWT tokens in localStorage",
+      "Option B: Use HTTPS and implement token refresh mechanism",
+      "Option C: Include user passwords in JWT payload",
+      "Option D: Set JWT expiration to never expire"
+    ],
+    "response": "Option B: Use HTTPS and implement token refresh mechanism",
+    "explanation": "HTTPS ensures token transmission security, while token refresh mechanisms limit exposure window. This combination provides robust security for financial data without compromising user experience.",
+    "keywords": ["rest api", "jwt", "security", "fintech", "https", "token refresh"]
+  },
+  {
+    "id": 7,
+    "topic": "Spring Dependency Injection",
+    "question": "In a Spring Boot application with multiple database configurations, which annotation correctly injects a specific bean when multiple beans of the same type exist?",
+    "options": [
+      "Option A: @Autowired",
+      "Option B: @Qualifier(\"primaryDataSource\")",
+      "Option C: @Primary",
+      "Option D: @Component(\"dataSource\")"
+    ],
+    "response": "Option B: @Qualifier(\"primaryDataSource\")",
+    "explanation": "@Qualifier specifies which exact bean to inject when multiple beans of the same type exist. Combined with @Autowired, it resolves ambiguity in dependency injection for multiple datasource scenarios.",
+    "keywords": ["spring", "dependency injection", "qualifier", "multiple beans", "datasource"]
+  },
+  {
+    "id": 8,
+    "topic": "Azure API Management",
+    "question": "When deploying REST APIs to Azure API Management (APIM), which feature is most important for monitoring API performance and usage in a production fintech environment?",
+    "options": [
+      "Option A: API versioning strategies",
+      "Option B: Rate limiting and throttling policies",
+      "Option C: Analytics and monitoring dashboards",
+      "Option D: Developer portal customization"
+    ],
+    "response": "Option C: Analytics and monitoring dashboards",
+    "explanation": "Analytics and monitoring dashboards provide real-time insights into API performance, usage patterns, error rates, and response times, which are critical for maintaining SLA compliance in financial services.",
+    "keywords": ["azure", "api management", "monitoring", "analytics", "fintech", "performance"]
+  },
+  {
+    "id": 9,
+    "topic": "Maven Build Management",
+    "question": "In a Maven project with multiple modules for a fintech application, which configuration ensures that all modules use the same version of Spring Boot dependencies?",
+    "options": [
+      "Option A: Define dependencies in each module's pom.xml",
+      "Option B: Use dependencyManagement in parent pom.xml",
+      "Option C: Include spring-boot-starter-parent in all modules",
+      "Option D: Use Maven profiles for version management"
+    ],
+    "response": "Option B: Use dependencyManagement in parent pom.xml",
+    "explanation": "dependencyManagement in the parent pom.xml centralizes version control, ensuring all child modules inherit consistent dependency versions without explicitly declaring them, preventing version conflicts.",
+    "keywords": ["maven", "dependency management", "multi-module", "spring boot", "version control"]
+  },
+  {
+    "id": 10,
+    "topic": "JPA Entity Relationships",
+    "question": "For a payment processing system modeling Customer and Transaction entities, which JPA annotation correctly establishes a one-to-many relationship where a customer can have multiple transactions?",
+    "options": [
+      "Option A: @OneToMany(mappedBy = \"customer\") in Customer entity",
+      "Option B: @ManyToOne(fetch = FetchType.LAZY) in Transaction entity",
+      "Option C: @JoinColumn(name = \"customer_id\") in Customer entity",
+      "Option D: @OneToMany(cascade = CascadeType.ALL) without mappedBy"
+    ],
+    "response": "Option A: @OneToMany(mappedBy = \"customer\") in Customer entity",
+    "explanation": "@OneToMany(mappedBy = \"customer\") establishes the relationship from the owning side (Customer) while mappedBy indicates that the Transaction entity owns the foreign key relationship.",
+    "keywords": ["jpa", "entity relationships", "one-to-many", "payment processing", "database mapping"]
+  },
+  {
+    "id": 11,
+    "topic": "Kubernetes Deployment",
+    "question": "When deploying a Java API to Kubernetes on Azure (AKS), which resource type is most appropriate for ensuring high availability and load distribution?",
+    "options": [
+      "Option A: Pod",
+      "Option B: ReplicaSet",
+      "Option C: Deployment",
+      "Option D: StatefulSet"
+    ],
+    "response": "Option C: Deployment",
+    "explanation": "Deployment manages ReplicaSets and provides declarative updates, rollback capabilities, and ensures desired number of pod replicas for high availability and load distribution of stateless applications like APIs.",
+    "keywords": ["kubernetes", "deployment", "azure aks", "high availability", "load distribution"]
+  },
+  {
+    "id": 12,
+    "topic": "SQL Query Optimization",
+    "question": "For an Oracle database query retrieving transaction history with millions of records, which approach provides the best performance when pagination is required?",
+    "options": [
+      "Option A: SELECT * FROM transactions LIMIT 10 OFFSET 1000",
+      "Option B: SELECT * FROM (SELECT ROWNUM rn, t.* FROM transactions t) WHERE rn BETWEEN 1001 AND 1010",
+      "Option C: SELECT * FROM transactions WHERE transaction_id > last_seen_id ORDER BY transaction_id LIMIT 10",
+      "Option D: Use cursors to iterate through all records"
+    ],
+    "response": "Option C: SELECT * FROM transactions WHERE transaction_id > last_seen_id ORDER BY transaction_id LIMIT 10",
+    "explanation": "Cursor-based pagination using WHERE clauses with indexed columns avoids the performance degradation of OFFSET with large datasets, making it ideal for financial transaction history queries.",
+    "keywords": ["sql", "oracle", "pagination", "performance optimization", "large datasets"]
+  },
+  {
+    "id": 13,
+    "topic": "Agile Scrum Methodology",
+    "question": "In an agile fintech project using Scrum, what is the recommended maximum duration for a sprint when developing payment processing APIs?",
+    "options": [
+      "Option A: 1 week",
+      "Option B: 2 weeks",
+      "Option C: 4 weeks",
+      "Option D: 6 weeks"
+    ],
+    "response": "Option B: 2 weeks",
+    "explanation": "Two-week sprints provide optimal balance between delivering valuable increments and maintaining flexibility for changing requirements in fast-paced fintech environments, while allowing sufficient time for development and testing.",
+    "keywords": ["agile", "scrum", "sprint duration", "fintech", "payment processing"]
+  },
+  {
+    "id": 14,
+    "topic": "Java 8 Streams API",
+    "question": "When processing a large collection of payment transactions using Java 8 Streams, which approach provides the best performance for filtering and grouping operations?",
+    "options": [
+      "Option A: transactions.stream().filter(t -> t.getAmount() > 1000).collect(groupingBy(Transaction::getType))",
+      "Option B: transactions.parallelStream().filter(t -> t.getAmount() > 1000).collect(groupingBy(Transaction::getType))",
+      "Option C: Use traditional for loops with HashMap for grouping",
+      "Option D: Convert to array first, then process with streams"
+    ],
+    "response": "Option B: transactions.parallelStream().filter(t -> t.getAmount() > 1000).collect(groupingBy(Transaction::getType))",
+    "explanation": "parallelStream() leverages multiple CPU cores for processing large collections, significantly improving performance for computationally intensive operations like filtering and grouping large transaction datasets.",
+    "keywords": ["java 8", "streams", "parallel processing", "performance", "transaction processing"]
+  },
+  {
+    "id": 15,
+    "topic": "Git Version Control",
+    "question": "In a collaborative Java API development project, which Git workflow strategy is most suitable for maintaining code quality and enabling continuous integration?",
+    "options": [
+      "Option A: Everyone commits directly to main branch",
+      "Option B: Feature branches with pull requests and code reviews",
+      "Option C: Individual developer branches without merging",
+      "Option D: Single shared development branch for all features"
+    ],
+    "response": "Option B: Feature branches with pull requests and code reviews",
+    "explanation": "Feature branches with pull requests enable code reviews, automated testing, and quality gates before merging, ensuring code quality and facilitating continuous integration in team environments.",
+    "keywords": ["git", "version control", "feature branches", "code review", "continuous integration"]
+  },
+  {
+    "id": 16,
+    "topic": "SOAP Web Services",
+    "question": "When implementing a SOAP web service for payment processing that needs to integrate with legacy banking systems, which approach ensures proper error handling?",
+    "options": [
+      "Option A: Return null values for errors",
+      "Option B: Use SOAP faults with detailed fault codes",
+      "Option C: Throw generic exceptions",
+      "Option D: Log errors and return success status"
+    ],
+    "response": "Option B: Use SOAP faults with detailed fault codes",
+    "explanation": "SOAP faults provide standardized error reporting with specific fault codes, enabling legacy banking systems to properly handle and categorize different types of payment processing errors.",
+    "keywords": ["soap", "web services", "error handling", "fault codes", "legacy systems"]
+  },
+  {
+    "id": 17,
+    "topic": "Spring Security Configuration",
+    "question": "For a fintech API requiring role-based access control, which Spring Security configuration correctly restricts payment endpoints to users with ADMIN role?",
+    "options": [
+      "Option A: @PreAuthorize(\"hasRole('ADMIN')\")",
+      "Option B: @Secured(\"ROLE_ADMIN\")",
+      "Option C: http.authorizeRequests().antMatchers(\"/api/payments/**\").hasRole(\"ADMIN\")",
+      "Option D: All of the above are correct approaches"
+    ],
+    "response": "Option D: All of the above are correct approaches",
+    "explanation": "Spring Security provides multiple ways to implement role-based access control: method-level with @PreAuthorize or @Secured, and URL-level with HttpSecurity configuration. All are valid for different use cases.",
+    "keywords": ["spring security", "role-based access", "authorization", "fintech", "admin role"]
+  },
+  {
+    "id": 18,
+    "topic": "Terraform Infrastructure as Code",
+    "question": "When using Terraform to provision Azure resources for a Java API deployment, which resource type is essential for creating a managed Kubernetes cluster?",
+    "options": [
+      "Option A: azurerm_container_group",
+      "Option B: azurerm_kubernetes_cluster",
+      "Option C: azurerm_container_registry",
+      "Option D: azurerm_app_service"
+    ],
+    "response": "Option B: azurerm_kubernetes_cluster",
+    "explanation": "azurerm_kubernetes_cluster creates an Azure Kubernetes Service (AKS) cluster, which provides managed Kubernetes infrastructure for deploying containerized Java APIs with high availability and scalability.",
+    "keywords": ["terraform", "infrastructure as code", "azure", "kubernetes", "aks"]
+  },
+  {
+    "id": 19,
+    "topic": "JMS Message Processing",
+    "question": "In a payment processing system using JMS for asynchronous transaction processing, which acknowledgment mode ensures messages are not lost even if processing fails?",
+    "options": [
+      "Option A: AUTO_ACKNOWLEDGE",
+      "Option B: CLIENT_ACKNOWLEDGE",
+      "Option C: DUPS_OK_ACKNOWLEDGE",
+      "Option D: SESSION_TRANSACTED"
+    ],
+    "response": "Option D: SESSION_TRANSACTED",
+    "explanation": "SESSION_TRANSACTED mode ensures message processing and acknowledgment occur within a transaction, providing guaranteed delivery and preventing message loss if processing fails, critical for financial transactions.",
+    "keywords": ["jms", "message processing", "transaction", "acknowledgment", "payment processing"]
+  },
+  {
+    "id": 20,
+    "topic": "Angular Frontend Integration",
+    "question": "When integrating an Angular 5 frontend with a Java REST API for displaying transaction data, which HTTP interceptor pattern is most important for fintech applications?",
+    "options": [
+      "Option A: Caching responses for better performance",
+      "Option B: Adding authentication headers to all requests",
+      "Option C: Logging all HTTP requests and responses",
+      "Option D: Compressing request payloads"
+    ],
+    "response": "Option B: Adding authentication headers to all requests",
+    "explanation": "Authentication headers (like JWT tokens) must be included in all API requests to ensure secure access to financial data. HTTP interceptors provide a centralized way to add these headers automatically.",
+    "keywords": ["angular", "http interceptor", "authentication", "rest api", "fintech security"]
+  },
+  {
+    "id": 21,
+    "topic": "Microservices Architecture",
+    "question": "In a microservices architecture for a payment platform, which pattern is most effective for handling distributed transactions across multiple services?",
+    "options": [
+      "Option A: Two-phase commit (2PC)",
+      "Option B: Saga pattern with compensation",
+      "Option C: Distributed locking mechanism",
+      "Option D: Eventual consistency without transactions"
+    ],
+    "response": "Option B: Saga pattern with compensation",
+    "explanation": "Saga pattern manages distributed transactions through a series of local transactions with compensating actions, providing better resilience and scalability than 2PC for microservices architectures.",
+    "keywords": ["microservices", "distributed transactions", "saga pattern", "payment platform", "compensation"]
+  },
+  {
+    "id": 22,
+    "topic": "JNDI Resource Lookup",
+    "question": "In a J2EE application server environment, which JNDI lookup pattern correctly retrieves a configured DataSource for database connections?",
+    "options": [
+      "Option A: InitialContext ctx = new InitialContext(); DataSource ds = (DataSource)ctx.lookup(\"java:comp/env/jdbc/myDB\");",
+      "Option B: DataSource ds = DriverManager.getDataSource(\"jdbc:oracle:thin:@localhost:1521:xe\");",
+      "Option C: Context ctx = new Context(); DataSource ds = ctx.getDataSource(\"myDB\");",
+      "Option D: DataSource ds = new DataSource(\"jdbc/myDB\");"
+    ],
+    "response": "Option A: InitialContext ctx = new InitialContext(); DataSource ds = (DataSource)ctx.lookup(\"java:comp/env/jdbc/myDB\");",
+    "explanation": "JNDI lookup using InitialContext with the java:comp/env namespace is the standard J2EE pattern for retrieving configured resources like DataSources from the application server's naming directory.",
+    "keywords": ["jndi", "datasource", "j2ee", "resource lookup", "naming directory"]
+  },
+  {
+    "id": 23,
+    "topic": "Performance Monitoring",
+    "question": "When using Application Performance Monitoring (APM) tools like Dynatrace for a Java API in production, which metric is most critical for fintech applications?",
+    "options": [
+      "Option A: CPU utilization percentage",
+      "Option B: Memory consumption patterns",
+      "Option C: API response time and error rate",
+      "Option D: Network bandwidth usage"
+    ],
+    "response": "Option C: API response time and error rate",
+    "explanation": "API response time and error rate directly impact user experience and SLA compliance in financial services. These metrics are critical for maintaining customer trust and regulatory compliance.",
+    "keywords": ["performance monitoring", "dynatrace", "api metrics", "response time", "error rate"]
+  },
+  {
+    "id": 24,
+    "topic": "Design Patterns",
+    "question": "For a payment processing system requiring different validation strategies based on payment type, which design pattern is most appropriate?",
+    "options": [
+      "Option A: Singleton pattern for validation logic",
+      "Option B: Strategy pattern with validation interfaces",
+      "Option C: Observer pattern for validation events",
+      "Option D: Factory pattern for creating validators"
+    ],
+    "response": "Option B: Strategy pattern with validation interfaces",
+    "explanation": "Strategy pattern allows different validation algorithms to be selected at runtime based on payment type, providing flexibility and maintainability for varying validation requirements.",
+    "keywords": ["design patterns", "strategy pattern", "payment validation", "payment types", "validation interfaces"]
+  },
+  {
+    "id": 25,
+    "topic": "Database Transaction Isolation",
+    "question": "In a high-concurrency payment processing system using Oracle Database, which transaction isolation level prevents dirty reads while allowing maximum concurrency?",
+    "options": [
+      "Option A: READ UNCOMMITTED",
+      "Option B: READ COMMITTED",
+      "Option C: REPEATABLE READ",
+      "Option D: SERIALIZABLE"
+    ],
+    "response": "Option B: READ COMMITTED",
+    "explanation": "READ COMMITTED prevents dirty reads by only allowing reads of committed data while providing good concurrency performance. This is optimal for payment systems where data consistency is crucial but high throughput is required.",
+    "keywords": ["database", "transaction isolation", "oracle", "read committed", "concurrency", "payment processing"]
+  },
    {
      "id": 1,
      "topic": "Core Java",
